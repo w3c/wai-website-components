@@ -1,0 +1,19 @@
+{
+  "name": "wai-website-assets",
+  "version": "0.1.0",
+  "dependencies": {
+    "@frctl/fractal": "^1.1.3",
+    "@frctl/nunjucks": "^1.0.3"
+  },
+  "devDependencies": {
+    "autoprefixer": "^6.7.7",
+    "gulp": "^3.9.1",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-postcss": "^6.4.0",
+    "gulp-sourcemaps": "^2.4.1",
+    "nunjucks": "^3.0.0",
+    "postcss-cssnext": "^2.10.0",
+    "postcss-easy-import": "^2.0.0",
+    "postcss-import": "^9.1.0"
+  }
+}
