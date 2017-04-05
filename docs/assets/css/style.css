@@ -51,14 +51,14 @@ code {
   display: grid;
   -ms-grid-columns: 1fr 2fr 1fr;
       grid-template-columns: 1fr 2fr 1fr;
-  grid-column-gap: 16px;
+  grid-column-gap: 32px;
 }
 .partial-grid-right {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 2fr 1fr;
       grid-template-columns: 2fr 1fr;
-  grid-column-gap: 16px;
+  grid-column-gap: 32px;
 }
 .leftcol {
 }
@@ -225,7 +225,6 @@ h6 {
   line-height: 1.8;
 }
 .sidenav {
- background-color: #fff;
 }
 .sidenav--head {
   background-color: #00666f;
@@ -263,6 +262,7 @@ h6 {
 }
 .sidenav--list {
   border: 1px solid #ddd;
+  background-color: #fff;
   margin: 0;
   padding:0;
   font-size: 13px;
@@ -284,7 +284,6 @@ h6 {
   padding: 0;
   margin: 0;
   padding-left: 24px;
-  border-bottom: 1px solid #ddd;
 }
 .sidenav--list a + ul {
   display: none;
