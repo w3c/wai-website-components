@@ -37,6 +37,11 @@ body {
   margin: 0;
 }
 
+code {
+  font-size: 1em;
+  font-family: 'Tchig Mono', monospace;
+}
+
 .default-container, .default-grid {
   max-width: 70rem;
   margin: 0 auto;
