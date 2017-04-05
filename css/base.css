@@ -51,13 +51,13 @@ code {
 .default-grid {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
-  grid-column-gap: 16px;
+  grid-column-gap: 32px;
 }
 
 .partial-grid-right {
   display: grid;
   grid-template-columns: 2fr 1fr;
-  grid-column-gap: 16px;
+  grid-column-gap: 32px;
 }
 
 .leftcol {

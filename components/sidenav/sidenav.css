@@ -1,5 +1,4 @@
 .sidenav {
- background-color: #fff;
 }
 
 .sidenav--head {
@@ -37,6 +36,7 @@
 
 .sidenav--list {
   border: 1px solid var(--line-grey);
+  background-color: #fff;
   margin: 0;
   padding:0;
   font-size: .8125rem;
@@ -56,7 +56,6 @@
     padding: 0;
     margin: 0;
     padding-left: 24px;
-    border-bottom: 1px solid var(--line-grey);
   }
   & a + ul { display:none; }
   & a[aria-current] + ul { display:block; }
