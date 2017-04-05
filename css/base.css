@@ -37,10 +37,26 @@ body {
   margin: 0;
 }
 
+.default-container, .default-grid {
+  max-width: 70rem;
+  margin: 0 auto;
+  padding: 0 1em;
+}
+
 .default-grid {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
   grid-column-gap: 16px;
-  max-width: 70rem;
-  margin: 0 auto;
+}
+
+.partial-grid-right {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-column-gap: 16px;
+}
+
+.leftcol {
+  & article {
+    grid-column: 2 / 4;
+  }
 }
