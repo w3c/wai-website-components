@@ -1,0 +1,26 @@
+.breadcrumb {
+  font-size: .8125rem;
+  background-color: var(--pure-white);
+  border-bottom: 1px solid var(--line-grey);
+  padding: 16px 0;
+  margin-bottom: 32px;
+  & ul {
+    & li {
+      display: inline-block;
+      &:after {
+        content: " / ";
+        color: var(--wai-petrol);
+      }
+      &:last-child:after {
+        display:none;
+      }
+    }
+  }
+  & a {
+    color: var(--w3c-blue);
+  }
+  & [aria-current=page] {
+    font-weight: bold;
+    text-decoration: none;
+  }
+}
