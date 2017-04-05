@@ -1,0 +1,589 @@
+<article class="partial-grid-right with-sidenotes">
+    <h1>Labeling Regions</h1>
+    <div class="status draft">
+      <p><strong>Status:</strong> This is an in-progress, unapproved draft.</p>
+    </div>
+
+    <p>Most regions on a page need to be labeled. This is especially important when there are multiple regions of the same type on one page, such as multiple navigation options. WAI-ARIA provides simple mechanisms to label a region, enabling users to easily navigate around the page.</p>
+
+    <p>Sections should also be organized using <a href="../headings/">headings</a>.</p>
+
+    <h2 class="ap" id="using-aria-label">Using <code>aria-label</code></h2>
+
+<p>Use the WAI-ARIA <code>aria-label</code> attribute to label the region. This approach can be used if the label is not supposed to appear visually on the page.</p>
+
+      <aside class="ref-side">
+      <div>
+        <svg style="width: 2em;" viewBox="0 0 32 32" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
+            <path d="M16 14 L16 23 M16 8 L16 10" />
+            <circle cx="16" cy="16" r="14" />
+        </svg>
+<p>More <a href="https://www.w3.org/WAI/intro/aria">information about WAI-ARIA</a> is available, including <a href="https://www.w3.org/TR/aria-in-html/">Notes on Using ARIA in HTML</a>.</p>
+
+</div>
+      </aside>
+
+<figure class="code ">
+  <figcaption>Code snippet: </figcaption>
+<pre class="highlight html"><code><span class="nt">&lt;nav</span> <span class="na">aria-label=</span><span class="s">"Main Navigation"</span><span class="nt">&gt;</span>
+  …
+<span class="nt">&lt;/nav&gt;</span>
+</code></pre>
+</figure>
+      <aside class="demo-side">
+      <div>
+        <svg style="width: 2em;" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%"><circle cx="17" cy="15" r="1"/><circle cx="16" cy="16" r="6"/><path d="M2 16S7 6 16 6s14 10 14 10-5 10-14 10S2 16 2 16z"/></symbol>
+<p>A <a href="../example/">complete example</a>, including labels, is available.</p>
+
+</div>
+      </aside>
+<h2 class="ap" id="using-aria-labelledby">Using <code>aria-labelledby</code></h2>
+
+<p>Use the WAI-ARIA <code>aria-labelledby</code> to reference an existing element – like a heading – by its (unique) <code>id</code>. The content of the referenced element is then used as the label. A heading allows users to find the region in multiple ways.</p>
+
+<figure class="code ">
+  <figcaption>Code snippet: </figcaption>
+<pre class="highlight html"><code><span class="nt">&lt;nav</span> <span class="na">aria-labelledby=</span><span class="s">"regionheading"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;h3</span> <span class="na">id=</span><span class="s">"regionheading"</span><span class="nt">&gt;</span>On this Page<span class="nt">&lt;/h3&gt;</span>
+    …
+<span class="nt">&lt;/nav&gt;</span>
+</code></pre>
+</figure>
+
+
+      <div class="resources">
+  <h2 id="related">Related WCAG 2.0 resources</h2>
+  <div class="resources-inner">
+	  <p>These tutorials provide best-practice guidance on implementing accessibility in different situations. This page combined the following WCAG 2.0 success criteria and techniques from different conformance levels:</p>
+
+	    <p><strong>Success Criteria:</strong></p>
+	    <ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	            <li><p><a href="http://www.w3.org/WAI/WCAG20/quickref/#qr-navigation-mechanisms-skip">2.4.1 Bypass Blocks:</a> A mechanism is available to bypass blocks of content that are repeated on multiple Web pages. (Level&nbsp;A)</p></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+	            <li><p><a href="http://www.w3.org/WAI/WCAG20/quickref/#qr-navigation-mechanisms-descriptive">2.4.6 Headings and Labels:</a> Headings and labels describe topic or purpose. (Level&nbsp;AA)</p></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	    </ul>
+
+
+	    <p><strong>Techniques:</strong></p>
+	    <ul>
+
+
+
+
+
+
+
+
+
+
+
+	            <li><a href="http://www.w3.org/TR/WCAG20-TECHS/ARIA11">ARIA11: Using ARIA landmarks to identify regions of a page</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	            <li><a href="http://www.w3.org/TR/WCAG20-TECHS/H69">H69: Providing heading elements at the beginning of each section of content</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	    </ul>
+
+  </div>
+</div>
+
+
+      <nav role="navigation" aria-label="Previous/Next" id="tools">
+  <ul>
+
+
+
+
+
+          <li class="prev">
+            <span><a rel="prev" class="" href="../regions/"><span class="count"></span><span class="txt"><span class="dir">Previous:</span><span class="title">Page Regions</span></span></a></span>
+          </li>
+
+
+
+
+
+
+
+
+
+
+          <li class="next">
+            <span><a rel="next" class="" href="../headings/"><span class="count"></span><span class="txt"><span class="dir">Next:</span><span class="title">Headings</span></span></a></span>
+          </li>
+
+
+
+
+
+
+
+
+
+
+
+  </ul>
+</nav>
+
+
+      <aside class="side-box github" role="complementary">
+  <h2 class="heading">We welcome your ideas</h2>
+  <p>Please send any ideas, suggestions, or comments to the <a href="mailto:wai-eo-editors@w3.org?subject=[Tutorial%20Feedback]">(publicly-archived) mailing list wai-eo-editors@w3.org</a>. You can also contribute to the <a href="https://github.com/w3c/wai-tutorials" rel="nofollow">code directly on Github</a>.</p>
+
+	<div class="editpage">
+  	<a class="btn" href="https://github.com/w3c/wai-tutorials/blob/master/source/page-structure/labels.html.erb.md">Fork &amp; edit this page on Github</a>
+	</div>
+
+</aside>
+  </article>

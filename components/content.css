@@ -1,0 +1,9 @@
+.with-sidenotes {
+  & * {
+    grid-column: 1/2;
+    grid-auto-flow: dense;
+  }
+  & .ref-side, & .demo-side {
+    grid-column: 2/3;
+  }
+}
