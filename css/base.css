@@ -42,6 +42,16 @@ code {
   font-family: 'Tchig Mono', monospace;
 }
 
+a {
+  color: var(--w3c-blue);
+  &:hover {
+    color: var(--wai-petrol)
+  }
+  &:visited {
+    color: var(--visited-link);
+  }
+}
+
 .default-container, .default-grid {
   max-width: 70rem;
   margin: 0 auto;
