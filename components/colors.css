@@ -10,7 +10,11 @@
   --cloudy: #bccbd3;
   --grey: #686868;
   --line-grey: #ddd;
+  --trans-line-grey: rgba(221, 221, 221, 0.32);
   --off-white: #f2f2f2;
+  --body-bg: #FAFAFC;
   --lt-off-white: #fafafa;
   --pure-white: #ffffff;
+  --visited-link: #660066;
+  --footer-grey: #efefef;
 }
