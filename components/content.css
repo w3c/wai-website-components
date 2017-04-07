@@ -5,5 +5,10 @@
   }
   & .ref-side, & .demo-side {
     grid-column: 2/3;
+    font-size: .875rem;
+    line-height: 1.2;
+    & p:first-of-type {
+      margin-top: 0;
+    }
   }
 }
