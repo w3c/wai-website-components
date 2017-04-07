@@ -36,6 +36,7 @@
 
 .sidenav--list {
   border: 1px solid var(--line-grey);
+  border-width: 0 1px 1px;
   background-color: #fff;
   margin: 0;
   padding:0;
