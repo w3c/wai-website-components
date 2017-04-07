@@ -31,7 +31,7 @@ body {
   line-height: 1.5;
   font-size: 16px;
   font-size: 1rem;
-  background-color: #f2f2f2;
+  background-color: #FAFAFC;
   color: #1d1d1d;
   padding: 0;
   margin: 0;
@@ -39,6 +39,15 @@ body {
 code {
   font-size: 1em;
   font-family: 'Tchig Mono', monospace;
+}
+a {
+  color: #003366
+}
+a:hover {
+  color: #005A6A;
+}
+a:visited {
+  color: #660066;
 }
 .default-container, .default-grid {
   max-width: 1120px;
@@ -80,7 +89,7 @@ code {
 }
 .breadcrumb ul li:after {
   content: " / ";
-  color: #00666f;
+  color: #005A6A;
 }
 .breadcrumb ul li:last-child:after {
   display: none;
@@ -100,6 +109,64 @@ code {
 }
 .with-sidenotes .ref-side, .with-sidenotes .demo-side {
   grid-column: 2/3;
+  font-size: 14px;
+  font-size: .875rem;
+  line-height: 1.2;
+}
+.with-sidenotes .ref-side p:first-of-type, .with-sidenotes .demo-side p:first-of-type {
+  margin-top: 0;
+}
+.page-footer, .site-footer {
+  font-size: 12px;
+  font-size: .75rem;
+  padding: 16px 0
+}
+.page-footer p:first-of-type, .site-footer p:first-of-type {
+  margin-top: 0;
+}
+.page-footer p:last-of-type, .site-footer p:last-of-type {
+  margin-bottom: 0;
+}
+.page-footer {
+  margin-top: 32px;
+  background-color: #efefef;
+}
+.site-footer {
+  padding: 16px 0;
+  background-color: #3b3b3b;
+  color: #ffffff
+}
+.site-footer a {
+  color: #ffffff;
+}
+.site-footer a.largelink {
+  color: #eed009;
+  font-size: 20px;
+  font-size: 1.25rem;
+  text-decoration: none;
+}
+.site-footer a.largelink:hover, .site-footer a.largelink:focus {
+  text-decoration: underline;
+}
+.site-footer .footer-list-header {
+  font-weight: bold;
+  border-bottom: 1px solid rgba(221, 221, 221, .32);
+  padding: 4px 0;
+}
+.site-footer ul {
+  margin: 0;
+  padding: 0;
+}
+.site-footer ul li {
+  list-style:none;
+  padding: 4px 0;
+}
+.site-footer-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2fr 1fr 1fr;
+      grid-template-columns: 2fr 1fr 1fr;
+  grid-column-gap: 32px;
 }
 #site-header {
   background-color: #003366;
@@ -194,14 +261,14 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font-size: 38px;
   font-size: 2.375rem;
-  color: #00666f;
+  color: #005A6A;
   line-height: 1.2;
   font-weight: normal;
 }
 h2 {
   font-size: 22px;
   font-size: 1.375rem;
-  color: #00666f;
+  color: #005A6A;
   line-height: 1.2;
   font-weight: normal;
   border-bottom: 1px solid #ddd;
@@ -209,7 +276,7 @@ h2 {
 h3, h4 {
   font-size: 18px;
   font-size: 1.125rem;
-  color: #00666f;
+  color: #005A6A;
   line-height: 1.4;
 }
 h4 {
@@ -227,7 +294,7 @@ h6 {
 .sidenav {
 }
 .sidenav--head {
-  background-color: #00666f;
+  background-color: #005A6A;
   padding: 8px;
   display:-webkit-box;
   display:-ms-flexbox;
@@ -262,6 +329,7 @@ h6 {
 }
 .sidenav--list {
   border: 1px solid #ddd;
+  border-width: 0 1px 1px;
   background-color: #fff;
   margin: 0;
   padding:0;
@@ -301,7 +369,7 @@ h6 {
   padding: 4px 4px 4px 16px;
 }
 .sidenav--list a[aria-current] {
-  color: #00666f;
+  color: #005A6A;
   padding-bottom: 4px;
 }
 .sidenav--list a[aria-current=page] {
