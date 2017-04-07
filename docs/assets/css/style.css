@@ -74,6 +74,25 @@ a:visited {
 .leftcol article {
   grid-column: 2 / 4;
 }
+button, .button {
+  border-radius: 5px;
+  display: inline-block;
+  padding: 8px 12px;
+  border: none;
+  font-size: 13px;
+  font-size: .8125rem;
+  line-height: 1.125;
+  color: #ffffff;
+  background-color: #005A6A;
+  text-decoration: none;
+  font-weight: bold
+}
+button:hover, button:focus, .button:hover, .button:focus {
+  background-color: #003366;
+}
+button:disabled, .button:disabled {
+  opacity: .75;
+}
 .breadcrumb {
   font-size: 13px;
   font-size: .8125rem;
