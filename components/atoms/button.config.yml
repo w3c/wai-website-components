@@ -1,0 +1,14 @@
+collated: true
+variants:
+- name: default
+  context:
+    label: Button
+- name: disabled
+  context:
+    label: Disabled button
+    disabled: true
+- name: link
+  context:
+    label: Link Button
+    href: '#'
+    mods: [more]

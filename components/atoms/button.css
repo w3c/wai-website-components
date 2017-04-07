@@ -1,0 +1,18 @@
+button, .button {
+  border-radius: 5px;
+  display: inline-block;
+  padding: 8px 12px;
+  border: none;
+  font-size: .8125rem;
+  line-height: 1.125;
+  color: var(--pure-white);
+  background-color: var(--wai-petrol);
+  text-decoration: none;
+  font-weight: bold;
+  &:hover, &:focus {
+    background-color: var(--w3c-blue);
+  }
+  &:disabled {
+    opacity: .75;
+  }
+}
