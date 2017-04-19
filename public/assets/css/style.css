@@ -1984,13 +1984,19 @@ Single-colored icons can be modified like so:
 .sidenav--head-icon {
   padding-bottom: .3em;
 }
-.sidenav--head-icon-dummy {
-  background-color: #ffffff;
-  width: 47px;
-  height: 47px;
+.sidenav--head-icon--inner {
+  background-color: rgba(255, 255, 255, .5);
+  width: 32px;
+  height: 32px;
+  padding: 8px;
   float: left;
   margin-right: 8px;
   border-radius: 50%;
+  color: #c0272d;
+}
+.sidenav--head-icon--inner svg {
+  width: 100%;
+  height: 100%;
 }
 .sidenav--head-section {
   color: #ffffff;

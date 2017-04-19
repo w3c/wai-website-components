@@ -1,2 +1,4 @@
-title: Sidenav header
-status: wip
+title: "Sidenav header"
+context:
+  section: Tutorials
+  header: Page Structure

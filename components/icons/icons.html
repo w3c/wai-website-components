@@ -1,8 +1,5 @@
-
 {%- if label -%}
-<svg aria-label="{{ label }}" class="icon-{{ name }}"><use xlink:href="{{ "/assets/images/icons.svg" | path }}#icon-{{ name }}"></use></svg><span class="name"> icon-{{ name }}</span>
+<svg aria-label="{{ label }}" class="icon-{{ name }}"><use xlink:href="{{ "/assets/images/icons.svg" | path }}#icon-{{ name }}"></use></svg>
 {%- else -%}
-<svg aria-hidden="true" class="icon-{{ name }}"><use xlink:href="{{ "/assets/images/icons.svg" | path }}#icon-{{ name }}"></use></svg><span class="name"> icon-{{ name }}</span>
+<svg aria-hidden="true" class="icon-{{ name }}"><use xlink:href="{{ "/assets/images/icons.svg" | path }}#icon-{{ name }}"></use></svg>
 {%- endif -%}
-
-<br>
