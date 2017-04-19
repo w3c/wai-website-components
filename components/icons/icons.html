@@ -1,7 +1,8 @@
-{%- if name != default -%}
+
 {%- if label -%}
 <svg aria-label="{{ label }}" class="icon-{{ name }}"><use xlink:href="{{ "/assets/images/icons.svg" | path }}#icon-{{ name }}"></use></svg><span class="name"> icon-{{ name }}</span>
 {%- else -%}
 <svg aria-hidden="true" class="icon-{{ name }}"><use xlink:href="{{ "/assets/images/icons.svg" | path }}#icon-{{ name }}"></use></svg><span class="name"> icon-{{ name }}</span>
 {%- endif -%}
-{%- endif -%}
+
+<br>

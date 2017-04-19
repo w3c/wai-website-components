@@ -1,3 +1,5 @@
+collated: true
+default: stop
 variants:
 - name: asterisk
   context:
