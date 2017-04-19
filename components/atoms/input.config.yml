@@ -1,0 +1,18 @@
+label: Input Types
+variants:
+- name: default
+  context:
+    label: Text
+    type: text
+- name: Search
+  context:
+    label: Search
+    type: search
+- name: email
+  context:
+    label: Email
+    type: email
+- name: url
+  context:
+    label: URL
+    type: url

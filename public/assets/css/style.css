@@ -93,6 +93,31 @@ button:hover, button:focus, .button:hover, .button:focus {
 button:disabled, .button:disabled {
   opacity: .75;
 }
+table, caption {
+  text-align: left;
+}
+table {
+  border: 1px solid #ddd;
+  border-collapse: collapse;
+  margin-bottom: 2em;
+}
+caption {
+  font-weight: bold;
+  font-size: 18px;
+  font-size: 1.125rem;
+  color: #005A6A;
+  line-height: 1.4;
+  margin-bottom: 8px;
+}
+th, td {
+  padding: 12px 18px;
+  border: 1px solid #ddd;
+}
+th {
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #005A6A;
+}
 .breadcrumb {
   font-size: 13px;
   font-size: .8125rem;

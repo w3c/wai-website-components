@@ -1,0 +1,24 @@
+table, caption {
+  text-align: left;
+}
+table {
+  border: 1px solid var(--line-grey);
+  border-collapse: collapse;
+  margin-bottom: 2em;
+}
+caption {
+  font-weight: bold;
+  font-size: 1.125rem;
+  color: var(--wai-petrol);
+  line-height: 1.4;
+  margin-bottom: 8px;
+}
+th, td {
+  padding: 12px 18px;
+  border: 1px solid var(--line-grey);
+}
+th {
+  font-weight: bold;
+  color: var(--pure-white);
+  background-color: var(--wai-petrol);
+}

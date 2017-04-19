@@ -93,6 +93,31 @@ button:hover, button:focus, .button:hover, .button:focus {
 button:disabled, .button:disabled {
   opacity: .75;
 }
+table, caption {
+  text-align: left;
+}
+table {
+  border: 1px solid #ddd;
+  border-collapse: collapse;
+  margin-bottom: 2em;
+}
+caption {
+  font-weight: bold;
+  font-size: 18px;
+  font-size: 1.125rem;
+  color: #005A6A;
+  line-height: 1.4;
+  margin-bottom: 8px;
+}
+th, td {
+  padding: 12px 18px;
+  border: 1px solid #ddd;
+}
+th {
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #005A6A;
+}
 .breadcrumb {
   font-size: 13px;
   font-size: .8125rem;
@@ -1984,13 +2009,19 @@ Single-colored icons can be modified like so:
 .sidenav--head-icon {
   padding-bottom: .3em;
 }
-.sidenav--head-icon-dummy {
-  background-color: #ffffff;
-  width: 47px;
-  height: 47px;
+.sidenav--head-icon--inner {
+  background-color: rgba(255, 255, 255, .5);
+  width: 32px;
+  height: 32px;
+  padding: 8px;
   float: left;
   margin-right: 8px;
   border-radius: 50%;
+  color: #c0272d;
+}
+.sidenav--head-icon--inner svg {
+  width: 100%;
+  height: 100%;
 }
 .sidenav--head-section {
   color: #ffffff;
