@@ -1,0 +1,40 @@
+
+
+<!DOCTYPE html>
+<!--
+    PHP: Check if fonts-loaded cookie has been set.
+    If so, add the `fonts-loaded` class to the `html` element.
+-->
+<html lang="en-gb" dir="ltr" prefix="og: http://ogp.me/ns#" class="no-js fonts-loaded">
+  <head>
+    <script>
+      document.documentElement.className = document.documentElement.className.replace('no-js', 'has-js');
+
+      function downloadJSAtOnload() {
+        var element = document.createElement("script");
+        element.src = "../../assets/scripts/main.js";
+        document.body.appendChild(element);
+        document.body.dataset.menuExpanded = 'false';
+      }
+
+      window.addEventListener("load", downloadJSAtOnload, false);
+    </script>
+
+    <meta charset="utf-8"/>
+    <meta name="referrer" content="origin"/>
+    <meta name="robots" content="index, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="format-detection" content="telephone=no"><meta property="og:title" content=""/><meta property="og:description" content=""/><meta property="og:url" content=""/><meta property="og:image" content="../../assets/icons/icon.png"/><meta name="twitter:card" content="summary"/>
+    <meta name="twitter:site" content="@"/>
+
+    <link rel="stylesheet" href="../../assets/css/style.css">
+
+    <title> &#9670; Web Accessibility Initiative (WAI) &#9670; W3C</title>
+  </head>
+
+  <body>
+    <svg aria-hidden="true" class="icon-space-shuttle"><use xlink:href="../../assets/images/icons.svg#icon-space-shuttle"></use></svg><span class="name"> icon-space-shuttle</span><br>
+
+  </body>
+</html>
+
