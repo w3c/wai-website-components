@@ -1994,6 +1994,107 @@ Single-colored icons can be modified like so:
 .icon-meetup {
   width: 1.0675em;
 }
+.pager {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 100%;
+          flex: 1 100%;
+}
+.pager > ul {
+  -ms-flex-line-pack: center;
+      align-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 100%;
+          flex: 1 100%;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  margin: 0;
+  padding: 18px;
+}
+.pager--item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 auto;
+          flex: 1 auto;
+  list-style: none;
+}
+.pager--item a:link {
+  color: #005A6A;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 100%;
+          flex: 1 100%;
+  text-decoration: none;
+}
+.pager--item a:visited {
+  color: #660066;
+}
+.pager--item a:hover,
+.pager--item a:focus {
+  color: #003366;
+}
+.pager--item a:active {
+  color: #005A6A;
+}
+.pager--item:last-child a {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  text-align: right;
+}
+.pager--item-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 33px;
+}
+.pager--item-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 auto;
+          flex: 1 auto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.pager--item-text {
+  margin-right: 16px;
+  margin-left: 16px;
+}
+.pager--item-text-direction {
+  color: #1d1d1d;
+  font-size: 13px;
+}
+.pager--item-text-target {
+  font-size: 17px;
+  line-height: 1em;
+}
 .sidenav {
 }
 .sidenav--head {
