@@ -93,6 +93,31 @@ button:hover, button:focus, .button:hover, .button:focus {
 button:disabled, .button:disabled {
   opacity: .75;
 }
+table, caption {
+  text-align: left;
+}
+table {
+  border: 1px solid #ddd;
+  border-collapse: collapse;
+  margin-bottom: 2em;
+}
+caption {
+  font-weight: bold;
+  font-size: 18px;
+  font-size: 1.125rem;
+  color: #005A6A;
+  line-height: 1.4;
+  margin-bottom: 8px;
+}
+th, td {
+  padding: 12px 18px;
+  border: 1px solid #ddd;
+}
+th {
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #005A6A;
+}
 .breadcrumb {
   font-size: 13px;
   font-size: .8125rem;
@@ -310,6 +335,1665 @@ h6 {
   font-size:.875rem+;
   line-height: 1.8;
 }
+[class^="icon-"], [class*=" icon-"] {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+/* ==========================================
+Single-colored icons can be modified like so:
+.icon-name {
+  font-size: 32px;
+  color: red;
+}
+========================================== */
+.icon-asterisk {
+  width: 0.9285714285714285em;
+}
+.icon-plus {
+  width: 0.7857142857142857em;
+}
+.icon-question {
+  width: 0.62em;
+}
+.icon-minus {
+  width: 0.7857142857142857em;
+}
+.icon-music {
+  width: 0.8571428571428571em;
+}
+.icon-search {
+  width: 0.9285714285714285em;
+}
+.icon-star {
+  width: 0.9285714285714285em;
+}
+.icon-star-o {
+  width: 0.9285714285714285em;
+}
+.icon-user {
+  width: 0.7142857142857142em;
+}
+.icon-film {
+  width: 1.0714285714285714em;
+}
+.icon-th-large {
+  width: 0.9285714285714285em;
+}
+.icon-close {
+  width: 0.7857142857142857em;
+}
+.icon-search-plus {
+  width: 0.9285714285714285em;
+}
+.icon-search-minus {
+  width: 0.9285714285714285em;
+}
+.icon-power-off {
+  width: 0.8571428571428571em;
+}
+.icon-cog {
+  width: 0.8571428571428571em;
+}
+.icon-trash-o {
+  width: 0.7857142857142857em;
+}
+.icon-home {
+  width: 0.9285714285714285em;
+}
+.icon-file-o {
+  width: 0.8571428571428571em;
+}
+.icon-clock-o {
+  width: 0.8571428571428571em;
+}
+.icon-road {
+  width: 1.0714285714285714em;
+}
+.icon-download {
+  width: 0.9285714285714285em;
+}
+.icon-arrow-circle-o-down {
+  width: 0.8571428571428571em;
+}
+.icon-arrow-circle-o-up {
+  width: 0.8571428571428571em;
+}
+.icon-inbox {
+  width: 0.8571428571428571em;
+}
+.icon-play-circle-o {
+  width: 0.8571428571428571em;
+}
+.icon-repeat {
+  width: 0.8571428571428571em;
+}
+.icon-refresh {
+  width: 0.8571428571428571em;
+}
+.icon-lock {
+  width: 0.6428571428571428em;
+}
+.icon-flag {
+  width: 1.0357142857142856em;
+}
+.icon-headphones {
+  width: 0.9285714285714285em;
+}
+.icon-volume-off {
+  width: 0.42857142857142855em;
+}
+.icon-volume-down {
+  width: 0.6428571428571428em;
+}
+.icon-volume-up {
+  width: 0.9285714285714285em;
+}
+.icon-qrcode {
+  width: 0.7857142857142857em;
+}
+.icon-tag {
+  width: 0.8454285714285714em;
+}
+.icon-tags {
+  width: 1.0597142857142856em;
+}
+.icon-book {
+  width: 0.9302142857142857em;
+}
+.icon-bookmark {
+  width: 0.7142857142857142em;
+}
+.icon-print {
+  width: 0.9285714285714285em;
+}
+.icon-camera {
+  width: 1.0714285714285714em;
+}
+.icon-font {
+  width: 0.9285714285714285em;
+}
+.icon-bold {
+  width: 0.7857142857142857em;
+}
+.icon-italic {
+  width: 0.5714285714285714em;
+}
+.icon-text-height {
+  width: 1.0055714285714286em;
+}
+.icon-text-width {
+  width: 0.8577142857142857em;
+}
+.icon-image {
+  width: 1.0714285714285714em;
+}
+.icon-pencil {
+  width: 0.8454285714285714em;
+}
+.icon-map-marker {
+  width: 0.5714285714285714em;
+}
+.icon-adjust {
+  width: 0.8571428571428571em;
+}
+.icon-tint {
+  width: 0.5714285714285714em;
+}
+.icon-edit {
+  width: 1.0005714285714284em;
+}
+.icon-share-square-o {
+  width: 0.9319285714285714em;
+}
+.icon-check-square-o {
+  width: 0.9324999999999999em;
+}
+.icon-step-backward {
+  width: 0.5714285714285714em;
+}
+.icon-backward {
+  width: 0.9932857142857143em;
+}
+.icon-play {
+  width: 0.7896428571428571em;
+}
+.icon-pause {
+  width: 0.8571428571428571em;
+}
+.icon-stop {
+  width: 0.8571428571428571em;
+}
+.icon-forward {
+  width: 0.8638571428571428em;
+}
+.icon-step-forward {
+  width: 0.5714285714285714em;
+}
+.icon-eject {
+  width: 0.8582857142857142em;
+}
+.icon-chevron-left {
+  width: 0.75em;
+}
+.icon-chevron-right {
+  width: 0.6785714285714285em;
+}
+.icon-plus-circle {
+  width: 0.8571428571428571em;
+}
+.icon-minus-circle {
+  width: 0.8571428571428571em;
+}
+.icon-times-circle {
+  width: 0.8571428571428571em;
+}
+.icon-check-circle {
+  width: 0.8571428571428571em;
+}
+.icon-question-circle {
+  width: 0.8571428571428571em;
+}
+.icon-info-circle {
+  width: 0.8571428571428571em;
+}
+.icon-crosshairs {
+  width: 0.8571428571428571em;
+}
+.icon-times-circle-o {
+  width: 0.8571428571428571em;
+}
+.icon-check-circle-o {
+  width: 0.8571428571428571em;
+}
+.icon-ban {
+  width: 0.8571428571428571em;
+}
+.icon-arrow-left {
+  width: 0.8928571428571428em;
+}
+.icon-arrow-right {
+  width: 0.8214285714285714em;
+}
+.icon-arrow-up {
+  width: 0.9285714285714285em;
+}
+.icon-arrow-down {
+  width: 0.9285714285714285em;
+}
+.icon-expand {
+  width: 0.8571428571428571em;
+}
+.icon-compress {
+  width: 0.8571428571428571em;
+}
+.icon-exclamation-circle {
+  width: 0.8571428571428571em;
+}
+.icon-gift {
+  width: 0.8571428571428571em;
+}
+.icon-fire {
+  width: 0.7857142857142857em;
+}
+.icon-plane {
+  width: 0.803em;
+}
+.icon-calendar {
+  width: 0.9285714285714285em;
+}
+.icon-magnet {
+  width: 0.8571428571428571em;
+}
+.icon-retweet {
+  width: 1.0714285714285714em;
+}
+.icon-shopping-cart {
+  width: 0.9285714285714285em;
+}
+.icon-folder {
+  width: 0.9285714285714285em;
+}
+.icon-folder-open {
+  width: 1.0485714285714285em;
+}
+.icon-arrows-v {
+  width: 0.42857142857142855em;
+}
+.icon-bar-chart {
+  width: 1.1428571428571428em;
+}
+.icon-twitter-square {
+  width: 0.8571428571428571em;
+}
+.icon-facebook-square {
+  width: 0.8571428571428571em;
+}
+.icon-key {
+  width: 0.9391428571428571em;
+}
+.icon-cogs {
+  width: 1.0714285714285714em;
+}
+.icon-thumbs-o-up {
+  width: 0.8571428571428571em;
+}
+.icon-thumbs-o-down {
+  width: 0.8571428571428571em;
+}
+.icon-star-half {
+  width: 0.46428571428571425em;
+}
+.icon-sign-out {
+  width: 0.875em;
+}
+.icon-linkedin-square {
+  width: 0.8571428571428571em;
+}
+.icon-thumb-tack {
+  width: 0.6428571428571428em;
+}
+.icon-sign-in {
+  width: 0.8571428571428571em;
+}
+.icon-trophy {
+  width: 0.9285714285714285em;
+}
+.icon-github-square {
+  width: 0.8571428571428571em;
+}
+.icon-upload {
+  width: 0.9285714285714285em;
+}
+.icon-lemon-o {
+  width: 0.8565714285714285em;
+}
+.icon-phone {
+  width: 0.7857142857142857em;
+}
+.icon-square-o {
+  width: 0.7857142857142857em;
+}
+.icon-bookmark-o {
+  width: 0.7142857142857142em;
+}
+.icon-phone-square {
+  width: 0.8571428571428571em;
+}
+.icon-twitter {
+  width: 0.9285714285714285em;
+}
+.icon-facebook {
+  width: 0.5881428571428571em;
+}
+.icon-github {
+  width: 0.8571428571428571em;
+}
+.icon-unlock {
+  width: 0.9285714285714285em;
+}
+.icon-credit-card {
+  width: 1.0714285714285714em;
+}
+.icon-feed {
+  width: 0.7862857142857141em;
+}
+.icon-hdd-o {
+  width: 0.8571428571428571em;
+}
+.icon-certificate {
+  width: 0.8571428571428571em;
+}
+.icon-hand-o-up {
+  width: 0.8571428571428571em;
+}
+.icon-hand-o-down {
+  width: 0.8571428571428571em;
+}
+.icon-arrow-circle-left {
+  width: 0.8571428571428571em;
+}
+.icon-arrow-circle-right {
+  width: 0.8571428571428571em;
+}
+.icon-arrow-circle-up {
+  width: 0.8571428571428571em;
+}
+.icon-arrow-circle-down {
+  width: 0.8571428571428571em;
+}
+.icon-globe {
+  width: 0.8571428571428571em;
+}
+.icon-wrench {
+  width: 0.9391428571428571em;
+}
+.icon-filter {
+  width: 0.7857142857142857em;
+}
+.icon-arrows-alt {
+  width: 0.8571428571428571em;
+}
+.icon-group {
+  width: 1.0714285714285714em;
+}
+.icon-chain {
+  width: 0.9285714285714285em;
+}
+.icon-cloud {
+  width: 1.0714285714285714em;
+}
+.icon-flask {
+  width: 0.9285714285714285em;
+}
+.icon-cut {
+  width: 0.9977857142857142em;
+}
+.icon-paperclip {
+  width: 0.7857142857142857em;
+}
+.icon-floppy-o {
+  width: 0.8571428571428571em;
+}
+.icon-square {
+  width: 0.8571428571428571em;
+}
+.icon-bars {
+  width: 0.8571428571428571em;
+}
+.icon-list-ol {
+  width: 1.008357142857143em;
+}
+.icon-underline {
+  width: 0.8571428571428571em;
+}
+.icon-table {
+  width: 0.9285714285714285em;
+}
+.icon-magic {
+  width: 0.9436428571428571em;
+}
+.icon-truck {
+  width: 1.0357142857142856em;
+}
+.icon-pinterest {
+  width: 0.8571428571428571em;
+}
+.icon-pinterest-square {
+  width: 0.8571428571428571em;
+}
+.icon-google-plus-square {
+  width: 0.8571428571428571em;
+}
+.icon-google-plus {
+  width: 1.2857142857142856em;
+}
+.icon-money {
+  width: 1.0714285714285714em;
+}
+.icon-caret-down {
+  width: 0.5714285714285714em;
+}
+.icon-caret-up {
+  width: 0.5714285714285714em;
+}
+.icon-caret-left {
+  width: 0.39285714285714285em;
+}
+.icon-caret-right {
+  width: 0.3214285714285714em;
+}
+.icon-columns {
+  width: 0.9285714285714285em;
+}
+.icon-sort {
+  width: 0.5714285714285714em;
+}
+.icon-sort-desc {
+  width: 0.5714285714285714em;
+}
+.icon-sort-asc {
+  width: 0.5714285714285714em;
+}
+.icon-linkedin {
+  width: 0.8571428571428571em;
+}
+.icon-rotate-left {
+  width: 0.8571428571428571em;
+}
+.icon-gavel {
+  width: 1.0105714285714285em;
+}
+.icon-bolt {
+  width: 0.5005714285714286em;
+}
+.icon-umbrella {
+  width: 0.9285714285714285em;
+}
+.icon-lightbulb-o {
+  width: 0.5714285714285714em;
+}
+.icon-cloud-download {
+  width: 1.0714285714285714em;
+}
+.icon-cloud-upload {
+  width: 1.0714285714285714em;
+}
+.icon-user-md {
+  width: 0.7857142857142857em;
+}
+.icon-stethoscope {
+  width: 0.7857142857142857em;
+}
+.icon-coffee {
+  width: 1.0357142857142856em;
+}
+.icon-cutlery {
+  width: 0.7857142857142857em;
+}
+.icon-file-text-o {
+  width: 0.8571428571428571em;
+}
+.icon-building-o {
+  width: 0.7857142857142857em;
+}
+.icon-hospital-o {
+  width: 0.7857142857142857em;
+}
+.icon-ambulance {
+  width: 1.107142857142857em;
+}
+.icon-fighter-jet {
+  width: 1.0714285714285714em;
+}
+.icon-beer {
+  width: 0.9642857142857142em;
+}
+.icon-h-square {
+  width: 0.8571428571428571em;
+}
+.icon-plus-square {
+  width: 0.8571428571428571em;
+}
+.icon-angle-double-left {
+  width: 0.5892857142857143em;
+}
+.icon-angle-double-right {
+  width: 0.5535714285714285em;
+}
+.icon-angle-double-up {
+  width: 0.6428571428571428em;
+}
+.icon-angle-double-down {
+  width: 0.6428571428571428em;
+}
+.icon-angle-left {
+  width: 0.375em;
+}
+.icon-angle-right {
+  width: 0.33928571428571425em;
+}
+.icon-angle-up {
+  width: 0.6428571428571428em;
+}
+.icon-angle-down {
+  width: 0.6428571428571428em;
+}
+.icon-desktop {
+  width: 1.0714285714285714em;
+}
+.icon-laptop {
+  width: 1.0714285714285714em;
+}
+.icon-tablet {
+  width: 0.6428571428571428em;
+}
+.icon-mobile {
+  width: 0.42857142857142855em;
+}
+.icon-circle-o {
+  width: 0.8571428571428571em;
+}
+.icon-quote-left {
+  width: 0.9285714285714285em;
+}
+.icon-quote-right {
+  width: 0.9285714285714285em;
+}
+.icon-circle {
+  width: 0.8571428571428571em;
+}
+.icon-github-alt {
+  width: 0.9285714285714285em;
+}
+.icon-folder-o {
+  width: 0.9285714285714285em;
+}
+.icon-folder-open-o {
+  width: 1.0652857142857142em;
+}
+.icon-smile-o {
+  width: 0.8571428571428571em;
+}
+.icon-frown-o {
+  width: 0.8571428571428571em;
+}
+.icon-meh-o {
+  width: 0.8571428571428571em;
+}
+.icon-gamepad {
+  width: 1.0714285714285714em;
+}
+.icon-keyboard-o {
+  width: 1.0714285714285714em;
+}
+.icon-flag-o {
+  width: 1.0357142857142856em;
+}
+.icon-flag-checkered {
+  width: 1.0357142857142856em;
+}
+.icon-terminal {
+  width: 0.934142857142857em;
+}
+.icon-code {
+  width: 1.0714285714285714em;
+}
+.icon-mail-reply-all {
+  width: 0.996642857142857em;
+}
+.icon-star-half-empty {
+  width: 0.9285714285714285em;
+}
+.icon-location-arrow {
+  width: 0.7862857142857141em;
+}
+.icon-crop {
+  width: 0.9302142857142857em;
+}
+.icon-code-fork {
+  width: 0.5714285714285714em;
+}
+.icon-chain-broken {
+  width: 0.9285714285714285em;
+}
+.icon-info {
+  width: 0.3571428571428571em;
+}
+.icon-exclamation {
+  width: 0.3571428571428571em;
+}
+.icon-superscript {
+  width: 0.8587857142857143em;
+}
+.icon-subscript {
+  width: 0.8599285714285714em;
+}
+.icon-eraser {
+  width: 1.0714285714285714em;
+}
+.icon-puzzle-piece {
+  width: 0.9285714285714285em;
+}
+.icon-microphone {
+  width: 0.6428571428571428em;
+}
+.icon-microphone-slash {
+  width: 0.7857142857142857em;
+}
+.icon-shield {
+  width: 0.7142857142857142em;
+}
+.icon-calendar-o {
+  width: 0.9285714285714285em;
+}
+.icon-fire-extinguisher {
+  width: 0.7807142857142857em;
+}
+.icon-rocket {
+  width: 0.9447857142857142em;
+}
+.icon-maxcdn {
+  width: 0.9894285714285714em;
+}
+.icon-chevron-circle-left {
+  width: 0.8571428571428571em;
+}
+.icon-chevron-circle-right {
+  width: 0.8571428571428571em;
+}
+.icon-chevron-circle-up {
+  width: 0.8571428571428571em;
+}
+.icon-chevron-circle-down {
+  width: 0.8571428571428571em;
+}
+.icon-html5 {
+  width: 0.7857142857142857em;
+}
+.icon-unlock-alt {
+  width: 0.6428571428571428em;
+}
+.icon-bullseye {
+  width: 0.8571428571428571em;
+}
+.icon-ellipsis-h {
+  width: 0.7857142857142857em;
+}
+.icon-ellipsis-v {
+  width: 0.21428571428571427em;
+}
+.icon-rss-square {
+  width: 0.8571428571428571em;
+}
+.icon-play-circle {
+  width: 0.8571428571428571em;
+}
+.icon-minus-square {
+  width: 0.8571428571428571em;
+}
+.icon-minus-square-o {
+  width: 0.7857142857142857em;
+}
+.icon-level-up {
+  width: 0.5730714285714286em;
+}
+.icon-level-down {
+  width: 0.5730714285714286em;
+}
+.icon-check-square {
+  width: 0.8571428571428571em;
+}
+.icon-pencil-square {
+  width: 0.8571428571428571em;
+}
+.icon-external-link-square {
+  width: 0.8571428571428571em;
+}
+.icon-share-square {
+  width: 0.8571428571428571em;
+}
+.icon-compass {
+  width: 0.8571428571428571em;
+}
+.icon-caret-square-o-down {
+  width: 0.8571428571428571em;
+}
+.icon-caret-square-o-up {
+  width: 0.8571428571428571em;
+}
+.icon-caret-square-o-right {
+  width: 0.8571428571428571em;
+}
+.icon-eur {
+  width: 0.5664285714285714em;
+}
+.icon-gbp {
+  width: 0.5692142857142857em;
+}
+.icon-dollar {
+  width: 0.5697857142857142em;
+}
+.icon-inr {
+  width: 0.5011428571428571em;
+}
+.icon-cny {
+  width: 0.5730714285714286em;
+}
+.icon-rouble {
+  width: 0.7142857142857142em;
+}
+.icon-bitcoin {
+  width: 0.7422142857142857em;
+}
+.icon-file {
+  width: 0.8571428571428571em;
+}
+.icon-file-text {
+  width: 0.8571428571428571em;
+}
+.icon-sort-alpha-asc {
+  width: 0.9430714285714284em;
+}
+.icon-sort-alpha-desc {
+  width: 0.9430714285714284em;
+}
+.icon-sort-amount-asc {
+  width: 1.0162142857142857em;
+}
+.icon-sort-amount-desc {
+  width: 1.0162142857142857em;
+}
+.icon-sort-numeric-asc {
+  width: 0.8454285714285714em;
+}
+.icon-sort-numeric-desc {
+  width: 0.8454285714285714em;
+}
+.icon-thumbs-up {
+  width: 0.8928571428571428em;
+}
+.icon-thumbs-down {
+  width: 0.8928571428571428em;
+}
+.icon-youtube-square {
+  width: 0.8571428571428571em;
+}
+.icon-youtube {
+  width: 0.8571428571428571em;
+}
+.icon-xing {
+  width: 0.7857142857142857em;
+}
+.icon-xing-square {
+  width: 0.8571428571428571em;
+}
+.icon-stack-overflow {
+  width: 0.8571428571428571em;
+}
+.icon-instagram {
+  width: 0.8571428571428571em;
+}
+.icon-flickr {
+  width: 0.8571428571428571em;
+}
+.icon-adn {
+  width: 0.8571428571428571em;
+}
+.icon-bitbucket {
+  width: 0.790142857142857em;
+}
+.icon-bitbucket-square {
+  width: 0.8571428571428571em;
+}
+.icon-tumblr {
+  width: 0.6093571428571428em;
+}
+.icon-tumblr-square {
+  width: 0.8571428571428571em;
+}
+.icon-long-arrow-down {
+  width: 0.42857142857142855em;
+}
+.icon-long-arrow-up {
+  width: 0.42857142857142855em;
+}
+.icon-long-arrow-left {
+  width: 1.0357142857142856em;
+}
+.icon-long-arrow-right {
+  width: 0.9642857142857142em;
+}
+.icon-apple {
+  width: 0.7773571428571427em;
+}
+.icon-windows {
+  width: 0.9285714285714285em;
+}
+.icon-android {
+  width: 0.7857142857142857em;
+}
+.icon-linux {
+  width: 0.8939999999999999em;
+}
+.icon-dribbble {
+  width: 0.8571428571428571em;
+}
+.icon-skype {
+  width: 0.8571428571428571em;
+}
+.icon-foursquare {
+  width: 0.7248571428571428em;
+}
+.icon-trello {
+  width: 0.8571428571428571em;
+}
+.icon-female {
+  width: 0.7142857142857142em;
+}
+.icon-male {
+  width: 0.5714285714285714em;
+}
+.icon-gittip {
+  width: 0.8571428571428571em;
+}
+.icon-moon-o {
+  width: 0.8236428571428571em;
+}
+.icon-bug {
+  width: 0.9285714285714285em;
+}
+.icon-vk {
+  width: 1.092642857142857em;
+}
+.icon-weibo {
+  width: 1.0150714285714286em;
+}
+.icon-renren {
+  width: 0.8571428571428571em;
+}
+.icon-pagelines {
+  width: 0.7823571428571428em;
+}
+.icon-stack-exchange {
+  width: 0.7142857142857142em;
+}
+.icon-arrow-circle-o-right {
+  width: 0.8571428571428571em;
+}
+.icon-arrow-circle-o-left {
+  width: 0.8571428571428571em;
+}
+.icon-caret-square-o-left {
+  width: 0.8571428571428571em;
+}
+.icon-dot-circle-o {
+  width: 0.8571428571428571em;
+}
+.icon-wheelchair {
+  width: 0.9090714285714285em;
+}
+.icon-vimeo-square {
+  width: 0.8571428571428571em;
+}
+.icon-try {
+  width: 0.6428571428571428em;
+}
+.icon-plus-square-o {
+  width: 0.7857142857142857em;
+}
+.icon-space-shuttle {
+  width: 1.2142857142857142em;
+}
+.icon-slack {
+  width: 0.9285714285714285em;
+}
+.icon-envelope-square {
+  width: 0.8571428571428571em;
+}
+.icon-bank {
+  width: 1.0714285714285714em;
+}
+.icon-graduation-cap {
+  width: 1.2857142857142856em;
+}
+.icon-yahoo {
+  width: 0.8571428571428571em;
+}
+.icon-google {
+  width: 0.8398571428571427em;
+}
+.icon-reddit-square {
+  width: 0.8571428571428571em;
+}
+.icon-stumbleupon-circle {
+  width: 0.8571428571428571em;
+}
+.icon-stumbleupon {
+  width: 1.0714285714285714em;
+}
+.icon-delicious {
+  width: 0.8571428571428571em;
+}
+.icon-digg {
+  width: 1.1428571428571428em;
+}
+.icon-pied-piper-pp {
+  width: 0.8571428571428571em;
+}
+.icon-pied-piper-alt {
+  width: 1.1372857142857142em;
+}
+.icon-drupal {
+  width: 0.8571428571428571em;
+}
+.icon-joomla {
+  width: 0.8571428571428571em;
+}
+.icon-language {
+  width: 0.8571428571428571em;
+}
+.icon-building {
+  width: 0.7857142857142857em;
+}
+.icon-child {
+  width: 0.7142857142857142em;
+}
+.icon-paw {
+  width: 0.9285714285714285em;
+}
+.icon-spoon {
+  width: 0.42857142857142855em;
+}
+.icon-cube {
+  width: 0.9285714285714285em;
+}
+.icon-cubes {
+  width: 1.2142857142857142em;
+}
+.icon-behance {
+  width: 1.1428571428571428em;
+}
+.icon-behance-square {
+  width: 0.8571428571428571em;
+}
+.icon-steam-square {
+  width: 0.8571428571428571em;
+}
+.icon-recycle {
+  width: 1.0022142857142857em;
+}
+.icon-automobile {
+  width: 1.1428571428571428em;
+}
+.icon-cab {
+  width: 1.1428571428571428em;
+}
+.icon-tree {
+  width: 0.8571428571428571em;
+}
+.icon-spotify {
+  width: 0.8571428571428571em;
+}
+.icon-deviantart {
+  width: 0.5714285714285714em;
+}
+.icon-soundcloud {
+  width: 1.2857142857142856em;
+}
+.icon-database {
+  width: 0.8571428571428571em;
+}
+.icon-file-pdf-o {
+  width: 0.8571428571428571em;
+}
+.icon-file-word-o {
+  width: 0.8571428571428571em;
+}
+.icon-file-excel-o {
+  width: 0.8571428571428571em;
+}
+.icon-file-powerpoint-o {
+  width: 0.8571428571428571em;
+}
+.icon-file-image-o {
+  width: 0.8571428571428571em;
+}
+.icon-file-archive-o {
+  width: 0.8571428571428571em;
+}
+.icon-file-audio-o {
+  width: 0.8571428571428571em;
+}
+.icon-file-movie-o {
+  width: 0.8571428571428571em;
+}
+.icon-file-code-o {
+  width: 0.8571428571428571em;
+}
+.icon-vine {
+  width: 0.8571428571428571em;
+}
+.icon-jsfiddle {
+  width: 1.1428571428571428em;
+}
+.icon-ra {
+  width: 0.9960714285714285em;
+}
+.icon-git-square {
+  width: 0.8571428571428571em;
+}
+.icon-hacker-news {
+  width: 0.8571428571428571em;
+}
+.icon-tencent-weibo {
+  width: 0.7142857142857142em;
+}
+.icon-wechat {
+  width: 1.1428571428571428em;
+}
+.icon-paper-plane {
+  width: 1.0011428571428571em;
+}
+.icon-paper-plane-o {
+  width: 1.0005714285714284em;
+}
+.icon-history {
+  width: 0.8571428571428571em;
+}
+.icon-circle-thin {
+  width: 0.8571428571428571em;
+}
+.icon-paragraph {
+  width: 0.7265714285714285em;
+}
+.icon-sliders {
+  width: 0.8571428571428571em;
+}
+.icon-share-alt {
+  width: 0.8571428571428571em;
+}
+.icon-share-alt-square {
+  width: 0.8571428571428571em;
+}
+.icon-plug {
+  width: 1.0067142857142857em;
+}
+.icon-yelp {
+  width: 0.8549285714285714em;
+}
+.icon-newspaper-o {
+  width: 1.1428571428571428em;
+}
+.icon-wifi {
+  width: 1.1428571428571428em;
+}
+.icon-calculator {
+  width: 0.9285714285714285em;
+}
+.icon-paypal {
+  width: 0.8577142857142857em;
+}
+.icon-google-wallet {
+  width: 1.0145em;
+}
+.icon-cc-visa {
+  width: 1.2857142857142856em;
+}
+.icon-cc-mastercard {
+  width: 1.2857142857142856em;
+}
+.icon-cc-discover {
+  width: 1.2857142857142856em;
+}
+.icon-cc-amex {
+  width: 1.2857142857142856em;
+}
+.icon-cc-paypal {
+  width: 1.2857142857142856em;
+}
+.icon-cc-stripe {
+  width: 1.2857142857142856em;
+}
+.icon-bell-slash {
+  width: 1.1428571428571428em;
+}
+.icon-bell-slash-o {
+  width: 1.1428571428571428em;
+}
+.icon-trash {
+  width: 0.7857142857142857em;
+}
+.icon-copyright {
+  width: 0.8571428571428571em;
+}
+.icon-at {
+  width: 0.8571428571428571em;
+}
+.icon-eyedropper {
+  width: 1.0178571428571428em;
+}
+.icon-paint-brush {
+  width: 0.9988571428571428em;
+}
+.icon-area-chart {
+  width: 1.1428571428571428em;
+}
+.icon-pie-chart {
+  width: 0.9642857142857142em;
+}
+.icon-line-chart {
+  width: 1.1428571428571428em;
+}
+.icon-lastfm-square {
+  width: 0.8571428571428571em;
+}
+.icon-toggle-off {
+  width: 1.1428571428571428em;
+}
+.icon-toggle-on {
+  width: 1.1428571428571428em;
+}
+.icon-bicycle {
+  width: 1.2857142857142856em;
+}
+.icon-bus {
+  width: 0.8571428571428571em;
+}
+.icon-ioxhost {
+  width: 1.1428571428571428em;
+}
+.icon-angellist {
+  width: 0.7142857142857142em;
+}
+.icon-cc {
+  width: 1.1428571428571428em;
+}
+.icon-ils {
+  width: 0.7678571428571428em;
+}
+.icon-meanpath {
+  width: 0.8571428571428571em;
+}
+.icon-buysellads {
+  width: 0.8571428571428571em;
+}
+.icon-connectdevelop {
+  width: 1.1428571428571428em;
+}
+.icon-dashcube {
+  width: 0.7857142857142857em;
+}
+.icon-forumbee {
+  width: 0.8571428571428571em;
+}
+.icon-leanpub {
+  width: 1.1428571428571428em;
+}
+.icon-sellsy {
+  width: 1.1428571428571428em;
+}
+.icon-shirtsinbulk {
+  width: 0.8571428571428571em;
+}
+.icon-simplybuilt {
+  width: 1.1428571428571428em;
+}
+.icon-skyatlas {
+  width: 1.1428571428571428em;
+}
+.icon-cart-plus {
+  width: 0.9285714285714285em;
+}
+.icon-cart-arrow-down {
+  width: 0.9285714285714285em;
+}
+.icon-diamond {
+  width: 1.1428571428571428em;
+}
+.icon-ship {
+  width: 1.1428571428571428em;
+}
+.icon-user-secret {
+  width: 0.7857142857142857em;
+}
+.icon-motorcycle {
+  width: 1.3019285714285713em;
+}
+.icon-street-view {
+  width: 0.7857142857142857em;
+}
+.icon-venus {
+  width: 0.63em;
+}
+.icon-mars {
+  width: 0.8571428571428571em;
+}
+.icon-mercury {
+  width: 0.6428571428571428em;
+}
+.icon-intersex {
+  width: 0.7728571428571428em;
+}
+.icon-transgender-alt {
+  width: 0.9285714285714285em;
+}
+.icon-mars-double {
+  width: 1.0602857142857143em;
+}
+.icon-venus-mars {
+  width: 1.1199999999999999em;
+}
+.icon-mars-stroke {
+  width: 0.8571428571428571em;
+}
+.icon-mars-stroke-v {
+  width: 0.63em;
+}
+.icon-mars-stroke-h {
+  width: 1.0552142857142857em;
+}
+.icon-neuter {
+  width: 0.6428571428571428em;
+}
+.icon-genderless {
+  width: 0.6428571428571428em;
+}
+.icon-facebook-official {
+  width: 0.8571428571428571em;
+}
+.icon-pinterest-p {
+  width: 0.7142857142857142em;
+}
+.icon-whatsapp {
+  width: 0.8571428571428571em;
+}
+.icon-user-plus {
+  width: 1.1428571428571428em;
+}
+.icon-user-times {
+  width: 1.1378571428571427em;
+}
+.icon-bed {
+  width: 1.1428571428571428em;
+}
+.icon-viacoin {
+  width: 0.8571428571428571em;
+}
+.icon-train {
+  width: 0.8571428571428571em;
+}
+.icon-subway {
+  width: 0.8571428571428571em;
+}
+.icon-y-combinator {
+  width: 0.8571428571428571em;
+}
+.icon-optin-monster {
+  width: 1.2812142857142856em;
+}
+.icon-opencart {
+  width: 1.5335em;
+}
+.icon-battery {
+  width: 1.2857142857142856em;
+}
+.icon-battery-3 {
+  width: 1.2857142857142856em;
+}
+.icon-battery-2 {
+  width: 1.2857142857142856em;
+}
+.icon-battery-1 {
+  width: 1.2857142857142856em;
+}
+.icon-battery-0 {
+  width: 1.2857142857142856em;
+}
+.icon-mouse-pointer {
+  width: 0.6456428571428571em;
+}
+.icon-i-cursor {
+  width: 0.5em;
+}
+.icon-object-group {
+  width: 1.1428571428571428em;
+}
+.icon-object-ungroup {
+  width: 1.2857142857142856em;
+}
+.icon-sticky-note {
+  width: 0.8571428571428571em;
+}
+.icon-sticky-note-o {
+  width: 0.8571428571428571em;
+}
+.icon-cc-jcb {
+  width: 1.2857142857142856em;
+}
+.icon-cc-diners-club {
+  width: 1.2857142857142856em;
+}
+.icon-balance-scale {
+  width: 1.2142857142857142em;
+}
+.icon-hourglass-o {
+  width: 0.8571428571428571em;
+}
+.icon-hourglass-1 {
+  width: 0.8571428571428571em;
+}
+.icon-hourglass-2 {
+  width: 0.8571428571428571em;
+}
+.icon-hourglass-3 {
+  width: 0.8571428571428571em;
+}
+.icon-hourglass {
+  width: 0.8571428571428571em;
+}
+.icon-hand-grab-o {
+  width: 0.8571428571428571em;
+}
+.icon-hand-paper-o {
+  width: 0.9107142857142857em;
+}
+.icon-hand-lizard-o {
+  width: 1.1428571428571428em;
+}
+.icon-hand-spock-o {
+  width: 1.0714285714285714em;
+}
+.icon-hand-pointer-o {
+  width: 0.9285714285714285em;
+}
+.icon-hand-peace-o {
+  width: 0.8571428571428571em;
+}
+.icon-trademark {
+  width: 1.101em;
+}
+.icon-gg {
+  width: 1.1428571428571428em;
+}
+.icon-tripadvisor {
+  width: 1.2857142857142856em;
+}
+.icon-odnoklassniki {
+  width: 0.7142857142857142em;
+}
+.icon-odnoklassniki-square {
+  width: 0.8571428571428571em;
+}
+.icon-get-pocket {
+  width: 0.9597857142857142em;
+}
+.icon-wikipedia-w {
+  width: 1.2857142857142856em;
+}
+.icon-chrome {
+  width: 1.054142857142857em;
+}
+.icon-firefox {
+  width: 0.9537142857142857em;
+}
+.icon-television {
+  width: 1.0714285714285714em;
+}
+.icon-500px {
+  width: 0.7957857142857142em;
+}
+.icon-amazon {
+  width: 0.9960714285714285em;
+}
+.icon-calendar-plus-o {
+  width: 0.9285714285714285em;
+}
+.icon-calendar-minus-o {
+  width: 0.9285714285714285em;
+}
+.icon-calendar-times-o {
+  width: 0.9285714285714285em;
+}
+.icon-calendar-check-o {
+  width: 0.9285714285714285em;
+}
+.icon-map-pin {
+  width: 0.5714285714285714em;
+}
+.icon-map-o {
+  width: 1.1428571428571428em;
+}
+.icon-houzz {
+  width: 0.5714285714285714em;
+}
+.icon-vimeo {
+  width: 1.005em;
+}
+.icon-black-tie {
+  width: 0.8571428571428571em;
+}
+.icon-fonticons {
+  width: 0.8571428571428571em;
+}
+.icon-credit-card-alt {
+  width: 1.2857142857142856em;
+}
+.icon-codiepie {
+  width: 0.9615em;
+}
+.icon-fort-awesome {
+  width: 0.9285714285714285em;
+}
+.icon-usb {
+  width: 1.2857142857142856em;
+}
+.icon-mixcloud {
+  width: 1.2857142857142856em;
+}
+.icon-scribd {
+  width: 0.8571428571428571em;
+}
+.icon-pause-circle {
+  width: 0.8571428571428571em;
+}
+.icon-pause-circle-o {
+  width: 0.8571428571428571em;
+}
+.icon-stop-circle {
+  width: 0.8571428571428571em;
+}
+.icon-stop-circle-o {
+  width: 0.8571428571428571em;
+}
+.icon-shopping-basket {
+  width: 1.1428571428571428em;
+}
+.icon-bluetooth {
+  width: 0.8571428571428571em;
+}
+.icon-bluetooth-b {
+  width: 0.5714285714285714em;
+}
+.icon-percent {
+  width: 0.8571428571428571em;
+}
+.icon-wpforms {
+  width: 0.8571428571428571em;
+}
+.icon-envira {
+  width: 1.0664285714285713em;
+}
+.icon-wheelchair-alt {
+  width: 0.8582857142857142em;
+}
+.icon-question-circle-o {
+  width: 0.8571428571428571em;
+}
+.icon-blind {
+  width: 0.7902142857142858em;
+}
+.icon-audio-description {
+  width: 1.2823571428571428em;
+}
+.icon-volume-control-phone {
+  width: 0.7857142857142857em;
+}
+.icon-braille {
+  width: 1.2142857142857142em;
+}
+.icon-assistive-listening-systems {
+  width: 1.0045em;
+}
+.icon-american-sign-language-interpreting {
+  width: 1.2857142857142856em;
+}
+.icon-glide {
+  width: 0.8571428571428571em;
+}
+.icon-glide-g {
+  width: 0.8565714285714285em;
+}
+.icon-sign-language {
+  width: 0.9257857142857142em;
+}
+.icon-viadeo {
+  width: 0.7131428571428571em;
+}
+.icon-viadeo-square {
+  width: 0.8571428571428571em;
+}
+.icon-snapchat {
+  width: 0.8571428571428571em;
+}
+.icon-snapchat-ghost {
+  width: 0.9285714285714285em;
+}
+.icon-snapchat-square {
+  width: 0.8571428571428571em;
+}
+.icon-pied-piper {
+  width: 1.2857142857142856em;
+}
+.icon-first-order {
+  width: 0.8571428571428571em;
+}
+.icon-yoast {
+  width: 0.9285714285714285em;
+}
+.icon-google-plus-circle {
+  width: 0.8571428571428571em;
+}
+.icon-fa {
+  width: 0.8777857142857142em;
+}
+.icon-handshake-o {
+  width: 1.2857142857142856em;
+}
+.icon-linode {
+  width: 0.8577142857142857em;
+}
+.icon-address-book {
+  width: 0.9285714285714285em;
+}
+.icon-address-book-o {
+  width: 0.9285714285714285em;
+}
+.icon-address-card {
+  width: 1.1428571428571428em;
+}
+.icon-address-card-o {
+  width: 1.1428571428571428em;
+}
+.icon-user-o {
+  width: 0.8571428571428571em;
+}
+.icon-id-badge {
+  width: 0.7142857142857142em;
+}
+.icon-drivers-license {
+  width: 1.1428571428571428em;
+}
+.icon-drivers-license-o {
+  width: 1.1428571428571428em;
+}
+.icon-quora {
+  width: 1.0033571428571428em;
+}
+.icon-free-code-camp {
+  width: 1.2857142857142856em;
+}
+.icon-thermometer {
+  width: 0.5714285714285714em;
+}
+.icon-thermometer-3 {
+  width: 0.5714285714285714em;
+}
+.icon-thermometer-2 {
+  width: 0.5714285714285714em;
+}
+.icon-thermometer-1 {
+  width: 0.5714285714285714em;
+}
+.icon-thermometer-0 {
+  width: 0.5714285714285714em;
+}
+.icon-shower {
+  width: 1.0714285714285714em;
+}
+.icon-podcast {
+  width: 0.8482142857142857em;
+}
+.icon-window-restore {
+  width: 1.1428571428571428em;
+}
+.icon-grav {
+  width: 1.0011428571428571em;
+}
+.icon-etsy {
+  width: 0.8571428571428571em;
+}
+.icon-imdb {
+  width: 0.8571428571428571em;
+}
+.icon-ravelry {
+  width: 1.231em;
+}
+.icon-eercast {
+  width: 0.9609285714285714em;
+}
+.icon-microchip {
+  width: 0.8571428571428571em;
+}
+.icon-snowflake-o {
+  width: 0.9285714285714285em;
+}
+.icon-meetup {
+  width: 1.0675em;
+}
 .sidenav {
 }
 .sidenav--head {
@@ -325,13 +2009,19 @@ h6 {
 .sidenav--head-icon {
   padding-bottom: .3em;
 }
-.sidenav--head-icon-dummy {
-  background-color: #ffffff;
-  width: 47px;
-  height: 47px;
+.sidenav--head-icon--inner {
+  background-color: rgba(255, 255, 255, .5);
+  width: 32px;
+  height: 32px;
+  padding: 8px;
   float: left;
   margin-right: 8px;
   border-radius: 50%;
+  color: #c0272d;
+}
+.sidenav--head-icon--inner svg {
+  width: 100%;
+  height: 100%;
 }
 .sidenav--head-section {
   color: #ffffff;
