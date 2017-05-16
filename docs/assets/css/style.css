@@ -229,6 +229,7 @@ th {
   padding: 16px 0;
 }
 .navigations {
+  position: relative;
   grid-column: 2/4;
   display: -ms-grid;
   display: grid;
@@ -238,12 +239,6 @@ th {
   border-style: none solid;
 }
 .mainnav, .metanav, #controls {
-}
-.mainnav a, .metanav a, #controls a {
-  text-decoration: none;
-}
-.mainnav a:hover, .mainnav a:focus, .mainnav a[aria-current="page"], .metanav a:hover, .metanav a:focus, .metanav a[aria-current="page"], #controls a:hover, #controls a:focus, #controls a[aria-current="page"] {
-  border-bottom: 2px solid #eed009;
 }
 .mainnav ul, .metanav ul, #controls ul {
   margin: 0;
@@ -271,7 +266,6 @@ th {
   text-decoration: underline;
 }
 .metanav, .mainnav {
-  padding: 16px;
 }
 .metanav {
   text-transform: uppercase;
@@ -279,7 +273,13 @@ th {
   font-size: .75rem;
   font-weight: bold;
   border-bottom: 1px solid rgba(255, 255, 255, .11);
-  text-align: right;
+  text-align: right
+}
+.metanav a {
+  text-decoration: none;
+}
+.metanav a:hover, .metanav a:focus, .metanav a[aria-current="page"] {
+  border-bottom: 2px solid #eed009;
 }
 .mainnav {
   display: -webkit-box;
@@ -287,16 +287,92 @@ th {
   display: flex;
   -webkit-box-align: end;
       -ms-flex-align: end;
-          align-items: flex-end
+          align-items: flex-end;
+  padding: 0 16px
 }
-.mainnav ul {
+.mainnav > ul {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+}
+.mainnav > ul > li {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.mainnav > ul > li > a {
+  text-decoration: none;
+}
+.mainnav > ul > li > a:hover, .mainnav > ul > li > a:focus, .mainnav > ul > li > a[aria-current="page"] {
+}
+.mainnav > ul > li > a:hover span, .mainnav > ul > li > a:focus span, .mainnav > ul > li > a[aria-current="page"] span {
+  border-bottom: 2px solid #eed009;
+}
+.mainnav > ul a {
+  display: block;
+  width: 100%;
+  padding: 16px 8px;
+}
+.mainsub {
+  display:-ms-grid;
+  display:grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  position: absolute;
+  top: 100%;
+  left:16px;
+  right: 16px
+}
+.mainsub b {
+  display: block;
+}
+.mainsub>ul {
+  background-color: #003366;
+  padding: 4px 8px;
+  list-style: none;
+  margin: 0;
+  display: none;
+  -webkit-columns: 2;
+     -moz-columns: 2;
+          columns: 2;
+  font-size: 14px;
+  font-size: .875rem;
+}
+.mainsub>ul ul {
+  padding: 0 0 0 16px;
+  margin-bottom: 16px;
+  list-style: none;
+  border-left: 2px solid #344D72;
+  /* TODO: DEFINE COLOR*/
+}
+.mainsub>ul ul a {
+  color: #f2f2f2 !important;
+  text-decoration: none;
+}
+.mainsub>ul ul a:hover, .mainsub>ul ul a:focus {
+  text-decoration: underline;
+}
+.mainsub>ul ul > li {
+  padding-bottom: 8px;
+}
+.mainsub>ul > li {
+  page-break-inside: avoid;
+}
+.mainsub>ul.active {
+  display: block;
+}
+.mainsub>ul:nth-child(1) {
+  grid-column: 1/4;
+}
+.mainsub>ul:nth-child(2) {
+  grid-column: 2/5;
+}
+.mainsub>ul:nth-child(3) {
+  grid-column: 1/4;
+}
+.mainsub>ul:nth-child(4) {
+  grid-column: 2/5;
 }
 h1, h2, h3, h4, h5, h6 {
   padding: 0 0 8px;
@@ -1993,6 +2069,107 @@ Single-colored icons can be modified like so:
 }
 .icon-meetup {
   width: 1.0675em;
+}
+.pager {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 100%;
+          flex: 1 100%;
+}
+.pager > ul {
+  -ms-flex-line-pack: center;
+      align-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 100%;
+          flex: 1 100%;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  margin: 0;
+  padding: 18px;
+}
+.pager--item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 auto;
+          flex: 1 auto;
+  list-style: none;
+}
+.pager--item a:link {
+  color: #005A6A;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 100%;
+          flex: 1 100%;
+  text-decoration: none;
+}
+.pager--item a:visited {
+  color: #660066;
+}
+.pager--item a:hover,
+.pager--item a:focus {
+  color: #003366;
+}
+.pager--item a:active {
+  color: #005A6A;
+}
+.pager--item:last-child a {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  text-align: right;
+}
+.pager--item-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 33px;
+}
+.pager--item-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 auto;
+          flex: 1 auto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.pager--item-text {
+  margin-right: 16px;
+  margin-left: 16px;
+}
+.pager--item-text-direction {
+  color: #1d1d1d;
+  font-size: 13px;
+}
+.pager--item-text-target {
+  font-size: 17px;
+  line-height: 1em;
 }
 .sidenav {
 }
