@@ -328,7 +328,7 @@ th {
   border: 0;
   border-radius: 0;
   color: #ffffff;
-  border-bottom: 1px solid #ffffff;
+  /* border-bottom: 1px solid var(--pure-white);*/
   height: 100%;
   display: inline-block;
   padding: 0;

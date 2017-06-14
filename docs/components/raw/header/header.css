@@ -98,7 +98,7 @@
       border: 0;
       border-radius: 0;
       color: var(--pure-white);
-      border-bottom: 1px solid var(--pure-white);
+      /* border-bottom: 1px solid var(--pure-white);*/
       height: 100%;
       display:inline-block;
       padding: 0;
