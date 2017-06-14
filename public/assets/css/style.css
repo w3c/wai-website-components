@@ -96,6 +96,10 @@ button:disabled, .button:disabled {
 button-nobg, .button-nobg {
   background: transparent;
 }
+button-nobg:hover, button-nobg:focus, .button-nobg:hover, .button-nobg:focus {
+  background-color: transparent;
+  outline: 1px solid #fff;
+}
 table, caption {
   text-align: left;
 }
@@ -263,10 +267,15 @@ th {
 #controls a {
   color: #003366;
   margin-left: 16px;
+  text-decoration: none;
 }
 #controls a:hover, #controls a:focus {
   border-bottom: none;
   text-decoration: underline;
+}
+#controls a svg {
+  width: .8em;
+  height: .8em;
 }
 .metanav, .mainnav {
 }

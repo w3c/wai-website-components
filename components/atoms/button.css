@@ -17,5 +17,9 @@ button, .button {
   }
   &-nobg {
     background: transparent;
+    &:hover, &:focus {
+      background-color: transparent;
+      outline: 1px solid #fff;
+    }
   }
 }

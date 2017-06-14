@@ -10,3 +10,15 @@ variants:
 - name: cancel-rect
   context:
     name: cancel-rect
+- name: chevron-up
+  context:
+    name: chevron-up
+- name: chevron-down
+  context:
+    name: chevron-down
+- name: chevron-left
+  context:
+    name: chevron-left
+- name: chevron-right
+  context:
+    name: chevron-right
