@@ -43,9 +43,14 @@
   & a {
     color: var(--w3c-blue);
     margin-left: 16px;
+    text-decoration: none;
     &:hover, &:focus {
       border-bottom: none;
       text-decoration: underline;
+    }
+    & svg {
+      width: .8em;
+      height: .8em;
     }
   }
 }
@@ -93,6 +98,15 @@
       border: 0;
       border-radius: 0;
       color: var(--pure-white);
+      border-bottom: 1px solid var(--pure-white);
+      height: 100%;
+      display:inline-block;
+      padding: 0;
+      margin: 0;
+    }
+    & button {
+      display:inline-block;
+      margin: 0;
     }
     & ::-webkit-input-placeholder {
        color: var(--pure-white);
