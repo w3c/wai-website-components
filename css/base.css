@@ -45,7 +45,7 @@ code {
 a {
   color: var(--w3c-blue);
   &:hover {
-    color: var(--wai-petrol)
+    color: var(--wai-green)
   }
   &:visited {
     color: var(--visited-link);

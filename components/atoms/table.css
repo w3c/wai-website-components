@@ -9,7 +9,7 @@ table {
 caption {
   font-weight: bold;
   font-size: 1.125rem;
-  color: var(--wai-petrol);
+  color: var(--wai-green);
   line-height: 1.4;
   margin-bottom: 8px;
 }
@@ -20,5 +20,5 @@ th, td {
 th {
   font-weight: bold;
   color: var(--pure-white);
-  background-color: var(--wai-petrol);
+  background-color: var(--wai-green);
 }

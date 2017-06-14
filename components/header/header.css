@@ -49,18 +49,73 @@
     }
   }
 }
+
 .metanav, .mainnav {
 }
+
 .metanav {
   text-transform: uppercase;
   font-size: .75rem;
   font-weight: bold;
   border-bottom: 1px solid rgba(255, 255, 255, 0.11);
   text-align: right;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
   & a {
     text-decoration: none;
     &:hover, &:focus, &[aria-current="page"] {
       border-bottom: 2px solid var(--gold);
+    }
+  }
+  & ul {
+    margin-right: 16px;
+    & li {
+      margin-left: 32px;
+      &:first-child {
+        margin-left: 0
+      }
+    }
+  }
+  & form[role=search] {
+    & label {
+      background-color: rgba(6, 30, 54, 0.44);
+      display:block;
+      text-transform: none;
+      font-weight: normal;
+      & .l {
+        padding: 8px 0 8px 12px;
+      }
+    }
+    & input {
+      -webkit-appearance: none;
+      background-color: transparent;
+      border: 0;
+      border-radius: 0;
+      color: var(--pure-white);
+    }
+    & ::-webkit-input-placeholder {
+       color: var(--pure-white);
+       font-style: italic;
+       opacity: 1;
+    }
+
+    & :-moz-placeholder { /* Firefox 18- */
+       color: var(--pure-white);
+       font-style: italic;
+       opacity: 1;
+    }
+
+    & ::-moz-placeholder {  /* Firefox 19+ */
+       color: var(--pure-white);
+       font-style: italic;
+       opacity: 1;
+    }
+
+    & :-ms-input-placeholder {
+       color: var(--pure-white);
+       font-style: italic;
+       opacity: 1;
     }
   }
 }

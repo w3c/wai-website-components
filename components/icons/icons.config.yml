@@ -4,3 +4,9 @@ variants:
 - name: book
   context:
     name: book
+- name: search
+  context:
+    name: search
+- name: cancel-rect
+  context:
+    name: cancel-rect

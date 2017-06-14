@@ -9,7 +9,7 @@
       display: inline-block;
       &:after {
         content: " / ";
-        color: var(--wai-petrol);
+        color: var(--wai-green);
       }
       &:last-child:after {
         display:none;

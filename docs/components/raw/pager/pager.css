@@ -22,7 +22,7 @@
 }
 
 .pager--item a:link {
-  color: var(--wai-petrol);
+  color: var(--wai-green);
   display: flex;
   flex-direction: row;
   flex: 1 100%;
@@ -39,7 +39,7 @@
 }
 
 .pager--item a:active {
-  color: var(--wai-petrol);
+  color: var(--wai-green);
 }
 
 .pager--item:last-child a {
