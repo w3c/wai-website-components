@@ -93,6 +93,9 @@ button:hover, button:focus, .button:hover, .button:focus {
 button:disabled, .button:disabled {
   opacity: .75;
 }
+button-nobg, .button-nobg {
+  background: transparent;
+}
 table, caption {
   text-align: left;
 }
@@ -273,13 +276,71 @@ th {
   font-size: .75rem;
   font-weight: bold;
   border-bottom: 1px solid rgba(255, 255, 255, .11);
-  text-align: right
+  text-align: right;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end
 }
 .metanav a {
   text-decoration: none;
 }
 .metanav a:hover, .metanav a:focus, .metanav a[aria-current="page"] {
   border-bottom: 2px solid #eed009;
+}
+.metanav ul {
+  margin-right: 16px;
+}
+.metanav ul li {
+  margin-left: 32px;
+}
+.metanav ul li:first-child {
+  margin-left: 0;
+}
+.metanav form[role=search] {
+}
+.metanav form[role=search] label {
+  background-color: rgba(6, 30, 54, .44);
+  display: block;
+  text-transform: none;
+  font-weight: normal;
+}
+.metanav form[role=search] label .l {
+  padding: 8px 0 8px 12px;
+}
+.metanav form[role=search] input {
+  -webkit-appearance: none;
+  background-color: transparent;
+  border: 0;
+  border-radius: 0;
+  color: #ffffff;
+}
+.metanav form[role=search] ::-webkit-input-placeholder {
+  color: #ffffff;
+  font-style: italic;
+  opacity: 1;
+}
+.metanav form[role=search] :-moz-placeholder {
+  /* Firefox 18- */
+  color: #ffffff;
+  font-style: italic;
+  opacity: 1;
+}
+.metanav form[role=search] ::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #ffffff;
+  font-style: italic;
+  opacity: 1;
+}
+.metanav form[role=search] :-ms-input-placeholder {
+  color: #ffffff;
+  font-style: italic;
+  opacity: 1;
 }
 .mainnav {
   display: -webkit-box;
@@ -2174,7 +2235,7 @@ Single-colored icons can be modified like so:
 .sidenav {
 }
 .sidenav--head {
-  background-color: #005A6A;
+  background-color: #f2f2f2;
   padding: 8px;
   display:-webkit-box;
   display:-ms-flexbox;
@@ -2182,6 +2243,8 @@ Single-colored icons can be modified like so:
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+  border: 1px solid #ddd;
+  border-bottom: none;
 }
 .sidenav--head-icon {
   padding-bottom: .3em;
@@ -2192,10 +2255,8 @@ Single-colored icons can be modified like so:
   float: left;
   margin-right: 8px;
 }
-s
-
 .sidenav--head-section {
-  color: #ffffff;
+  color: #005A6A;
   text-transform: uppercase;
   letter-spacing: .7px;
   font-size: 11px;
@@ -2203,7 +2264,7 @@ s
   font-weight: bold;
 }
 .sidenav--head-subsection {
-  color: #ffffff;
+  color: #005A6A;
   font-size: 22px;
   font-size: 1.375rem;
 }
