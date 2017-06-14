@@ -319,6 +319,15 @@ th {
   border: 0;
   border-radius: 0;
   color: #ffffff;
+  border-bottom: 1px solid #ffffff;
+  height: 100%;
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+.metanav form[role=search] button {
+  display: inline-block;
+  margin: 0;
 }
 .metanav form[role=search] ::-webkit-input-placeholder {
   color: #ffffff;
