@@ -12,3 +12,10 @@ variants:
     label: Link Button
     href: '#'
     mods: [more]
+- name: icon
+  context:
+    type: icon
+    icon: search
+    label: Icon Button
+    href: '#'
+    mods: ["icon"]

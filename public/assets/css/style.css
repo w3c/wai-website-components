@@ -93,6 +93,13 @@ button:hover, button:focus, .button:hover, .button:focus {
 button:disabled, .button:disabled {
   opacity: .75;
 }
+button-nobg, .button-nobg {
+  background: transparent;
+}
+button-nobg:hover, button-nobg:focus, .button-nobg:hover, .button-nobg:focus {
+  background-color: transparent;
+  outline: 1px solid #fff;
+}
 table, caption {
   text-align: left;
 }
@@ -229,6 +236,7 @@ th {
   padding: 16px 0;
 }
 .navigations {
+  position: relative;
   grid-column: 2/4;
   display: -ms-grid;
   display: grid;
@@ -238,12 +246,6 @@ th {
   border-style: none solid;
 }
 .mainnav, .metanav, #controls {
-}
-.mainnav a, .metanav a, #controls a {
-  text-decoration: none;
-}
-.mainnav a:hover, .mainnav a:focus, .mainnav a[aria-current="page"], .metanav a:hover, .metanav a:focus, .metanav a[aria-current="page"], #controls a:hover, #controls a:focus, #controls a[aria-current="page"] {
-  border-bottom: 2px solid #eed009;
 }
 .mainnav ul, .metanav ul, #controls ul {
   margin: 0;
@@ -265,13 +267,17 @@ th {
 #controls a {
   color: #003366;
   margin-left: 16px;
+  text-decoration: none;
 }
 #controls a:hover, #controls a:focus {
   border-bottom: none;
   text-decoration: underline;
 }
+#controls a svg {
+  width: .8em;
+  height: .8em;
+}
 .metanav, .mainnav {
-  padding: 16px;
 }
 .metanav {
   text-transform: uppercase;
@@ -280,6 +286,79 @@ th {
   font-weight: bold;
   border-bottom: 1px solid rgba(255, 255, 255, .11);
   text-align: right;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end
+}
+.metanav a {
+  text-decoration: none;
+}
+.metanav a:hover, .metanav a:focus, .metanav a[aria-current="page"] {
+  border-bottom: 2px solid #eed009;
+}
+.metanav ul {
+  margin-right: 16px;
+}
+.metanav ul li {
+  margin-left: 32px;
+}
+.metanav ul li:first-child {
+  margin-left: 0;
+}
+.metanav form[role=search] {
+}
+.metanav form[role=search] label {
+  background-color: rgba(6, 30, 54, .44);
+  display: block;
+  text-transform: none;
+  font-weight: normal;
+}
+.metanav form[role=search] label .l {
+  padding: 8px 0 8px 12px;
+}
+.metanav form[role=search] input {
+  -webkit-appearance: none;
+  background-color: transparent;
+  border: 0;
+  border-radius: 0;
+  color: #ffffff;
+  /* border-bottom: 1px solid var(--pure-white);*/
+  height: 100%;
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+.metanav form[role=search] button {
+  display: inline-block;
+  margin: 0;
+}
+.metanav form[role=search] ::-webkit-input-placeholder {
+  color: #ffffff;
+  font-style: italic;
+  opacity: 1;
+}
+.metanav form[role=search] :-moz-placeholder {
+  /* Firefox 18- */
+  color: #ffffff;
+  font-style: italic;
+  opacity: 1;
+}
+.metanav form[role=search] ::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #ffffff;
+  font-style: italic;
+  opacity: 1;
+}
+.metanav form[role=search] :-ms-input-placeholder {
+  color: #ffffff;
+  font-style: italic;
+  opacity: 1;
 }
 .mainnav {
   display: -webkit-box;
@@ -287,16 +366,92 @@ th {
   display: flex;
   -webkit-box-align: end;
       -ms-flex-align: end;
-          align-items: flex-end
+          align-items: flex-end;
+  padding: 0 16px
 }
-.mainnav ul {
+.mainnav > ul {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+}
+.mainnav > ul > li {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.mainnav > ul > li > a {
+  text-decoration: none;
+}
+.mainnav > ul > li > a:hover, .mainnav > ul > li > a:focus, .mainnav > ul > li > a[aria-current="page"] {
+}
+.mainnav > ul > li > a:hover span, .mainnav > ul > li > a:focus span, .mainnav > ul > li > a[aria-current="page"] span {
+  border-bottom: 2px solid #eed009;
+}
+.mainnav > ul a {
+  display: block;
+  width: 100%;
+  padding: 16px 8px;
+}
+.mainsub {
+  display:-ms-grid;
+  display:grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  position: absolute;
+  top: 100%;
+  left:16px;
+  right: 16px
+}
+.mainsub b {
+  display: block;
+}
+.mainsub>ul {
+  background-color: #003366;
+  padding: 4px 8px;
+  list-style: none;
+  margin: 0;
+  display: none;
+  -webkit-columns: 2;
+     -moz-columns: 2;
+          columns: 2;
+  font-size: 14px;
+  font-size: .875rem;
+}
+.mainsub>ul ul {
+  padding: 0 0 0 16px;
+  margin-bottom: 16px;
+  list-style: none;
+  border-left: 2px solid #344D72;
+  /* TODO: DEFINE COLOR*/
+}
+.mainsub>ul ul a {
+  color: #f2f2f2 !important;
+  text-decoration: none;
+}
+.mainsub>ul ul a:hover, .mainsub>ul ul a:focus {
+  text-decoration: underline;
+}
+.mainsub>ul ul > li {
+  padding-bottom: 8px;
+}
+.mainsub>ul > li {
+  page-break-inside: avoid;
+}
+.mainsub>ul.active {
+  display: block;
+}
+.mainsub>ul:nth-child(1) {
+  grid-column: 1/4;
+}
+.mainsub>ul:nth-child(2) {
+  grid-column: 2/5;
+}
+.mainsub>ul:nth-child(3) {
+  grid-column: 1/4;
+}
+.mainsub>ul:nth-child(4) {
+  grid-column: 2/5;
 }
 h1, h2, h3, h4, h5, h6 {
   padding: 0 0 8px;
@@ -2157,7 +2312,7 @@ Single-colored icons can be modified like so:
 .sidenav {
 }
 .sidenav--head {
-  background-color: #005A6A;
+  background-color: #f2f2f2;
   padding: 8px;
   display:-webkit-box;
   display:-ms-flexbox;
@@ -2165,26 +2320,20 @@ Single-colored icons can be modified like so:
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+  border: 1px solid #ddd;
+  border-bottom: none;
 }
 .sidenav--head-icon {
   padding-bottom: .3em;
 }
 .sidenav--head-icon--inner {
-  background-color: rgba(255, 255, 255, .5);
-  width: 32px;
-  height: 32px;
-  padding: 8px;
+  width: 47px;
+  height: 48px;
   float: left;
   margin-right: 8px;
-  border-radius: 50%;
-  color: #c0272d;
-}
-.sidenav--head-icon--inner svg {
-  width: 100%;
-  height: 100%;
 }
 .sidenav--head-section {
-  color: #ffffff;
+  color: #005A6A;
   text-transform: uppercase;
   letter-spacing: .7px;
   font-size: 11px;
@@ -2192,7 +2341,7 @@ Single-colored icons can be modified like so:
   font-weight: bold;
 }
 .sidenav--head-subsection {
-  color: #ffffff;
+  color: #005A6A;
   font-size: 22px;
   font-size: 1.375rem;
 }

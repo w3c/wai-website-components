@@ -2,10 +2,12 @@
 }
 
 .sidenav--head {
-  background-color: var(--wai-petrol);
+  background-color: var(--off-white);
   padding: 8px;
   display:flex;
   align-items: flex-end;
+  border: 1px solid var(--line-grey);
+  border-bottom: none;
 }
 
 .sidenav--head-icon {
@@ -13,23 +15,14 @@
 }
 
 .sidenav--head-icon--inner {
-  background-color: rgba(255,255,255, .5);
-  width: 32px;
-  height: 32px;
-  padding: 8px;
+  width: 47px;
+  height: 48px;
   float: left;
   margin-right: 8px;
-  border-radius: 50%;
-  color: var(--faded-red);
-}
-
-.sidenav--head-icon--inner svg {
-  width: 100%;
-  height: 100%;
 }
 
 .sidenav--head-section {
-  color: var(--pure-white);
+  color: var(--wai-green);
   text-transform: uppercase;
   letter-spacing: .7px;
   font-size: .6875rem;
@@ -37,7 +30,7 @@
 }
 
 .sidenav--head-subsection {
-  color: var(--pure-white);
+  color: var(--wai-green);
   font-size: 1.375rem;
 }
 
@@ -77,7 +70,7 @@
     padding: 4px 4px 4px 16px;
   }
   & a[aria-current] {
-    color: var(--wai-petrol);
+    color: var(--wai-green);
     padding-bottom: 4px;
   }
   & a[aria-current=page] {

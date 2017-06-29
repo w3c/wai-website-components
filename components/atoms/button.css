@@ -6,7 +6,7 @@ button, .button {
   font-size: .8125rem;
   line-height: 1.125;
   color: var(--pure-white);
-  background-color: var(--wai-petrol);
+  background-color: var(--wai-green);
   text-decoration: none;
   font-weight: bold;
   &:hover, &:focus {
@@ -14,5 +14,12 @@ button, .button {
   }
   &:disabled {
     opacity: .75;
+  }
+  &-nobg {
+    background: transparent;
+    &:hover, &:focus {
+      background-color: transparent;
+      outline: 1px solid #fff;
+    }
   }
 }

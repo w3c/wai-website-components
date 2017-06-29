@@ -153,10 +153,14 @@
     
     <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-c4d523abe5bfdcd16fb679dbf33a7bb7-panel-view">
     <code class="Code Code--lang-html">
-        <pre>{%- if href -%}
+        <pre>{%- if type != "icon" -%}
+{%- if href -%}
 <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"button{% for mod in mods %} button-{{ mod }}{% endfor %}"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"{{ href }}"</span>&gt;</span>{{ label }}<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
 {%- else -%}
 <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"button{% for mod in mods %} button-{{ mod }}{% endfor %}"</span>{{ " <span class="hljs-attr">type</span>=<span class="hljs-string">\</span>"<span class="hljs-attr">submit</span>\"" <span class="hljs-attr">if</span> <span class="hljs-attr">submit</span> }}{{ " <span class="hljs-attr">disabled</span>" <span class="hljs-attr">if</span> <span class="hljs-attr">disabled</span> }}&gt;</span>{{ label }}<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+{%- endif -%}
+{%- else -%}
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"button{% for mod in mods %} button-{{ mod }}{% endfor %}"</span>{{ " <span class="hljs-attr">type</span>=<span class="hljs-string">\</span>"<span class="hljs-attr">submit</span>\"" <span class="hljs-attr">if</span> <span class="hljs-attr">submit</span> }}{{ " <span class="hljs-attr">disabled</span>" <span class="hljs-attr">if</span> <span class="hljs-attr">disabled</span> }}&gt;</span>{%render '<a href="icons.html">@icons</a>', name=icon %}<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
 {%- endif -%}</pre>
     </code>
 </div>
@@ -192,7 +196,7 @@
         
         
         <li class="Meta-item">
-            <strong class="Meta-key">Variants <em class="Meta-count">(3)</em>:</strong>
+            <strong class="Meta-key">Variants <em class="Meta-count">(4)</em>:</strong>
             <span class="Meta-value Meta-value--linkList">
             
                 <a href="button--default.html">
@@ -205,6 +209,10 @@
             
                 <a href="button--link.html">
                     <span>Link</span>
+                </a>, 
+            
+                <a href="button--icon.html">
+                    <span>Icon</span>
                 </a>
             
             </span>
@@ -231,6 +239,15 @@
             <strong class="Meta-key">Filesystem Path:</strong>
             <span class="Meta-value">components/atoms/button.html</span>
         </li>
+        
+        <li class="Meta-item">
+            <strong class="Meta-key">References <em class="Meta-count">(1)</em>:</strong>
+            <span class="Meta-value Meta-value--linkList">
+            
+                <a href="icons.html">@<span>icons</span></a>
+            
+            </span>
+        </li class="Meta-item">
         
         
     </ul>
@@ -598,6 +615,30 @@
     
 
             </ul>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="pager.html" data-pjax>
+                <span>Pager</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
         </li>
         
     
