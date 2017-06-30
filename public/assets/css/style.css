@@ -2250,6 +2250,44 @@ Single-colored icons can be modified like so:
   font-size: 17px;
   line-height: 1em;
 }
+.quote {
+  background-color: #005A6A;
+  border-radius: 5px;
+  color: #ffffff;
+  padding: 22px;
+}
+.quote--block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+.quote--block-text {
+  font-size: 20px;
+  font-style: italic;
+  line-height: 1.25;
+  margin: 0;
+  padding: 0;
+}
+.quote--block-text::before {
+  content: open-quote;
+}
+.quote--block-text::after {
+  content: close-quote;
+}
+.quote--block-cite {
+  font-size: 15px;
+  font-weight: 500;
+  margin: 9px 0 0 0;
+}
+.quote--block-cite a {
+  color: #FAFAFC;
+}
 .related-content {
   background-color: #ffffff;
   border: 1px solid #ddd;
