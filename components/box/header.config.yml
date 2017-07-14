@@ -1,0 +1,14 @@
+status: wip
+default: default
+variants:
+- name: default
+  context:
+    label: Standard header
+- name: large
+  context:
+    label: Large Header
+    mods: ['large']
+- name: large-icon
+  context:
+    label: Large Header w/ Icon
+    mods: ['large','icon']

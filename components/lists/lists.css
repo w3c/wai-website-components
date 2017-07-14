@@ -1,0 +1,31 @@
+ul ::marker {
+  color: var(--faded-red);
+}
+
+.linklist {
+  &, & li {
+    margin: 0;
+    padding: 0;
+    list-style:none;
+  }
+  & a {
+    display: block;
+    padding: 4px 16px;
+    border-bottom: 1px solid var(--line-grey);
+    text-decoration: none;
+    & svg {
+      height: .65em;
+    }
+    &:hover, &:focus {
+      & svg {
+        color: var(--faded-red);
+      }
+      & .visual-a {
+        text-decoration: underline;
+      }
+    }
+  }
+  & li:last-child a {
+    border-bottom: none;
+  }
+}
