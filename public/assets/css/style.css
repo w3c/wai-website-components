@@ -125,6 +125,49 @@ th {
   color: #ffffff;
   background-color: #005A6A;
 }
+.box {
+  border: solid 1px #ddd;
+  margin-bottom: 32px;
+}
+.box.box-list {
+}
+.box.box-list .box-i {
+  padding: 0;
+}
+.box-h {
+  padding: 8px 16px;
+  color: #005A6A;
+  font-weight: bold;
+  font-size: 14px;
+  font-size: .875rem;
+  line-height: 1.57;
+}
+.box-h-large {
+  font-size: 20px;
+  font-size: 1.25rem;
+  color: #003366;
+  padding-bottom: 7px;
+  font-weight: normal;
+  background-color: #f2f2f2;
+  border-bottom: solid 1px #ddd;
+}
+.box-h-icon {
+}
+.box-h-icon svg {
+  margin-right: 4px;
+}
+.box-i {
+  background-color: #ffffff;
+  padding: 8px 16px;
+  font-size: 14/16 * 16px;
+  font-size: 14/16 * 1rem
+}
+.box-i > :first-child {
+  margin-top: 0;
+}
+.box-i > :last-child {
+  margin-bottom: 0;
+}
 .breadcrumb {
   font-size: 13px;
   font-size: .8125rem;
@@ -2148,6 +2191,36 @@ Single-colored icons can be modified like so:
 }
 .icon-meetup {
   width: 1.0675em;
+}
+ul ::marker {
+  color: #c0272d;
+}
+.linklist {
+}
+.linklist, .linklist li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.linklist a {
+  display: block;
+  padding: 4px 16px;
+  border-bottom: 1px solid #ddd;
+  text-decoration: none;
+}
+.linklist a svg {
+  height: .65em;
+}
+.linklist a:hover, .linklist a:focus {
+}
+.linklist a:hover svg, .linklist a:focus svg {
+  color: #c0272d;
+}
+.linklist a:hover .visual-a, .linklist a:focus .visual-a {
+  text-decoration: underline;
+}
+.linklist li:last-child a {
+  border-bottom: none;
 }
 .pager {
   background-color: #ffffff;
