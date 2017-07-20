@@ -1,0 +1,45 @@
+.box {
+  border: solid 1px var(--line-grey);
+  margin-bottom: 32px;
+}
+
+.box.box-list {
+  & .box-i {
+    padding: 0;
+  }
+}
+
+.box-h {
+  padding: 8px 16px;
+  color: var(--wai-green);
+  font-weight: bold;
+  font-size: .875rem;
+  line-height: 1.57;
+}
+
+.box-h-large {
+  font-size: 1.25rem;
+  color: var(--w3c-blue);
+  padding-bottom: 7px;
+  font-weight: normal;
+  background-color: var(--off-white);
+  border-bottom: solid 1px var(--line-grey);
+}
+
+.box-h-icon {
+  & svg {
+    margin-right: 4px;
+  }
+}
+
+.box-i {
+  background-color: var(--pure-white);
+  padding: 8px 16px;
+  font-size: 14/16 * 1rem;
+  & > :first-child {
+    margin-top: 0;
+  }
+  & > :last-child {
+    margin-bottom: 0;
+  }
+}

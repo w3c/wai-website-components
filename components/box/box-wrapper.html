@@ -1,0 +1,12 @@
+<aside class="box{% for mod in mods %} box-{{ mod }}{% endfor %}">
+  {%render '@box-header', type=headertype, label=headerlabel, mods=headermods %}
+  <div class="box-i">
+    {%- if content == "linklist" -%}
+    {%- render '@list-links' -%}
+    {%- elseif content == "listwithlinks" -%}
+    {%- render '@list-unordered-with-link' -%}
+    {%- else -%}
+    {{content}}
+    {%- endif -%}
+  </div>
+</aside>

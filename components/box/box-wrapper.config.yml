@@ -1,0 +1,35 @@
+collated: true
+status: wip
+default: default
+variants:
+- name: default
+  context:
+    headerlabel: Standard header
+    headertype: default
+    content: "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem laudantium, molestias perspiciatis corporis aspernatur earum quibusdam, sequi, error pariatur delectus accusantium, cum! Maxime ad, eos ea. Ab labore aliquam quam!</p>"
+- name: large
+  context:
+    headerlabel: Standard header
+    headertype: large
+    headermods: ['large']
+    content: "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem laudantium, molestias perspiciatis corporis aspernatur earum quibusdam, sequi, error pariatur delectus accusantium, cum! Maxime ad, eos ea. Ab labore aliquam quam!</p>"
+- name: large-icon
+  context:
+    headerlabel: Large header w/ Icon
+    headertype: large-icon
+    headermods: ['large', 'icon']
+    content: "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem laudantium, molestias perspiciatis corporis aspernatur earum quibusdam, sequi, error pariatur delectus accusantium, cum! Maxime ad, eos ea. Ab labore aliquam quam!</p>"
+- name: large-icon-link-list
+  context:
+    headerlabel: Large header w/ Icon
+    headertype: large-icon
+    headermods: ['large', 'icon']
+    mods: ['list']
+    content: linklist
+- name: large-icon-unordered-with-link
+  context:
+    headerlabel: Large header w/ Icon
+    headertype: large-icon
+    headermods: ['large', 'icon']
+    mods: ['list']
+    content: listwithlinks
