@@ -1,0 +1,39 @@
+.quote {
+  background-color: var(--wai-green);
+  border-radius: 5px;
+  color: var(--pure-white);
+  padding: 22px;
+}
+
+.quote--block {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+
+.quote--block-text {
+  font-size: 20px;
+  font-style: italic;
+  line-height: 1.25;
+  margin: 0;
+  padding: 0;
+}
+
+.quote--block-text::before {
+  content: open-quote;
+}
+
+.quote--block-text::after {
+  content: close-quote;
+}
+
+.quote--block-cite {
+  font-size: 15px;
+  font-weight: 500;
+  margin: 9px 0 0 0;
+}
+
+.quote--block-cite a {
+  color: var(--body-bg);
+}
