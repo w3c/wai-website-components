@@ -1,6 +1,8 @@
 collated: true
-default: book
 variants:
+- name: default
+  context:
+    name: default
 - name: book
   context:
     name: book
@@ -22,3 +24,6 @@ variants:
 - name: chevron-right
   context:
     name: chevron-right
+- name: comments
+  context:
+    name: comments
