@@ -1,16 +1,23 @@
 button, .button {
   border-radius: 5px;
   display: inline-block;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 8px 12px;
   border: none;
   font-size: .8125rem;
-  line-height: 1.125;
+  line-height: 1.4;
   color: var(--pure-white);
   background-color: var(--wai-green);
   text-decoration: none;
   font-weight: bold;
+  & span {
+  }
   &:hover, &:focus {
     background-color: var(--w3c-blue);
+    color: var(--pure-white);
   }
   &:disabled {
     opacity: .75;
@@ -21,5 +28,17 @@ button, .button {
       background-color: transparent;
       outline: 1px solid #fff;
     }
+  }
+}
+
+.button-group {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -8px;
+  & button, & .button {
+    min-width: 7em;
+    flex: 1;
+    text-align: center;
+    margin: 8px;
   }
 }

@@ -1,9 +1,9 @@
 {%- if type != "icon" -%}
 {%- if href -%}
-<a class="button{% for mod in mods %} button-{{ mod }}{% endfor %}" href="{{ href }}">{{ label }}</a>
+<a class="button{% for mod in mods %} button-{{ mod }}{% endfor %}" href="{{ href }}"><span>{{ label }}</span></a>
 {%- else -%}
-<button class="button{% for mod in mods %} button-{{ mod }}{% endfor %}"{{ " type=\"submit\"" if submit }}{{ " disabled" if disabled }}>{{ label }}</button>
+<button class="button{% for mod in mods %} button-{{ mod }}{% endfor %}"{{ " type=\"submit\"" if submit }}{{ " disabled" if disabled }}><span>{{ label }}</span></button>
 {%- endif -%}
 {%- else -%}
-<button class="button{% for mod in mods %} button-{{ mod }}{% endfor %}"{{ " type=\"submit\"" if submit }}{{ " disabled" if disabled }}>{%render '@icons', name=icon %}</button>
+<button class="button{% for mod in mods %} button-{{ mod }}{% endfor %}"{{ " type=\"submit\"" if submit }}{{ " disabled" if disabled }}><span>{%render '@icons', name=icon %}</span></button>
 {%- endif -%}
