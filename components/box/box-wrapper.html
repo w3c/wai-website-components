@@ -1,5 +1,5 @@
 <aside class="box{% for mod in mods %} box-{{ mod }}{% endfor %}">
-  {%render '@box-header', type=headertype, label=headerlabel, mods=headermods %}
+  {%render '@box-header', type=headertype, label=headerlabel, mods=headermods, icon=headericon %}
   <div class="box-i">
     {%- if content == "linklist" -%}
     {%- render '@list-links' -%}
