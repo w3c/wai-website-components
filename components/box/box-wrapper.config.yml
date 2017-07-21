@@ -1,4 +1,4 @@
-collated: true
+# collated: true
 status: wip
 default: default
 variants:
@@ -22,14 +22,22 @@ variants:
 - name: large-icon-link-list
   context:
     headerlabel: Large header w/ Icon
-    headertype: large-icon
+    headertype: icon
     headermods: ['large', 'icon']
-    mods: ['list']
+    mods: ['linklist']
     content: linklist
 - name: large-icon-unordered-with-link
   context:
     headerlabel: Large header w/ Icon
-    headertype: large-icon
+    headertype: icon
     headermods: ['large', 'icon']
     mods: ['list']
     content: listwithlinks
+- name: help-improve-page
+  context:
+    headerlabel: "Help improve this page"
+    headertype: icon
+    headermods: ['icon']
+    headericon: comments
+    mods: []
+    content: help-box-content

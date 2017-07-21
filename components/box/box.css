@@ -5,6 +5,16 @@
 
 .box.box-list {
   & .box-i {
+    & ul, & ol {
+      margin:0;
+      padding: 0;
+      list-style: none;
+    }
+  }
+}
+
+.box.box-linklist {
+  & .box-i {
     padding: 0;
   }
 }

@@ -5,6 +5,8 @@
     {%- render '@list-links' -%}
     {%- elseif content == "listwithlinks" -%}
     {%- render '@list-unordered-with-link' -%}
+    {%- elseif content == "help-box-content" -%}
+    {%- render '@box-help-box-content' -%}
     {%- else -%}
     {{content}}
     {%- endif -%}
