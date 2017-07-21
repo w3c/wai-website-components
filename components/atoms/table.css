@@ -16,9 +16,18 @@ caption {
 th, td {
   padding: 12px 18px;
   border: 1px solid var(--line-grey);
+  vertical-align: top;
 }
 th {
   font-weight: bold;
   color: var(--pure-white);
   background-color: var(--wai-green);
+}
+th, td {
+  & > :first-child {
+    margin-top: 0;
+  }
+  & > :last-child {
+    margin-top: 0;
+  }
 }

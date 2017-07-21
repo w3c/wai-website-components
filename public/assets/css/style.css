@@ -150,11 +150,20 @@ caption {
 th, td {
   padding: 12px 18px;
   border: 1px solid #ddd;
+  vertical-align: top;
 }
 th {
   font-weight: bold;
   color: #ffffff;
   background-color: #005A6A;
+}
+th, td {
+}
+th > :first-child, td > :first-child {
+  margin-top: 0;
+}
+th > :last-child, td > :last-child {
+  margin-top: 0;
 }
 .box {
   border: solid 1px #ddd;
