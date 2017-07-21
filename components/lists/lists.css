@@ -2,6 +2,10 @@ ul ::marker {
   color: var(--faded-red);
 }
 
+ul li, ol li {
+  margin-bottom: 8px;
+}
+
 .linklist {
   &, & li {
     margin: 0;
