@@ -130,6 +130,7 @@
     width: 100%;
     margin:0 -8px;
     display: flex;
+    align-items: flex-end;
     & > li {
       flex:1;
       margin: 0 8px;

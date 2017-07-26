@@ -2200,6 +2200,9 @@ ul li, ol li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 .mainnav > ul > li {
   -webkit-box-flex: 1;
