@@ -2078,6 +2078,7 @@ ul li, ol li {
 .mainnav ul > li, .metanav ul > li, #controls ul > li {
   display: inline-block;
   list-style: none;
+  margin: 0;
 }
 #controls {
   background-color: #f2f2f2;
@@ -2292,7 +2293,6 @@ ul li, ol li {
   margin: 0;
   display: none;
   -webkit-columns: 2;
-     -moz-columns: 2;
           columns: 2;
   font-size: 14px;
   font-size: .875rem;
