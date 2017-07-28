@@ -5,13 +5,19 @@
   padding: 16px 0;
   margin-bottom: 32px;
   & ul {
+    margin: 0;
+    padding: 0;
+    grid-column: 2/7;
     & li {
       display: inline-block;
+      margin: 0;
+      padding: 0;
       &:after {
         content: " / ";
         color: var(--wai-green);
       }
       &:last-child:after {
+        content: "";
         display:none;
       }
     }
