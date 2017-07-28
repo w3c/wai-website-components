@@ -13,4 +13,6 @@
 }
 .logos {
   padding: 16px 0;
+  grid-area: navigation;
+  grid-row-start: 1;
 }
