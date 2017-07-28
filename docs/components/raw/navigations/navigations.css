@@ -1,10 +1,11 @@
 .navigations {
   position: relative;
-  grid-column: 2/4;
+  grid-column: content;
   display: grid;
-  grid-template-rows: min-content min-content;
+  grid-template-rows: min-content minmax(10px, 1fr) min-content;
   border: 1px solid rgba(255, 255, 255, 0.11);
   border-style: none solid;
+  padding: 16px 0 0;
   & .nava11y {
     display: block;
   }
@@ -16,6 +17,7 @@
     & > li {
       display: inline-block;
       list-style: none;
+      margin: 0;
     }
   }
 }
@@ -24,8 +26,8 @@
   text-align: right;
   font-size: .8125em;
   & ul {
-    padding: 8px 16px;
-    grid-column: 1/4;
+    padding: 8px;
+    grid-area: content;
   }
   & a {
     color: var(--w3c-blue);
@@ -61,11 +63,26 @@
     }
   }
   & ul {
-    margin-right: 16px;
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 120px));
+    grid-column-gap: 32px;
     & li {
-      margin-left: 32px;
+      display: flex;
+      align-items: center;
+      padding: 0 8px 8px;
       &:first-child {
-        margin-left: 0
+        grid-column-start: 3;
+      }
+      &:nth-child(2) {
+        grid-column-start: 4;
+      }
+      &:last-child {
+        grid-column: 5/7;
+      }
+      & a {
+        display: block;
+        width: 100%;
+        text-align: right;
       }
     }
   }
@@ -126,11 +143,18 @@
   display: flex;
   align-items: flex-end;
   padding: 0 1px;
+  grid-row-start: 2;
   & > ul {
     width: 100%;
     margin:0 -8px;
     display: flex;
     align-items: flex-end;
+    @supports (display: grid) {
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0, 120px));
+      grid-column-gap: 32px;
+      margin:0;
+    }
     & > li {
       flex:1;
       margin: 0 8px;
@@ -140,6 +164,9 @@
         display:block;
         width: 100%;
         padding: 16px 8px;
+        @supports (display: grid) {
+          padding:8px 0;
+        }
         & > span {
           display: block;
           border-bottom: 2px solid transparent;
