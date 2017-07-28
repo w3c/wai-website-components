@@ -1,4 +1,4 @@
-<nav class="sidenav" label="This Tutorial">
-{%render '@sn-header' %}
-{%render '@sn-base' %}
+<nav class="sidenav{% for mod in mods %} sn-{{ mod }}{% endfor %}" label="{{label}}"{% if id %} id="{{ id }}"{% endif %}>
+{%render '@sn-header', icon=icon, section=section, header=label %}
+{%render '@sn-base', content=content %}
 </nav>

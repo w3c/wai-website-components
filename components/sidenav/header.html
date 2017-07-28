@@ -1,9 +1,11 @@
 <div class="sidenav--head">
-  <div class="sidenav--head-icon">
-      {%render '@icons', name="book", class="sidenav--head-icon--inner" %}
-  </div>
+  {%- if icon -%}
+    <div class="sidenav--head-icon">
+        {%- render '@icons', name=icon, class="sidenav--head-icon--inner" -%}
+    </div>
+  {%- endif -%}
   <div class="sidenav--head-title">
-    <div class="sidenav--head-section">{{ section }}</div>
+    {%- if section -%}<div class="sidenav--head-section">{{ section }}</div>{%- endif -%}
     <div class="sidenav--head-subsection">{{ header }}</div>
   </div>
 </div>

@@ -1,4 +1,5 @@
 .sidenav {
+  grid-area: navigation;
 }
 
 .sidenav--head {
