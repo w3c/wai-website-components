@@ -12,3 +12,7 @@ variants:
   context:
     label: Large Header w/ Icon
     mods: ['large','icon']
+- name: simple
+  context:
+    label: Simple header w/o bg and less spacing
+    mods: ['simple']

@@ -1,4 +1,4 @@
-# collated: true
+title: Boxes
 status: wip
 default: default
 variants:
@@ -7,6 +7,13 @@ variants:
     headerlabel: Standard header
     headertype: default
     content: "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem laudantium, molestias perspiciatis corporis aspernatur earum quibusdam, sequi, error pariatur delectus accusantium, cum! Maxime ad, eos ea. Ab labore aliquam quam!</p>"
+- name: simple
+  context:
+    headerlabel: "Status: Draft"
+    headertype: simple
+    headermods: ['simple']
+    content: "<p>This is an in-progress, unapproved draft.</p>"
+    mods: ['simple']
 - name: large
   context:
     headerlabel: Standard header

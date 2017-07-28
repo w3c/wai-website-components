@@ -1,6 +1,44 @@
 .box {
   border: solid 1px var(--line-grey);
-  margin-bottom: 32px;
+  margin-bottom: 16px;
+  background-color: var(--pure-white);
+}
+
+.box-h {
+  padding: 8px 16px;
+  color: var(--wai-green);
+  font-weight: bold;
+  font-size: .875rem;
+  line-height: 1.57;
+  background-color: var(--off-white);
+  & h1, & h2, & h3, & h4, & h5, & h6 {
+    all: unset;
+  }
+}
+
+.box-h-large {
+  font-size: 1.25rem;
+  color: var(--w3c-blue);
+  padding-bottom: 7px;
+  font-weight: normal;
+  border-bottom: solid 1px var(--line-grey);
+}
+
+.box-h-icon {
+  & svg {
+    margin-right: 4px;
+  }
+}
+
+.box-i {
+  padding: 8px 16px;
+  font-size: 14/16 * 1rem;
+  & > :first-child {
+    margin-top: 0;
+  }
+  & > :last-child {
+    margin-bottom: 0;
+  }
 }
 
 .box.box-list {
@@ -19,37 +57,12 @@
   }
 }
 
-.box-h {
-  padding: 8px 16px;
-  color: var(--wai-green);
-  font-weight: bold;
-  font-size: .875rem;
-  line-height: 1.57;
-}
-
-.box-h-large {
-  font-size: 1.25rem;
-  color: var(--w3c-blue);
-  padding-bottom: 7px;
-  font-weight: normal;
-  background-color: var(--off-white);
-  border-bottom: solid 1px var(--line-grey);
-}
-
-.box-h-icon {
-  & svg {
-    margin-right: 4px;
+.box.box-simple {
+  & .box-i {
+    padding: 2px 8px 8px;
   }
-}
-
-.box-i {
-  background-color: var(--pure-white);
-  padding: 8px 16px;
-  font-size: 14/16 * 1rem;
-  & > :first-child {
-    margin-top: 0;
-  }
-  & > :last-child {
-    margin-bottom: 0;
+  & .box-h-simple {
+    padding: 8px 8px 2px;
+    background-color: transparent;
   }
 }
