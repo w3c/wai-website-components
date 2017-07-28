@@ -1,14 +1,56 @@
-.with-sidenotes {
-  & * {
-    grid-column: 1/2;
+.content {
+  display: grid;
+  grid-area: content;
+  grid-template-columns: repeat(6, minmax(0, 120px));
+  grid-column-gap: 32px;
+  & > * {
+    grid-column: 1/5;
     grid-auto-flow: dense;
   }
-  & .ref-side, & .demo-side {
-    grid-column: 2/3;
+  & > .ref-side, > & .demo-side, > & .aside {
+    grid-column: 5/7;
     font-size: .875rem;
     line-height: 1.2;
     & p:first-of-type {
       margin-top: 0;
     }
+  }
+  &.wide {
+    grid-template-columns: repeat(8, minmax(0, 120px));
+    grid-column-start: navigation;
+    grid-column-end: content;
+    & > * {
+      grid-column: 3/9;
+    }
+    & .sn-contents {
+      grid-column:1/3;
+      grid-row:1/99;
+    }
+  }
+}
+
+.example-bar {
+  @apply --grid-six;
+  & > * {
+    grid-column: 2/7;
+  }
+  & .eg {
+    grid-column: 1/2;
+    grid-row: 1/99;
+    text-align: right;
+    border-right: 2px solid var(--wai-green);
+    padding: 0 8px;
+    font-weight: bold;
+    font-style: italic;
+    color: var(--wai-green);
+  }
+}
+
+.example-sheet {
+  @apply --grid-six;
+  & .example-sheet-inner {
+    grid-column: 2/6;
+    background-color: var(--pure-white);
+    padding: 16px 32px;
   }
 }
