@@ -2135,6 +2135,9 @@ ul li, ol li {
 .linklist li:last-child a {
   border-bottom: none;
 }
+p+ul, p+ol {
+  margin-top: -8px;
+}
 .navigations {
   position: relative;
   -ms-grid-column: content;
