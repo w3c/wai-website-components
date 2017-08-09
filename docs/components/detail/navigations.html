@@ -161,8 +161,8 @@
                     <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"header-search"</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"l"</span>&gt;</span>Search:<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"header-search"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"search"</span> <span class="hljs-attr">results</span>=<span class="hljs-string">"10"</span> <span class="hljs-attr">autosave</span>=<span class="hljs-string">"waisearches"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"e.g. Tutorials"</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"button button-icon button-nobg"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"icon-search "</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">use</span> <span class="hljs-attr">xlink:href</span>=<span class="hljs-string">"../../assets/images/icons.svg#icon-search"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">use</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
           <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"button button-icon button-nobg"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"icon-search "</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">use</span> <span class="hljs-attr">xlink:href</span>=<span class="hljs-string">"../../assets/images/icons.svg#icon-search"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">use</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
                 <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
             <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
@@ -444,8 +444,8 @@
           <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"header-search"</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"l"</span>&gt;</span>Search:<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"header-search"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"search"</span> <span class="hljs-attr">results</span>=<span class="hljs-string">"10"</span> <span class="hljs-attr">autosave</span>=<span class="hljs-string">"waisearches"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"e.g. Tutorials"</span>&gt;</span>
-            {%render '<a href="button.html">@button</a>', name="icon", mods=["icon","nobg"], type="icon", icon="search", label="Search" %}
           <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+          {%render '<a href="button.html">@button</a>', name="icon", mods=["icon","nobg"], type="icon", icon="search", label="Search" %}
         <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
@@ -820,7 +820,6 @@
     &amp; li {
       display: flex;
       align-items: center;
-      padding: 0 8px 8px;
       &amp;:first-child {
         grid-column-start: 3;
       }
@@ -838,13 +837,17 @@
     }
   }
   &amp; form[role=search] {
+    background-color: rgba(6, 30, 54, 0.44);
+    display:flex;
+    width: 100%;
     &amp; label {
-      background-color: rgba(6, 30, 54, 0.44);
-      display:block;
       text-transform: none;
       font-weight: normal;
+      display:flex;
+      align-content: center;
+      flex:1;
       &amp; .l {
-        padding: 8px 0 8px 12px;
+        padding: 8px 4px 8px 12px;
       }
     }
     &amp; input {
@@ -855,13 +858,16 @@
       color: var(--pure-white);
       /* border-bottom: 1px solid var(--pure-white);*/
       height: 100%;
-      display:inline-block;
-      padding: 0;
+      padding: 8px 0;
       margin: 0;
+      &amp;::-webkit-search-cancel-button,
+      &amp;::-webkit-search-results-button {
+        filter: invert(100%);
+      }
     }
     &amp; button {
-      display:inline-block;
       margin: 0;
+
     }
     &amp; ::-webkit-input-placeholder {
        color: var(--pure-white);
@@ -1049,7 +1055,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">5.7 KB</span>
+                    <span class="Meta-value">5.8 KB</span>
                 </li>
             </ul>
         </div>
