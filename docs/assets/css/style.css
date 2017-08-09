@@ -43,19 +43,25 @@ code {
 a {
   color: #003366
 }
-a:hover {
+a:hover, a:focus {
   color: #005A6A;
 }
 a:visited {
   color: #660066;
 }
+a.stealthy-link {
+  text-decoration: none;
+}
+a.stealthy-link:hover, a.stealthy-link:focus {
+  color: inherit;
+}
+a.stealthy-link:visited {
+  color: inherit;
+}
 .default-container, .default-grid {
   /*max-width: 70rem;*/
   /*margin: 0 auto;
   padding: 0 1em;*/
-}
-.danger {
-  @apply --danger-theme;
 }
 .default-grid {
   display: -ms-grid;
@@ -74,6 +80,26 @@ a:visited {
       grid-template-columns: repeat(6, minmax(0, 120px));
   grid-column-gap: 32px;
 }
+.grid-three-five {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: [complete-start] minmax(16px, 1fr) [three-start] (minmax(0, 120px))[3] [three-end five-start] (minmax(0, 120px))[5] [five-end] minmax(16px, 1fr) [complete-end];
+      grid-template-columns: [complete-start] minmax(16px, 1fr) [three-start] repeat(3, minmax(0, 120px)) [three-end five-start] repeat(5, minmax(0, 120px)) [five-end] minmax(16px, 1fr) [complete-end];
+  grid-column-gap: 32px;
+}
+.grid-five-three {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: [complete-start] minmax(16px, 1fr) [five-start] (minmax(0, 120px))[5] [five-end three-start] (minmax(0, 120px))[3] [three-end] minmax(16px, 1fr) [complete-end];
+      grid-template-columns: [complete-start] minmax(16px, 1fr) [five-start] repeat(5, minmax(0, 120px)) [five-end three-start] repeat(3, minmax(0, 120px)) [three-end] minmax(16px, 1fr) [complete-end];
+  grid-column-gap: 32px
+}
+.grid-five-three .col1 {
+  grid-area: five;
+}
+.grid-five-three .col2 {
+  grid-area: three;
+}
 .leftcol {
 }
 .leftcol article {
@@ -82,12 +108,9 @@ a:visited {
 button, .button {
   border-radius: 5px;
   display: inline-block;
-
-  display: -webkit-box;
-
-  display: -ms-flexbox;
-
-  display: flex;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -104,21 +127,27 @@ button, .button {
   text-decoration: none;
   font-weight: bold
 }
-button span, .button span {
-}
-button:hover, button:focus, .button:hover, .button:focus {
-  background-color: #003366;
-  color: #ffffff;
-}
-button:disabled, .button:disabled {
-  opacity: .75;
-}
 button-nobg, .button-nobg {
   background: transparent;
 }
 button-nobg:hover, button-nobg:focus, .button-nobg:hover, .button-nobg:focus {
   background-color: transparent;
   outline: 1px solid #fff;
+}
+.stealthy-link:hover, .stealthy-link:focus {
+}
+.stealthy-link:hover span.button, .stealthy-link:focus span.button {
+  background-color: #003366;
+  color: #ffffff;
+}
+button, a.button {
+}
+button:hover, button:focus, a.button:hover, a.button:focus {
+  background-color: #003366;
+  color: #ffffff;
+}
+button:disabled, a.button:disabled {
+  opacity: .75;
 }
 .button-group {
   display: -webkit-box;
@@ -2751,6 +2780,73 @@ p+ul, p+ol {
   padding-bottom: 4px;
 }
 .sidenav--list a[aria-current=page] {
+  font-weight: bold;
+}
+.teaser.featured {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: [complete-start] minmax(16px, 1fr) [three-start] (minmax(0, 120px))[3] [three-end five-start] (minmax(0, 120px))[5] [five-end] minmax(16px, 1fr) [complete-end];
+      grid-template-columns: [complete-start] minmax(16px, 1fr) [three-start] repeat(3, minmax(0, 120px)) [three-end five-start] repeat(5, minmax(0, 120px)) [five-end] minmax(16px, 1fr) [complete-end];
+  grid-column-gap: 32px;
+  background-size: cover;
+  padding: 64px 0
+}
+.teaser.featured .teaser-c {
+  grid-area: three;
+  background-color: rgba(255, 255, 255, .92);
+  border-top: 5px solid #c0272d;
+  padding: 16px 32px;
+}
+.teaser.featured .teaser-h {
+  font-size: 38px;
+  font-size: 2.375rem;
+}
+.teaser-h {
+}
+.teaser-h h2, .teaser-h h3, .teaser-h h4, .teaser-h h5, .teaser-h h6 {
+  margin: 16px 0;
+  padding: 0;
+  border: none;
+  color: #005A6A;
+  font-size: 1em;
+  line-height: 1.2;
+}
+.teaser-h p {
+  font-weight: bold;
+  margin: 0;
+}
+.teaser-h-icon {
+  height: 24px;
+  height:1.5rem;
+  width: 24px;
+  width: 1.5rem;
+  vertical-align: middle;
+  margin-right: .5em
+}
+.teaser-tip {
+  text-align: center
+}
+.teaser-tip .teaser-h span {
+  display: block;
+}
+.teaser-tip .teaser-h h2 {
+  font-size: 28px;
+  font-size: 1.75rem;
+}
+.teaser-tip .teaser-h svg {
+  height: 48px;
+  height: 3rem;
+  width: 48px;
+  width: 3rem;
+}
+.teaser-about {
+}
+.teaser-about p {
+  font-size: 24px;
+  font-size: 1.5rem;
+  color: #686868;
+}
+.teaser-about .teaser-h h2 {
   font-weight: bold;
 }
 
