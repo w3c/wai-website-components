@@ -1,0 +1,16 @@
+<section class="teaser featured" style="background-image: url({{image}});">
+  <a class="teaser-c stealthy-link" href="#">
+    <header class="teaser-h featured">
+      <p>{{subtitle}}</p>
+      <h2>
+        {%- render '@icons', name=icon, class="teaser-h-icon" -%} {{title}}
+      </h2>
+    </header>
+    <p>
+      {{description}}
+    </p>
+    <div>
+      {%render "@button", name="fake", type="fake", label="Read More" %}
+    </div>
+  </a>
+</section>

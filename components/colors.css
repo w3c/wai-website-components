@@ -15,6 +15,7 @@
   --body-bg: #FAFAFC;
   --lt-off-white: #fafafa;
   --pure-white: #ffffff;
+  --white-transparent: rgba(255, 255, 255, 0.92);;
   --visited-link: #660066;
   --footer-grey: #efefef;
 }

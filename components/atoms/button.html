@@ -1,3 +1,6 @@
+{%- if type == "fake" -%}
+<span class="button{% for mod in mods %} button-{{ mod }}{% endfor %}">{{label}}</span>
+{%- else -%}
 {%- if type != "icon" -%}
 {%- if href -%}
 <a class="button{% for mod in mods %} button-{{ mod }}{% endfor %}" href="{{ href }}"><span>{{ label }}</span></a>
@@ -6,4 +9,5 @@
 {%- endif -%}
 {%- else -%}
 <button class="button{% for mod in mods %} button-{{ mod }}{% endfor %}"{{ " type=\"submit\"" if submit }}{{ " disabled" if disabled }}><span>{%render '@icons', name=icon %}</span></button>
+{%- endif -%}
 {%- endif -%}

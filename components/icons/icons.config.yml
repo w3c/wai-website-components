@@ -6,6 +6,9 @@ variants:
 - name: book
   context:
     name: book
+- name: checkmark
+  context:
+    name: checkmark
 - name: search
   context:
     name: search

@@ -19,3 +19,8 @@ variants:
     label: Icon Button
     href: '#'
     mods: ["icon"]
+- name: fake
+  context:
+    type: fake
+    label: Fake button
+    mods: ['fake']

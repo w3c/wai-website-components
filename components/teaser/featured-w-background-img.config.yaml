@@ -1,0 +1,7 @@
+title: Teaser with BG Image
+context:
+  title: Easy Checks
+  subtitle: Featured Resource
+  description: "Is accessibility addressed in even the most basic way on your site?"
+  icon: checkmark
+  image: /assets/images/teaser-image.jpg

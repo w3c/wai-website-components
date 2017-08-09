@@ -1,8 +1,7 @@
 button, .button {
   border-radius: 5px;
   display: inline-block;
-
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   padding: 8px 12px;
@@ -13,21 +12,29 @@ button, .button {
   background-color: var(--wai-green);
   text-decoration: none;
   font-weight: bold;
-  & span {
-  }
-  &:hover, &:focus {
-    background-color: var(--w3c-blue);
-    color: var(--pure-white);
-  }
-  &:disabled {
-    opacity: .75;
-  }
   &-nobg {
     background: transparent;
     &:hover, &:focus {
       background-color: transparent;
       outline: 1px solid #fff;
     }
+  }
+}
+
+.stealthy-link:hover, .stealthy-link:focus {
+  & span.button {
+    background-color: var(--w3c-blue);
+    color: var(--pure-white);
+  }
+}
+
+button, a.button {
+  &:hover, &:focus {
+    background-color: var(--w3c-blue);
+    color: var(--pure-white);
+  }
+  &:disabled {
+    opacity: .75;
   }
 }
 
