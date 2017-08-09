@@ -406,8 +406,8 @@ th > :last-child, td > :last-child {
       grid-row-start: 1;
 }
 h1, h2, h3, h4, h5, h6 {
-  padding: 0 0 8px;
-  margin: 0 0 8px;
+  padding: 0;
+  margin: 40px 0 20px;
 }
 h1 {
   font-size: 38px;
@@ -415,6 +415,7 @@ h1 {
   color: #005A6A;
   line-height: 1.2;
   font-weight: normal;
+  margin-top: 0;
 }
 h2 {
   font-size: 22px;
@@ -438,8 +439,8 @@ h5 {
   line-height: 1.6;
 }
 h6 {
-  font-size: 14px+;
-  font-size:.875rem+;
+  font-size: 14px;
+  font-size:.875rem;
   line-height: 1.8;
 }
 [class^="icon-"], [class*=" icon-"] {
@@ -2221,7 +2222,6 @@ ul li, ol li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0 8px 8px;
 }
 .metanav ul li:first-child {
   -ms-grid-column: 3;
@@ -2240,15 +2240,26 @@ ul li, ol li {
   text-align: right;
 }
 .metanav form[role=search] {
+  background-color: rgba(6, 30, 54, .44);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
 }
 .metanav form[role=search] label {
-  background-color: rgba(6, 30, 54, .44);
-  display: block;
   text-transform: none;
   font-weight: normal;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 .metanav form[role=search] label .l {
-  padding: 8px 0 8px 12px;
+  padding: 8px 4px 8px 12px;
 }
 .metanav form[role=search] input {
   -webkit-appearance: none;
@@ -2258,12 +2269,16 @@ ul li, ol li {
   color: #ffffff;
   /* border-bottom: 1px solid var(--pure-white);*/
   height: 100%;
-  display: inline-block;
-  padding: 0;
+  padding: 8px 0;
   margin: 0;
 }
+.metanav form[role=search] input::-webkit-search-cancel-button,
+      .metanav form[role=search] input::-webkit-search-results-button {
+  filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="table" tableValues="1 0" /><feFuncG type="table" tableValues="1 0" /><feFuncB type="table" tableValues="1 0" /></feComponentTransfer></filter></svg>#filter');
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
+}
 .metanav form[role=search] button {
-  display: inline-block;
   margin: 0;
 }
 .metanav form[role=search] ::-webkit-input-placeholder {
