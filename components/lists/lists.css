@@ -33,3 +33,7 @@ ul li, ol li {
     border-bottom: none;
   }
 }
+
+p+ul, p+ol {
+  margin-top: -8px;
+}
