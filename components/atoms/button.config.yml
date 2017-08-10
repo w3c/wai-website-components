@@ -7,11 +7,20 @@ variants:
   context:
     label: Disabled button
     disabled: true
+- name: secondary
+  context:
+    label: Secondary button
+    mods: ['secondary']
 - name: link
   context:
     label: Link Button
     href: '#'
-    mods: [more]
+    mods: ['more']
+- name: link-secondary
+  context:
+    label: Secondary Link Button
+    href: '#'
+    mods: ['more', 'secondary']
 - name: icon
   context:
     type: icon

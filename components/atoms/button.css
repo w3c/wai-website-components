@@ -5,7 +5,7 @@ button, .button {
   align-items: center;
   justify-content: center;
   padding: 8px 12px;
-  border: none;
+  border: 2px solid var(--wai-green);;
   font-size: .8125rem;
   line-height: 1.4;
   color: var(--pure-white);
@@ -30,12 +30,18 @@ button, .button {
 
 button, a.button {
   &:hover, &:focus {
+    border-color: var(--w3c-blue);
     background-color: var(--w3c-blue);
     color: var(--pure-white);
   }
   &:disabled {
     opacity: .75;
   }
+}
+
+.button-secondary {
+  background-color: var(--pure-white);
+  color: var(--wai-green);
 }
 
 .button-group {

@@ -2,7 +2,7 @@
 <span class="button{% for mod in mods %} button-{{ mod }}{% endfor %}">{{label}}</span>
 {%- else -%}
 {%- if type != "icon" -%}
-{%- if href -%}
+{%- if ((name == "link") or (name == "link-secondary")) -%}
 <a class="button{% for mod in mods %} button-{{ mod }}{% endfor %}" href="{{ href }}"><span>{{ label }}</span></a>
 {%- else -%}
 <button class="button{% for mod in mods %} button-{{ mod }}{% endfor %}"{{ " type=\"submit\"" if submit }}{{ " disabled" if disabled }}><span>{{ label }}</span></button>
