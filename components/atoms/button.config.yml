@@ -16,11 +16,13 @@ variants:
     label: Link Button
     href: '#'
     mods: ['more']
+    type: link
 - name: link-secondary
   context:
     label: Secondary Link Button
     href: '#'
     mods: ['more', 'secondary']
+    type: link
 - name: icon
   context:
     type: icon
