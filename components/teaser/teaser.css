@@ -1,15 +1,16 @@
+.teaser {
+  padding: 32px 0;
+}
+
 .teaser.featured {
   @apply --full-grid-three-five;
   background-size: cover;
-  padding: 64px 0;
+  background-position: center;
   & .teaser-c {
     grid-area: three;
-    background-color: rgba(255, 255, 255, 0.92);
+    background-color: rgba(255, 255, 255, 0.9);
     border-top: 5px solid var(--faded-red);
     padding: 16px 32px;
-  }
-  & .teaser-h {
-    font-size: 2.375rem;
   }
 }
 
@@ -19,42 +20,94 @@
     padding: 0;
     border:none;
     color: var(--wai-green);
-    font-size: 1em;
+    font-size: 1rem;
     line-height: 1.2;
+    &.title {
+      font-size: 2.375rem;
+      margin: 10px 0 20px;
+    }
   }
   & p {
     font-weight: bold;
     margin: 0;
+    font-size: 1rem;
   }
 }
 
 .teaser-h-icon {
-  height:1.5rem;
-  width: 1.5rem;
+  height:2.5rem;
+  width: 2.5rem;
   vertical-align: middle;
-  margin-right: .5em
+  margin-right: 10px;
+  &.full {
+    display: block;
+    height: 4.25rem;
+    width: 4.25rem;
+  }
 }
 
 .teaser-tip {
   text-align: center;
-  & .teaser-h span {
-    display:block;
-  }
   & .teaser-h h2 {
     font-size: 1.75rem
   }
   & .teaser-h svg {
+    display: block;
+    margin: 0 auto;
     height: 3rem;
     width: 3rem;
+  }
+  & .fakelink {
+    margin: 0 auto;
+  }
+}
+
+.fakelink {
+  text-decoration: underline;
+  position: relative;
+  & svg {
+    margin-left: 5px;
+    width: .75em;
+    height: .75em;
   }
 }
 
 .teaser-about {
+  border-right: 1px solid var(--line-grey);
+  margin-right: -17px;
+  padding-right: 17px;
   & p {
     font-size: 1.5rem;
     color: var(--grey);
   }
   & .teaser-h h2 {
     font-weight: bold;
+  }
+}
+
+.teaser-media {
+  align-items: center;
+  background-color: #fff;
+}
+
+.area-teaser {
+  background-color: var(--pure-white);
+  border: 1px solid var(--line-grey);
+  margin: -1px;
+  padding: 60px 40px;
+  display: grid;
+  grid-template-rows: 1fr min-content min-content;
+  & .teaser-h {
+    display: flex;
+    align-items: flex-end;
+    & h2, & h3, & h4, & h5, & h6 {margin: 0;}
+  }
+  & .teaser-h-icon {
+    margin-bottom: 10px;
+  }
+  &:hover, &:focus {
+    & .teaser-h > :not(svg) {
+      text-decoration: underline;
+    }
   }
 }
