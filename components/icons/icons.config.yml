@@ -9,6 +9,18 @@ variants:
 - name: checkmark
   context:
     name: checkmark
+- name: loupe
+  context:
+    name: loupe
+- name: design
+  context:
+    name: design
+- name: development
+  context:
+    name: development
+- name: laws
+  context:
+    name: laws
 - name: search
   context:
     name: search
