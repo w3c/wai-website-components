@@ -157,7 +157,7 @@
 <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"button{% for mod in mods %} button-{{ mod }}{% endfor %}"</span>&gt;</span>{{label}}<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
 {%- else -%}
 {%- if type != "icon" -%}
-{%- if href -%}
+{%- if type == "link" -%}
 <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"button{% for mod in mods %} button-{{ mod }}{% endfor %}"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"{{ href }}"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>{{ label }}<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
 {%- else -%}
 <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"button{% for mod in mods %} button-{{ mod }}{% endfor %}"</span>{{ " <span class="hljs-attr">type</span>=<span class="hljs-string">\</span>"<span class="hljs-attr">submit</span>\"" <span class="hljs-attr">if</span> <span class="hljs-attr">submit</span> }}{{ " <span class="hljs-attr">disabled</span>" <span class="hljs-attr">if</span> <span class="hljs-attr">disabled</span> }}&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>{{ label }}<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
@@ -205,7 +205,7 @@
         
         
         <li class="Meta-item">
-            <strong class="Meta-key">Variants <em class="Meta-count">(5)</em>:</strong>
+            <strong class="Meta-key">Variants <em class="Meta-count">(7)</em>:</strong>
             <span class="Meta-value Meta-value--linkList">
             
                 <a href="button--default.html">
@@ -216,8 +216,16 @@
                     <span>Disabled</span>
                 </a>, 
             
+                <a href="button--secondary.html">
+                    <span>Secondary</span>
+                </a>, 
+            
                 <a href="button--link.html">
                     <span>Link</span>
+                </a>, 
+            
+                <a href="button--link-secondary.html">
+                    <span>Link Secondary</span>
                 </a>, 
             
                 <a href="">
@@ -1289,6 +1297,54 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="teasers-featured-w-background-img.html" data-pjax>
                 <span>Featured W Background Img</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="teasers-four-teasers.html" data-pjax>
+                <span>Four Teasers</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="teasers-media.html" data-pjax>
+                <span>Media</span>
                 
 
 <div class="Status Status--unlabelled">
