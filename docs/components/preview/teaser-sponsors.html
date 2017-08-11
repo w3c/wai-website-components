@@ -1,0 +1,57 @@
+
+
+<!DOCTYPE html>
+<!--
+    PHP: Check if fonts-loaded cookie has been set.
+    If so, add the `fonts-loaded` class to the `html` element.
+-->
+<html lang="en-gb" dir="ltr" prefix="og: http://ogp.me/ns#" class="no-js fonts-loaded">
+  <head>
+    <script>
+      document.documentElement.className = document.documentElement.className.replace('no-js', 'has-js');
+
+      function downloadJSAtOnload() {
+        var element = document.createElement("script");
+        element.src = "../../assets/scripts/main.js";
+        document.body.appendChild(element);
+        document.body.dataset.menuExpanded = 'false';
+      }
+
+      window.addEventListener("load", downloadJSAtOnload, false);
+    </script>
+
+    <meta charset="utf-8"/>
+    <meta name="referrer" content="origin"/>
+    <meta name="robots" content="index, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="format-detection" content="telephone=no"><meta property="og:title" content=""/><meta property="og:description" content=""/><meta property="og:url" content=""/><meta property="og:image" content="../../assets/icons/icon.png"/><meta name="twitter:card" content="summary"/>
+    <meta name="twitter:site" content="@"/>
+
+    <link rel="stylesheet" href="../../assets/css/style.css">
+
+    <title> &#9670; Web Accessibility Initiative (WAI) &#9670; W3C</title>
+  </head>
+
+  <body>
+    <div class="default-grid teaser teaser-sponsors">
+  <div class="inner">
+    <header class="teaser-h">
+      <h2 class="title">Sponsors and Funders</h2>
+    </header>
+    <p>WAI is supported in part by the following organizations. Thank you!</p>
+<ul class="four columns">
+  <li><a href="#">Adobe Systems</a></li>
+  <li><a href="#">Deque Systems</a></li>
+  <li><a href="#">ETS</a></li>
+  <li><a href="#">HP Enterprise</a></li>
+  <li><a href="#">HP Inc.</a></li>
+  <li><a href="#">IBM Corporation</a></li>
+  <li>US Department of Health and Human Services, <a href="#">National Institute for Disability</a>, Independent Living and Rehabilitation Research, contract HHSP23301500054 (<a href="#">WAI-Core 2015 Project</a>)</li>
+  <li>US Access Board (<a href="#">WCAG TA Project</a>)</li>
+</ul>
+<p>WAI welcomes <a href="#">additional sponsors and contributors</a>.</p>
+  </div>
+</div>
+  </body>
+</html>
+

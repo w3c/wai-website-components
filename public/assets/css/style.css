@@ -68,7 +68,12 @@ a.stealthy-link:visited {
   display: grid;
   -ms-grid-columns: [complete-start] minmax(16px, 1fr) [navigation-start] (minmax(0, 120px))[2] [navigation-end content-start] (minmax(0, 120px))[6] [content-end] minmax(16px, 1fr) [complete-end];
       grid-template-columns: [complete-start] minmax(16px, 1fr) [navigation-start] repeat(2, minmax(0, 120px)) [navigation-end content-start] repeat(6, minmax(0, 120px)) [content-end] minmax(16px, 1fr) [complete-end];
-  grid-column-gap: 32px;
+  grid-column-gap: 32px
+}
+.default-grid .inner {
+  -ms-grid-column: navigation-start;
+      grid-column-start: navigation-start;
+  grid-column-end: content-end;
 }
 .grid-4 {
   -ms-grid-columns: (minmax(0, 120px))[4];
@@ -2251,6 +2256,26 @@ ul li, ol li {
 p+ul, p+ol {
   margin-top: -8px;
 }
+.columns {
+  padding: 0
+}
+.columns > * {
+  margin-left: 32px;
+  /*page-break-inside: avoid;
+    break-inside: avoid;*/
+}
+.two.columns {
+  -webkit-columns: 2;
+          columns: 2;
+  -webkit-column-gap: 32px;
+          column-gap: 32px;
+}
+.four.columns {
+  -webkit-columns: 4;
+          columns: 4;
+  -webkit-column-gap: 32px;
+          column-gap: 32px;
+}
 .navigations {
   position: relative;
   -ms-grid-column: content;
@@ -2587,6 +2612,9 @@ p+ul, p+ol {
   background-color: #ffffff;
 }
 .news-teaser {
+  margin-bottom: 60px;
+}
+.announcements-list {
   margin-bottom: 60px;
 }
 .announce-box {
