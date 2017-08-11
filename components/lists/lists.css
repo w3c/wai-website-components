@@ -34,6 +34,16 @@ ul li, ol li {
   }
 }
 
+.nolist {
+  margin: 0;
+  padding: 0;
+  & li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+}
+
 p+ul, p+ol {
   margin-top: -8px;
 }
