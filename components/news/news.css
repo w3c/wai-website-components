@@ -6,6 +6,10 @@
   margin-bottom: 60px;
 }
 
+.announcements-list {
+  margin-bottom: 60px;
+}
+
 .announce-box {
   background-color: var(--lt-off-white);
   border: 1px solid var(--line-grey);
