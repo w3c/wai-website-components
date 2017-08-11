@@ -169,6 +169,18 @@ a {
   }
 }
 
+.grid-line-right {
+  border-right: 1px solid var(--line-grey);
+  margin-right: -17px;
+  padding-right: 17px;
+}
+
+.grid-line-left {
+  border-left: 1px solid var(--line-grey);
+  margin-left: -16px;
+  padding-left: 16px;
+}
+
 .media-wrapper {
   position: relative;
   padding-top: 56.25%;

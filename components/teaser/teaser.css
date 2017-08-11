@@ -73,9 +73,6 @@
 }
 
 .teaser-about {
-  border-right: 1px solid var(--line-grey);
-  margin-right: -17px;
-  padding-right: 17px;
   & p {
     font-size: 1.5rem;
     color: var(--grey);
