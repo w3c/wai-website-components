@@ -130,6 +130,10 @@ a {
   & .col2 {
     grid-area: three;
   }
+  & .col12 {
+    grid-column-start: five-start;
+    grid-column-end: three-end;
+  }
 }
 
 .grid-4q {
