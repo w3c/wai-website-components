@@ -107,6 +107,10 @@ a {
 
 .default-grid {
   @apply --full-grid;
+  & .inner {
+    grid-column-start: navigation-start;
+    grid-column-end: content-end;
+  }
 }
 
 .grid-4 {
