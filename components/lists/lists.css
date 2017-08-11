@@ -47,3 +47,22 @@ ul li, ol li {
 p+ul, p+ol {
   margin-top: -8px;
 }
+
+.columns {
+  padding: 0;
+  & > * {
+    margin-left: 32px;
+    /*page-break-inside: avoid;
+    break-inside: avoid;*/
+  }
+}
+
+.two.columns {
+  columns: 2;
+  column-gap: 32px;
+}
+
+.four.columns {
+  columns: 4;
+  column-gap: 32px;
+}
