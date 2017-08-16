@@ -70,9 +70,12 @@
       display: flex;
       align-items: center;
       &:first-child {
-        grid-column-start: 3;
+        grid-column-start: 2;
       }
       &:nth-child(2) {
+        grid-column-start: 3;
+      }
+      &:nth-child(3) {
         grid-column-start: 4;
       }
       &:last-child {

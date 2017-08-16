@@ -2371,10 +2371,14 @@ p+ul, p+ol {
           align-items: center;
 }
 .metanav ul li:first-child {
+  -ms-grid-column: 2;
+      grid-column-start: 2;
+}
+.metanav ul li:nth-child(2) {
   -ms-grid-column: 3;
       grid-column-start: 3;
 }
-.metanav ul li:nth-child(2) {
+.metanav ul li:nth-child(3) {
   -ms-grid-column: 4;
       grid-column-start: 4;
 }
