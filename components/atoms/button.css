@@ -16,7 +16,13 @@ button, .button {
     background: transparent;
     &:hover, &:focus {
       background-color: transparent;
-      outline: 1px solid #fff;
+      border-color: #fff;
+    }
+  }
+  &-noborder {
+    border-color: transparent;
+    &:hover, &:focus {
+      border-color: #fff;
     }
   }
 }
