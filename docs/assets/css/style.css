@@ -207,7 +207,13 @@ button-nobg, .button-nobg {
 }
 button-nobg:hover, button-nobg:focus, .button-nobg:hover, .button-nobg:focus {
   background-color: transparent;
-  outline: 1px solid #fff;
+  border-color: #fff;
+}
+button-noborder, .button-noborder {
+  border-color: transparent;
+}
+button-noborder:hover, button-noborder:focus, .button-noborder:hover, .button-noborder:focus {
+  border-color: #fff;
 }
 .stealthy-link:hover, .stealthy-link:focus {
 }
@@ -2395,9 +2401,13 @@ p+ul, p+ol {
   display: flex;
   -ms-flex-line-pack: center;
       align-content: center;
+  -ms-flex-preferred-size: 70%;
+      flex-basis: 70%;
   -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
 }
 .metanav form[role=search] label .l {
   padding: 8px 4px 8px 12px;
@@ -2412,6 +2422,7 @@ p+ul, p+ol {
   height: 100%;
   padding: 8px 0;
   margin: 0;
+  width: 70%;
 }
 .metanav form[role=search] input::-webkit-search-cancel-button,
       .metanav form[role=search] input::-webkit-search-results-button {
