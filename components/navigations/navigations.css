@@ -175,7 +175,7 @@
         text-decoration: none;
         display:block;
         width: 100%;
-        padding: 16px 8px;
+        padding: 16px;
         @supports (display: grid) {
           padding:8px 0;
         }
@@ -208,6 +208,10 @@
       /*display: grid;
       grid-auto-columns: 1fr;*/
       margin-bottom: 0;
+      border-bottom: 1px solid #B0C5D5;
+      &:last-child {
+       border-bottom: none;
+      }
       & > a {
         /*grid-column: 1/2;*/
       }
@@ -219,6 +223,13 @@
           background-color: var(--pure-white);
           color: var(--w3c-blue) !important;
         }
+      }
+      & svg {
+        float: right;
+        width: .75em;
+        height: .75em;
+        margin-left: .85em;
+        margin-top: .4em;
       }
     }
     & .subsubnav {
