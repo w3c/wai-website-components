@@ -94,7 +94,9 @@
       font-weight: normal;
       display:flex;
       align-content: center;
-      flex:1;
+      flex-basis: 70%;
+      flex-grow: 1;
+      flex-shrink: 1;
       & .l {
         padding: 8px 4px 8px 12px;
       }
@@ -109,6 +111,7 @@
       height: 100%;
       padding: 8px 0;
       margin: 0;
+      width:70%;
       &::-webkit-search-cancel-button,
       &::-webkit-search-results-button {
         filter: invert(100%);
