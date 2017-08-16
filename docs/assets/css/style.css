@@ -2502,7 +2502,7 @@ p+ul, p+ol {
   text-decoration: none;
   display: block;
   width: 100%;
-  padding: 16px 8px;
+  padding: 16px;
 }
 @supports ((display: -ms-grid) or (display: grid)) {
   .mainnav > ul > li > a {
@@ -2535,6 +2535,10 @@ p+ul, p+ol {
   /*display: grid;
       grid-auto-columns: 1fr;*/
   margin-bottom: 0;
+  border-bottom: 1px solid #B0C5D5;
+}
+.mainnav .subnav > li:last-child, .mainnav .subnav > li li:last-child {
+  border-bottom: none;
 }
 .mainnav .subnav > li > a, .mainnav .subnav > li li > a {
   /*grid-column: 1/2;*/
@@ -2547,6 +2551,13 @@ p+ul, p+ol {
 .mainnav .subnav > li a:hover, .mainnav .subnav > li li a:hover {
   background-color: #ffffff;
   color: #003366 !important;
+}
+.mainnav .subnav > li svg, .mainnav .subnav > li li svg {
+  float: right;
+  width: .75em;
+  height: .75em;
+  margin-left: .85em;
+  margin-top: .4em;
 }
 .mainnav .subnav .subsubnav {
   width: 15em;
