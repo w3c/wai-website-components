@@ -163,7 +163,7 @@
     align-items: flex-end;
     @supports (display: grid) {
       display: grid;
-      grid-template-columns: repeat(6, minmax(0, 120px));
+      grid-template-columns: repeat(6, minmax(0, 130px));
       grid-column-gap: 32px;
       margin:0;
     }

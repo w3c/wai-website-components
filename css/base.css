@@ -70,37 +70,37 @@ a {
 :root {
   --full-grid: {
     display: grid;
-    grid-template-columns: [complete-start] minmax(16px, 1fr) [navigation-start] repeat(2, minmax(0, 120px)) [navigation-end content-start] repeat(6, minmax(0, 120px)) [content-end] minmax(16px, 1fr) [complete-end];
+    grid-template-columns: [complete-start] minmax(16px, 1fr) [navigation-start] repeat(2, minmax(0, 130px)) [navigation-end content-start] repeat(6, minmax(0, 130px)) [content-end] minmax(16px, 1fr) [complete-end];
     grid-column-gap: 32px;
   }
   --full-grid-three-five: {
     display: grid;
-    grid-template-columns: [complete-start] minmax(16px, 1fr) [three-start] repeat(3, minmax(0, 120px)) [three-end five-start] repeat(5, minmax(0, 120px)) [five-end] minmax(16px, 1fr) [complete-end];
+    grid-template-columns: [complete-start] minmax(16px, 1fr) [three-start] repeat(3, minmax(0, 130px)) [three-end five-start] repeat(5, minmax(0, 130px)) [five-end] minmax(16px, 1fr) [complete-end];
     grid-column-gap: 32px;
   }
   --full-grid-five-three: {
     display: grid;
-    grid-template-columns: [complete-start] minmax(16px, 1fr) [five-start] repeat(5, minmax(0, 120px)) [five-end three-start] repeat(3, minmax(0, 120px)) [three-end] minmax(16px, 1fr) [complete-end];
+    grid-template-columns: [complete-start] minmax(16px, 1fr) [five-start] repeat(5, minmax(0, 130px)) [five-end three-start] repeat(3, minmax(0, 130px)) [three-end] minmax(16px, 1fr) [complete-end];
     grid-column-gap: 32px;
   }
   --full-grid-4q: {
     display: grid;
-    grid-template-columns: [complete-start] minmax(16px, 1fr) [content-start q1-start] repeat(2, minmax(0, 120px)) [q1-end q2-start] repeat(2, minmax(0, 120px)) [q2-end q3-start] repeat(2, minmax(0, 120px)) [q3-end q4-start] repeat(2, minmax(0, 120px)) [q4-end content-end] minmax(16px, 1fr) [complete-end];
+    grid-template-columns: [complete-start] minmax(16px, 1fr) [content-start q1-start] repeat(2, minmax(0, 130px)) [q1-end q2-start] repeat(2, minmax(0, 130px)) [q2-end q3-start] repeat(2, minmax(0, 130px)) [q3-end q4-start] repeat(2, minmax(0, 130px)) [q4-end content-end] minmax(16px, 1fr) [complete-end];
     grid-column-gap: 32px;
   }
   --full-grid-4q-nogap: {
     display: grid;
-    grid-template-columns: [complete-start] minmax(16px, 1fr) [content-start q1-start] repeat(2, minmax(0, 148px)) [q1-end q2-start] repeat(2, minmax(0, 148px)) [q2-end q3-start] repeat(2, minmax(0, 148px)) [q3-end q4-start] repeat(2, minmax(0, 148px)) [q4-end content-end] minmax(16px, 1fr) [complete-end];
+    grid-template-columns: [complete-start] minmax(16px, 1fr) [content-start q1-start] repeat(2, minmax(0, 158px)) [q1-end q2-start] repeat(2, minmax(0, 158px)) [q2-end q3-start] repeat(2, minmax(0, 158px)) [q3-end q4-start] repeat(2, minmax(0, 158px)) [q4-end content-end] minmax(16px, 1fr) [complete-end];
     grid-column-gap: 0;
   }
   --grid-six: {
     display:grid;
-    grid-template-columns: repeat(6, minmax(0, 120px));
+    grid-template-columns: repeat(6, minmax(0, 130px));
     grid-column-gap: 32px;
   }
   --grid-four: {
     display:grid;
-    grid-template-columns: repeat(4, minmax(0, 120px));
+    grid-template-columns: repeat(4, minmax(0, 130px));
     grid-column-gap: 32px;
   };
 }
