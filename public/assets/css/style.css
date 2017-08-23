@@ -3283,7 +3283,7 @@ p+ul, p+ol {
 
 .mainnav > ul > li > a > span {
   display: block;
-  border-bottom: 2px solid transparent;
+  border-bottom: 2px solid rgba(221, 221, 221, .32);
 }
 
 .mainnav > ul > li > a:hover,
