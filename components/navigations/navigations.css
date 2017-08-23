@@ -220,8 +220,6 @@
         padding: 2px 6px;
         display: block;
         text-decoration: none;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
         &:--hovcus {
           color: var(--gold) !important;
           &::after {
@@ -265,6 +263,8 @@
     & a, & strong {
       display: block;
       font-weight: bold;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
     & .has-sub {
       page-break-inside: avoid;
