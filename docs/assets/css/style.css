@@ -3232,7 +3232,8 @@ p+ul, p+ol {
           align-items: flex-end;
   padding: 0 1px;
   -ms-grid-row: 2;
-      grid-row-start: 2
+      grid-row-start: 2;
+  font-size: .875em
 }
 
 .mainnav > ul {
@@ -3285,10 +3286,14 @@ p+ul, p+ol {
   border-bottom: 2px solid transparent;
 }
 
-.mainnav > ul > li > a:hover, .mainnav > ul > li > a:focus, .mainnav > ul > li > a[aria-current="page"] {
+.mainnav > ul > li > a:hover,
+.mainnav > ul > li > a:focus,
+.mainnav > ul > li > a[aria-current="page"] {
 }
 
-.mainnav > ul > li > a:hover > span, .mainnav > ul > li > a:focus > span, .mainnav > ul > li > a[aria-current="page"] > span {
+.mainnav > ul > li > a:hover > span,
+.mainnav > ul > li > a:focus > span,
+.mainnav > ul > li > a[aria-current="page"] > span {
   border-bottom: 2px solid #eed009;
 }
 
@@ -3296,7 +3301,7 @@ p+ul, p+ol {
   display: none;
   width: 15em;
   position: absolute;
-  left: 0;
+  left: -24px;
   background-color: #003366;
   border: 2px solid #003366;
 
@@ -3311,7 +3316,7 @@ p+ul, p+ol {
   /*display: grid;
       grid-auto-columns: 1fr;*/
   margin-bottom: 0;
-  border-bottom: 1px solid #B0C5D5;
+  border-bottom: 1px solid rgba(221, 221, 221, .32);
 }
 
 .mainnav .subnav > li:last-child, .mainnav .subnav > li li:last-child {
@@ -3326,8 +3331,6 @@ p+ul, p+ol {
   padding: 2px 6px;
   display: block;
   text-decoration: none;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 .mainnav .subnav > li a:hover,
@@ -3385,6 +3388,8 @@ p+ul, p+ol {
 .mainnav.alternative .subnav a, .mainnav.alternative .subnav strong {
   display: block;
   font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .mainnav.alternative .subnav .has-sub {

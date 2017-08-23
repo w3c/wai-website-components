@@ -3331,8 +3331,6 @@ p+ul, p+ol {
   padding: 2px 6px;
   display: block;
   text-decoration: none;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 .mainnav .subnav > li a:hover,
@@ -3390,6 +3388,8 @@ p+ul, p+ol {
 .mainnav.alternative .subnav a, .mainnav.alternative .subnav strong {
   display: block;
   font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .mainnav.alternative .subnav .has-sub {
