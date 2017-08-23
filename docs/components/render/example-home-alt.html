@@ -29,7 +29,7 @@
       </li>
     </ul>
   </nav>
-  <nav class="mainnav" label="Main">
+  <nav class="mainnav alternative" label="Main">
     <ul>
       <li>
         <a href="#"><span>Accessibility Fundamentals</span></a>
@@ -38,20 +38,8 @@
           <li><a href="#">Accessibility Principles</a></li>
           <li>
             <a href="#">User Perspectives Videos</a>
-          <!--   <ul class="subsubnav">
-              <li><a href="#">Keyboard Control</a></li>
-              <li><a href="#">Color Contrast</a></li>
-              <li><a href="#">Layout &amp; Design</a></li>
-              <li><a href="#">Text to Speech</a></li>
-              <li><a href="#">Large Controls</a></li>
-              <li><a href="#">Video Captions</a></li>
-              <li><a href="#">Customizable Text</a></li>
-              <li><a href="#">Voice Recognition</a></li>
-              <li><a href="#">Understandable Content</a></li>
-              <li><a href="#">Notifications &amp; Feedback</a></li>
-            </ul> -->
           </li>
-          <li><a href="#">How do People with Disabilities Use the Web?<svg aria-hidden="true" class="icon-chevron-right "><use xlink:href="../../assets/images/icons.svg#icon-chevron-right"></use></svg></a>
+          <li class="has-sub"><strong>How do People with Disabilities Use the Web?</strong>
             <ul class="subsubnav">
               <li><a href="#">Stories of Web Users</a></li>
               <li><a href="#">[Diverse Abilities and Disabilities]</a></li>
@@ -68,8 +56,8 @@
         <ul class="subnav">
           <li><a href="#">[Building a Business Case]</a></li>
           <li><a href="#">Approaches for Interim Repairs</a></li>
-          <li>
-            <a href="#">Planning &amp; Managing Accessibility<svg aria-hidden="true" class="icon-chevron-right "><use xlink:href="../../assets/images/icons.svg#icon-chevron-right"></use></svg></a>
+          <li class="has-sub">
+            <strong>Planning &amp; Managing Accessibility</strong>
             <ul class="subsubnav">
               <li><a href="#">Initiate</a></li>
               <li><a href="#">Plan</a></li>
@@ -99,15 +87,15 @@
         <a href="#"><span>Code &amp; Develop</span></a>
         <ul class="subnav">
           <li><a href="#">Tips for Developing</a></li>
-          <li>
-            <a href="#">Developer’s Intro<svg aria-hidden="true" class="icon-chevron-right "><use xlink:href="../../assets/images/icons.svg#icon-chevron-right"></use></svg></a>
+          <li class="has-sub">
+            <strong>Developer’s Intro</strong>
             <ul class="subsubnav">
               <li><a href="#">WAI-ARIA</a></li>
               <li><a href="#">Mobile Accessibility</a></li>
             </ul>
           </li>
-          <li>
-            <a href="#">Developer Tutorials<svg aria-hidden="true" class="icon-chevron-right "><use xlink:href="../../assets/images/icons.svg#icon-chevron-right"></use></svg></a>
+          <li class="has-sub">
+            <strong>Developer Tutorials</strong>
             <ul class="subsubnav">
               <li><a href="#">Page Structure</a></li>
               <li><a href="#">Menus Tutorial</a></li>
@@ -127,15 +115,15 @@
         <ul class="subnav">
           <li><a href="#">Tips for Evaluating</a></li>
           <li><a href="#">[First Checks for Common Accessibility Problems]</a></li>
-          <li>
-            <a href="#">Evaluation Tools<svg aria-hidden="true" class="icon-chevron-right "><use xlink:href="../../assets/images/icons.svg#icon-chevron-right"></use></svg></a>
+          <li class="has-sub">
+            <strong>Evaluation Tools</strong>
             <ul class="subsubnav">
               <li><a href="#">Selecting Evaluation Tools</a></li>
               <li><a href="#">List of Evaluation Tools</a></li>
             </ul>
           </li>
-          <li>
-            <a href="#">Conformance Evaluation<svg aria-hidden="true" class="icon-chevron-right "><use xlink:href="../../assets/images/icons.svg#icon-chevron-right"></use></svg></a>
+          <li class="has-sub">
+            <strong>Conformance Evaluation</strong>
             <ul class="subsubnav">
               <li><a href="#">WCAG-EM Conformance Methodology</a></li>
               <li><a href="#">WCAG-EM Report Tool</a></li>
@@ -281,688 +269,144 @@
 
 </header>
 
-<nav class="breadcrumb default-grid" label="Breadcrumb">
-  <ul class="default-container">
-    <li><a href="#">Home</a></li>
-    <li><a href="#">Tutorials</a></li>
-    <li><a href="#">Page Structure</a></li>
-    <li><a href="#main" aria-current="page">Page Regions</a></li>
-  </ul>
-</nav>
-
-<main id="main" class="default-grid with-gap leftcol">
-  <nav class="sidenav sn-contents" label="Page Structure" id="contents">
-<div class="sidenav--head"><div class="sidenav--head-icon"><svg aria-hidden="true" class="icon-book sidenav--head-icon--inner"><use xlink:href="../../assets/images/icons.svg#icon-book"></use></svg></div><div class="sidenav--head-title"><div class="sidenav--head-section">Tutorials</div><div class="sidenav--head-subsection">Page Structure</div>
+<section class="teaser featured" style="background-image: url(../../assets/images/teaser-image.jpg);">
+  <a class="teaser-c stealthy-link" href="#">
+    <header class="teaser-h featured">
+      <p>Featured Resource</p>
+      <h2 class="title"><svg aria-hidden="true" class="icon-checkmark teaser-h-icon"><use xlink:href="../../assets/images/icons.svg#icon-checkmark"></use></svg>Easy Checks
+      </h2>
+    </header>
+    <p>
+      Is accessibility addressed in even the most basic way on your site?
+    </p>
+    <div>
+      <span class="button">Read More</span>
+    </div>
+  </a>
+</section>
+<section class="teaser grid-five-three">
+  <div class="col1 teaser-about grid-line-right">
+    <header class="teaser-h">
+      <h2>What is the Web Accessibility Initiative?</h2>
+    </header>
+    <p>[Placeholder short description] WAI develops guidelines widely regarded as the international standard for Web accessibility support materials to help understand and implement Web accessibility resources, through international collaboration.</p>
+  </div>
+  <a href="#" class="col2 stealthy-link teaser-tip">
+    <header class="teaser-h">
+      <h2><svg aria-hidden="true" class="icon-lightbulb tips"><use xlink:href="../../assets/images/icons.svg#icon-lightbulb"></use></svg><span>Tip of the Week</span></h2>
+    </header>
+    <p>Provide sufficient contrast between foreground and background</p>
+    <span class="fakelink">More Design Tips<svg aria-hidden="true" class="icon-chevron-right "><use xlink:href="../../assets/images/icons.svg#icon-chevron-right"></use></svg></span>
+  </a>
+</section>
+<div class="grid-4q teaser teaser-media">
+  <div class="q1-start q2-end">
+    <header class="teaser-h">
+      <p class="subtitle">
+        Web Accessibility Perspectives
+      </p>
+      <h2 class="title">Keyboard Compatibility</h2>
+    </header>
+    <p>[Short description for Keyboard Compatibility] All functionality must be usable with the keyboard. That is, users can access and move between links, buttons, forms, and other controls using the Tab key and other keystrokes. Websites should not require a mouse;…</p>
+    <div class="button-group">
+      <button class="button button-more"><span>More About Keyboard Compatibility</span></button>
+      <button class="button button-more button-secondary"><span>See All Perspectives Videos</span></button>
+    </div>
+  </div>
+  <div class="q3-start q4-end media">
+    <div class="media-wrapper">
+      <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/93UgG72os8M" frameborder="0" allowfullscreen></iframe>
+    </div>
   </div>
 </div>
 
-<ul class="sidenav--list">
-  <li><a href="#">Web Accessibility Tutorials</a></li>
-  <li>
-    <a href="#" aria-current="location">Page Structure Tutorial</a>
-    <ul>
-      <li><a href="#">Page Regions</a></li>
-      <li><a href="#" aria-current="page">Labeling Regions</a></li>
-      <li><a href="#">Headings</a></li>
-      <li><a href="#">Content Structure</a></li>
-      <li><a href="#">Example</a></li>
+<div class="grid-4q nogap teaser">
+  <a href="#" class="q1-start q1-end stealthy-link area-teaser">
+    <header class="teaser-h">
+      <h2 class="title"><svg aria-hidden="true" class="icon-loupe teaser-h-icon full"><use xlink:href="../../assets/images/icons.svg#icon-loupe"></use></svg>Audit</h2>
+    </header>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+    <span class="fakelink">Learn more<svg aria-hidden="true" class="icon-chevron-right "><use xlink:href="../../assets/images/icons.svg#icon-chevron-right"></use></svg></span>
+  </a>
+  <a href="#" class="q2-start q2-end stealthy-link area-teaser">
+    <header class="teaser-h">
+      <h2 class="title"><svg aria-hidden="true" class="icon-design teaser-h-icon full"><use xlink:href="../../assets/images/icons.svg#icon-design"></use></svg>Design</h2>
+    </header>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+    <span class="fakelink">Learn more<svg aria-hidden="true" class="icon-chevron-right "><use xlink:href="../../assets/images/icons.svg#icon-chevron-right"></use></svg></span>
+  </a><a href="#" class="q3-start q3-end stealthy-link area-teaser">
+    <header class="teaser-h">
+      <h2 class="title"><svg aria-hidden="true" class="icon-development teaser-h-icon full"><use xlink:href="../../assets/images/icons.svg#icon-development"></use></svg>Develop</h2>
+    </header>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+    <span class="fakelink">Learn more<svg aria-hidden="true" class="icon-chevron-right "><use xlink:href="../../assets/images/icons.svg#icon-chevron-right"></use></svg></span>
+  </a><a href="#" class="q4-start q4-end stealthy-link area-teaser">
+    <header class="teaser-h">
+      <h2 class="title"><svg aria-hidden="true" class="icon-laws teaser-h-icon full"><use xlink:href="../../assets/images/icons.svg#icon-laws"></use></svg>Laws &amp; Policies</h2>
+    </header>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+    <span class="fakelink">Learn more<svg aria-hidden="true" class="icon-chevron-right "><use xlink:href="../../assets/images/icons.svg#icon-chevron-right"></use></svg></span>
+  </a>
+</div>
+<div class="grid-five-three teaser news">
+  <div class="col12 teaser-h">
+    <h2 class="title">News &amp; Announcements</h2>
+  </div>
+  <div class="col1 grid-line-right">
+    <h3>News</h3>
+    <article class="news-teaser">
+      <h4>Updated: Tutorials on Web Accessibility</h4>
+      <p><a href="http://w3.org/WAI/tutorials">Web Accessibility Tutorials</a> on Menus, Page Structure, Forms, Images, Tables, and Carousels have been updated. These tutorials show you how to create web content that is accessible to people with disabilities and that improves the user experience for all users. They include general guidance, and specific examples for HTML5 and WAI-ARIA. (<a href="#">2017-Apr-18</a>)</p>
+    </article>
+    <article class="news-teaser">
+      <h4>Updated: Tutorials on Web Accessibility</h4>
+      <p><a href="http://w3.org/WAI/tutorials">Web Accessibility Tutorials</a> on Menus, Page Structure, Forms, Images, Tables, and Carousels have been updated. These tutorials show you how to create web content that is accessible to people with disabilities and that improves the user experience for all users. They include general guidance, and specific examples for HTML5 and WAI-ARIA. (<a href="#">2017-Apr-18</a>)</p>
+    </article>
+    <article class="news-teaser">
+      <h4>Updated: Tutorials on Web Accessibility</h4>
+      <p><a href="http://w3.org/WAI/tutorials">Web Accessibility Tutorials</a> on Menus, Page Structure, Forms, Images, Tables, and Carousels have been updated. These tutorials show you how to create web content that is accessible to people with disabilities and that improves the user experience for all users. They include general guidance, and specific examples for HTML5 and WAI-ARIA. (<a href="#">2017-Apr-18</a>)</p>
+    </article>
+    <button class="button button-more"><span>See All News and Announcements</span></button>
+  </div>
+  <div class="col2">
+    <h3>Announcements</h3>
+    <ul class="nolist announcements-list">
+      <li class="announce-box">Open position: <a href="#">Web Accessibility Engineer (China)</a></li>
+      <li class="announce-box"><a href="#">Get WAI Announcements</a></li>
     </ul>
-  </li>
-  <li>
-    <a href="#">Menus</a>
-    <ul>
-      <li><a href="#">Structure</a></li>
-      <li><a href="#">Styling</a></li>
-      <li><a href="#">Fly-out Menus</a></li>
-      <li><a href="#">Application Menus</a></li>
-      <li><a href="#">Application Menu Example &amp; Code</a></li>
-    </ul>
-  </li>
-  <li>
-    <a href="#">Images</a>
-    <ul>
-      <li><a href="#">Informative Images</a></li>
-      <li><a href="#">Decorative Images</a></li>
-      <li><a href="#">Functional Images</a></li>
-      <li><a href="#">Images of Text</a></li>
-      <li><a href="#">Complex Images</a></li>
-      <li><a href="#">Groups of Images</a></li>
-      <li><a href="#">Image Maps</a></li>
-      <li><a href="#">An alt Decision Tree</a></li>
-      <li><a href="#">Tips and Tricks</a></li>
-    </ul>
-  </li>
-  <li>
-    <a href="#">Tables</a>
-    <ul>
-      <li><a href="#">One Header</a></li>
-      <li><a href="#">Two Headers</a></li>
-      <li><a href="#">Irregular Headers</a></li>
-      <li><a href="#">Multi-level Headers</a></li>
-      <li><a href="#">Caption &amp; Summary</a></li>
-      <li><a href="#">Tips and Tricks</a></li>
-    </ul>
-  </li>
-  <li>
-    <a href="#">Forms</a>
-    <ul>
-      <li><a href="#">Labeling Controls</a></li>
-      <li><a href="#">Grouping Controls</a></li>
-      <li><a href="#">Form Instructions</a></li>
-      <li><a href="#">Validating Input</a></li>
-      <li><a href="#">User Notifications</a></li>
-      <li><a href="#">Multi-page Forms</a></li>
-      <li><a href="#">Custom Controls</a></li>
-    </ul>
-  </li>
-  <li>
-    <a href="#">Carousels</a>
-    <ul>
-      <li><a href="#">Structure</a></li>
-      <li><a href="#">Functionality</a></li>
-      <li><a href="#">Animations</a></li>
-      <li><a href="#">Styling</a></li>
-      <li><a href="#">Working Example</a></li>
-      <li><a href="#">Complete Code</a></li>
-    </ul>
-  </li>
+    <h3>Upcoming Events, Meetings, and Presentations</h3>
+    <div class="announce-box">
+      <p>At AccessU in Austin, TX, USA in May 2017</p>
+      <ul>
+        <li><a href="#">Catching Up with Accessibility: Beginner’s Basics</a></li>
+        <li><a href="#">Easy Checks for Web Accessibility: Get the Gist (No Experience Necessary)</a></li>
+        <li><a href="#">The WAI to Web Accessibility: An Interactive Tour Through Resources from the W3C Web Accessibility Initiative</a></li>
+      </ul>
+    </div>
+    <div class="announce-box">
+      <a href="#">See Past Events</a>
+    </div>
+  </div>
+</div>
+<div class="default-grid teaser teaser-sponsors">
+  <div class="inner">
+    <header class="teaser-h">
+      <h2 class="title">Sponsors and Funders</h2>
+    </header>
+    <p>WAI is supported in part by the following organizations. Thank you!</p>
+<ul class="four columns">
+  <li><a href="#">Adobe Systems</a></li>
+  <li><a href="#">Deque Systems</a></li>
+  <li><a href="#">ETS</a></li>
+  <li><a href="#">HP Enterprise</a></li>
+  <li><a href="#">HP Inc.</a></li>
+  <li><a href="#">IBM Corporation</a></li>
+  <li>US Department of Health and Human Services, <a href="#">National Institute for Disability</a>, Independent Living and Rehabilitation Research, contract HHSP23301500054 (<a href="#">WAI-Core 2015 Project</a>)</li>
+  <li>US Access Board (<a href="#">WCAG TA Project</a>)</li>
 </ul>
-</nav>
-
-  <article class="content with-sidenotes">
-    <h1>Labeling Regions</h1>
-    <aside class="box box-simple">
-  <header class="box-h box-h-simple">Status: Draft
-</header>
-  <div class="box-i"><p>This is an in-progress, unapproved draft.</p></div>
-</aside>
-
-    <p>Most regions on a page need to be labeled. This is especially important when there are multiple regions of the same type on one page, such as multiple navigation options. WAI-ARIA provides simple mechanisms to label a region, enabling users to easily navigate around the page.</p>
-
-    <p>Sections should also be organized using <a href="../headings/">headings</a>.</p>
-
-    <h2 class="ap" id="using-aria-label">Using <code>aria-label</code></h2>
-
-<p>Use the WAI-ARIA <code>aria-label</code> attribute to label the region. This approach can be used if the label is not supposed to appear visually on the page.</p>
-
-      <aside class="ref-side">
-      <div>
-        <svg style="width: 2em;" viewBox="0 0 32 32" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
-            <path d="M16 14 L16 23 M16 8 L16 10" />
-            <circle cx="16" cy="16" r="14" />
-        </svg>
-<p>More <a href="https://www.w3.org/WAI/intro/aria">information about WAI-ARIA</a> is available, including <a href="https://www.w3.org/TR/aria-in-html/">Notes on Using ARIA in HTML</a>.</p>
-
-</div>
-      </aside>
-
-<figure class="code ">
-  <figcaption>Code snippet: </figcaption>
-<pre class="highlight html"><code><span class="nt">&lt;nav</span> <span class="na">aria-label=</span><span class="s">"Main Navigation"</span><span class="nt">&gt;</span>
-  …
-<span class="nt">&lt;/nav&gt;</span>
-</code></pre>
-</figure>
-      <aside class="demo-side">
-      <div>
-        <svg style="width: 2em;" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%"><circle cx="17" cy="15" r="1"/><circle cx="16" cy="16" r="6"/><path d="M2 16S7 6 16 6s14 10 14 10-5 10-14 10S2 16 2 16z"/></symbol>
-<p>A <a href="../example/">complete example</a>, including labels, is available.</p>
-
-</div>
-      </aside>
-<h2 class="ap" id="using-aria-labelledby">Using <code>aria-labelledby</code></h2>
-
-<p>Use the WAI-ARIA <code>aria-labelledby</code> to reference an existing element – like a heading – by its (unique) <code>id</code>. The content of the referenced element is then used as the label. A heading allows users to find the region in multiple ways.</p>
-
-<figure class="code ">
-  <figcaption>Code snippet: </figcaption>
-<pre class="highlight html"><code><span class="nt">&lt;nav</span> <span class="na">aria-labelledby=</span><span class="s">"regionheading"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;h3</span> <span class="na">id=</span><span class="s">"regionheading"</span><span class="nt">&gt;</span>On this Page<span class="nt">&lt;/h3&gt;</span>
-    …
-<span class="nt">&lt;/nav&gt;</span>
-</code></pre>
-</figure>
-
-
-      <div class="resources">
-  <h2 id="related">Related WCAG 2.0 resources</h2>
-  <div class="resources-inner">
-	  <p>These tutorials provide best-practice guidance on implementing accessibility in different situations. This page combined the following WCAG 2.0 success criteria and techniques from different conformance levels:</p>
-
-	    <p><strong>Success Criteria:</strong></p>
-	    <ul>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	            <li><p><a href="http://www.w3.org/WAI/WCAG20/quickref/#qr-navigation-mechanisms-skip">2.4.1 Bypass Blocks:</a> A mechanism is available to bypass blocks of content that are repeated on multiple Web pages. (Level&nbsp;A)</p></li>
-
-
-
-
-
-
-
-
-
-
-
-
-
-	            <li><p><a href="http://www.w3.org/WAI/WCAG20/quickref/#qr-navigation-mechanisms-descriptive">2.4.6 Headings and Labels:</a> Headings and labels describe topic or purpose. (Level&nbsp;AA)</p></li>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	    </ul>
-
-
-	    <p><strong>Techniques:</strong></p>
-	    <ul>
-
-
-
-
-
-
-
-
-
-
-
-	            <li><a href="http://www.w3.org/TR/WCAG20-TECHS/ARIA11">ARIA11: Using ARIA landmarks to identify regions of a page</a></li>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	            <li><a href="http://www.w3.org/TR/WCAG20-TECHS/H69">H69: Providing heading elements at the beginning of each section of content</a></li>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	    </ul>
-
+<p>WAI welcomes <a href="#">additional sponsors and contributors</a>.</p>
   </div>
 </div>
-
-
-      <nav role="navigation" aria-label="Previous/Next" id="tools">
-  <ul>
-
-
-
-
-
-          <li class="prev">
-            <span><a rel="prev" class="" href="../regions/"><span class="count"></span><span class="txt"><span class="dir">Previous:</span><span class="title">Page Regions</span></span></a></span>
-          </li>
-
-
-
-
-
-
-
-
-
-
-          <li class="next">
-            <span><a rel="next" class="" href="../headings/"><span class="count"></span><span class="txt"><span class="dir">Next:</span><span class="title">Headings</span></span></a></span>
-          </li>
-
-
-
-
-
-
-
-
-
-
-
-  </ul>
-</nav>
-
-
-      <aside class="side-box github" role="complementary">
-  <h2 class="heading">We welcome your ideas</h2>
-  <p>Please send any ideas, suggestions, or comments to the <a href="mailto:wai-eo-editors@w3.org?subject=[Tutorial%20Feedback]">(publicly-archived) mailing list wai-eo-editors@w3.org</a>. You can also contribute to the <a href="https://github.com/w3c/wai-tutorials" rel="nofollow">code directly on Github</a>.</p>
-
-	<div class="editpage">
-  	<a class="btn" href="https://github.com/w3c/wai-tutorials/blob/master/source/page-structure/labels.html.erb.md">Fork &amp; edit this page on Github</a>
-	</div>
-
-</aside>
-  </article>
-
-</main>
-
 <footer class="page-footer">
   <div class="default-container">
     <p>Status: Draft updated October 2016 (first published March 2006)</p>
