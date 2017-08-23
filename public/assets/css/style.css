@@ -3326,11 +3326,23 @@ p+ul, p+ol {
   padding: 2px 6px;
   display: block;
   text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-.mainnav .subnav > li a:hover, .mainnav .subnav > li li a:hover {
-  background-color: #ffffff;
-  color: #003366 !important;
+.mainnav .subnav > li a:hover,
+.mainnav .subnav > li a:focus,
+.mainnav .subnav > li li a:hover,
+.mainnav .subnav > li li a:focus {
+  color: #eed009 !important;
+}
+
+.mainnav .subnav > li a:hover::after,
+.mainnav .subnav > li a:focus::after,
+.mainnav .subnav > li li a:hover::after,
+.mainnav .subnav > li li a:focus::after {
+  content: " •";
+  color: #ffffff;
 }
 
 .mainnav .subnav > li svg, .mainnav .subnav > li li svg {
@@ -3364,14 +3376,15 @@ p+ul, p+ol {
 }
 
 .mainnav.alternative .subnav {
+  padding: 16px;
   -webkit-columns: 2;
           columns: 2;
   width: 30em;
 }
 
 .mainnav.alternative .subnav a, .mainnav.alternative .subnav strong {
-  padding: 2px 16px;
   display: block;
+  font-weight: bold;
 }
 
 .mainnav.alternative .subnav .has-sub {
@@ -3391,6 +3404,10 @@ p+ul, p+ol {
   background-color: #003366;
   border: 2px solid #003366;
   page-break-inside: avoid;
+}
+
+.mainnav.alternative .subnav .subsubnav a {
+  font-weight: normal;
 }
 
 .mainsub {

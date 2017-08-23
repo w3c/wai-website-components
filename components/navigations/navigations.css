@@ -219,9 +219,14 @@
         padding: 2px 6px;
         display: block;
         text-decoration: none;
-        &:hover {
-          background-color: var(--pure-white);
-          color: var(--w3c-blue) !important;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        &:--hovcus {
+          color: var(--gold) !important;
+          &::after {
+            content: " •";
+            color: var(--pure-white);
+          }
         }
       }
       & svg {
@@ -253,11 +258,12 @@
 
 .mainnav.alternative {
   & .subnav {
+    padding: 16px;
     columns: 2;
     width: 30em;
     & a, & strong {
-      padding: 2px 16px;
       display: block;
+      font-weight: bold;
     }
     & .has-sub {
       page-break-inside: avoid;
@@ -273,6 +279,9 @@
       background-color: var(--w3c-blue);
       border: 2px solid var(--w3c-blue);
       page-break-inside: avoid;
+      & a {
+        font-weight: normal;
+      }
     }
   }
 }
