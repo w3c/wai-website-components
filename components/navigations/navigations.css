@@ -156,6 +156,7 @@
   align-items: flex-end;
   padding: 0 1px;
   grid-row-start: 2;
+  font-size: .875em;
   & > ul {
     width: 100%;
     margin:0 -8px;
@@ -183,7 +184,7 @@
           display: block;
           border-bottom: 2px solid transparent;
         }
-        &:hover, &:focus, &[aria-current="page"] {
+        &:--hovcus, &[aria-current="page"] {
           & > span {
             border-bottom: 2px solid var(--gold);
           }
@@ -196,7 +197,7 @@
     display: none;
     width: 15em;
     position: absolute;
-    left: 0;
+    left: -24px;
     background-color: var(--w3c-blue);
     border: 2px solid var(--w3c-blue);
     a {
@@ -208,7 +209,7 @@
       /*display: grid;
       grid-auto-columns: 1fr;*/
       margin-bottom: 0;
-      border-bottom: 1px solid #B0C5D5;
+      border-bottom: 1px solid var(--trans-line-grey);
       &:last-child {
        border-bottom: none;
       }
