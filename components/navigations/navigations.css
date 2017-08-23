@@ -251,6 +251,32 @@
   }
 }
 
+.mainnav.alternative {
+  & .subnav {
+    columns: 2;
+    width: 30em;
+    & a, & strong {
+      padding: 2px 16px;
+      display: block;
+    }
+    & .has-sub {
+      page-break-inside: avoid;
+    }
+    & .subsubnav {
+      margin-left: 1em;
+      width: auto;
+      /*grid-column: 2/3;*/
+      display: block;
+      position: static;
+      left: initial;
+      top: initial;
+      background-color: var(--w3c-blue);
+      border: 2px solid var(--w3c-blue);
+      page-break-inside: avoid;
+    }
+  }
+}
+
 
 .mainsub {
   display:grid;
