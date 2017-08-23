@@ -12,22 +12,22 @@ button, .button {
   background-color: var(--wai-green);
   text-decoration: none;
   font-weight: bold;
-  &-nobg {
+  &.button-nobg {
     background: transparent;
-    &:hover, &:focus {
+    &:--hovcus {
       background-color: transparent;
       border-color: #fff;
     }
   }
-  &-noborder {
+  &.button-noborder {
     border-color: transparent;
-    &:hover, &:focus {
+    &:--hovcus {
       border-color: #fff;
     }
   }
 }
 
-.stealthy-link:hover, .stealthy-link:focus {
+.stealthy-link:--hovcus {
   & span.button {
     background-color: var(--w3c-blue);
     color: var(--pure-white);
@@ -35,7 +35,7 @@ button, .button {
 }
 
 button, a.button {
-  &:hover, &:focus {
+  &:--hovcus {
     border-color: var(--w3c-blue);
     background-color: var(--w3c-blue);
     color: var(--pure-white);

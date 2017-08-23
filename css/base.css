@@ -1,3 +1,5 @@
+@custom-selector :--hovcus :hover, :focus;
+
 @font-face {
   font-family: 'Noto Sans';
   src: url('../fonts/notosans-regular.woff2') format('woff2'),
@@ -44,7 +46,7 @@ code {
 
 a {
   color: var(--w3c-blue);
-  &:hover, &:focus {
+  &:--hovcus {
     color: var(--wai-green);
   }
   &:visited {
@@ -52,7 +54,7 @@ a {
   }
   &.stealthy-link {
     text-decoration: none;
-    &:hover, &:focus {
+    &:--hovcus {
       color: inherit;
     }
     &:visited {
@@ -66,6 +68,9 @@ a {
   /*margin: 0 auto;
   padding: 0 1em;*/
 }
+
+@custom-media --medium (width >= 27.5em);
+@custom-media --large (width >= 60.5em);
 
 :root {
   --full-grid: {
@@ -102,32 +107,42 @@ a {
     display:grid;
     grid-template-columns: repeat(4, minmax(0, 130px));
     grid-column-gap: 32px;
-  };
+  }
 }
 
 .default-grid {
-  @apply --full-grid;
-  & .inner {
-    grid-column-start: navigation-start;
-    grid-column-end: content-end;
+  @media (--large) {
+    @apply --full-grid;
+    & .inner {
+      grid-column-start: navigation-start;
+      grid-column-end: content-end;
+    }
   }
 }
 
 .grid-4 {
-  grid-template-columns: repeat(4, minmax(0, 120px));
-  grid-column-gap: 32px;
+  @media (--large) {
+    grid-template-columns: repeat(4, minmax(0, 120px));
+    grid-column-gap: 32px;
+  }
 }
 .grid-6 {
-  grid-template-columns: repeat(6, minmax(0, 120px));
-  grid-column-gap: 32px;
+  @media (--large) {
+    grid-template-columns: repeat(6, minmax(0, 120px));
+    grid-column-gap: 32px;
+  }
 }
 
 .grid-three-five {
-  @apply --full-grid-three-five;
+  @media (--large) {
+    @apply --full-grid-three-five;
+  }
 }
 
 .grid-five-three {
-  @apply --full-grid-five-three;
+  @media (--large) {
+    @apply --full-grid-five-three;
+  }
   & .col1 {
     grid-area: five;
   }
@@ -141,9 +156,11 @@ a {
 }
 
 .grid-4q {
-  @apply --full-grid-4q;
-  &.nogap {
-    @apply --full-grid-4q-nogap;
+  @media (--large) {
+    @apply --full-grid-4q;
+    &.nogap {
+      @apply --full-grid-4q-nogap;
+    }
   }
   & .q1-start {
     grid-column-start: q1-start;
