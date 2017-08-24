@@ -255,39 +255,6 @@
   }
 }
 
-.mainnav.alternative {
-  & .subnav {
-    padding: 16px;
-    columns: 2;
-    width: 30em;
-    & a, & strong {
-      display: block;
-      font-weight: bold;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
-    & .has-sub {
-      page-break-inside: avoid;
-    }
-    & .subsubnav {
-      margin-left: 1em;
-      width: auto;
-      /*grid-column: 2/3;*/
-      display: block;
-      position: static;
-      left: initial;
-      top: initial;
-      background-color: var(--w3c-blue);
-      border: 2px solid var(--w3c-blue);
-      page-break-inside: avoid;
-      & a {
-        font-weight: normal;
-      }
-    }
-  }
-}
-
-
 .mainsub {
   display:grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
