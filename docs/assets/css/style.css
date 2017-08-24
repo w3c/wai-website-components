@@ -647,14 +647,6 @@ th > :last-child, td > :last-child {
   padding: 4px 0;
 }
 
-.site-footer-grid {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 2fr 1fr 1fr;
-      grid-template-columns: 2fr 1fr 1fr;
-  grid-column-gap: 32px;
-}
-
 #site-header {
   background-color: #003366;
   color: #fff
