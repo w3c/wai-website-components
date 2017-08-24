@@ -3391,6 +3391,47 @@ p+ul, p+ol {
   display: block;
 }
 
+.mainnav.alternative {
+}
+
+.mainnav.alternative .subnav {
+  padding: 16px;
+  -webkit-columns: 2;
+          columns: 2;
+  width: 30em;
+}
+
+.mainnav.alternative .subnav a, .mainnav.alternative .subnav strong {
+  display: block;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.mainnav.alternative .subnav .has-sub {
+  page-break-inside: avoid;
+}
+
+.mainnav.alternative .subnav .subsubnav {
+  margin-left: 1em;
+  width: auto;
+  /*grid-column: 2/3;*/
+  display: block;
+  position: static;
+  left: auto;
+  left: initial;
+  top: auto;
+  top: initial;
+  background-color: #003366;
+  border: 2px solid #003366;
+  page-break-inside: avoid;
+  padding: 0 !important;
+}
+
+.mainnav.alternative .subnav .subsubnav a {
+  font-weight: normal;
+}
+
 .mainsub {
   display:-ms-grid;
   display:grid;
