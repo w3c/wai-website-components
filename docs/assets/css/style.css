@@ -3082,7 +3082,8 @@ p+ul, p+ol {
           align-items: center;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
-          justify-content: flex-end
+          justify-content: flex-end;
+  width: 100%
 }
 
 .metanav a {
@@ -3093,43 +3094,35 @@ p+ul, p+ol {
   border-bottom: 2px solid #eed009;
 }
 
-.metanav ul {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (minmax(0, 120px))[6];
-      grid-template-columns: repeat(6, minmax(0, 120px));
-  grid-column-gap: 32px;
+.metanav > ul {
+  width: 100%;
+  /* @apply --grid-six;*/
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 -8px;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
-.metanav ul li {
+.metanav > ul li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin: 0 8px;
 }
 
-.metanav ul li:first-child {
-  -ms-grid-column: 2;
-      grid-column-start: 2;
+.metanav > ul li:first-child {
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 3;
 }
 
-.metanav ul li:nth-child(2) {
-  -ms-grid-column: 3;
-      grid-column-start: 3;
-}
-
-.metanav ul li:nth-child(3) {
-  -ms-grid-column: 4;
-      grid-column-start: 4;
-}
-
-.metanav ul li:last-child {
-  grid-column: 5/7;
-}
-
-.metanav ul li a {
+.metanav > ul li a {
   display: block;
   width: 100%;
   text-align: right;
@@ -3367,7 +3360,7 @@ p+ul, p+ol {
   display: none;
   position: absolute;
   left: 100%;
-  top: 0;
+  top: -18px;
   background-color: #003366;
   border: 2px solid #003366;
   padding: 16px;

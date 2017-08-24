@@ -1,9 +1,41 @@
 
 
-<div class="navigations">
+<!DOCTYPE html>
+<!--
+    PHP: Check if fonts-loaded cookie has been set.
+    If so, add the `fonts-loaded` class to the `html` element.
+-->
+<html lang="en-gb" dir="ltr" prefix="og: http://ogp.me/ns#" class="no-js fonts-loaded">
+  <head>
+    <script>
+      document.documentElement.className = document.documentElement.className.replace('no-js', 'has-js');
+
+      function downloadJSAtOnload() {
+        var element = document.createElement("script");
+        element.src = "../../assets/scripts/main.js";
+        document.body.appendChild(element);
+        document.body.dataset.menuExpanded = 'false';
+      }
+
+      window.addEventListener("load", downloadJSAtOnload, false);
+    </script>
+
+    <meta charset="utf-8"/>
+    <meta name="referrer" content="origin"/>
+    <meta name="robots" content="index, follow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="format-detection" content="telephone=no"><meta property="og:title" content=""/><meta property="og:description" content=""/><meta property="og:url" content=""/><meta property="og:image" content="../../assets/icons/icon.png"/><meta name="twitter:card" content="summary"/>
+    <meta name="twitter:site" content="@"/>
+
+    <link rel="stylesheet" href="../../assets/css/style.css">
+
+    <title> &#9670; Web Accessibility Initiative (WAI) &#9670; W3C</title>
+  </head>
+
+  <body>
+    <div class="navigations">
   <nav class="metanav" label="Meta &amp; Search">
     <ul>
-      <li><a href="#">Standards &amp; Guidelines</a></li>
       <li><a href="#">About WAI</a></li>
       <li><a href="#">Get Involved</a></li>
       <li>
@@ -40,6 +72,19 @@
         </ul>
       </li>
       <li>
+        <a href="#"><span>Standards &amp;<br>Guidelines</span></a>
+        <ul class="subnav">
+          <li><a href="#">How Accessibility Works</a></li>
+          <li><a href="#">Web Content (WCAG)</a></li>
+          <li><a href="#">WAI-ARIA</a></li>
+          <li><a href="#">Authoring Tools (ATAG)</a></li>
+          <li><a href="#">User Agents (UAAG)</a></li>
+          <li><a href="#">Evaluation &amp; Report Language (EARL)</a></li>
+          <li><a href="#">FAQ: Mobile Accessibility</a></li>
+          <li><a href="#">Referencing and Linking to Standards</a></li>
+        </ul>
+      </li>
+      <li>
         <a href="#"><span>Plan &amp;<br>Manage</span></a>
         <ul class="subnav">
           <li><a href="#">[Building a Business Case]</a></li>
@@ -60,15 +105,10 @@
         </ul>
       </li>
       <li>
-        <a href="#"><span>Write &amp;<br> Design</span></a>
+        <a href="#"><span>Develop</span></a>
         <ul class="subnav">
-          <li><a href="#">Tips for Designing</a></li>
           <li><a href="#">Tips for Writing</a></li>
-        </ul>
-      </li>
-      <li>
-        <a href="#"><span>Code &amp;<br>Develop</span></a>
-        <ul class="subnav">
+          <li><a href="#">Tips for Designing</a></li>
           <li><a href="#">Tips for Developing</a></li>
           <li>
             <span tabindex="0">Developer’s Intros<svg aria-hidden="true" class="icon-chevron-right "><use xlink:href="../../assets/images/icons.svg#icon-chevron-right"></use></svg></span>
@@ -138,4 +178,7 @@
     </ul>
   </nav>
 </div>
+
+  </body>
+</html>
 
