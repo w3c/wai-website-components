@@ -153,7 +153,7 @@
 <div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-a6819638362e2366b40eeeebba19d325-panel-html">
     <code class="Code Code--lang-html">
         
-        <pre><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"teaser featured"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"background-image: url(../../assets/images/teaser-image.jpg);"</span>&gt;</span>
+        <pre><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"teaser featured"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"background-image: url(../../assets/images/teaser-image@1x.jpg); background-image: -webkit-image-set(url(../../assets/images/teaser-image@1x.jpg) 1x, url(../../assets/images/teaser-image@2x.jpg) 2x)"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"teaser-c stealthy-link"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"teaser-h featured"</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Featured Resource<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
@@ -175,7 +175,7 @@
     
     <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-a6819638362e2366b40eeeebba19d325-panel-view">
     <code class="Code Code--lang-html">
-        <pre><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"teaser featured"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"background-image: url({{ image | path }});"</span>&gt;</span>
+        <pre><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"teaser featured"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"background-image: url({{ image | path }}); background-image: -webkit-image-set(url({{ image1x | path }}) 1x, url({{ image2x | path }}) 2x)"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"teaser-c stealthy-link"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"teaser-h featured"</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>{{subtitle}}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
@@ -204,7 +204,9 @@
   <span class="hljs-attr">"subtitle"</span>: <span class="hljs-string">"Featured Resource"</span>,
   <span class="hljs-attr">"description"</span>: <span class="hljs-string">"Is accessibility addressed in even the most basic way on your site?"</span>,
   <span class="hljs-attr">"icon"</span>: <span class="hljs-string">"checkmark"</span>,
-  <span class="hljs-attr">"image"</span>: <span class="hljs-string">"/assets/images/teaser-image.jpg"</span>
+  <span class="hljs-attr">"image"</span>: <span class="hljs-string">"/assets/images/teaser-image@1x.jpg"</span>,
+  <span class="hljs-attr">"image1x"</span>: <span class="hljs-string">"/assets/images/teaser-image@1x.jpg"</span>,
+  <span class="hljs-attr">"image2x"</span>: <span class="hljs-string">"/assets/images/teaser-image@2x.jpg"</span>
 }</pre>
             
         
