@@ -3,9 +3,11 @@
   grid-column: content;
   display: grid;
   grid-template-rows: min-content minmax(10px, 1fr) min-content;
-  border: 1px solid rgba(255, 255, 255, 0.11);
-  border-style: none solid;
-  padding: 16px 0 0;
+  @media (--medium) {
+    border: 1px solid rgba(255, 255, 255, 0.11);
+    border-style: none solid;
+    padding: 16px 0 0;
+  }
   & .nava11y {
     display: block;
   }
@@ -28,10 +30,17 @@
   & ul {
     padding: 8px;
     grid-area: content;
+    display: flex;
+    justify-content: space-between;
+    @media (--small) {
+      justify-content: flex-end;
+    }
   }
   & a {
     color: var(--w3c-blue);
-    margin-left: 16px;
+    @media (--small) {
+      margin-left: 16px;
+    }
     text-decoration: none;
     &:hover, &:focus {
       border-bottom: none;
@@ -53,10 +62,12 @@
   font-weight: bold;
   border-bottom: 1px solid rgba(255, 255, 255, 0.11);
   text-align: right;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
   width: 100%;
+  @media (--medium) {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
   & a {
     text-decoration: none;
     &:hover, &:focus, &[aria-current="page"] {
@@ -65,22 +76,29 @@
   }
   & > ul {
     width: 100%;
-    /* @apply --grid-six;*/
-    display: flex;
-    margin: 0 -8px;
-    justify-content: flex-end;
-    & li {
+    @media (--medium) {
       display: flex;
-      align-items: center;
-      margin: 0 8px;
+      justify-content: flex-end;
+    }
+    & li {
+      display: inline;
+      margin-bottom: 8px;
+      @media (--medium) {
+        display: flex;
+        align-items: center;
+        margin: 0 8px;
+      }
       &:first-child {
+        margin-right: 16px;
         grid-column-start: 1;
         grid-column-end: 3;
       }
       & a {
-        display: block;
-        width: 100%;
-        text-align: right;
+        @media (--medium) {
+          display: block;
+          width: 100%;
+          text-align: right;
+        }
       }
     }
   }
@@ -148,26 +166,33 @@
 
 .mainnav {
   position: relative;
-  display: flex;
-  align-items: flex-end;
-  padding: 0 1px;
-  grid-row-start: 2;
   font-size: .875em;
-  & > ul {
-    width: 100%;
-    margin:0 -8px;
+  @media (--medium) {
     display: flex;
     align-items: flex-end;
-    @supports (display: grid) {
-      display: grid;
-      grid-template-columns: repeat(6, minmax(0, 130px));
-      grid-column-gap: 32px;
-      margin:0;
+    padding: 0 1px;
+    grid-row-start: 2;
+  }
+  & > ul {
+    width: 100%;
+    @media (--medium) {
+      margin:0 -8px;
+      display: flex;
+      align-items: flex-end;
+      @supports (display: grid) {
+        display: grid;
+        grid-template-columns: repeat(6, minmax(0, 130px));
+        grid-column-gap: 32px;
+        margin:0;
+      }
     }
     & > li {
-      flex:1;
-      margin: 0 8px;
-      position: relative;
+      display:block;
+      @media (--medium) {
+        flex:1;
+        margin: 0 8px;
+        position: relative;
+      }
       & > a {
         text-decoration: none;
         display:block;
@@ -176,6 +201,7 @@
         @supports (display: grid) {
           padding:8px 0;
         }
+        & br {display: none;@media (--medium) {display: block;}}
         & > span {
           display: block;
           border-bottom: 2px solid transparent;/* var(--trans-line-grey);*/
@@ -191,12 +217,15 @@
 
   & .subnav {
     display: none;
-    width: 20em;
-    position: absolute;
-    left: -24px;
     background-color: var(--w3c-blue);
     border: 2px solid var(--w3c-blue);
-    padding: 16px;
+    padding: 0 16px 16px;
+    @media (--medium) {
+      padding-top: 16px;
+      position: absolute;
+      left: -24px;
+      width: 20em;
+    }
     a {
       padding: 0;
     }
@@ -237,15 +266,17 @@
       }
     }
     & .subsubnav {
-      width: 20em;
-      /*grid-column: 2/3;*/
       display:none;
-      position: absolute;
-      left: 100%;
-      top: -18px;
       background-color: var(--w3c-blue);
       border: 2px solid var(--w3c-blue);
-      padding: 16px;
+      padding: 0 16px 16px;
+      @media (--medium) {
+        padding-top: 16px;
+        position: absolute;
+        width: 20em;
+        left: 100%;
+        top: -18px;
+      }
     }
     & li:--hovcus .subsubnav{
       display:block;
