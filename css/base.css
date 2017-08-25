@@ -64,11 +64,13 @@ a {
 }
 
 .default-container, .default-grid {
-  /*max-width: 70rem;*/
-  /*margin: 0 auto;
-  padding: 0 1em;*/
+  padding: 0 8px;
+  @media (--medium) {
+    padding:0;
+  }
 }
 
+@custom-media --small (width >= 22.5em);
 @custom-media --medium (width >= 27.5em);
 @custom-media --large (width >= 60.5em);
 
