@@ -27,6 +27,8 @@
   background-color: var(--off-white);
   text-align: right;
   font-size: .8125em;
+  padding-left: 8px;
+  padding-right: 8px;
   & ul {
     padding: 8px;
     grid-area: content;

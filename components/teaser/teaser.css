@@ -1,5 +1,6 @@
 .teaser {
-  padding: 32px 0;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 .teaser.featured {
@@ -23,8 +24,14 @@
     font-size: 1rem;
     line-height: 1.2;
     &.title {
-      font-size: 2.375rem;
+      font-size: 1.5rem;
       margin: 10px 0 20px;
+      @media (--medium) {
+        font-size: 2rem;
+      }
+      @media (--large) {
+       font-size: 2.375rem;
+      }
     }
   }
   & p {
@@ -35,14 +42,14 @@
 }
 
 .teaser-h-icon {
-  height:2.5rem;
-  width: 2.5rem;
+  height:1em;
+  width: 1em;
   vertical-align: middle;
   margin-right: 10px;
   &.full {
     display: block;
-    height: 4.25rem;
-    width: 4.25rem;
+    height: 1.8em;
+    width: 1.8em;
   }
 }
 
@@ -54,8 +61,8 @@
   & .teaser-h svg {
     display: block;
     margin: 0 auto;
-    height: 3rem;
-    width: 3rem;
+    height: 1.75em;
+    width: 1.75em;
   }
   & .fakelink {
     margin: 0 auto;
@@ -96,7 +103,13 @@
   background-color: var(--pure-white);
   border: 1px solid var(--line-grey);
   margin: -1px;
-  padding: 60px 40px;
+  padding: 20px 32px;
+  @media (--medium) {
+    padding: 40px 40px;
+  }
+  @media (--large) {
+    padding: 60px 40px;
+  }
   display: grid;
   grid-template-rows: 1fr min-content min-content;
   & .teaser-h {
