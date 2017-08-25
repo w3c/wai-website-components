@@ -7,12 +7,20 @@
 }
 
 .wai {
-  font-size: 1.5625rem;
   line-height: 1.2;
-  display: block;
+  @media (--medium) {
+    vertical-align: middle;
+    display: block;
+    font-size: 1.5625rem;
+  }
 }
+
 .logos {
   padding: 16px 0;
   grid-area: navigation;
   grid-row-start: 1;
+  & img {
+    vertical-align:middle;
+    padding-right: 8px
+  }
 }
