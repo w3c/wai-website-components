@@ -70,9 +70,9 @@ a {
   }
 }
 
-@custom-media --small (width >= 22.5em);
+@custom-media --small  (width >= 23em);
 @custom-media --medium (width >= 35em);
-@custom-media --large (width >= 60.5em);
+@custom-media --large  (width >= 60em);
 
 :root {
   --full-grid: {

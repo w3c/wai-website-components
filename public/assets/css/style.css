@@ -86,7 +86,7 @@ a.stealthy-link:visited {
 .default-grid {
 }
 
-@media (min-width: 60.5em) {
+@media  (min-width: 60em) {
 
   .default-grid {
     display: -ms-grid;
@@ -106,7 +106,7 @@ a.stealthy-link:visited {
 .grid-4 {
 }
 
-@media (min-width: 60.5em) {
+@media  (min-width: 60em) {
 
   .grid-4 {
     -ms-grid-columns: (minmax(0, 120px))[4];
@@ -118,7 +118,7 @@ a.stealthy-link:visited {
 .grid-6 {
 }
 
-@media (min-width: 60.5em) {
+@media  (min-width: 60em) {
 
   .grid-6 {
     -ms-grid-columns: (minmax(0, 120px))[6];
@@ -185,7 +185,7 @@ a.stealthy-link:visited {
   grid-column-gap: 32px
 }
 
-@media (min-width: 60.5em) {
+@media  (min-width: 60em) {
 
   .grid-4q {
     -ms-grid-columns: [complete-start] minmax(16px, 1fr) [content-start q1-start] (minmax(0, 130px))[2] [q1-end q2-start] (minmax(0, 130px))[2] [q2-end q3-start] (minmax(0, 130px))[2] [q3-end q4-start] (minmax(0, 130px))[2] [q4-end content-end] minmax(16px, 1fr) [complete-end];
@@ -201,7 +201,7 @@ a.stealthy-link:visited {
   grid-column-gap: 0;
 }
 
-@media (min-width: 60.5em) {
+@media  (min-width: 60em) {
 
   .grid-4q.nogap {
     -ms-grid-columns: [complete-start] minmax(16px, 1fr) [content-start q1-start] (minmax(0, 158px))[2] [q1-end q2-start] (minmax(0, 158px))[2] [q2-end q3-start] (minmax(0, 158px))[2] [q3-end q4-start] (minmax(0, 158px))[2] [q4-end content-end] minmax(16px, 1fr) [complete-end];
@@ -3069,7 +3069,7 @@ p+ul, p+ol {
   }
   }
 
-@media (min-width: 60.5em) {
+@media  (min-width: 60em) {
 
   .four.columns {
     -webkit-columns: 4;
@@ -3135,7 +3135,7 @@ p+ul, p+ol {
           justify-content: space-between;
 }
 
-@media (min-width: 22.5em) {
+@media  (min-width: 23em) {
 
   #controls ul {
     -webkit-box-pack: end;
@@ -3149,7 +3149,7 @@ p+ul, p+ol {
   text-decoration: none;
 }
 
-@media (min-width: 22.5em) {
+@media  (min-width: 23em) {
 
   #controls a {
     margin-left: 16px;
@@ -4080,7 +4080,7 @@ p+ul, p+ol {
   }
 }
 
-@media (min-width: 60.5em) {
+@media  (min-width: 60em) {
 
   .teaser-h h2.title, .teaser-h h3.title, .teaser-h h4.title, .teaser-h h5.title, .teaser-h h6.title {
     font-size: 2.375rem;
@@ -4152,7 +4152,7 @@ p+ul, p+ol {
   }
 }
 
-@media (min-width: 60.5em) {
+@media  (min-width: 60em) {
 
   .teaser-about p {
     font-size: 1.5rem;
@@ -4188,7 +4188,7 @@ p+ul, p+ol {
   }
   }
 
-@media (min-width: 60.5em) {
+@media  (min-width: 60em) {
 
   .area-teaser {
     padding: 60px 40px;
