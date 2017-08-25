@@ -74,7 +74,12 @@
 
 .teaser-about {
   & p {
-    font-size: 1.5rem;
+    @media (--medium) {
+      font-size: 1.25rem;
+    }
+    @media (--large) {
+      font-size: 1.5rem;
+    }
     color: var(--grey);
   }
   & .teaser-h h2 {

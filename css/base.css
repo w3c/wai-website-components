@@ -82,13 +82,19 @@ a {
   }
   --full-grid-three-five: {
     display: grid;
-    grid-template-columns: [complete-start] minmax(16px, 1fr) [three-start] repeat(3, minmax(0, 130px)) [three-end five-start] repeat(5, minmax(0, 130px)) [five-end] minmax(16px, 1fr) [complete-end];
     grid-column-gap: 32px;
+    grid-template-columns: [complete-start] 0 [three-start five-start] 1fr [three-end five-end] 0 [complete-end];
+    @media (--medium) {
+      grid-template-columns: [complete-start] minmax(16px, 1fr) [three-start] repeat(3, minmax(0, 130px)) [three-end five-start] repeat(5, minmax(0, 130px)) [five-end] minmax(16px, 1fr) [complete-end];
+    }
   }
   --full-grid-five-three: {
     display: grid;
-    grid-template-columns: [complete-start] minmax(16px, 1fr) [five-start] repeat(5, minmax(0, 130px)) [five-end three-start] repeat(3, minmax(0, 130px)) [three-end] minmax(16px, 1fr) [complete-end];
     grid-column-gap: 32px;
+    grid-template-columns: [complete-start] 0 [three-start five-start] 1fr [three-end five-end] 0 [complete-end];
+    @media (--medium) {
+      grid-template-columns: [complete-start] minmax(16px, 1fr) [five-start] repeat(5, minmax(0, 130px)) [five-end three-start] repeat(3, minmax(0, 130px)) [three-end] minmax(16px, 1fr) [complete-end];
+    }
   }
   --full-grid-4q: {
     display: grid;
@@ -136,20 +142,18 @@ a {
 }
 
 .grid-three-five {
-  @media (--large) {
-    @apply --full-grid-three-five;
-  }
+  @apply --full-grid-three-five;
 }
 
 .grid-five-three {
-  @media (--large) {
-    @apply --full-grid-five-three;
-  }
+  @apply --full-grid-five-three;
   & .col1 {
-    grid-area: five;
+    grid-column-start: five-start;
+    grid-column-end: five-end;
   }
   & .col2 {
-    grid-area: three;
+    grid-column-start: three-start;
+    grid-column-end: three-end;
   }
   & .col12 {
     grid-column-start: five-start;
@@ -197,15 +201,19 @@ a {
 }
 
 .grid-line-right {
-  border-right: 1px solid var(--line-grey);
-  margin-right: -17px;
-  padding-right: 17px;
+  @media (--medium) {
+    border-right: 1px solid var(--line-grey);
+    margin-right: -17px;
+    padding-right: 17px;
+  }
 }
 
 .grid-line-left {
-  border-left: 1px solid var(--line-grey);
-  margin-left: -16px;
-  padding-left: 16px;
+  @media (--medium) {
+    border-left: 1px solid var(--line-grey);
+    margin-left: -16px;
+    padding-left: 16px;
+  }
 }
 
 .media-wrapper {
