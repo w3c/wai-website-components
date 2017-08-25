@@ -58,11 +58,20 @@ p+ul, p+ol {
 }
 
 .two.columns {
-  columns: 2;
-  column-gap: 32px;
+  @media (--medium) {
+    columns: 2;
+    column-gap: 32px;
+  }
 }
 
 .four.columns {
-  columns: 4;
-  column-gap: 32px;
+  padding: 0 8px;
+  @media (--medium) {
+    columns: 2;
+    column-gap: 32px;
+  }
+  @media (--large) {
+    columns: 4;
+    column-gap: 32px;
+  }
 }
