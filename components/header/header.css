@@ -1,5 +1,7 @@
 #site-header {
   background-color: var(--w3c-blue);
+  padding-left: 8px;
+  padding-right: 8px;
   color: #fff;
   & a {
     color: #fff;
