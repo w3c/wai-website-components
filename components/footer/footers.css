@@ -1,6 +1,7 @@
 .page-footer, .site-footer {
   font-size: .75rem;
-  padding: 16px 0;
+  padding-top: 16px;
+  padding-bottom: 16px;
   & p:first-of-type {
     margin-top: 0;
   }
