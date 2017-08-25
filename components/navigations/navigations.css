@@ -191,7 +191,7 @@
 
   & .subnav {
     display: none;
-    width: 15em;
+    width: 20em;
     position: absolute;
     left: -24px;
     background-color: var(--w3c-blue);
@@ -237,7 +237,7 @@
       }
     }
     & .subsubnav {
-      width: 15em;
+      width: 20em;
       /*grid-column: 2/3;*/
       display:none;
       position: absolute;

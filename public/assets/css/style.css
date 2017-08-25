@@ -3285,7 +3285,7 @@ p+ul, p+ol {
 
 .mainnav .subnav {
   display: none;
-  width: 15em;
+  width: 20em;
   position: absolute;
   left: -24px;
   background-color: #003366;
@@ -3355,7 +3355,7 @@ p+ul, p+ol {
 }
 
 .mainnav .subnav .subsubnav {
-  width: 15em;
+  width: 20em;
   /*grid-column: 2/3;*/
   display: none;
   position: absolute;
