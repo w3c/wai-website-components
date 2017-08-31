@@ -14,7 +14,7 @@
         var element = document.createElement("script");
         element.src = "../../assets/scripts/main.js";
         document.body.appendChild(element);
-        document.body.dataset.menuExpanded = 'false';
+        //document.body.dataset.menuExpanded = 'false';
       }
 
       window.addEventListener("load", downloadJSAtOnload, false);
@@ -52,11 +52,13 @@
       <li><a href="#">About W3C WAI</a></li>
       <li>
         <form action="#" role="search">
-          <label for="header-search">
-            <span class="l">Search:</span>
-            <input id="header-search" type="search" results="10" autosave="waisearches" placeholder="e.g. Tutorials">
-          </label>
-          <button class="button button-icon button-nobg button-noborder"><span><svg aria-hidden="true" class="icon-search "><use xlink:href="../../assets/images/icons.svg#icon-search"></use></svg></span></button>
+          <div>
+            <label for="header-search">
+              <span class="l">Search:</span>
+              <input id="header-search" type="search" results="10" autosave="waisearches" placeholder="e.g. Tutorials">
+            </label>
+            <button class="button button-icon button-nobg button-noborder"><span><svg aria-hidden="true" class="icon-search "><use xlink:href="../../assets/images/icons.svg#icon-search"></use></svg></span></button>
+          </div>
         </form>
       </li>
     </ul>
@@ -64,7 +66,7 @@
   <nav class="mainnav" label="Main">
     <ul>
       <li>
-        <a href="#"><span>Accessibility Fundamentals</span></a>
+        <a href="#"><span>Accessibility <br>Fundamentals</span></a>
         <ul class="subnav">
           <li><a href="#">Introduction to Accessibility</a></li>
           <li><a href="#">Accessibility Principles</a></li>
@@ -149,7 +151,7 @@
         </ul>
       </li>
       <li>
-        <a href="#"><span>Teach &amp; Advocate</span></a>
+        <a href="#"><span>Teach &amp; <br>Advocate</span></a>
         <ul class="subnav">
           <li><a href="#">Make Presentations Accessible</a></li>
           <li><a href="#">Developing Accessibility Training </a></li>
@@ -179,8 +181,8 @@
 
 </header>
 
-<section class="teaser featured" style="background-image: url(../../assets/images/teaser-image@1x.jpg); background-image: -webkit-image-set(url(../../assets/images/teaser-image@1x.jpg) 1x, url(../../assets/images/teaser-image@2x.jpg) 2x)">
-  <a class="teaser-c stealthy-link" href="#">
+<section class="teaser featured grid-three-five" style="background-image: url(../../assets/images/teaser-image@1x.jpg); background-image: -webkit-image-set(url(../../assets/images/teaser-image@1x.jpg) 1x, url(../../assets/images/teaser-image@2x.jpg) 2x)">
+  <a class="teaser-c stealthy-link col1" href="#">
     <header class="teaser-h featured">
       <p>Featured Resource</p>
       <h2 class="title"><svg aria-hidden="true" class="icon-checkmark teaser-h-icon"><use xlink:href="../../assets/images/icons.svg#icon-checkmark"></use></svg>Easy Checks
@@ -258,43 +260,47 @@
     <span class="fakelink">Learn more<svg aria-hidden="true" class="icon-chevron-right "><use xlink:href="../../assets/images/icons.svg#icon-chevron-right"></use></svg></span>
   </a>
 </div>
-<div class="grid-five-three teaser news">
-  <div class="col12 teaser-h">
-    <h2 class="title">News &amp; Announcements</h2>
-  </div>
-  <div class="col1 grid-line-right">
-    <h3>News</h3>
-    <article class="news-teaser">
-      <h4>Updated: Tutorials on Web Accessibility</h4>
-      <p><a href="http://w3.org/WAI/tutorials">Web Accessibility Tutorials</a> on Menus, Page Structure, Forms, Images, Tables, and Carousels have been updated. These tutorials show you how to create web content that is accessible to people with disabilities and that improves the user experience for all users. They include general guidance, and specific examples for HTML5 and WAI-ARIA. (<a href="#">2017-Apr-18</a>)</p>
-    </article>
-    <article class="news-teaser">
-      <h4>Updated: Tutorials on Web Accessibility</h4>
-      <p><a href="http://w3.org/WAI/tutorials">Web Accessibility Tutorials</a> on Menus, Page Structure, Forms, Images, Tables, and Carousels have been updated. These tutorials show you how to create web content that is accessible to people with disabilities and that improves the user experience for all users. They include general guidance, and specific examples for HTML5 and WAI-ARIA. (<a href="#">2017-Apr-18</a>)</p>
-    </article>
-    <article class="news-teaser">
-      <h4>Updated: Tutorials on Web Accessibility</h4>
-      <p><a href="http://w3.org/WAI/tutorials">Web Accessibility Tutorials</a> on Menus, Page Structure, Forms, Images, Tables, and Carousels have been updated. These tutorials show you how to create web content that is accessible to people with disabilities and that improves the user experience for all users. They include general guidance, and specific examples for HTML5 and WAI-ARIA. (<a href="#">2017-Apr-18</a>)</p>
-    </article>
-    <button class="button button-more"><span>See All News and Announcements</span></button>
-  </div>
-  <div class="col2">
-    <h3>Announcements</h3>
-    <ul class="nolist announcements-list">
-      <li class="announce-box">Open position: <a href="#">Web Accessibility Engineer (China)</a></li>
-      <li class="announce-box"><a href="#">Get WAI Announcements</a></li>
-    </ul>
-    <h3>Upcoming Events, Meetings, and Presentations</h3>
-    <div class="announce-box">
-      <p>At AccessU in Austin, TX, USA in May 2017</p>
-      <ul>
-        <li><a href="#">Catching Up with Accessibility: Beginner’s Basics</a></li>
-        <li><a href="#">Easy Checks for Web Accessibility: Get the Gist (No Experience Necessary)</a></li>
-        <li><a href="#">The WAI to Web Accessibility: An Interactive Tour Through Resources from the W3C Web Accessibility Initiative</a></li>
-      </ul>
+<div class="teaser news">
+  <div class="grid-five-three">
+    <div class="col12 teaser-h">
+      <h2 class="title">News &amp; Announcements</h2>
     </div>
-    <div class="announce-box">
-      <a href="#">See Past Events</a>
+  </div>
+  <div class="grid-five-three">
+    <div class="col1 grid-line-right">
+      <h3>News</h3>
+      <article class="news-teaser">
+        <h4>Updated: Tutorials on Web Accessibility</h4>
+        <p><a href="http://w3.org/WAI/tutorials">Web Accessibility Tutorials</a> on Menus, Page Structure, Forms, Images, Tables, and Carousels have been updated. These tutorials show you how to create web content that is accessible to people with disabilities and that improves the user experience for all users. They include general guidance, and specific examples for HTML5 and WAI-ARIA. (<a href="#">2017-Apr-18</a>)</p>
+      </article>
+      <article class="news-teaser">
+        <h4>Updated: Tutorials on Web Accessibility</h4>
+        <p><a href="http://w3.org/WAI/tutorials">Web Accessibility Tutorials</a> on Menus, Page Structure, Forms, Images, Tables, and Carousels have been updated. These tutorials show you how to create web content that is accessible to people with disabilities and that improves the user experience for all users. They include general guidance, and specific examples for HTML5 and WAI-ARIA. (<a href="#">2017-Apr-18</a>)</p>
+      </article>
+      <article class="news-teaser">
+        <h4>Updated: Tutorials on Web Accessibility</h4>
+        <p><a href="http://w3.org/WAI/tutorials">Web Accessibility Tutorials</a> on Menus, Page Structure, Forms, Images, Tables, and Carousels have been updated. These tutorials show you how to create web content that is accessible to people with disabilities and that improves the user experience for all users. They include general guidance, and specific examples for HTML5 and WAI-ARIA. (<a href="#">2017-Apr-18</a>)</p>
+      </article>
+      <button class="button button-more"><span>See All News and Announcements</span></button>
+    </div>
+    <div class="col2">
+      <h3>Announcements</h3>
+      <ul class="nolist announcements-list">
+        <li class="announce-box">Open position: <a href="#">Web Accessibility Engineer (China)</a></li>
+        <li class="announce-box"><a href="#">Get WAI Announcements</a></li>
+      </ul>
+      <h3>Upcoming Events, Meetings, and Presentations</h3>
+      <div class="announce-box">
+        <p>At AccessU in Austin, TX, USA in May 2017</p>
+        <ul>
+          <li><a href="#">Catching Up with Accessibility: Beginner’s Basics</a></li>
+          <li><a href="#">Easy Checks for Web Accessibility: Get the Gist (No Experience Necessary)</a></li>
+          <li><a href="#">The WAI to Web Accessibility: An Interactive Tour Through Resources from the W3C Web Accessibility Initiative</a></li>
+        </ul>
+      </div>
+      <div class="announce-box">
+        <a href="#">See Past Events</a>
+      </div>
     </div>
   </div>
 </div>
@@ -321,7 +327,7 @@
   <div class="q1-start q2-end">
     <p><a class="largelink" href="https://w3.org/WAI/">Web Accessibility Initiative</a></p>
     <p>Strategies, guidelines, resources to make the web accessible to people with disabilities</p>
-    <p>Copyright © 2016 W3C® (MIT, ERCIM, Keio, Beihang). Usage policies apply.</p>
+    <p>Copyright © 2017 W3C® (MIT, ERCIM, Keio, Beihang). Usage policies apply.</p>
   </div>
   <div class="q3-start q3-end">
     <div class="footer-list-header">
@@ -344,5 +350,9 @@
 
 
   </body>
+  <script src="../../assets/scripts/svg4everybody.js"></script>
+  <script>
+    svg4everybody();
+  </script>
 </html>
 

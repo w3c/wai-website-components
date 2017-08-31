@@ -1,4 +1,4 @@
-var menutimer;
+/* var menutimer;
 
 function forEach(elements, func) {
   Array.prototype.forEach.call(elements, func);
@@ -44,3 +44,4 @@ forEach(subnavitems, function(e){
       hideMenu(event)
     }, 1000);});
 });
+*/

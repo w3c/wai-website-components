@@ -14,7 +14,7 @@
         var element = document.createElement("script");
         element.src = "../../assets/scripts/main.js";
         document.body.appendChild(element);
-        document.body.dataset.menuExpanded = 'false';
+        //document.body.dataset.menuExpanded = 'false';
       }
 
       window.addEventListener("load", downloadJSAtOnload, false);
@@ -33,8 +33,8 @@
   </head>
 
   <body>
-    <section class="teaser featured" style="background-image: url(../../assets/images/teaser-image@1x.jpg); background-image: -webkit-image-set(url(../../assets/images/teaser-image@1x.jpg) 1x, url(../../assets/images/teaser-image@2x.jpg) 2x)">
-  <a class="teaser-c stealthy-link" href="#">
+    <section class="teaser featured grid-three-five" style="background-image: url(../../assets/images/teaser-image@1x.jpg); background-image: -webkit-image-set(url(../../assets/images/teaser-image@1x.jpg) 1x, url(../../assets/images/teaser-image@2x.jpg) 2x)">
+  <a class="teaser-c stealthy-link col1" href="#">
     <header class="teaser-h featured">
       <p>Featured Resource</p>
       <h2 class="title"><svg aria-hidden="true" class="icon-checkmark teaser-h-icon"><use xlink:href="../../assets/images/icons.svg#icon-checkmark"></use></svg>Easy Checks
@@ -49,5 +49,9 @@
   </a>
 </section>
   </body>
+  <script src="../../assets/scripts/svg4everybody.js"></script>
+  <script>
+    svg4everybody();
+  </script>
 </html>
 

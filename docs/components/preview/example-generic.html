@@ -14,7 +14,7 @@
         var element = document.createElement("script");
         element.src = "../../assets/scripts/main.js";
         document.body.appendChild(element);
-        document.body.dataset.menuExpanded = 'false';
+        //document.body.dataset.menuExpanded = 'false';
       }
 
       window.addEventListener("load", downloadJSAtOnload, false);
@@ -52,11 +52,13 @@
       <li><a href="#">About W3C WAI</a></li>
       <li>
         <form action="#" role="search">
-          <label for="header-search">
-            <span class="l">Search:</span>
-            <input id="header-search" type="search" results="10" autosave="waisearches" placeholder="e.g. Tutorials">
-          </label>
-          <button class="button button-icon button-nobg button-noborder"><span><svg aria-hidden="true" class="icon-search "><use xlink:href="../../assets/images/icons.svg#icon-search"></use></svg></span></button>
+          <div>
+            <label for="header-search">
+              <span class="l">Search:</span>
+              <input id="header-search" type="search" results="10" autosave="waisearches" placeholder="e.g. Tutorials">
+            </label>
+            <button class="button button-icon button-nobg button-noborder"><span><svg aria-hidden="true" class="icon-search "><use xlink:href="../../assets/images/icons.svg#icon-search"></use></svg></span></button>
+          </div>
         </form>
       </li>
     </ul>
@@ -64,7 +66,7 @@
   <nav class="mainnav" label="Main">
     <ul>
       <li>
-        <a href="#"><span>Accessibility Fundamentals</span></a>
+        <a href="#"><span>Accessibility <br>Fundamentals</span></a>
         <ul class="subnav">
           <li><a href="#">Introduction to Accessibility</a></li>
           <li><a href="#">Accessibility Principles</a></li>
@@ -149,7 +151,7 @@
         </ul>
       </li>
       <li>
-        <a href="#"><span>Teach &amp; Advocate</span></a>
+        <a href="#"><span>Teach &amp; <br>Advocate</span></a>
         <ul class="subnav">
           <li><a href="#">Make Presentations Accessible</a></li>
           <li><a href="#">Developing Accessibility Training </a></li>
@@ -472,7 +474,7 @@
   <div class="q1-start q2-end">
     <p><a class="largelink" href="https://w3.org/WAI/">Web Accessibility Initiative</a></p>
     <p>Strategies, guidelines, resources to make the web accessible to people with disabilities</p>
-    <p>Copyright © 2016 W3C® (MIT, ERCIM, Keio, Beihang). Usage policies apply.</p>
+    <p>Copyright © 2017 W3C® (MIT, ERCIM, Keio, Beihang). Usage policies apply.</p>
   </div>
   <div class="q3-start q3-end">
     <div class="footer-list-header">
@@ -495,5 +497,9 @@
 
 
   </body>
+  <script src="../../assets/scripts/svg4everybody.js"></script>
+  <script>
+    svg4everybody();
+  </script>
 </html>
 

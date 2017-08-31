@@ -162,7 +162,7 @@
             <span class="hljs-keyword">var</span> element = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">"script"</span>);
             element.src = <span class="hljs-string">"../../assets/scripts/main.js"</span>;
             <span class="hljs-built_in">document</span>.body.appendChild(element);
-            <span class="hljs-built_in">document</span>.body.dataset.menuExpanded = <span class="hljs-string">'false'</span>;
+            <span class="hljs-comment">//document.body.dataset.menuExpanded = 'false';</span>
         }
         <span class="hljs-built_in">window</span>.addEventListener(<span class="hljs-string">"load"</span>, downloadJSAtOnload, <span class="hljs-literal">false</span>);
     </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
@@ -187,6 +187,10 @@
 <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
 
 <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"../../assets/scripts/svg4everybody.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="undefined">
+    svg4everybody();
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
 
 <span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span></pre>
         
@@ -210,7 +214,7 @@
         <span class="hljs-keyword">var</span> element = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">"script"</span>);
         element.src = <span class="hljs-string">"{{ '/assets/scripts/main.js' | path }}"</span>;
         <span class="hljs-built_in">document</span>.body.appendChild(element);
-        <span class="hljs-built_in">document</span>.body.dataset.menuExpanded = <span class="hljs-string">'false'</span>;
+        <span class="hljs-comment">//document.body.dataset.menuExpanded = 'false';</span>
       }
 
       <span class="hljs-built_in">window</span>.addEventListener(<span class="hljs-string">"load"</span>, downloadJSAtOnload, <span class="hljs-literal">false</span>);
@@ -256,6 +260,10 @@
   <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
     {{ yield }}
   <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"{{ '/assets/scripts/svg4everybody.js' | path }}"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="undefined">
+    svg4everybody();
+  </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span></pre>
     </code>
 </div>
