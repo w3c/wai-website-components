@@ -1,8 +1,10 @@
 #site-header {
   background-color: var(--w3c-blue);
-  padding-left: 8px;
-  padding-right: 8px;
   color: #fff;
+  @supports (display: grid) {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
   & a {
     color: #fff;
   }
@@ -21,8 +23,13 @@
   padding: 16px 0;
   grid-area: navigation;
   grid-row-start: 1;
+  margin-right: 32px;
+  @supports (display: grid) {
+    margin-right: 0;
+  }
   & img {
     vertical-align:middle;
-    padding-right: 8px
+    padding-right: 8px;
+    margin-bottom: 8px;
   }
 }

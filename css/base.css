@@ -29,6 +29,10 @@
   font-style: italic;
 }
 
+html {
+  background-color: var(--off-white);
+}
+
 body {
   font-family: "Noto Sans", "Trebuchet MS", "Helvetica Neue", Arial, sans-serif;
   line-height: 1.5;
@@ -36,7 +40,12 @@ body {
   background-color: var(--body-bg);
   color:  var(--off-black);
   padding: 0;
-  margin: 0;
+  margin: 0 auto;
+  max-width: 1250px;
+  @supports (display: grid) {
+    max-width: none;
+    margin: 0;
+  }
 }
 
 code {
@@ -75,52 +84,63 @@ a {
 @custom-media --large  (width >= 60em);
 
 :root {
-  --full-grid: {
+  --def-grid: {
+    display: flex;
     display: grid;
-    grid-template-columns: [complete-start] minmax(16px, 1fr) [navigation-start] repeat(2, minmax(0, 130px)) [navigation-end content-start] repeat(6, minmax(0, 130px)) [content-end] minmax(16px, 1fr) [complete-end];
     grid-column-gap: 32px;
+    padding-left: 32px;
+    padding-right: 32px;
+    @supports (display: grid) {
+      padding: 0;
+      max-width: none;
+    }
   }
+
+  --full-grid: {
+    @apply --def-grid;
+    grid-template-columns: [complete-start] minmax(16px, 1fr) [navigation-start] repeat(2, minmax(0, 130px)) [navigation-end content-start] repeat(6, minmax(0, 130px)) [content-end] minmax(16px, 1fr) [complete-end];
+  }
+
   --full-grid-three-five: {
-    display: grid;
-    grid-column-gap: 32px;
+    @apply --def-grid;
     grid-template-columns: [complete-start] 0 [three-start five-start] 1fr [three-end five-end] 0 [complete-end];
     @media (--medium) {
       grid-template-columns: [complete-start] minmax(16px, 1fr) [three-start] repeat(3, minmax(0, 130px)) [three-end five-start] repeat(5, minmax(0, 130px)) [five-end] minmax(16px, 1fr) [complete-end];
     }
   }
+
   --full-grid-five-three: {
-    display: grid;
-    grid-column-gap: 32px;
+    @apply --def-grid;
     grid-template-columns: [complete-start] 0 [three-start five-start] 1fr [three-end five-end] 0 [complete-end];
     @media (--medium) {
       grid-template-columns: [complete-start] minmax(16px, 1fr) [five-start] repeat(5, minmax(0, 130px)) [five-end three-start] repeat(3, minmax(0, 130px)) [three-end] minmax(16px, 1fr) [complete-end];
     }
   }
+
   --full-grid-4q: {
-    display: grid;
+    @apply --def-grid;
     grid-template-columns: [complete-start] 0 [q1-start q2-start q3-start q4-start] 1fr [q1-end q2-end q3-end q4-end] 0 [complete-end];
     @media (--large) {
       grid-template-columns: [complete-start] minmax(16px, 1fr) [content-start q1-start] repeat(2, minmax(0, 130px)) [q1-end q2-start] repeat(2, minmax(0, 130px)) [q2-end q3-start] repeat(2, minmax(0, 130px)) [q3-end q4-start] repeat(2, minmax(0, 130px)) [q4-end content-end] minmax(16px, 1fr) [complete-end];
     }
-    grid-column-gap: 32px;
   }
+
   --full-grid-4q-nogap: {
-    display: grid;
     grid-template-columns: [complete-start] 0 [q1-start q2-start q3-start q4-start] 1fr [q1-end q2-end q3-end q4-end] 0 [complete-end];
     @media (--large) {
       grid-template-columns: [complete-start] minmax(16px, 1fr) [content-start q1-start] repeat(2, minmax(0, 158px)) [q1-end q2-start] repeat(2, minmax(0, 158px)) [q2-end q3-start] repeat(2, minmax(0, 158px)) [q3-end q4-start] repeat(2, minmax(0, 158px)) [q4-end content-end] minmax(16px, 1fr) [complete-end];
     }
     grid-column-gap: 0;
   }
+
   --grid-six: {
-    display:grid;
+    @apply --def-grid;
     grid-template-columns: repeat(6, minmax(0, 130px));
-    grid-column-gap: 32px;
   }
+
   --grid-four: {
-    display:grid;
+    @apply --def-grid;
     grid-template-columns: repeat(4, minmax(0, 130px));
-    grid-column-gap: 32px;
   }
 }
 
@@ -149,19 +169,41 @@ a {
 
 .grid-three-five {
   @apply --full-grid-three-five;
+  & .col1, & .col2 { flex-shrink: 1; }
+  & .col1 {
+    flex-basis: 35%;
+    grid-column-start: three-start;
+    grid-column-end: three-end;
+    margin-right: 32px;
+  }
+  & .col2 {
+    flex-basis: 61%;
+    grid-column-start: five-start;
+    grid-column-end: five-end;
+  }
+  & .col12 {
+    flex-basis: 100%;
+    grid-column-start: three-start;
+    grid-column-end: five-end;
+  }
 }
 
 .grid-five-three {
   @apply --full-grid-five-three;
+  & .col1, & .col2 { flex-shrink: 1; }
   & .col1 {
+    flex: 1 1 62%;
     grid-column-start: five-start;
     grid-column-end: five-end;
+    margin-right: 32px;
   }
   & .col2 {
+    flex: 1 1 37%;
     grid-column-start: three-start;
     grid-column-end: three-end;
   }
   & .col12 {
+    flex-basis: 100%;
     grid-column-start: five-start;
     grid-column-end: three-end;
   }
@@ -172,16 +214,29 @@ a {
   &.nogap {
     @apply --full-grid-4q-nogap;
   }
+
   & .q1-start {
+    flex-basis:25%;
+    flex-shrink: 1;
+    margin-right: 32px;
     grid-column-start: q1-start;
   }
   & .q2-start {
+    flex-basis:25%;
+    flex-shrink: 1;
+    margin-right: 32px;
     grid-column-start: q2-start;
   }
   & .q3-start {
+    flex-basis:25%;
+    flex-shrink: 1;
+    margin-right: 32px;
     grid-column-start: q3-start;
   }
   & .q4-start {
+    flex-basis:25%;
+    flex-shrink: 1;
+    margin-right: 32px;
     grid-column-start: q4-start;
   }
   & .q1-end {
@@ -195,6 +250,34 @@ a {
   }
   & .q4-end {
     grid-column-end: q4-end;
+    margin-right: 0;
+  }
+  & .q1-start.q2-end,
+  & .q2-start.q3-end,
+  & .q3-start.q4-end {
+    flex-basis: 50%;
+  }
+  & .q1-start.q3-end,
+  & .q2-start.q4-end {
+    flex-basis: 75%;
+  }
+
+  &.nogap {
+    & .q1-start,
+    & .q2-start,
+    & .q3-start,
+    & .q4-start {
+      margin-right: 0;
+    }
+  }
+
+  @supports(display: grid) {
+    & .q1-start,
+    & .q2-start,
+    & .q3-start,
+    & .q4-start {
+      margin-right: 0;
+    }
   }
 }
 

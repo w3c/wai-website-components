@@ -16,7 +16,8 @@
 }
 
 .site-footer {
-  padding: 16px 0;
+  padding-top: 16px;
+  padding-bottom: 16px;
   background-color: var(--dk-grey);
   color: var(--pure-white);
   & a {

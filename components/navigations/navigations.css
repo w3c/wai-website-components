@@ -2,6 +2,7 @@
   position: relative;
   grid-column: content;
   display: grid;
+  flex-grow: 1;
   grid-template-rows: min-content minmax(10px, 1fr) min-content;
   @media (--medium) {
     border: 1px solid rgba(255, 255, 255, 0.11);
@@ -95,6 +96,9 @@
         grid-column-start: 1;
         grid-column-end: 3;
       }
+      &:last-child {
+        min-width: 300px;
+      }
       & a {
         @media (--medium) {
           display: block;
@@ -106,39 +110,41 @@
   }
   & form[role=search] {
     background-color: rgba(6, 30, 54, 0.44);
-    display:flex;
-    width: 100%;
+    & > div {
+      width: 300px;
+      display:flex;
+    }
     & label {
       text-transform: none;
       font-weight: normal;
-      display:flex;
+      display: flex;
       align-content: center;
-      flex-basis: 70%;
-      flex-grow: 1;
-      flex-shrink: 1;
+      width: 70%;
+      flex: 1 1 70%;
       & .l {
+        display: block;
         padding: 8px 4px 8px 12px;
       }
     }
     & input {
+      box-sizing: border-box;
       -webkit-appearance: none;
       background-color: transparent;
       border: 0;
       border-radius: 0;
       color: var(--pure-white);
-      /* border-bottom: 1px solid var(--pure-white);*/
       height: 100%;
       padding: 8px 0;
       margin: 0;
-      width:70%;
+      min-width: 100px;
       &::-webkit-search-cancel-button,
       &::-webkit-search-results-button {
         filter: invert(100%);
       }
     }
     & button {
+      display: block;
       margin: 0;
-
     }
     & ::-webkit-input-placeholder {
        color: var(--pure-white);
