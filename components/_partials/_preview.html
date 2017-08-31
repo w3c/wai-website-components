@@ -12,7 +12,7 @@
         var element = document.createElement("script");
         element.src = "{{ '/assets/scripts/main.js' | path }}";
         document.body.appendChild(element);
-        document.body.dataset.menuExpanded = 'false';
+        //document.body.dataset.menuExpanded = 'false';
       }
 
       window.addEventListener("load", downloadJSAtOnload, false);
@@ -58,4 +58,8 @@
   <body>
     {{ yield }}
   </body>
+  <script src="{{ '/assets/scripts/svg4everybody.js' | path }}"></script>
+  <script>
+    svg4everybody();
+  </script>
 </html>
