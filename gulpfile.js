@@ -13,7 +13,8 @@ const processors = [
   importer({
     glob: true,
   }),
-  cssnext,
+  cssnext({features: { autoprefixer: false }}),
+  autoprefixer({grid:false}),
   cssnano
 ];
 
