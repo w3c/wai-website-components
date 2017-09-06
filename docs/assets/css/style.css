@@ -3597,12 +3597,7 @@ p+ul, p+ol {
 .mainnav .subnav {
   display: none;
   background-color: #003366;
-  border: 2px solid #003366;
-  padding: 0 16px 16px;
-
-  a {
-    padding: 0;
-  }
+  padding: 0 0 16px;
 }
 
 @media (min-width: 35em) {
@@ -3610,7 +3605,7 @@ p+ul, p+ol {
   .mainnav .subnav {
     padding-top: 16px;
     position: absolute;
-    left: -24px;
+    left: -16px;
     width: 20em;
   }
 }
@@ -3618,11 +3613,11 @@ p+ul, p+ol {
 .mainnav .subnav > li, .mainnav .subnav > li li {
   position: relative;
   display: block !important;
-
-  /*display: grid;
-      grid-auto-columns: 1fr;*/
   margin-bottom: 0;
-  border-bottom: 1px solid rgba(221, 221, 221, .32);
+}
+
+.mainnav .subnav > li:hover, .mainnav .subnav > li li:hover {
+  background-color: #091832;
 }
 
 .mainnav .subnav > li:last-child, .mainnav .subnav > li li:last-child {
@@ -3634,11 +3629,25 @@ p+ul, p+ol {
   /*grid-column: 1/2;*/
 }
 
+.mainnav .subnav > li:last-child a::after, .mainnav .subnav > li:last-child span::after, .mainnav .subnav > li li:last-child a::after, .mainnav .subnav > li li:last-child span::after {
+  display: none;
+}
+
 .mainnav .subnav > li a, .mainnav .subnav > li span, .mainnav .subnav > li li a, .mainnav .subnav > li li span {
-  padding: 2px 6px;
+  padding: 8px 32px;
   display: block;
   text-decoration: none;
   position: relative;
+}
+
+.mainnav .subnav > li a::after, .mainnav .subnav > li span::after, .mainnav .subnav > li li a::after, .mainnav .subnav > li li span::after {
+  content: "";
+  background-color: rgba(221, 221, 221, .32);
+  left: 16px;
+  right: 16px;
+  bottom: 0;
+  height: 1px;
+  position: absolute;
 }
 
 .mainnav .subnav > li a:hover,
@@ -3650,6 +3659,7 @@ p+ul, p+ol {
 .mainnav .subnav > li li span:hover,
 .mainnav .subnav > li li span:focus {
   color: #eed009 !important;
+  background-color: #091832;
 }
 
 .mainnav .subnav > li a:hover::before,
@@ -3662,23 +3672,28 @@ p+ul, p+ol {
 .mainnav .subnav > li li span:focus::before {
   content: "•";
   color: #ffffff;
-  left: -.5em;
+  left: 16px;
+  height: 1em;
+  line-height: 1;
+  top: 50%;
+  margin-top: -.5em;
   position: absolute;
 }
 
 .mainnav .subnav > li svg, .mainnav .subnav > li li svg {
   float: right;
-  width: .75em;
-  height: .75em;
-  margin-left: .85em;
-  margin-top: .4em;
+  width: .7em;
+  height: .7em;
+  right: 16px;
+  top: 50%;
+  margin-top: -.35em;
+  position: absolute;
 }
 
 .mainnav .subnav .subsubnav {
   display: none;
-  background-color: #003366;
-  border: 2px solid #003366;
-  padding: 0 16px 16px;
+  background-color: #091832;
+  padding: 0 0 16px;
 }
 
 @media (min-width: 35em) {
@@ -3688,7 +3703,7 @@ p+ul, p+ol {
     position: absolute;
     width: 20em;
     left: 100%;
-    top: -18px;
+    top: 0;
   }
 }
 
