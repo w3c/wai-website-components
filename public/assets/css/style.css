@@ -3546,7 +3546,7 @@ p+ul, p+ol {
     -webkit-box-flex: 1;
         -ms-flex: 1;
             flex: 1;
-    margin: 0 8px;
+    margin: 0 16px;
     position: relative;
   }
 }
@@ -3633,43 +3633,33 @@ p+ul, p+ol {
   display: none;
 }
 
-.mainnav .subnav > li a, .mainnav .subnav > li span, .mainnav .subnav > li li a, .mainnav .subnav > li li span {
-  padding: 8px 32px;
+.mainnav .subnav > li a, .mainnav .subnav > li li a {
   display: block;
   text-decoration: none;
   position: relative;
-}
-
-.mainnav .subnav > li a::after, .mainnav .subnav > li span::after, .mainnav .subnav > li li a::after, .mainnav .subnav > li li span::after {
-  content: "";
-  background-color: rgba(221, 221, 221, .32);
-  left: 16px;
-  right: 16px;
-  bottom: 0;
-  height: 1px;
-  position: absolute;
+  margin-bottom: -1px;
 }
 
 .mainnav .subnav > li a:hover,
 .mainnav .subnav > li a:focus,
-.mainnav .subnav > li span:hover,
-.mainnav .subnav > li span:focus,
 .mainnav .subnav > li li a:hover,
-.mainnav .subnav > li li a:focus,
-.mainnav .subnav > li li span:hover,
-.mainnav .subnav > li li span:focus {
+.mainnav .subnav > li li a:focus {
   color: #eed009 !important;
   background-color: #091832;
+  z-index: 5;
+}
+
+.mainnav .subnav > li a:hover span,
+.mainnav .subnav > li a:focus span,
+.mainnav .subnav > li li a:hover span,
+.mainnav .subnav > li li a:focus span {
+  border-color: #091832;
 }
 
 .mainnav .subnav > li a:hover::before,
 .mainnav .subnav > li a:focus::before,
-.mainnav .subnav > li span:hover::before,
-.mainnav .subnav > li span:focus::before,
 .mainnav .subnav > li li a:hover::before,
-.mainnav .subnav > li li a:focus::before,
-.mainnav .subnav > li li span:hover::before,
-.mainnav .subnav > li li span:focus::before {
+.mainnav .subnav > li li a:focus::before {
   content: "•";
   color: #ffffff;
   left: 16px;
@@ -3678,6 +3668,14 @@ p+ul, p+ol {
   top: 50%;
   margin-top: -.5em;
   position: absolute;
+}
+
+.mainnav .subnav > li span, .mainnav .subnav > li li span {
+  display: block;
+  border: 1px solid rgba(221, 221, 221, .32);
+  border-width: 1px 0;
+  margin: 0 16px 0;
+  padding: 8px 16px;
 }
 
 .mainnav .subnav > li svg, .mainnav .subnav > li li svg {
@@ -3705,6 +3703,11 @@ p+ul, p+ol {
     left: 100%;
     top: 0;
   }
+}
+
+.mainnav .subnav .subsubnav a:hover > span,
+.mainnav .subnav .subsubnav a:focus > span {
+  border-color: rgba(221, 221, 221, .32);
 }
 
 .mainnav .subnav li:hover .subsubnav,

@@ -198,7 +198,7 @@
       display:block;
       @media (--medium) {
         flex:1;
-        margin: 0 8px;
+        margin: 0 16px;
         position: relative;
       }
       & > a {
@@ -249,23 +249,18 @@
       &:last-child a::after, &:last-child span::after {
         display: none;
       }
-      & a, & span {
-        padding: 8px 32px;
+      & a {
         display: block;
         text-decoration: none;
         position: relative;
-        &::after {
-          content: "";
-          background-color: var(--trans-line-grey);
-          left: 16px;
-          right: 16px;
-          bottom:0;
-          height: 1px;
-          position: absolute;
-        }
+        margin-bottom: -1px;
         &:--hovcus {
           color: var(--gold) !important;
           background-color: var(--dk-blue);
+          z-index: 5;
+          & span {
+            border-color: var(--dk-blue);
+          }
           &::before {
             content: "•";
             color: var(--pure-white);
@@ -277,6 +272,13 @@
             position: absolute;
           }
         }
+      }
+      & span {
+        display: block;
+        border: 1px solid var(--trans-line-grey);
+        border-width: 1px 0;
+        margin: 0 16px 0;
+        padding: 8px 16px;
       }
       & svg {
         float: right;
@@ -298,6 +300,9 @@
         width: 20em;
         left: 100%;
         top: 0;
+      }
+      & a:--hovcus > span {
+        border-color: var(--trans-line-grey);
       }
     }
     & li:--hovcus .subsubnav{
