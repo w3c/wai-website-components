@@ -226,64 +226,78 @@
   & .subnav {
     display: none;
     background-color: var(--w3c-blue);
-    border: 2px solid var(--w3c-blue);
-    padding: 0 16px 16px;
+    padding: 0 0 16px;
     @media (--medium) {
       padding-top: 16px;
       position: absolute;
-      left: -24px;
+      left: -16px;
       width: 20em;
-    }
-    a {
-      padding: 0;
     }
     & > li, & > li li {
       position: relative;
       display: block !important;
-      /*display: grid;
-      grid-auto-columns: 1fr;*/
       margin-bottom: 0;
-      border-bottom: 1px solid var(--trans-line-grey);
+      &:hover {
+        background-color: var(--dk-blue);
+      }
       &:last-child {
        border-bottom: none;
       }
       & > a {
         /*grid-column: 1/2;*/
       }
+      &:last-child a::after, &:last-child span::after {
+        display: none;
+      }
       & a, & span {
-        padding: 2px 6px;
+        padding: 8px 32px;
         display: block;
         text-decoration: none;
         position: relative;
+        &::after {
+          content: "";
+          background-color: var(--trans-line-grey);
+          left: 16px;
+          right: 16px;
+          bottom:0;
+          height: 1px;
+          position: absolute;
+        }
         &:--hovcus {
           color: var(--gold) !important;
+          background-color: var(--dk-blue);
           &::before {
             content: "•";
             color: var(--pure-white);
-            left: -.5em;
+            left: 16px;
+            height: 1em;
+            line-height: 1;
+            top: 50%;
+            margin-top:-.5em;
             position: absolute;
           }
         }
       }
       & svg {
         float: right;
-        width: .75em;
-        height: .75em;
-        margin-left: .85em;
-        margin-top: .4em;
+        width: .7em;
+        height: .7em;
+        right: 16px;
+        top: 50%;
+        margin-top:-.35em;
+        position: absolute;
       }
     }
     & .subsubnav {
       display:none;
-      background-color: var(--w3c-blue);
-      border: 2px solid var(--w3c-blue);
-      padding: 0 16px 16px;
+      background-color: var(--dk-blue);
+      padding: 0 0 16px;
       @media (--medium) {
         padding-top: 16px;
         position: absolute;
         width: 20em;
         left: 100%;
-        top: -18px;
+        top: 0;
       }
     }
     & li:--hovcus .subsubnav{
