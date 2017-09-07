@@ -1,0 +1,15 @@
+.info {
+  background-color: var(--gold);
+  background-image: linear-gradient(to bottom, var(--gold), color(var(--gold) blackness(15%)));
+  background-size: 100% 20%;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  font-weight: bold;
+  text-align: center;
+  & svg {
+    margin-right: 8px;
+    font-size: 2em;
+    vertical-align: middle;
+    margin-top: -.14em;
+  }
+}
