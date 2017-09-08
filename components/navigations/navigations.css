@@ -253,14 +253,10 @@
         display: block;
         text-decoration: none;
         position: relative;
-        margin-bottom: -1px;
         &:--hovcus {
           color: var(--gold) !important;
           background-color: var(--dk-blue);
           z-index: 5;
-          & span {
-            border-color: var(--dk-blue);
-          }
           &::before {
             content: "•";
             color: var(--pure-white);
@@ -276,9 +272,15 @@
       & span {
         display: block;
         border: 1px solid var(--trans-line-grey);
-        border-width: 1px 0;
+        border-width: 1px 0 0;
         margin: 0 16px 0;
         padding: 8px 16px;
+      }
+      &.new-section>a>span {
+        border-top-width: 3px;
+      }
+      &:last-child>a>span {
+        border-bottom-width: 1px;
       }
       & svg {
         float: right;
