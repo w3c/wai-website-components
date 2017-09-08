@@ -1462,7 +1462,6 @@ p+ul, p+ol {
   display: block;
   text-decoration: none;
   position: relative;
-  margin-bottom: -1px;
 }
 
 .mainnav .subnav > li a:hover,
@@ -1472,13 +1471,6 @@ p+ul, p+ol {
   color: #eed009 !important;
   background-color: #091832;
   z-index: 5;
-}
-
-.mainnav .subnav > li a:hover span,
-.mainnav .subnav > li a:focus span,
-.mainnav .subnav > li li a:hover span,
-.mainnav .subnav > li li a:focus span {
-  border-color: #091832;
 }
 
 .mainnav .subnav > li a:hover::before,
@@ -1498,9 +1490,17 @@ p+ul, p+ol {
 .mainnav .subnav > li span, .mainnav .subnav > li li span {
   display: block;
   border: 1px solid rgba(221, 221, 221, .32);
-  border-width: 1px 0;
+  border-width: 1px 0 0;
   margin: 0 16px 0;
   padding: 8px 16px;
+}
+
+.mainnav .subnav > li.new-section>a>span, .mainnav .subnav > li li.new-section>a>span {
+  border-top-width: 3px;
+}
+
+.mainnav .subnav > li:last-child>a>span, .mainnav .subnav > li li:last-child>a>span {
+  border-bottom-width: 1px;
 }
 
 .mainnav .subnav > li svg, .mainnav .subnav > li li svg {
