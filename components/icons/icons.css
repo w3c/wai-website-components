@@ -14,3 +14,19 @@ Single-colored icons can be modified like so:
   color: red;
 }
 ========================================== */
+
+.icon-default {
+  width: 0.9285714285714285em;
+}
+
+.icon-info {
+  width: 0.8571428571428571em;
+}
+
+.icon-audio-description {
+  width: 1.2823571428571428em;
+}
+
+.icon-search {
+  width: 0.9287109375em;
+}
