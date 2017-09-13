@@ -39,6 +39,18 @@ variants:
 - name: chevron-right
   context:
     name: chevron-right
+- name: arrow-up
+  context:
+    name: arrow-up
+- name: arrow-down
+  context:
+    name: arrow-down
+- name: arrow-left
+  context:
+    name: arrow-left
+- name: arrow-right
+  context:
+    name: arrow-right
 - name: comments
   context:
     name: comments

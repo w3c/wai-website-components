@@ -961,11 +961,29 @@ Single-colored icons can be modified like so:
 }
 
 .icon-audio-description {
-  width: 1.2823571428571428em;
+  width: 3.5em;
+  height: 1.75em;
+  margin: -.25em;
 }
 
 .icon-search {
   width: 0.9287109375em;
+}
+
+.icon-arrow-left {
+  width: 0.8928571428571428em;
+}
+
+.icon-arrow-right {
+  width: 0.8214285714285714em;
+}
+
+.icon-arrow-up {
+  width: 0.9285714285714285em;
+}
+
+.icon-arrow-down {
+  width: 0.9285714285714285em;
 }
 
 ul ::marker {
