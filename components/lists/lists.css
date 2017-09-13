@@ -48,14 +48,14 @@ p+ul, p+ol {
   margin-top: -8px;
 }
 
-/*.columns {
+.columns {
   padding: 0;
   & > * {
     margin-left: 32px;
   }
 }
 
-.two.columns {
+.two.columns, .four.columns {
   @media (--medium) {
     columns: 2 500px;
     column-gap: 32px;
@@ -64,12 +64,8 @@ p+ul, p+ol {
 
 .four.columns {
   padding: 0 8px;
-  @media (--medium) {
-    columns: 2 500px;
-    column-gap: 32px;
-  }
   @media (--large) {
-    columns-count: 4 300px;
+    columns: 4 300px;
     column-gap: 32px;
   }
-}*/
+}
