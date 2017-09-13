@@ -24,7 +24,9 @@ Single-colored icons can be modified like so:
 }
 
 .icon-audio-description {
-  width: 1.2823571428571428em;
+  width: 3.5em;
+  height: 1.75em;
+  margin: -.25em;
 }
 
 .icon-search {
