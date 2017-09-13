@@ -56,16 +56,15 @@ p+ul, p+ol {
 }
 
 .two.columns, .four.columns {
+  column-gap: 32px;
   @media (--medium) {
-    columns: 2 500px;
-    column-gap: 32px;
+    columns: 2;
   }
 }
 
 .four.columns {
   padding: 0 8px;
   @media (--large) {
-    columns: 4 300px;
-    column-gap: 32px;
+    columns: 4;
   }
 }
