@@ -2008,6 +2008,9 @@ p+ul, p+ol {
 
 .sidenav--list a[aria-current] {
   color: #005A6A;
+}
+
+.sidenav--list a[aria-current=location] {
   padding-bottom: 4px;
 }
 

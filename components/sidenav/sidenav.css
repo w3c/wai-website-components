@@ -72,7 +72,9 @@
   }
   & a[aria-current] {
     color: var(--wai-green);
-    padding-bottom: 4px;
+  }
+  & a[aria-current=location] {
+     padding-bottom: 4px;
   }
   & a[aria-current=page] {
     font-weight: bold;
