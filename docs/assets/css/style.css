@@ -414,12 +414,12 @@ a.stealthy-link:visited {
   }
   }
 
-.media-wrapper {
+.media-wrapper, .able-media-container {
   position: relative;
   padding-top: 56.25%
 }
 
-.media-wrapper iframe, .media-wrapper video, .media-wrapper .img {
+.media-wrapper iframe, .media-wrapper video, .media-wrapper .img, .able-media-container iframe, .able-media-container video, .able-media-container .img {
   position: absolute;
   top: 0;
   right: 0;

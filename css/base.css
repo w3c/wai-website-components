@@ -303,7 +303,7 @@ a {
   }
 }
 
-.media-wrapper {
+.media-wrapper, .able-media-container {
   position: relative;
   padding-top: 56.25%;
   & iframe, & video, & .img {
