@@ -720,7 +720,7 @@
       this.iconType = 'image';
     }
     if (this.debug) {
-
+      console.log('Using ' + this.iconType + 's for player controls');
     }
     if (typeof $tempButton !== 'undefined') {
       $tempButton.remove();
@@ -2101,10 +2101,10 @@
       errString += 'Column: ' + parserState.column + '\n';
       errString += err;
       if (console.warn) {
-
+        console.warn(errString);
       }
       else if (console.log) {
-
+        console.log(errString);
       }
     }
     return parserState;
@@ -2282,21 +2282,21 @@
     var errString;
 
     if(nextLine.indexOf('-->') === -1) {
-      cueId = cutLine(state);
-      nextLine = peekLine(state);
-      if(nextLine.indexOf('-->') === -1) {
+    	cueId = cutLine(state);
+    	nextLine = peekLine(state);
+    	if(nextLine.indexOf('-->') === -1) {
         errString = 'Invalid WebVTT file: ' + state.src + '\n';
         errString += 'Line: ' + state.line + ', ';
         errString += 'Column: ' + state.column + '\n';
         errString += 'Expected cue timing for cueId \''+cueId+'\' but found: ' + nextLine + '\n';
         if (console.warn) {
-
+          console.warn(errString);
         }
         else if (console.log) {
-
+          console.log(errString);
         }
         return; // Return leaving line for parseCuesAndComments to handle
-      }
+    	}
     }
 
     var cueTimings = actList(state, [getTiming,
@@ -4442,7 +4442,7 @@
       // return the name of the control with first letter in upper case
       // ultimately will need to get a translated label from this.tt
       if (this.debug) {
-
+        console.log('Found an untranslated label: ' + control);
       }
       return control.charAt(0).toUpperCase() + control.slice(1);
     }
@@ -4710,7 +4710,7 @@
     $tempDiv.load(src, function (trackText, status, req) {
       if (status === 'error') {
         if (thisObj.debug) {
-
+          console.log ('error reading file ' + src + ': ' + status);
         }
         deferred.fail();
       }
@@ -4871,7 +4871,7 @@
             }
           }
           if (typeof thisObj.aspectRatio === 'undefined') {
-
+console.log('resizeYouTubePlayer at POS Y1');
             thisObj.resizeYouTubePlayer(thisObj.activeYouTubeId, containerId);
           }
           deferred.resolve();
@@ -5066,7 +5066,7 @@
       });
     })
     .fail(function(){
-
+      console.log('Unable to initialize Google API. YouTube captions are currently unavailable.');
     });
 
     return promise;
@@ -5146,7 +5146,7 @@
             deferred.resolve();
           }
         }, function (reason) {
-
+          console.log('Error: ' + reason.result.error.message);
         });
       });
     return promise;
@@ -6640,18 +6640,18 @@
       this.userAgent.os = "Linux";
     }
     if (this.debug) {
-
-
-
-
-
+      console.log('User agent:' + navigator.userAgent);
+      console.log('Vendor: ' + navigator.vendor);
+      console.log('Browser: ' + this.userAgent.browser.name);
+      console.log('Version: ' + this.userAgent.browser.version);
+      console.log('OS: ' + this.userAgent.os);
     }
   };
 
   AblePlayer.prototype.isUserAgent = function(which) {
     var userAgent = navigator.userAgent.toLowerCase();
     if (this.debug) {
-
+      console.log('User agent: ' + userAgent);
     }
     if (userAgent.indexOf(which.toLowerCase()) !== -1) {
       return true;
@@ -7507,7 +7507,7 @@
       var currentRate = this.getPlaybackRate();
       var index = rates.indexOf(currentRate);
       if (index === -1) {
-
+        console.log('ERROR: Youtube returning unknown playback rate ' + currentRate.toString());
       }
       else {
         index += dir;
@@ -10161,7 +10161,7 @@
       })
       .on('play',function() {
         if (thisObj.debug) {
-
+          console.log('media play event');
         }
       })
       .on('pause',function() {
@@ -10173,23 +10173,23 @@
       .on('volumechange',function() {
         thisObj.volume = thisObj.getVolume();
         if (thisObj.debug) {
-
+          console.log('media volume change to ' + thisObj.volume + ' (' + thisObj.volumeButton + ')');
         }
       })
       .on('error',function() {
         if (thisObj.debug) {
           switch (thisObj.media.error.code) {
             case 1:
-
+              console.log('HTML5 Media Error: MEDIA_ERR_ABORTED');
               break;
             case 2:
-
+              console.log('HTML5 Media Error: MEDIA_ERR_NETWORK ');
               break;
             case 3:
-
+              console.log('HTML5 Media Error: MEDIA_ERR_DECODE ');
               break;
             case 4:
-
+              console.log('HTML5 Media Error: MEDIA_ERR_SRC_NOT_SUPPORTED ');
               break;
           }
         }
@@ -10208,7 +10208,7 @@
       })
       .onReady(function() {
         if (thisObj.debug) {
-
+          console.log('JW Player onReady event fired');
         }
         // remove JW Player from tab order.
         // We don't want users tabbing into the Flash object and getting trapped
@@ -10245,7 +10245,7 @@
       })
       .onPlay(function() {
         if (thisObj.debug) {
-
+          console.log('JW Player onPlay event fired');
         }
         thisObj.refreshControls();
       })
@@ -10254,7 +10254,7 @@
       })
       .onBuffer(function() {
         if (thisObj.debug) {
-
+          console.log('JW Player onBuffer event fired');
         }
         thisObj.refreshControls();
       })
@@ -10263,18 +10263,18 @@
       })
       .onIdle(function(e) {
         if (thisObj.debug) {
-
+          console.log('JW Player onIdle event fired');
         }
         thisObj.refreshControls();
       })
       .onMeta(function() {
         if (thisObj.debug) {
-
+          console.log('JW Player onMeta event fired');
         }
       })
       .onPlaylist(function() {
         if (thisObj.debug) {
-
+          console.log('JW Player onPlaylist event fired');
         }
 
         // Playlist change includes new media source.
@@ -10937,32 +10937,32 @@
     keySpeed = 10; // pixels per keypress event
 
     switch (key) {
-      case 37:  // left
+		  case 37:	// left
       case 63234:
-        this.dragKeyX -= keySpeed;
+			  this.dragKeyX -= keySpeed;
         break;
-      case 38:  // up
+      case 38:	// up
       case 63232:
-        this.dragKeyY -= keySpeed;
+				this.dragKeyY -= keySpeed;
         break;
-      case 39:  // right
+      case 39:	// right
       case 63235:
-        this.dragKeyX += keySpeed;
+				this.dragKeyX += keySpeed;
         break;
-      case 40:  // down
+      case 40:	// down
       case 63233:
-        this.dragKeyY += keySpeed;
+				this.dragKeyY += keySpeed;
         break;
-      case 13:  // enter
-      case 27:  // escape
-        this.endDrag(which);
+      case 13: 	// enter
+      case 27: 	// escape
+				this.endDrag(which);
         return false;
       default:
-        return false;
-    }
+				return false;
+		}
     this.resetDraggedObject(this.dragKeyX,this.dragKeyY);
     if (e.preventDefault) {
-      e.preventDefault();
+  		e.preventDefault();
     }
     return false;
   };
@@ -11142,7 +11142,7 @@
       this.signFile = this.$sources.first().attr('data-sign-src');
       if (this.signFile) {
         if (this.debug) {
-
+          console.log('This video has an accompanying sign language video: ' + this.signFile);
         }
         this.hasSignLanguage = true;
         this.injectSignPlayerCode();
@@ -11964,15 +11964,15 @@
   }
 
   AblePlayer.prototype.getLanguageName = function (key) {
-    key = key.slice(0,2);
-    var lang = isoLangs[key];
-    return lang ? lang.name : undefined;
-  };
+		key = key.slice(0,2);
+		var lang = isoLangs[key];
+		return lang ? lang.name : undefined;
+	};
   AblePlayer.prototype.getLanguageNativeName = function (key) {
-    key = key.slice(0,2);
-    var lang = isoLangs[key];
-    return lang ? lang.nativeName : undefined;
-  }
+		key = key.slice(0,2);
+		var lang = isoLangs[key];
+		return lang ? lang.nativeName : undefined;
+	}
 
 })(jQuery);
 (function ($) {
@@ -12011,7 +12011,7 @@
           msg += ' is not currently supported. Using default language (' + this.lang + ')';
         }
         if (this.debug) {
-
+          console.log(msg);
         }
       }
     }

@@ -2310,7 +2310,7 @@ p+ul, p+ol {
 }
 
 .able-player {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: inherit;
   background-color: #262626; /* background color of player (appears on top & bottom) */
 }
 
@@ -3021,7 +3021,7 @@ span.able-modkey {
   bottom: 0;
   right: 0;
   cursor: nwse-resize;
-  background: transparent url('../images/wingrip.png') no-repeat;
+  background: transparent url('../ableplayer/images/wingrip.png') no-repeat;
 }
 
 /*
@@ -3501,11 +3501,11 @@ button svg {
 
 @font-face {
   font-family: 'able';
-    src:    url('../button-icons/fonts/able.eot?dqripi');
-    src:    url('../button-icons/fonts/able.eot?dqripi#iefix') format('embedded-opentype'),
-        url('../button-icons/fonts/able.ttf?dqripi') format('truetype'),
-        url('../button-icons/fonts/able.woff?dqripi') format('woff'),
-        url('../button-icons/fonts/able.svg?dqripi#able') format('svg');
+    src:    url('../ableplayer/button-icons/fonts/able.eot?dqripi');
+    src:    url('../ableplayer/button-icons/fonts/able.eot?dqripi#iefix') format('embedded-opentype'),
+        url('../ableplayer/button-icons/fonts/able.ttf?dqripi') format('truetype'),
+        url('../ableplayer/button-icons/fonts/able.woff?dqripi') format('woff'),
+        url('../ableplayer/button-icons/fonts/able.svg?dqripi#able') format('svg');
   font-weight: normal;
   font-style: normal;
 }

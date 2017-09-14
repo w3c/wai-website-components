@@ -164,10 +164,12 @@
   <span class="hljs-tag">&lt;/<span class="hljs-name">video</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"/assets/scripts/modernizr.custom.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"audio_description_button"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"icon-audio-description "</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">use</span> <span class="hljs-attr">xlink:href</span>=<span class="hljs-string">"/assets/images/icons.svg#icon-audio-description"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">use</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>Enable Audio Description<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"/assets/ableplayer/thirdparty/modernizr.custom.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"/assets/scripts/jquery.min.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"/assets/scripts/js.cookie.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"/assets/scripts/ableplayer.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"/assets/ableplayer/thirdparty/js.cookie.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"/assets/ableplayer/build/ableplayer.min.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="actionscript">
     <span class="hljs-keyword">var</span> youTubeDataAPIKey = <span class="hljs-string">""</span>;
     <span class="hljs-keyword">var</span> googleApiReady = <span class="hljs-literal">false</span>;
@@ -176,7 +178,73 @@
         googleApiReady = <span class="hljs-literal">true</span>;
     }
 </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"http://apis.google.com/js/client.js?onload=initGoogleClientApi"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"http://apis.google.com/js/client.js?onload=initGoogleClientApi"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+    (<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+<span class="hljs-meta">        'use strict'</span>;
+        <span class="hljs-keyword">var</span> player1 = <span class="hljs-keyword">new</span> AblePlayer($(<span class="hljs-string">'[data-video-type=""] video'</span>));
+        <span class="hljs-keyword">var</span> player2 = <span class="hljs-keyword">new</span> AblePlayer($(<span class="hljs-string">'[data-video-type="audio-described"] video'</span>));
+
+        <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">addclass</span>(<span class="hljs-params">el, className</span>) </span>{
+            <span class="hljs-keyword">if</span> (el.classList) {
+                el.classList.add(className);
+            } <span class="hljs-keyword">else</span> {
+                <span class="hljs-keyword">if</span> (!hasclass(el, className)) {
+                    el.className += <span class="hljs-string">' '</span> + className;
+                }
+            }
+        }
+
+        <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">removeclass</span>(<span class="hljs-params">el, className</span>) </span>{
+            <span class="hljs-keyword">if</span> (el.classList) {
+                el.classList.remove(className);
+            } <span class="hljs-keyword">else</span> {
+                el.className = el.className.replace(<span class="hljs-keyword">new</span> <span class="hljs-built_in">RegExp</span>(<span class="hljs-string">'(^|\\b)'</span> + className.split(<span class="hljs-string">' '</span>).join(<span class="hljs-string">'|'</span>) + <span class="hljs-string">'(\\b|$)'</span>, <span class="hljs-string">'gi'</span>), <span class="hljs-string">' '</span>);
+            }
+        }
+
+        <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">hasclass</span>(<span class="hljs-params">el, className</span>) </span>{
+            <span class="hljs-keyword">if</span> (el.classList) {
+                <span class="hljs-keyword">return</span> el.classList.contains(className);
+            } <span class="hljs-keyword">else</span> {
+                <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">RegExp</span>(<span class="hljs-string">'(^| )'</span> + className + <span class="hljs-string">'( |$)'</span>, <span class="hljs-string">'gi'</span>).test(el.className);
+            }
+        }
+        <span class="hljs-keyword">var</span> audiodescribed = <span class="hljs-built_in">document</span>.querySelectorAll(<span class="hljs-string">'[data-video-type="audio-described"]'</span>);
+        <span class="hljs-built_in">Array</span>.prototype.forEach.call(audiodescribed, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">el, i</span>) </span>{
+            el.setAttribute(<span class="hljs-string">'hidden'</span>, <span class="hljs-literal">true</span>);
+        });
+        <span class="hljs-keyword">var</span> adbutton = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'#audio_description_button'</span>);
+        adbutton.addEventListener(<span class="hljs-string">'click'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
+            $(<span class="hljs-string">'[data-video-type] iframe'</span>).attr(<span class="hljs-string">'width'</span>, <span class="hljs-string">'450'</span>).attr(<span class="hljs-string">'height'</span>, <span class="hljs-string">'253'</span>);
+            player1.pauseMedia();
+            player2.pauseMedia();
+            <span class="hljs-keyword">if</span> (e.target.getAttribute(<span class="hljs-string">'data-status'</span>) == <span class="hljs-string">"audio-described"</span>) {
+                <span class="hljs-keyword">var</span> videos = <span class="hljs-built_in">document</span>.querySelectorAll(<span class="hljs-string">'.video-container'</span>);
+                <span class="hljs-built_in">Array</span>.prototype.forEach.call(videos, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">el, i</span>) </span>{
+                    el.removeAttribute(<span class="hljs-string">"hidden"</span>);
+                });
+                <span class="hljs-keyword">var</span> nonaudiodescribed = <span class="hljs-built_in">document</span>.querySelectorAll(<span class="hljs-string">'[data-video-type="audio-described"]'</span>);
+                <span class="hljs-built_in">Array</span>.prototype.forEach.call(nonaudiodescribed, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">el, i</span>) </span>{
+                    el.setAttribute(<span class="hljs-string">'hidden'</span>, <span class="hljs-literal">true</span>);
+                });
+                e.target.setAttribute(<span class="hljs-string">'data-status'</span>, <span class="hljs-string">'non-audio-described'</span>);
+                e.target.querySelector(<span class="hljs-string">'span'</span>).innerHTML = <span class="hljs-string">'Enable Audio Description'</span>;
+            } <span class="hljs-keyword">else</span> {
+                <span class="hljs-keyword">var</span> videos = <span class="hljs-built_in">document</span>.querySelectorAll(<span class="hljs-string">'.video-container'</span>);
+                <span class="hljs-built_in">Array</span>.prototype.forEach.call(videos, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">el, i</span>) </span>{
+                    el.setAttribute(<span class="hljs-string">'hidden'</span>, <span class="hljs-literal">true</span>);
+                });
+                <span class="hljs-keyword">var</span> nonaudiodescribed = <span class="hljs-built_in">document</span>.querySelectorAll(<span class="hljs-string">'[data-video-type="audio-described"]'</span>);
+                <span class="hljs-built_in">Array</span>.prototype.forEach.call(nonaudiodescribed, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">el, i</span>) </span>{
+                    el.removeAttribute(<span class="hljs-string">"hidden"</span>);
+                });
+                e.target.setAttribute(<span class="hljs-string">'data-status'</span>, <span class="hljs-string">'audio-described'</span>);
+                e.target.querySelector(<span class="hljs-string">'span'</span>).innerHTML = <span class="hljs-string">'Disable Audio Description'</span>;
+            }
+        });
+    }());
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
         
     </code>
 </div>
@@ -197,10 +265,12 @@
   <span class="hljs-tag">&lt;/<span class="hljs-name">video</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"/assets/scripts/modernizr.custom.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"audio_description_button"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"icon-audio-description "</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">use</span> <span class="hljs-attr">xlink:href</span>=<span class="hljs-string">"/assets/images/icons.svg#icon-audio-description"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">use</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>Enable Audio Description<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"/assets/ableplayer/thirdparty/modernizr.custom.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"/assets/scripts/jquery.min.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"/assets/scripts/js.cookie.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"/assets/scripts/ableplayer.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"/assets/ableplayer/thirdparty/js.cookie.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"/assets/ableplayer/build/ableplayer.min.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="actionscript">
   <span class="hljs-keyword">var</span> youTubeDataAPIKey = <span class="hljs-string">"{{site.ytapi}}"</span>;
   <span class="hljs-keyword">var</span> googleApiReady = <span class="hljs-literal">false</span>;
@@ -208,7 +278,78 @@
     googleApiReady = <span class="hljs-literal">true</span>;
   }
 </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"http://apis.google.com/js/client.js?onload=initGoogleClientApi"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"http://apis.google.com/js/client.js?onload=initGoogleClientApi"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+<span class="hljs-meta">  'use strict'</span>;
+
+  <span class="hljs-keyword">var</span> player1 = <span class="hljs-keyword">new</span> AblePlayer($(<span class="hljs-string">'[data-video-type=""] video'</span>));
+  <span class="hljs-keyword">var</span> player2 = <span class="hljs-keyword">new</span> AblePlayer($(<span class="hljs-string">'[data-video-type="audio-described"] video'</span>));
+
+  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">addclass</span>(<span class="hljs-params">el, className</span>) </span>{
+    <span class="hljs-keyword">if</span> (el.classList) {
+      el.classList.add(className);
+    } <span class="hljs-keyword">else</span> {
+      <span class="hljs-keyword">if</span>(! hasclass(el, className)){
+        el.className += <span class="hljs-string">' '</span> + className;
+      }
+    }
+  }
+
+  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">removeclass</span>(<span class="hljs-params">el, className</span>) </span>{
+    <span class="hljs-keyword">if</span> (el.classList) {
+      el.classList.remove(className);
+    } <span class="hljs-keyword">else</span> {
+      el.className = el.className.replace(<span class="hljs-keyword">new</span> <span class="hljs-built_in">RegExp</span>(<span class="hljs-string">'(^|\\b)'</span> + className.split(<span class="hljs-string">' '</span>).join(<span class="hljs-string">'|'</span>) + <span class="hljs-string">'(\\b|$)'</span>, <span class="hljs-string">'gi'</span>), <span class="hljs-string">' '</span>);
+    }
+  }
+
+  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">hasclass</span>(<span class="hljs-params">el, className</span>) </span>{
+    <span class="hljs-keyword">if</span> (el.classList) {
+      <span class="hljs-keyword">return</span> el.classList.contains(className);
+    } <span class="hljs-keyword">else</span> {
+      <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">RegExp</span>(<span class="hljs-string">'(^| )'</span> + className + <span class="hljs-string">'( |$)'</span>, <span class="hljs-string">'gi'</span>).test(el.className);
+    }
+  }
+
+  <span class="hljs-keyword">var</span> audiodescribed = <span class="hljs-built_in">document</span>.querySelectorAll(<span class="hljs-string">'[data-video-type="audio-described"]'</span>);
+
+  <span class="hljs-built_in">Array</span>.prototype.forEach.call(audiodescribed, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">el, i</span>)</span>{
+    el.setAttribute(<span class="hljs-string">'hidden'</span>, <span class="hljs-literal">true</span>);
+  });
+
+  <span class="hljs-keyword">var</span> adbutton = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'#audio_description_button'</span>);
+  adbutton.addEventListener(<span class="hljs-string">'click'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>)</span>{
+    $(<span class="hljs-string">'[data-video-type] iframe'</span>).attr(<span class="hljs-string">'width'</span>, <span class="hljs-string">'450'</span>).attr(<span class="hljs-string">'height'</span>, <span class="hljs-string">'253'</span>);
+    player1.pauseMedia();
+    player2.pauseMedia();
+    <span class="hljs-keyword">if</span> (e.target.getAttribute(<span class="hljs-string">'data-status'</span>) == <span class="hljs-string">"audio-described"</span>) {
+      <span class="hljs-keyword">var</span> videos = <span class="hljs-built_in">document</span>.querySelectorAll(<span class="hljs-string">'.video-container'</span>);
+      <span class="hljs-built_in">Array</span>.prototype.forEach.call(videos, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">el, i</span>)</span>{
+        el.removeAttribute(<span class="hljs-string">"hidden"</span>);
+      });
+      <span class="hljs-keyword">var</span> nonaudiodescribed = <span class="hljs-built_in">document</span>.querySelectorAll(<span class="hljs-string">'[data-video-type="audio-described"]'</span>);
+      <span class="hljs-built_in">Array</span>.prototype.forEach.call(nonaudiodescribed, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">el, i</span>)</span>{
+        el.setAttribute(<span class="hljs-string">'hidden'</span>, <span class="hljs-literal">true</span>);
+      });
+      e.target.setAttribute(<span class="hljs-string">'data-status'</span>, <span class="hljs-string">'non-audio-described'</span>);
+      e.target.querySelector(<span class="hljs-string">'span'</span>).innerHTML = <span class="hljs-string">'Enable Audio Description'</span>;
+    } <span class="hljs-keyword">else</span> {
+      <span class="hljs-keyword">var</span> videos = <span class="hljs-built_in">document</span>.querySelectorAll(<span class="hljs-string">'.video-container'</span>);
+      <span class="hljs-built_in">Array</span>.prototype.forEach.call(videos, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">el, i</span>)</span>{
+        el.setAttribute(<span class="hljs-string">'hidden'</span>, <span class="hljs-literal">true</span>);
+      });
+      <span class="hljs-keyword">var</span> nonaudiodescribed = <span class="hljs-built_in">document</span>.querySelectorAll(<span class="hljs-string">'[data-video-type="audio-described"]'</span>);
+      <span class="hljs-built_in">Array</span>.prototype.forEach.call(nonaudiodescribed, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">el, i</span>)</span>{
+        el.removeAttribute(<span class="hljs-string">"hidden"</span>);
+      });
+      e.target.setAttribute(<span class="hljs-string">'data-status'</span>, <span class="hljs-string">'audio-described'</span>);
+      e.target.querySelector(<span class="hljs-string">'span'</span>).innerHTML = <span class="hljs-string">'Disable Audio Description'</span>;
+    }
+  });
+
+}());
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
     </code>
 </div>
 
@@ -312,7 +453,7 @@
   <span class="hljs-attribute">top</span>: <span class="hljs-number">0</span>;
 }
 <span class="hljs-selector-class">.able-player</span> {
-  <span class="hljs-attribute">font-family</span>: Arial, Helvetica, sans-serif;
+  <span class="hljs-attribute">font-family</span>: inherit;
   <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#262626</span>; <span class="hljs-comment">/* background color of player (appears on top &amp; bottom) */</span>
 }
 <span class="hljs-selector-class">.able-offscreen</span> {
@@ -944,7 +1085,7 @@ input[type=range]:focus::-ms-fill-upper {
   <span class="hljs-attribute">bottom</span>: <span class="hljs-number">0</span>;
   <span class="hljs-attribute">right</span>: <span class="hljs-number">0</span>;
   <span class="hljs-attribute">cursor</span>: nwse-resize;
-  <span class="hljs-attribute">background</span>: transparent <span class="hljs-built_in">url</span>(<span class="hljs-string">'../images/wingrip.png'</span>) no-repeat;
+  <span class="hljs-attribute">background</span>: transparent <span class="hljs-built_in">url</span>(<span class="hljs-string">'../ableplayer/images/wingrip.png'</span>) no-repeat;
 }
 
 <span class="hljs-comment">/*
@@ -1373,11 +1514,11 @@ input[type=range]:focus::-ms-fill-upper {
 */</span>
 @<span class="hljs-keyword">font-face</span> {
   <span class="hljs-attribute">font-family</span>: <span class="hljs-string">'able'</span>;
-    <span class="hljs-attribute">src</span>:    <span class="hljs-built_in">url</span>(<span class="hljs-string">'../button-icons/fonts/able.eot?dqripi'</span>);
-    <span class="hljs-attribute">src</span>:    <span class="hljs-built_in">url</span>(<span class="hljs-string">'../button-icons/fonts/able.eot?dqripi#iefix'</span>) <span class="hljs-built_in">format</span>(<span class="hljs-string">'embedded-opentype'</span>),
-        <span class="hljs-built_in">url</span>(<span class="hljs-string">'../button-icons/fonts/able.ttf?dqripi'</span>) <span class="hljs-built_in">format</span>(<span class="hljs-string">'truetype'</span>),
-        <span class="hljs-built_in">url</span>(<span class="hljs-string">'../button-icons/fonts/able.woff?dqripi'</span>) <span class="hljs-built_in">format</span>(<span class="hljs-string">'woff'</span>),
-        <span class="hljs-built_in">url</span>(<span class="hljs-string">'../button-icons/fonts/able.svg?dqripi#able'</span>) <span class="hljs-built_in">format</span>(<span class="hljs-string">'svg'</span>);
+    <span class="hljs-attribute">src</span>:    <span class="hljs-built_in">url</span>(<span class="hljs-string">'../ableplayer/button-icons/fonts/able.eot?dqripi'</span>);
+    <span class="hljs-attribute">src</span>:    <span class="hljs-built_in">url</span>(<span class="hljs-string">'../ableplayer/button-icons/fonts/able.eot?dqripi#iefix'</span>) <span class="hljs-built_in">format</span>(<span class="hljs-string">'embedded-opentype'</span>),
+        <span class="hljs-built_in">url</span>(<span class="hljs-string">'../ableplayer/button-icons/fonts/able.ttf?dqripi'</span>) <span class="hljs-built_in">format</span>(<span class="hljs-string">'truetype'</span>),
+        <span class="hljs-built_in">url</span>(<span class="hljs-string">'../ableplayer/button-icons/fonts/able.woff?dqripi'</span>) <span class="hljs-built_in">format</span>(<span class="hljs-string">'woff'</span>),
+        <span class="hljs-built_in">url</span>(<span class="hljs-string">'../ableplayer/button-icons/fonts/able.svg?dqripi#able'</span>) <span class="hljs-built_in">format</span>(<span class="hljs-string">'svg'</span>);
   <span class="hljs-attribute">font-weight</span>: normal;
   <span class="hljs-attribute">font-style</span>: normal;
 }
@@ -1504,7 +1645,7 @@ input[type=range]:focus::-ms-fill-upper {
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">24.5 KB</span>
+                    <span class="Meta-value">24.6 KB</span>
                 </li>
             </ul>
         </div>
