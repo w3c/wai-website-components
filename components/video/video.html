@@ -1,0 +1,25 @@
+<div class="video-container" data-video-type="">
+  <video preload="metadata" data-youtube-id="93UgG72os8M" width="450">
+    <track src="../cc/keyboard-en.vtt" label="Captions" kind="captions" srclang="en" default="">
+  </video>
+</div>
+
+<div class="video-container" data-video-type="audio-described">
+  <video preload="metadata" data-youtube-id="1rBwxGMT9ZM" width="450">
+    <track src="../cc/keyboard_ad-en.vtt" label="Captions" kind="captions" srclang="en" default="">
+    <track src="../cc/keyboard_ad_desc-en.vtt" label="Descriptions" kind="descriptions" srclang="en" default="">
+  </video>
+</div>
+
+<script src="/assets/scripts/modernizr.custom.js"></script>
+<script src="/assets/scripts/jquery.min.js"></script>
+<script src="/assets/scripts/js.cookie.js"></script>
+<script src="/assets/scripts/ableplayer.js"></script>
+<script>
+  var youTubeDataAPIKey = "{{site.ytapi}}";
+  var googleApiReady = false;
+  function initGoogleClientApi() {
+    googleApiReady = true;
+  }
+</script>
+<script src="http://apis.google.com/js/client.js?onload=initGoogleClientApi"></script>
