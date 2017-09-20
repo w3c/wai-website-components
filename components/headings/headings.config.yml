@@ -1,0 +1,68 @@
+collated: true
+variants:
+- name: default
+  context:
+    name: h1
+- name: h2
+  context:
+    name: h2
+- name: h3
+  context:
+    name: h3
+- name: h4
+  context:
+    name: h4
+- name: h5
+  context:
+    name: h5
+- name: h6
+  context:
+    name: h6
+- name: exdefault
+  context:
+    name: h1
+    class: ex
+- name: exh2
+  context:
+    name: h2
+    class: ex
+- name: exh3
+  context:
+    name: h3
+    class: ex
+- name: exh4
+  context:
+    name: h4
+    class: ex
+- name: exh5
+  context:
+    name: h5
+    class: ex
+- name: exh6
+  context:
+    name: h6
+    class: ex
+- name: apdefault
+  context:
+    name: h1
+    class: ap
+- name: aph2
+  context:
+    name: h2
+    class: ap
+- name: aph3
+  context:
+    name: h3
+    class: ap
+- name: aph4
+  context:
+    name: h4
+    class: ap
+- name: aph5
+  context:
+    name: h5
+    class: ap
+- name: aph6
+  context:
+    name: h6
+    class: ap

@@ -965,6 +965,50 @@ h6 {
   line-height: 1.8;
 }
 
+h1, h2, h3, h4, h5, h6 {
+}
+
+h1.ex:before, h1.ap:before, h1 b, h2.ex:before, h2.ap:before, h2 b, h3.ex:before, h3.ap:before, h3 b, h4.ex:before, h4.ap:before, h4 b, h5.ex:before, h5.ap:before, h5 b, h6.ex:before, h6.ap:before, h6 b {
+    color: #003366 !important;
+    font-weight: bold
+}
+
+.no-js {
+}
+
+.no-js .ex {
+    counter-increment: examples;
+    counter-reset: approaches
+}
+
+.no-js .ex:before {
+    content: 'Example ' counter(examples) ': '
+}
+
+.no-js .ex.inap {
+    counter-reset: none
+}
+
+.no-js .newap {
+    counter-reset: approaches
+}
+
+.no-js .newex {
+    counter-reset: examples
+}
+
+.no-js h2.first, .no-js h3.first, .no-js .newexap {
+    counter-reset: examples approaches
+}
+
+.no-js .ap {
+    counter-increment: approaches
+}
+
+.no-js .ap:before {
+    content: 'Approach ' counter(approaches) ': '
+}
+
 [class^="icon-"], [class*=" icon-"] {
   display: inline-block;
   width: 1em;
