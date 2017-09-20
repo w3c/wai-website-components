@@ -65,6 +65,7 @@ body {
   background-color: var(--body-bg);
   color:  var(--off-black);
   padding: 0;
+  padding: constant(safe-area-inset-top) constant(safe-area-inset-right) constant(safe-area-inset-bottom) constant(safe-area-inset-left);
   margin: 0 auto;
   max-width: 1250px;
   @supports (display: grid) {
