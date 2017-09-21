@@ -1,59 +1,48 @@
+
+
 <!DOCTYPE html>
-<html lang="en" dir="ltr" class="no-js">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="en-gb" dir="ltr" prefix="og: http://ogp.me/ns#" class="no-js fonts-loaded">
+  <head>
     <script>
-    window.frctl = {
-        env: 'static'
-    };
+      document.documentElement.className = document.documentElement.className.replace('no-js', 'has-js');
+
+      function downloadJSAtOnload() {
+        var element = document.createElement("script");
+        element.src = "../../assets/scripts/main.js";
+        document.body.appendChild(element);
+        //document.body.dataset.menuExpanded = 'false';
+      }
+
+      window.addEventListener("load", downloadJSAtOnload, false);
     </script>
-    <script>var cl = document.querySelector('html').classList; cl.remove('no-js'); cl.add('has-js');</script>
-    <link rel="shortcut icon" href="../../themes/mandelbrot/favicon.ico" type="image/ico">
 
-<link rel="stylesheet" href="../../themes/mandelbrot/css/default.css?cachebust=1.2.0" type="text/css">
+    <meta charset="utf-8">
+    <meta name="referrer" content="origin">
+    <meta name="robots" content="index, follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"><meta property="og:title" content=""><meta property="og:description" content=""><meta property="og:url" content=""><meta property="og:image" content="../../assets/icons/icon.png"><meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@">
 
+    <link rel="stylesheet" href="../../assets/css/style.css">
 
-<title>Error rendering component box-wrapper--help-improve-page | WAI Website Assets</title>
+    <title> &#9670; Web Accessibility Initiative (WAI) &#9670; W3C</title>
+  </head>
 
-</head>
-<body>
-
-
-
-<div class="Frame Frame--full" id="frame">
-
-
-<div class="Error Error--render">
-    <h4 class="Error-title">Error rendering component</h4>
-    <div class="Error-message Prose">
-        <p>(unknown path)
-  Error: Could not render component &#39;@help-box-content&#39; - component not found.</p>
-
-    </div>
-    
-    <code class="Error-stack">
-        <pre>Template render error: (unknown path)
-  Error: Could not render component '@help-box-content' - component not found.
-    at Object.exports.prettifyError (/Users/yatil/Library/Mobile Documents/com~apple~CloudDocs/projects/wai-website-assets/wai-website-assets/node_modules/@frctl/nunjucks/node_modules/nunjucks/src/lib.js:34:15)
-    at /Users/yatil/Library/Mobile Documents/com~apple~CloudDocs/projects/wai-website-assets/wai-website-assets/node_modules/@frctl/nunjucks/node_modules/nunjucks/src/environment.js:486:31
-    at eval (eval at _compile (/Users/yatil/Library/Mobile Documents/com~apple~CloudDocs/projects/wai-website-assets/wai-website-assets/node_modules/@frctl/nunjucks/node_modules/nunjucks/src/environment.js:565:24), <anonymous>:30:11)
-    at entity.render.then.catch.err (/Users/yatil/Library/Mobile Documents/com~apple~CloudDocs/projects/wai-website-assets/wai-website-assets/node_modules/@frctl/nunjucks/src/extensions/render.js:46:21)
-    at <anonymous>
-    at process._tickCallback (internal/process/next_tick.js:188:7)</pre>
-    </code>
-    
-</div>
-
-
-</div>
-
-
-
-
-<script src="../../themes/mandelbrot/js/mandelbrot.js?cachebust=1.2.0"></script>
-
-
-
-</body>
+  <body>
+    <aside class="box">
+  <header class="box-h box-h-icon"><svg aria-hidden="true" class="icon-comments "><use xlink:href="../../assets/images/icons.svg#icon-comments"></use></svg>Help improve this page
+</header>
+  <div class="box-i"><p>Please share your ideas, suggestions, or comments via email to the publicly-archived list <a href="#">wai-eo-editors@w3.org</a> or via GitHub.</p>
+<div class="button-group">
+  <button class="button"><span>Email</span></button>
+  <button class="button"><span>Fork &amp; Edit on GitHub</span></button>
+  <button class="button"><span>List of GitHub Issues</span></button>
+  <button class="button"><span>New GitHub Issue</span></button>
+</div></div>
+</aside>
+  </body>
+  <script src="../../assets/scripts/svg4everybody.js"></script>
+  <script>
+    svg4everybody();
+  </script>
 </html>
+

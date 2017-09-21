@@ -184,7 +184,7 @@
     {%- elseif content == "listwithlinks" -%}
     {%- render '<a href="list-unordered-with-link.html">@list-unordered-with-link</a>' -%}
     {%- elseif content == "help-box-content" -%}
-    {%- render '@help-box-content' -%}
+    {%- render '<a href="box-help-content.html">@box-help-content</a>' -%}
     {%- else -%}
     {{content}}
     {%- endif -%}
@@ -289,14 +289,16 @@
         </li>
         
         <li class="Meta-item">
-            <strong class="Meta-key">References <em class="Meta-count">(3)</em>:</strong>
+            <strong class="Meta-key">References <em class="Meta-count">(4)</em>:</strong>
             <span class="Meta-value Meta-value--linkList">
             
                 <a href="box-header.html">@<span>box-header</span></a>, 
             
                 <a href="list-links.html">@<span>list-links</span></a>, 
             
-                <a href="list-unordered-with-link.html">@<span>list-unordered-with-link</span></a>
+                <a href="list-unordered-with-link.html">@<span>list-unordered-with-link</span></a>, 
+            
+                <a href="box-help-content.html">@<span>box-help-content</span></a>
             
             </span>
         </li class="Meta-item">

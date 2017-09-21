@@ -51,10 +51,6 @@
 
     
     
-        
-        
-        
-    
 
 <div class="Pen" data-behaviour="pen" id="pen-28bf653fadc9ce826f7ffb0528e11e72">
 
@@ -87,17 +83,14 @@
     <div class="Preview-wrapper" data-role="resizer">
         <div class="Preview-resizer">
             
-<div class="Error Error--render">
-    <h4 class="Error-title">Error rendering component</h4>
-    <div class="Error-message Prose">
-        <p>(unknown path)
-  Error: Could not render component &#39;@help-box-content&#39; - component not found.</p>
-
-    </div>
-    
-</div>
-
-            
+             <iframe
+                class="Preview-iframe"
+                data-role="window"
+                src="../preview/box-wrapper--help-improve-page.html"
+                sandbox="allow-same-origin allow-scripts allow-forms"
+                 style=""
+                marginwidth="0" marginheight="0" frameborder="0" vspace="0" hspace="0" scrolling="yes">
+            </iframe>
         </div>
         <div class="Preview-handle" data-role="resize-handle"></div>
         <div class="Preview-overlay"></div>
@@ -158,7 +151,19 @@
 <div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-28bf653fadc9ce826f7ffb0528e11e72-panel-html">
     <code class="Code Code--lang-html">
         
-        <pre><!-- Error rendering component:  --></pre>
+        <pre><span class="hljs-tag">&lt;<span class="hljs-name">aside</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"box"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"box-h box-h-icon"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"icon-comments "</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">use</span> <span class="hljs-attr">xlink:href</span>=<span class="hljs-string">"../../assets/images/icons.svg#icon-comments"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">use</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>Help improve this page
+    <span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"box-i"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Please share your ideas, suggestions, or comments via email to the publicly-archived list <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>wai-eo-editors@w3.org<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span> or via GitHub.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"button-group"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"button"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>Email<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"button"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>Fork &amp;amp; Edit on GitHub<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"button"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>List of GitHub Issues<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"button"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>New GitHub Issue<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">aside</span>&gt;</span></pre>
         
     </code>
 </div>
@@ -174,7 +179,7 @@
     {%- elseif content == "listwithlinks" -%}
     {%- render '<a href="list-unordered-with-link.html">@list-unordered-with-link</a>' -%}
     {%- elseif content == "help-box-content" -%}
-    {%- render '@help-box-content' -%}
+    {%- render '<a href="box-help-content.html">@box-help-content</a>' -%}
     {%- else -%}
     {{content}}
     {%- endif -%}
@@ -277,14 +282,16 @@
         </li>
         
         <li class="Meta-item">
-            <strong class="Meta-key">References <em class="Meta-count">(3)</em>:</strong>
+            <strong class="Meta-key">References <em class="Meta-count">(4)</em>:</strong>
             <span class="Meta-value Meta-value--linkList">
             
                 <a href="box-header.html">@<span>box-header</span></a>, 
             
                 <a href="list-links.html">@<span>list-links</span></a>, 
             
-                <a href="list-unordered-with-link.html">@<span>list-unordered-with-link</span></a>
+                <a href="list-unordered-with-link.html">@<span>list-unordered-with-link</span></a>, 
+            
+                <a href="box-help-content.html">@<span>box-help-content</span></a>
             
             </span>
         </li class="Meta-item">
