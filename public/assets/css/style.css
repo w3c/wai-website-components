@@ -904,7 +904,9 @@ th > :last-child, td > :last-child {
   padding: 16px 0;
   grid-area: navigation;
   grid-row-start: 1;
-  margin-right: 32px
+  margin-right: 32px;
+  text-decoration: none;
+  transition: color .5s ease-in .1s
 }
 
 @supports (display: grid) {
@@ -917,7 +919,15 @@ th > :last-child, td > :last-child {
 .logos img {
     vertical-align: middle;
     padding-right: 8px;
-    margin-bottom: 8px
+    margin-bottom: 8px;
+    color: inherit;
+    fill: inherit
+}
+
+.logos:hover,
+.logos:focus {
+    text-decoration: underline;
+    color: #eed009 !important
 }
 
 h1, h2, h3, h4, h5, h6 {

@@ -24,6 +24,8 @@
   grid-area: navigation;
   grid-row-start: 1;
   margin-right: 32px;
+  text-decoration: none;
+  transition: color .5s ease-in .1s;
   @supports (display: grid) {
     margin-right: 0;
   }
@@ -31,5 +33,11 @@
     vertical-align:middle;
     padding-right: 8px;
     margin-bottom: 8px;
+    color: inherit;
+    fill: inherit;
+  }
+  &:--hovcus {
+    text-decoration: underline;
+    color: var(--gold) !important;
   }
 }
