@@ -1846,6 +1846,15 @@ p+ul, p+ol {
     margin-bottom: 0
 }
 
+.notes {
+  font-size: .85em
+}
+
+.notes strong:first-child {
+    font-weight: bold;
+    color: #005A6A
+}
+
 .pager {
   background-color: #ffffff;
   border: 1px solid #ddd;
