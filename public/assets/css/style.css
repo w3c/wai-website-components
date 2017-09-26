@@ -1446,7 +1446,8 @@ p+ul, p+ol {
     }
 }
 
-#controls a:hover, #controls a:focus {
+#controls a:hover,
+#controls a:focus {
     border-bottom: none;
     text-decoration: underline
 }
@@ -1488,7 +1489,9 @@ p+ul, p+ol {
     text-decoration: none
 }
 
-.metanav a:hover, .metanav a:focus, .metanav a[aria-current="page"] {
+.metanav a:hover,
+.metanav a:focus,
+.metanav a[aria-current="page"] {
     border-bottom: 2px solid #eed009
 }
 
@@ -1852,12 +1855,14 @@ p+ul, p+ol {
 }
 
 .mainnav .subnav li:hover .subsubnav,
-.mainnav .subnav li:focus .subsubnav {
+.mainnav .subnav li:focus .subsubnav,
+.mainnav .subnav li.open .subsubnav {
     display: block
 }
 
 .mainnav li:hover .subnav,
-.mainnav li:focus .subnav {
+.mainnav li:focus .subnav,
+.mainnav li.open .subnav {
     display: block
 }
 
