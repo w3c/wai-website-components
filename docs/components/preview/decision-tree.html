@@ -1,0 +1,111 @@
+
+
+<!DOCTYPE html>
+<html lang="en-gb" dir="ltr" prefix="og: http://ogp.me/ns#" class="no-js fonts-loaded">
+  <head>
+    <script>
+      document.documentElement.className = document.documentElement.className.replace('no-js', 'has-js');
+
+      function downloadJSAtOnload() {
+        var element = document.createElement("script");
+        element.src = "../../assets/scripts/main.js";
+        document.body.appendChild(element);
+        //document.body.dataset.menuExpanded = 'false';
+      }
+
+      window.addEventListener("load", downloadJSAtOnload, false);
+    </script>
+
+    <meta charset="utf-8">
+    <meta name="referrer" content="origin">
+    <meta name="robots" content="index, follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"><meta property="og:title" content=""><meta property="og:description" content=""><meta property="og:url" content=""><meta property="og:image" content="../../assets/icons/icon.png"><meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@">
+
+    <link rel="stylesheet" href="../../assets/css/style.css">
+
+    <title> &#9670; Web Accessibility Initiative (WAI) &#9670; W3C</title>
+  </head>
+
+  <body>
+    <ul class="decision-tree">
+  <li><strong>Does the image contain text?</strong>
+    <ul>
+      <li class="yes"><strong>Yes:</strong>
+        <ul>
+          <li><strong>… and the text is also present as <em>real</em> text nearby.</strong>
+<em>Use an empty <code>alt</code> attribute. See <a href="../decorative/">Decorative Images</a>.</em></li>
+          <li><strong>… and the text is only shown for visual effects.</strong>
+<em>Use an empty <code>alt</code> attribute. See <a href="../decorative/">Decorative Images</a>.</em></li>
+          <li><strong>… and the text has a specific function, for example is an icon.</strong>
+  <em>Use the <code>alt</code> attribute to communicate the function of the image. See <a href="../functional/">Functional Images</a>.</em></li>
+          <li><strong>… and the text in the image is not present otherwise.</strong> <em>Use the <code>alt</code> attribute to include the text of the image. See <a href="../textual/#image-of-styled-text-with-decorative-effect">Images of Text</a>.</em></li>
+        </ul>
+      </li>
+      <li class="no"><strong>No:</strong>
+        <ul>
+          <li>Continue.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><strong>Is the image used in a link or a button, and would it be hard or impossible to understand what the link or the button does, if the image wasn’t there?</strong>
+    <ul>
+      <li class="yes"><strong>Yes:</strong>
+        <ul>
+          <li><em>Use the <code>alt</code> attribute to communicate the destination of the link or action taken. See <a href="../functional/">Functional Images</a>.</em></li>
+        </ul>
+      </li>
+      <li class="no"><strong>No:</strong>
+        <ul>
+          <li>Continue.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><strong>Does the image contribute meaning to the current page or context?</strong>
+    <ul>
+      <li class="yes"><strong>Yes:</strong>
+        <ul>
+          <li><strong>… and it’s a simple graphic or photograph.</strong>
+<em>Use a brief description of the image in a way that conveys that meaning in the <code>alt</code> attribute. See <a href="../informative/">Informative Images</a>.</em></li>
+          <li><strong>… and it’s a graph or complex piece of information.</strong>
+<em>Include the information contained in the image elsewhere on the page. See <a href="../complex/">Complex Images</a>.</em></li>
+          <li><strong>… and it shows content that is redundant to <em>real</em> text nearby.</strong>
+<em>Use an empty <code>alt</code> attribute. See (redundant) <a href="../functional/#logo-image-within-link-text">Functional Images</a>.</em></li>
+        </ul>
+      </li>
+      <li class="no"><strong>No:</strong>
+        <ul>
+          <li>Continue.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><strong>Is the image purely decorative or not intended for the user?</strong>
+    <ul>
+      <li class="yes"><strong>Yes:</strong>
+        <ul>
+          <li><em>Use an empty <code>alt</code> attribute. See <a href="../decorative/">Decorative Images</a>.</em></li>
+        </ul>
+      </li>
+      <li class="no"><strong>No:</strong>
+        <ul>
+          <li>Continue.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><strong>Is the image’s use not listed above or it’s unclear what <code>alt</code> text to provide?</strong>
+    <ul>
+      <li class="yes">This decision tree <strong>does not</strong> cover all cases. For detailed information on the provision of text alternatives refer to the <a href="../">Image Concepts Page</a>.</li>
+    </ul>
+  </li>
+</ul>
+  </body>
+  <script src="../../assets/scripts/svg4everybody.js"></script>
+  <script>
+    svg4everybody();
+  </script>
+</html>
+

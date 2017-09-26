@@ -847,6 +847,162 @@ th > :last-child, td > :last-child {
     padding: 16px 32px
 }
 
+.decision-tree {
+  list-style: none;
+  margin: 1em 0;
+  padding:0
+}
+
+.decision-tree > li {
+
+    /*border: 2px solid #999;
+    border-top:none;*/
+}
+
+.decision-tree > li > strong {
+    display: block;
+    padding: 1em .5em
+}
+
+.decision-tree > li:first-child {
+
+    /*border-top:2px solid #999;*/
+}
+
+.decision-tree > li > ul {
+    padding: 0;
+    list-style: none
+
+    /*border-top: 1px dotted #aaa;*/
+}
+
+@supports ((display: -webkit-box) or (display: flex)) {
+
+    .decision-tree > li > ul {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: reverse;
+            -ms-flex-direction: row-reverse;
+                flex-direction: row-reverse;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        -webkit-box-align: stretch;
+            -ms-flex-align: stretch;
+                align-items: stretch
+    }
+}
+
+.decision-tree > li > ul > li {
+    text-indent: 0;
+    box-sizing: border-box;
+    font-weight: normal;
+    padding: .5em;
+    //: 1px solid #aaa
+}
+
+@supports ((display: -webkit-box) or (display: flex)) {
+
+    .decision-tree > li > ul > li {
+        -ms-flex-preferred-size: 25%;
+            flex-basis: 25%
+    }
+}
+
+.decision-tree > li > ul > li:nth-child(odd) {
+}
+
+@supports ((display: -webkit-box) or (display: flex)) {
+
+    .decision-tree > li > ul > li:nth-child(odd) {
+        -ms-flex-preferred-size: 75%;
+            flex-basis: 75%
+    }
+}
+
+.decision-tree > li > ul > li:nth-child(odd):last-child {
+    display: block;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%
+}
+
+.decision-tree > li > ul > li ul {
+    padding: 0;
+    margin: 0
+}
+
+.decision-tree > li > ul > li li {
+    padding: 0;
+    padding-bottom: 0.5em;
+    margin-bottom: 0.5em;
+    border-bottom: 1px solid #3b3b3b;
+    list-style: none
+}
+
+.decision-tree > li > ul > li li > em {
+    display: block;
+    padding-left: 1.5em;
+    position: relative;
+    margin-top: .25em;
+    font-style: normal
+}
+
+.decision-tree > li > ul > li li > em:before {
+    position: absolute;
+    content: '';
+    top: .2em;
+    margin-left: -1.5em
+}
+
+.decision-tree > li > ul > li li:last-child {
+    border-bottom-style: none;
+    padding-bottom: 0;
+    margin-bottom: 0
+}
+
+.decision-tree .yes {
+    background-color: rgb(229, 242, 255);
+    border-bottom: none
+}
+
+.decision-tree .yes li {
+    list-style: disc;
+    margin-left: 1em
+}
+
+.decision-tree .yes li:only-child {
+    list-style: none
+}
+
+.decision-tree .no {
+
+    /*border-right:1px dotted #aaa;*/
+    background-color: rgb(242, 192, 193);
+    border-bottom: none;
+    position: relative
+
+    /*&:before { top: 100%; left: 50%; border: solid transparent; content: " "; height: 0; width: 0; position: absolute; pointer-events: none; border-color: rgba(119, 119, 119, 0); border-top-color: #999; border-width: 1.1rem; margin-left: -.6rem; z-index: 400; }*/
+}
+
+.decision-tree .no:after {
+    top: 100%;
+    left: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(119, 119, 119, 0);
+    border-top-color: rgb(242, 192, 193);
+    border-width: 16px;
+    border-width: 1rem;
+    margin-left: -8px;
+    margin-left: -.5rem;
+    z-index: 500
+}
+
 .page-footer, .site-footer {
   font-size: 12px;
   font-size: .75rem;
