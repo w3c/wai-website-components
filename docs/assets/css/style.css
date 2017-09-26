@@ -2398,11 +2398,11 @@ p+ul, p+ol {
     }
 }
 
-.teaser-h p {
+.teaser-h .subtitle {
     font-weight: bold;
     margin: 0;
-    font-size: 16px;
-    font-size: 1rem
+    font-size: 14px;
+    font-size: .875rem
 }
 
 .teaser-h-icon {

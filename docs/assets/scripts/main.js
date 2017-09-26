@@ -120,6 +120,9 @@
   var timer;
   Array.prototype.forEach.call(menuItems, function(el, i){
     el.addEventListener("mouseover", function(event){
+      if (document.querySelector(".has-submenu.open")) {
+        document.querySelector(".has-submenu.open").className = "has-submenu";
+      }
       this.className = "has-submenu open";
       clearTimeout(timer);
     });
@@ -127,6 +130,20 @@
       timer = setTimeout(function(event){
         document.querySelector(".has-submenu.open").className = "has-submenu";
       }, 1000);
+    });
+  });
+
+  Array.prototype.forEach.call(menuItems, function(el, i){
+    el.querySelector('a').addEventListener("click",  function(event){
+      if (this.parentNode.className == "has-submenu") {
+        this.parentNode.className = "has-submenu open";
+        this.setAttribute('aria-expanded', "true");
+      } else {
+        this.parentNode.className = "has-submenu";
+        this.setAttribute('aria-expanded', "false");
+      }
+      event.preventDefault();
+      return false;
     });
   });
 

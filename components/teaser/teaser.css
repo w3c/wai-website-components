@@ -33,10 +33,10 @@
       }
     }
   }
-  & p {
+  & .subtitle {
     font-weight: bold;
     margin: 0;
-    font-size: 1rem;
+    font-size: .875rem;
   }
 }
 
