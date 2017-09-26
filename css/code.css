@@ -20,6 +20,7 @@ green     #859900  operators, other keywords
 .highlight {
   color: #586e75;
   tab-size: 2;
+  font-weight: bold;
   & .c { color: #93a1a1 } /* Comment */
   & .err { color: #586e75 } /* Error */
   & .g { color: #586e75 } /* Generic */
@@ -88,4 +89,10 @@ green     #859900  operators, other keywords
   & .vg { color: #268bd2 } /* Name.Variable.Global */
   & .vi { color: #268bd2 } /* Name.Variable.Instance */
   & .il { color: #2aa198 } /* Literal.Number.Integer.Long */
+}
+
+:not(.highlight) code {
+  color: var(--w3c-blue);
+  font-size: 1.05em;
+  font-weight: bold;
 }
