@@ -45,7 +45,7 @@
       margin-left: 16px;
     }
     text-decoration: none;
-    &:hover, &:focus {
+    &:--hovcus {
       border-bottom: none;
       text-decoration: underline;
     }
@@ -73,7 +73,7 @@
   }
   & a {
     text-decoration: none;
-    &:hover, &:focus, &[aria-current="page"] {
+    &:--hovcus, &[aria-current="page"] {
       border-bottom: 2px solid var(--gold);
     }
   }
@@ -307,11 +307,13 @@
         border-color: var(--trans-line-grey);
       }
     }
-    & li:--hovcus .subsubnav{
+    & li:--hovcus .subsubnav,
+    & li.open .subsubnav {
       display:block;
     }
   }
-  & li:--hovcus .subnav {
+  & li:--hovcus .subnav,
+  & li.open .subnav {
     display:block;
   }
 }
