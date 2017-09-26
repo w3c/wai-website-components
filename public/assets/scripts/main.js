@@ -120,6 +120,9 @@
   var timer;
   Array.prototype.forEach.call(menuItems, function(el, i){
     el.addEventListener("mouseover", function(event){
+      if (document.querySelector(".has-submenu.open")) {
+        document.querySelector(".has-submenu.open").className = "has-submenu";
+      }
       this.className = "has-submenu open";
       clearTimeout(timer);
     });
