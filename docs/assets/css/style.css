@@ -249,6 +249,13 @@ a.stealthy-link:visited {
     margin-right: 32px
 }
 
+@supports (display: grid) {
+
+    .grid-three-five .col1 {
+        margin-right: 0
+    }
+}
+
 .grid-three-five .col2 {
     -ms-flex-preferred-size: 61%;
         flex-basis: 61%;

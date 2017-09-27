@@ -230,6 +230,9 @@ a {
     grid-column-start: three-start;
     grid-column-end: three-end;
     margin-right: 32px;
+    @supports (display: grid) {
+      margin-right: 0;
+    }
   }
   & .col2 {
     flex-basis: 61%;
