@@ -2555,7 +2555,8 @@ p+ul, p+ol {
 }
 
 .area-teaser .teaser-h h2, .area-teaser .teaser-h h3, .area-teaser .teaser-h h4, .area-teaser .teaser-h h5, .area-teaser .teaser-h h6 {
-    margin: 0
+    margin: 0;
+    font-weight: normal
 }
 
 .area-teaser .teaser-h-icon {

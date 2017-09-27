@@ -116,7 +116,7 @@
   & .teaser-h {
     display: flex;
     align-items: flex-end;
-    & h2, & h3, & h4, & h5, & h6 {margin: 0;}
+    & h2, & h3, & h4, & h5, & h6 {margin: 0; font-weight: normal;}
   }
   & .teaser-h-icon {
     margin-bottom: 10px;
