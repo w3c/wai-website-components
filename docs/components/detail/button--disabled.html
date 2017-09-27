@@ -158,9 +158,9 @@
 {%- else -%}
 {%- if type != "icon" -%}
 {%- if type == "link" -%}
-<span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"button{% for mod in mods %} button-{{ mod }}{% endfor %}"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"{{ href }}"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>{{ label }}<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"button{% for mod in mods %} button-{{ mod }}{% endfor %}"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"{{ href }}"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>{% if icon %}{%render '<a href="icons.html">@icons</a>', name=icon %} {% endif %}{{ label }}<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
 {%- else -%}
-<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"button{% for mod in mods %} button-{{ mod }}{% endfor %}"</span>{{ " <span class="hljs-attr">type</span>=<span class="hljs-string">\</span>"<span class="hljs-attr">submit</span>\"" <span class="hljs-attr">if</span> <span class="hljs-attr">submit</span> }}{{ " <span class="hljs-attr">disabled</span>" <span class="hljs-attr">if</span> <span class="hljs-attr">disabled</span> }}&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>{{ label }}<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"button{% for mod in mods %} button-{{ mod }}{% endfor %}"</span>{{ " <span class="hljs-attr">type</span>=<span class="hljs-string">\</span>"<span class="hljs-attr">submit</span>\"" <span class="hljs-attr">if</span> <span class="hljs-attr">submit</span> }}{{ " <span class="hljs-attr">disabled</span>" <span class="hljs-attr">if</span> <span class="hljs-attr">disabled</span> }}&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>{% if icon %}{%render '<a href="icons.html">@icons</a>', name=icon %} {% endif %}{{ label }}<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
 {%- endif -%}
 {%- else -%}
 <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"button{% for mod in mods %} button-{{ mod }}{% endfor %}"</span>{{ " <span class="hljs-attr">type</span>=<span class="hljs-string">\</span>"<span class="hljs-attr">submit</span>\"" <span class="hljs-attr">if</span> <span class="hljs-attr">submit</span> }}{{ " <span class="hljs-attr">disabled</span>" <span class="hljs-attr">if</span> <span class="hljs-attr">disabled</span> }}&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>{%render '<a href="icons.html">@icons</a>', name=icon %}<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
@@ -200,7 +200,7 @@
         
         
         <li class="Meta-item">
-            <strong class="Meta-key">Variants <em class="Meta-count">(7)</em>:</strong>
+            <strong class="Meta-key">Variants <em class="Meta-count">(8)</em>:</strong>
             <span class="Meta-value Meta-value--linkList">
             
                 <a href="button--default.html">
@@ -229,6 +229,10 @@
             
                 <a href="button--fake.html">
                     <span>Fake</span>
+                </a>, 
+            
+                <a href="button--backtotop.html">
+                    <span>Backtotop</span>
                 </a>
             
             </span>

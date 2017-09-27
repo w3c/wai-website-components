@@ -35,3 +35,10 @@ variants:
     type: fake
     label: Fake button
     mods: ['fake']
+- name: backtotop
+  context:
+    type: link
+    label: Back to Top
+    icon: arrow-up
+    href: '#top'
+    mods: ['backtotop']

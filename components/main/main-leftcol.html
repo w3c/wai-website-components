@@ -1,4 +1,5 @@
 <main id="main" class="default-grid with-gap leftcol">
   {% render '@sn-header-base', mods=['contents'], id="contents", section="Tutorials", label="Page Structure", icon="book" %}
-  {%render '@content' %}
+  {% render '@content' %}
+  {% render '@button', type="link", href="#main", mods=['backtotop'], label="Back to Top", icon="arrow-up" %}
 </main>

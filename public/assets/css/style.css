@@ -491,6 +491,10 @@ a.stealthy-link:visited {
     height: 100%
 }
 
+#main {
+  position: relative;
+}
+
 button, .button {
   border-radius: 5px;
   display: inline-block;
@@ -512,6 +516,10 @@ button, .button {
   background-color: #005A6A;
   text-decoration: none;
   font-weight: bold
+}
+
+button:visited, .button:visited {
+    color: #ffffff
 }
 
 button.button-nobg, .button.button-nobg {
@@ -547,25 +555,42 @@ button.button-noborder:focus,
     color: #ffffff
 }
 
-button, a.button {
+button, .button {
 }
 
 button:hover,
 button:focus,
-a.button:hover,
-a.button:focus {
+.button:hover,
+.button:focus {
     border-color: #003366;
     background-color: #003366;
     color: #ffffff
 }
 
-button:disabled, a.button:disabled {
+button:disabled, .button:disabled {
     opacity: .75
 }
 
 .button-secondary {
   background-color: #ffffff;
   color: #005A6A;
+}
+
+.button-backtotop {
+  position: fixed;
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 16px;
+  right: 16px;
+  opacity: 0.85;
+  border-radius: 100px;
+  background-color: #003366;
+  border-color: #003366;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .5)
+}
+
+.button-backtotop svg {
+    vertical-align: -1px
 }
 
 .button-group {
