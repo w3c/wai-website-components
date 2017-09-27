@@ -227,6 +227,7 @@
     display: none;
     background-color: var(--w3c-blue);
     padding: 0 0 16px;
+    z-index: 9999;
     @media (--medium) {
       padding-top: 16px;
       position: absolute;
