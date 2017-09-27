@@ -251,6 +251,9 @@ a {
     grid-column-start: five-start;
     grid-column-end: five-end;
     margin-right: 32px;
+    @supports (display: grid) {
+      margin-right: 0;
+    }
   }
   & .col2 {
     flex: 1 1 37%;

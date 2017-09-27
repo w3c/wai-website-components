@@ -303,6 +303,13 @@ a.stealthy-link:visited {
     margin-right: 32px
 }
 
+@supports (display: grid) {
+
+    .grid-five-three .col1 {
+        margin-right: 0
+    }
+}
+
 .grid-five-three .col2 {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 37%;
