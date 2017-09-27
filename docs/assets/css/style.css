@@ -2441,7 +2441,8 @@ p+ul, p+ol {
     font-weight: bold;
     margin: 0;
     font-size: 14px;
-    font-size: .875rem
+    font-size: .875rem;
+    color: #1d1d1d
 }
 
 .teaser-h-icon {

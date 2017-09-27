@@ -37,6 +37,7 @@
     font-weight: bold;
     margin: 0;
     font-size: .875rem;
+    color: var(--off-black);
   }
 }
 
