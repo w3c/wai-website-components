@@ -592,8 +592,7 @@ button:disabled, .button:disabled {
 
 .button-backtotop {
   position: fixed;
-  position: -webkit-sticky;
-  position: sticky;
+  /*position: sticky;*/
   bottom: 16px;
   right: 16px;
   opacity: 0.85;
@@ -893,7 +892,6 @@ th > :last-child, td > :last-child {
 }
 
 .decision-tree > li {
-
     /*border: 2px solid #999;
     border-top:none;*/
 }
@@ -904,14 +902,12 @@ th > :last-child, td > :last-child {
 }
 
 .decision-tree > li:first-child {
-
     /*border-top:2px solid #999;*/
 }
 
 .decision-tree > li > ul {
     padding: 0;
     list-style: none
-
     /*border-top: 1px dotted #aaa;*/
 }
 
@@ -1015,12 +1011,10 @@ th > :last-child, td > :last-child {
 }
 
 .decision-tree .no {
-
     /*border-right:1px dotted #aaa;*/
     background-color: rgb(242, 192, 193);
     border-bottom: none;
     position: relative
-
     /*&:before { top: 100%; left: 50%; border: solid transparent; content: " "; height: 0; width: 0; position: absolute; pointer-events: none; border-color: rgba(119, 119, 119, 0); border-top-color: #999; border-width: 1.1rem; margin-left: -.6rem; z-index: 400; }*/
 }
 
@@ -1652,7 +1646,6 @@ p+ul, p+ol {
 }
 
 .metanav form[role=search] :-moz-placeholder {
-
     /* Firefox 18- */
     color: #ffffff;
     font-style: italic;
@@ -1660,7 +1653,6 @@ p+ul, p+ol {
 }
 
 .metanav form[role=search] ::-moz-placeholder {
-
     /* Firefox 19+ */
     color: #ffffff;
     font-style: italic;
@@ -1762,7 +1754,6 @@ p+ul, p+ol {
 .mainnav > ul > li > a > span {
     display: block;
     border-bottom: 2px solid transparent
-
     /* var(--trans-line-grey);*/
 }
 
@@ -1809,7 +1800,6 @@ p+ul, p+ol {
 }
 
 .mainnav .subnav > li > a, .mainnav .subnav > li li > a {
-
     /*grid-column: 1/2;*/
 }
 
@@ -1930,7 +1920,6 @@ p+ul, p+ol {
 .mainnav.alternative .subnav .subsubnav {
     margin-left: 1em;
     width: auto;
-
     /*grid-column: 2/3;*/
     display: block;
     position: static;
@@ -1978,7 +1967,6 @@ p+ul, p+ol {
     margin-bottom: 16px;
     list-style: none;
     border-left: 2px solid #344D72
-
     /* TODO: DEFINE COLOR*/
 }
 

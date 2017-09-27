@@ -55,7 +55,7 @@ button, .button {
 
 .button-backtotop {
   position: fixed;
-  position: sticky;
+  /*position: sticky;*/
   bottom: 16px;
   right: 16px;
   opacity: 0.85;
