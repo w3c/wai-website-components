@@ -197,6 +197,17 @@ a {
     @apply --def-grid;
     grid-template-columns: repeat(4, minmax(0, 130px));
   }
+
+  --clear: {
+    &:before, &:after {
+      content: " ";
+      display: table;
+    }
+
+    &:after {
+        clear: both;
+    }
+  }
 }
 
 .default-grid {

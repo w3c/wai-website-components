@@ -722,10 +722,18 @@ th > :last-child, td > :last-child {
 }
 
 .box-i {
-  overflow: show;
   padding: 8px 16px;
   font-size: 14/16 * 16px;
   font-size: 14/16 * 1rem
+}
+
+.box-i:before, .box-i:after {
+    content: " ";
+    display: table
+}
+
+.box-i:after {
+    clear: both
 }
 
 .box-i > :first-child {
