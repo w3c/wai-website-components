@@ -2134,7 +2134,7 @@ p+ul, p+ol {
   color: #005A6A;
 }
 
-.pager--item:last-child a {
+.pager--item.next a {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
       -ms-flex-direction: row-reverse;

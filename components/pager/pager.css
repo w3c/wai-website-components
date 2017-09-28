@@ -42,7 +42,7 @@
   color: var(--wai-green);
 }
 
-.pager--item:last-child a {
+.pager--item.next a {
   flex-direction: row-reverse;
   justify-content: flex-end;
   text-align: right;
