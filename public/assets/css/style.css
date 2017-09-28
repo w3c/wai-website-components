@@ -509,6 +509,25 @@ a.stealthy-link:visited {
   position: relative;
 }
 
+#toc {
+}
+
+@media (min-width: 35em) {
+
+    #toc {
+        float: right;
+        margin-left: 32px;
+        width: 40%
+    }
+  }
+
+@media  (min-width: 60em) {
+
+    #toc {
+        width: 30%
+    }
+  }
+
 button, .button {
   border-radius: 5px;
   display: inline-block;
@@ -3983,6 +4002,10 @@ cyan      #2aa198  strings, numbers
 green     #859900  operators, other keywords
 
 */
+
+pre {
+  white-space: pre-wrap;
+}
 
 .highlight {
   color: #586e75;

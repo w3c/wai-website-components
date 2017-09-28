@@ -381,3 +381,14 @@ a {
 #main {
   position: relative;
 }
+
+#toc {
+  @media (--medium) {
+    float:right;
+    margin-left: 32px;
+    width: 40%;
+  }
+  @media (--large) {
+    width: 30%;
+  }
+}
