@@ -111,8 +111,6 @@
   @media (--large) {
     padding: 60px 40px;
   }
-  display: grid;
-  grid-template-rows: 1fr min-content min-content;
   & .teaser-h {
     display: flex;
     align-items: flex-end;

@@ -2540,9 +2540,7 @@ p+ul, p+ol {
   background-color: #ffffff;
   border: 1px solid #ddd;
   margin: -1px;
-  padding: 20px 32px;
-  display: grid;
-  grid-template-rows: 1fr min-content min-content
+  padding: 20px 32px
 }
 
 @media (min-width: 35em) {
