@@ -404,7 +404,7 @@ a {
   }
   &.box-full {
     width: auto;
-    float: 0;
+    float: none;
     margin-left: 0;
   }
 }

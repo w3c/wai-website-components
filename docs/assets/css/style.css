@@ -530,7 +530,7 @@ a.stealthy-link:visited {
 
 #toc.box-full {
     width: auto;
-    float: 0;
+    float: none;
     margin-left: 0
 }
 
