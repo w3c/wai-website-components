@@ -528,6 +528,12 @@ a.stealthy-link:visited {
     }
   }
 
+#toc.box-full {
+    width: auto;
+    float: 0;
+    margin-left: 0
+}
+
 button, .button {
   border-radius: 5px;
   display: inline-block;
@@ -2540,7 +2546,9 @@ p+ul, p+ol {
   background-color: #ffffff;
   border: 1px solid #ddd;
   margin: -1px;
-  padding: 20px 32px
+  padding: 20px 32px;
+  display: grid;
+  grid-template-rows: 1fr min-content min-content
 }
 
 @media (min-width: 35em) {

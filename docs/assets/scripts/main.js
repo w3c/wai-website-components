@@ -24,7 +24,7 @@
 
   var spc = document.createTextNode(' ');
 
-  var headings = document.querySelectorAll('.content h2[id], .content h3[id], .content h4[id]');
+  var headings = document.querySelectorAll('article h2[id], article h3[id], article h4[id]');
   var firstheading = headings[0];
 
   if (firstheading) {
@@ -35,14 +35,14 @@
     var excount = 1,
         apcount = 1;
 
-    var toc_outer = document.createElement('figure');
-    toc_outer.setAttribute('role', 'navigation');
-    toc_outer.setAttribute('aria-describedby', 'toc_desc');
-    toc_outer.innerHTML = '<figcaption id="toc_desc">On this page <a href="#skipotp" class="visuallyhidden focusable">(skip)</a></figcaption><div class="figcontent"></div>';
-    if (toc_outer.classList)
-      toc_outer.classList.add('toc');
-    else
-      toc_outer.className += ' ' + ('toc');
+    // var toc_outer = document.createElement('figure');
+    // toc_outer.setAttribute('role', 'navigation');
+    // toc_outer.setAttribute('aria-describedby', 'toc_desc');
+    // toc_outer.innerHTML = '<figcaption id="toc_desc">On this page <a href="#skipotp" class="visuallyhidden focusable">(skip)</a></figcaption><div class="figcontent"></div>';
+    // if (toc_outer.classList)
+    //   toc_outer.classList.add('toc');
+    // else
+    //   toc_outer.className += ' ' + ('toc');
     var toc_wrap = document.createElement('ul');
     var toc_elem = document.createElement('li');
     var nesting = false;
@@ -88,31 +88,31 @@
         apcount = 1;
       }
 
-      cur_elem.innerHTML = '<a class="' + el.getAttribute('class') + '" href="#' + el.getAttribute('id') + '">' + el.innerHTML + '</a>';
+    //   cur_elem.innerHTML = '<a class="' + el.getAttribute('class') + '" href="#' + el.getAttribute('id') + '">' + el.innerHTML + '</a>';
 
-       console.log(cur_elem);
-      if (el.localName==="h4") {
-        sub_sub_wrap.appendChild(cur_elem);
-        subnesting = true;
-      } else if (el.localName==="h3") {
-        sub_wrap.appendChild(cur_elem);
-        nesting = true;
-        last_sub_elem = cur_elem;
-      } else {
-        toc_wrap.appendChild(cur_elem);
-        last_elem = cur_elem;
-      }
+    //    console.log(cur_elem);
+    //   if (el.localName==="h4") {
+    //     sub_sub_wrap.appendChild(cur_elem);
+    //     subnesting = true;
+    //   } else if (el.localName==="h3") {
+    //     sub_wrap.appendChild(cur_elem);
+    //     nesting = true;
+    //     last_sub_elem = cur_elem;
+    //   } else {
+    //     toc_wrap.appendChild(cur_elem);
+    //     last_elem = cur_elem;
+    //   }
     });
 
-    if (nesting===true) {
-      last_elem.appendChild(sub_wrap);
-      nesting = false;
-    }
+    // if (nesting===true) {
+    //   last_elem.appendChild(sub_wrap);
+    //   nesting = false;
+    // }
 
-    toc_outer.querySelectorAll('.figcontent')[0].innerHTML = toc_wrap.outerHTML;
+    // toc_outer.querySelectorAll('.figcontent')[0].innerHTML = toc_wrap.outerHTML;
 
-    var inner = document.querySelectorAll('.inner > :first-child')[0];
-    inner.insertAdjacentHTML('beforebegin', toc_outer.outerHTML + '<span id="skipotp" class="visuallyhidden"></span>');
+    //var inner = document.querySelectorAll('.inner > :first-child')[0];
+    //inner.insertAdjacentHTML('beforebegin', toc_outer.outerHTML + '<span id="skipotp" class="visuallyhidden"></span>');
 
   }
 

@@ -402,4 +402,9 @@ a {
   @media (--large) {
     width: 30%;
   }
+  &.box-full {
+    width: auto;
+    float: 0;
+    margin-left: 0;
+  }
 }
