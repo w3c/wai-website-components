@@ -1325,6 +1325,14 @@ Single-colored icons can be modified like so:
   width: 0.9285714285714285em;
 }
 
+.icon-ex-circle {
+  width: 0.8571428571428571em;
+}
+
+.icon-check-circle {
+  width: 0.8571428571428571em;
+}
+
 ul ::marker {
   color: #c0272d;
 }
@@ -2546,9 +2554,7 @@ p+ul, p+ol {
   background-color: #ffffff;
   border: 1px solid #ddd;
   margin: -1px;
-  padding: 20px 32px;
-  display: grid;
-  grid-template-rows: 1fr min-content min-content
+  padding: 20px 32px
 }
 
 @media (min-width: 35em) {

@@ -24,6 +24,12 @@ variants:
 - name: search
   context:
     name: search
+- name: ex-circle
+  context:
+    name: ex-circle
+- name: check-circle
+  context:
+    name: check-circle
 - name: cancel-rect
   context:
     name: cancel-rect
