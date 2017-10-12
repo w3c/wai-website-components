@@ -624,7 +624,13 @@ button:disabled, .button:disabled {
   border-radius: 100px;
   background-color: #003366;
   border-color: #003366;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .5)
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .5);
+  opacity: 0;
+  transition: opacity .5s linear
+}
+
+.button-backtotop:focus,.button-backtotop.active {
+    opacity: 1
 }
 
 .button-backtotop svg {

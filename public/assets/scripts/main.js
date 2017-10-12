@@ -149,4 +149,30 @@
     });
   });
 
+
+
+  var last_known_scroll_position = 0;
+  var ticking = false;
+
+  window.addEventListener('scroll', function(e) {
+
+    last_known_scroll_position = window.scrollY;
+
+    if (!ticking) {
+
+      window.requestAnimationFrame(function() {
+        if (last_known_scroll_position > (window.innerHeight * 0.66)) {
+          addclass(document.querySelector('.button-backtotop'), 'active');
+          ticking = true;
+        } else {
+          ticking = false;
+        }
+      });
+
+      ticking = true;
+
+    }
+
+  });
+
 }());

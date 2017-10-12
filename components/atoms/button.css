@@ -63,6 +63,11 @@ button, .button {
   background-color: var(--w3c-blue);
   border-color: var(--w3c-blue);
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity .5s linear;
+  &:focus,&.active {
+    opacity: 1;
+  }
   & svg {
     vertical-align: -1px;
   }
