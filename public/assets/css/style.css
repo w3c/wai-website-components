@@ -2316,7 +2316,8 @@ p+ul, p+ol {
 }
 
 .sidenav--head {
-  background-color: #f2f2f2;
+  /*background-color: var(--off-white);*/
+  background-color: #003366;
   padding: 8px;
   display:-webkit-box;
   display:-ms-flexbox;
@@ -2324,7 +2325,7 @@ p+ul, p+ol {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  border: 1px solid #ddd;
+  border: 2px solid #003366;
   border-bottom: none;
 }
 
@@ -2340,7 +2341,7 @@ p+ul, p+ol {
 }
 
 .sidenav--head-section {
-  color: #005A6A;
+  color: #ffffff;
   text-transform: uppercase;
   letter-spacing: .7px;
   font-size: 11px;
@@ -2349,15 +2350,15 @@ p+ul, p+ol {
 }
 
 .sidenav--head-subsection {
-  color: #005A6A;
+  color: #ffffff;
   font-size: 22px;
   font-size: 1.375rem;
 }
 
 .sidenav--list {
-  border: 1px solid #ddd;
+  border: 2px solid #003366;
   border-width: 0 1px 1px;
-  background-color: #fff;
+  background-color: #003366;
   margin: 0;
   padding:0;
   font-size: 13px;
@@ -2370,12 +2371,19 @@ p+ul, p+ol {
 .sidenav--list a {
     display: block;
     padding: 16px 24px;
-    color: #1d1d1d;
+    color: #ffffff;
     text-decoration: none
 }
 
+.sidenav--list a:hover,
+.sidenav--list a:focus {
+    text-decoration: underline;
+    background-color: #ffffff;
+    color: #005A6A
+}
+
 .sidenav--list>li>a {
-    border-top: 1px solid #ddd
+    border-top: 1px solid #ffffff
 }
 
 .sidenav--list ul {
@@ -2400,19 +2408,25 @@ p+ul, p+ol {
 
 .sidenav--list ul li a {
     border-bottom: none;
-    padding: 4px 4px 4px 16px
+    padding: 4px 4px 4px 16px;
+    border-radius: 2px 0 0 2px
 }
 
 .sidenav--list a[aria-current] {
-    color: #005A6A
+    /*color: var(--w3c-blue);
+    background-color: var(--body-bg);*/
 }
 
 .sidenav--list a[aria-current=location] {
-    padding-bottom: 4px
+    padding-bottom: 4px;
+    font-weight: bold
 }
 
 .sidenav--list a[aria-current=page] {
-    font-weight: bold
+    font-weight: bold;
+    margin-right: -1px;
+    color: #003366;
+    background-color: #FAFAFC
 }
 
 .teaser {
