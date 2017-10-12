@@ -167,8 +167,10 @@
         } else {
           if (last_known_scroll_position < 1) {
             remclass(document.querySelector('.button-backtotop'), 'active');
+            ticking = true;
+          } else {
+            ticking = false;
           }
-          ticking = false;
         }
       });
 
