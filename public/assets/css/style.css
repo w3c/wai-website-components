@@ -1706,7 +1706,8 @@ p+ul, p+ol {
 
 .mainnav {
   position: relative;
-  font-size: .875em
+  font-size: 14px;
+  font-size: .875rem
 }
 
 @media (min-width: 35em) {
@@ -1719,7 +1720,9 @@ p+ul, p+ol {
             -ms-flex-align: end;
                 align-items: flex-end;
         padding: 0 1px;
-        grid-row-start: 2
+        grid-row-start: 2;
+        font-size: 16px;
+        font-size: 1rem
     }
   }
 
@@ -1760,7 +1763,6 @@ p+ul, p+ol {
         -webkit-box-flex: 1;
             -ms-flex: 1;
                 flex: 1;
-        margin: 0 16px;
         position: relative
     }
 }
@@ -1775,7 +1777,8 @@ p+ul, p+ol {
 @supports (display: grid) {
 
     .mainnav > ul > li > a {
-        padding: 8px 0
+        padding-top: 8px;
+        padding-bottom: 8px
     }
 }
 
@@ -1808,6 +1811,8 @@ p+ul, p+ol {
 }
 
 .mainnav .subnav {
+    font-size: 14px;
+    font-size: .875rem;
     display: none;
     background-color: #003366;
     padding: 0 0 16px;

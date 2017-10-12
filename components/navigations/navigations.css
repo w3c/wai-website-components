@@ -174,12 +174,14 @@
 
 .mainnav {
   position: relative;
-  font-size: .875em;
+  font-size: .875rem;
   @media (--medium) {
     display: flex;
     align-items: flex-end;
     padding: 0 1px;
     grid-row-start: 2;
+    font-size: 16px;
+    font-size: 1rem;
   }
   & > ul {
     width: 100%;
@@ -198,7 +200,6 @@
       display:block;
       @media (--medium) {
         flex:1;
-        margin: 0 16px;
         position: relative;
       }
       & > a {
@@ -207,7 +208,8 @@
         width: 100%;
         padding: 16px;
         @supports (display: grid) {
-          padding:8px 0;
+          padding-top:8px;
+          padding-bottom:8px;
         }
         & br {display: none;@media (--medium) {display: block;}}
         & > span {
@@ -224,6 +226,7 @@
   }
 
   & .subnav {
+    font-size: .875rem;
     display: none;
     background-color: var(--w3c-blue);
     padding: 0 0 16px;
