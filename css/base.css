@@ -139,16 +139,19 @@ a {
 @custom-media --large  (width >= 60em);
 
 :root {
-  --def-grid: {
-    display: flex;
-    display: grid;
-    grid-column-gap: 32px;
-    padding-left: 32px;
-    padding-right: 32px;
+  --def-grid-noflex: {
     @supports (display: grid) {
+      display: grid;
+      grid-column-gap: 32px;
       padding: 0;
       max-width: none;
     }
+  }
+  --def-grid: {
+    display: flex;
+    padding-left: 32px;
+    padding-right: 32px;
+    @apply --def-grid-noflex;
   }
 
   --full-grid: {
@@ -189,12 +192,12 @@ a {
   }
 
   --grid-six: {
-    @apply --def-grid;
+    @apply --def-grid-noflex;
     grid-template-columns: repeat(6, minmax(0, 130px));
   }
 
   --grid-four: {
-    @apply --def-grid;
+    @apply --def-grid-noflex;
     grid-template-columns: repeat(4, minmax(0, 130px));
   }
 
@@ -222,15 +225,43 @@ a {
 
 .grid-4 {
   @media (--large) {
-    grid-template-columns: repeat(4, minmax(0, 120px));
-    grid-column-gap: 32px;
+    @apply --grid-four;
   }
+  & .col1, & .from-col1 { grid-column-start: 1; }
+  & .col1, & .to-col1   { grid-column-end:   2; }
+
+  & .col2, & .from-col2 { grid-column-start: 2; }
+  & .col2, & .to-col2   { grid-column-end:   3; }
+
+  & .col3, & .from-col3 { grid-column-start: 3; }
+  & .col3, & .to-col3   { grid-column-end:   4; }
+
+  & .col4, & .from-col4 { grid-column-start: 4; }
+  & .col4, & .to-col4   { grid-column-end:   5; }
 }
+
 .grid-6 {
   @media (--large) {
-    grid-template-columns: repeat(6, minmax(0, 120px));
-    grid-column-gap: 32px;
+    @apply --grid-six;
   }
+
+  & .col1, & .from-col1 { grid-column-start: 1; }
+  & .col1, & .to-col1   { grid-column-end:   2; }
+
+  & .col2, & .from-col2 { grid-column-start: 2; }
+  & .col2, & .to-col2   { grid-column-end:   3; }
+
+  & .col3, & .from-col3 { grid-column-start: 3; }
+  & .col3, & .to-col3   { grid-column-end:   4; }
+
+  & .col4, & .from-col4 { grid-column-start: 4; }
+  & .col4, & .to-col4   { grid-column-end:   5; }
+
+  & .col5, & .from-col5 { grid-column-start: 5; }
+  & .col5, & .to-col5   { grid-column-end:   6; }
+
+  & .col6, & .from-col6 { grid-column-start: 6; }
+  & .col6, & .to-col6   { grid-column-end:   7; }
 }
 
 .grid-three-five {

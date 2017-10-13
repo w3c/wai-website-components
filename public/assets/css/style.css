@@ -167,8 +167,6 @@ a.stealthy-link:visited {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
-        display: grid;
-        grid-column-gap: 32px;
         padding-left: 32px;
         padding-right: 32px;
         grid-template-columns: [complete-start] minmax(16px, 1fr) [navigation-start] repeat(2, minmax(0, 130px)) [navigation-end content-start] repeat(6, minmax(0, 130px)) [content-end] minmax(16px, 1fr) [complete-end]
@@ -177,6 +175,8 @@ a.stealthy-link:visited {
     @supports (display: grid) {
 
         .default-grid {
+            display: grid;
+            grid-column-gap: 32px;
             padding: 0;
             max-width: none
         }
@@ -194,10 +194,51 @@ a.stealthy-link:visited {
 @media  (min-width: 60em) {
 
     .grid-4 {
-        grid-template-columns: repeat(4, minmax(0, 120px));
-        grid-column-gap: 32px
+        grid-template-columns: repeat(4, minmax(0, 130px))
+    }
+
+    @supports (display: grid) {
+
+        .grid-4 {
+            display: grid;
+            grid-column-gap: 32px;
+            padding: 0;
+            max-width: none
+        }
     }
   }
+
+.grid-4 .col1, .grid-4 .from-col1 {
+    grid-column-start: 1
+}
+
+.grid-4 .col1, .grid-4 .to-col1 {
+    grid-column-end: 2
+}
+
+.grid-4 .col2, .grid-4 .from-col2 {
+    grid-column-start: 2
+}
+
+.grid-4 .col2, .grid-4 .to-col2 {
+    grid-column-end: 3
+}
+
+.grid-4 .col3, .grid-4 .from-col3 {
+    grid-column-start: 3
+}
+
+.grid-4 .col3, .grid-4 .to-col3 {
+    grid-column-end: 4
+}
+
+.grid-4 .col4, .grid-4 .from-col4 {
+    grid-column-start: 4
+}
+
+.grid-4 .col4, .grid-4 .to-col4 {
+    grid-column-end: 5
+}
 
 .grid-6 {
 }
@@ -205,17 +246,72 @@ a.stealthy-link:visited {
 @media  (min-width: 60em) {
 
     .grid-6 {
-        grid-template-columns: repeat(6, minmax(0, 120px));
-        grid-column-gap: 32px
+        grid-template-columns: repeat(6, minmax(0, 130px))
+    }
+
+    @supports (display: grid) {
+
+        .grid-6 {
+            display: grid;
+            grid-column-gap: 32px;
+            padding: 0;
+            max-width: none
+        }
     }
   }
+
+.grid-6 .col1, .grid-6 .from-col1 {
+    grid-column-start: 1
+}
+
+.grid-6 .col1, .grid-6 .to-col1 {
+    grid-column-end: 2
+}
+
+.grid-6 .col2, .grid-6 .from-col2 {
+    grid-column-start: 2
+}
+
+.grid-6 .col2, .grid-6 .to-col2 {
+    grid-column-end: 3
+}
+
+.grid-6 .col3, .grid-6 .from-col3 {
+    grid-column-start: 3
+}
+
+.grid-6 .col3, .grid-6 .to-col3 {
+    grid-column-end: 4
+}
+
+.grid-6 .col4, .grid-6 .from-col4 {
+    grid-column-start: 4
+}
+
+.grid-6 .col4, .grid-6 .to-col4 {
+    grid-column-end: 5
+}
+
+.grid-6 .col5, .grid-6 .from-col5 {
+    grid-column-start: 5
+}
+
+.grid-6 .col5, .grid-6 .to-col5 {
+    grid-column-end: 6
+}
+
+.grid-6 .col6, .grid-6 .from-col6 {
+    grid-column-start: 6
+}
+
+.grid-6 .col6, .grid-6 .to-col6 {
+    grid-column-end: 7
+}
 
 .grid-three-five {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  display: grid;
-  grid-column-gap: 32px;
   padding-left: 32px;
   padding-right: 32px;
   grid-template-columns: [complete-start] 0 [three-start five-start] 1fr [three-end five-end] 0 [complete-end]
@@ -224,6 +320,8 @@ a.stealthy-link:visited {
 @supports (display: grid) {
 
     .grid-three-five {
+        display: grid;
+        grid-column-gap: 32px;
         padding: 0;
         max-width: none
     }
@@ -274,8 +372,6 @@ a.stealthy-link:visited {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  display: grid;
-  grid-column-gap: 32px;
   padding-left: 32px;
   padding-right: 32px;
   grid-template-columns: [complete-start] 0 [three-start five-start] 1fr [three-end five-end] 0 [complete-end]
@@ -284,6 +380,8 @@ a.stealthy-link:visited {
 @supports (display: grid) {
 
     .grid-five-three {
+        display: grid;
+        grid-column-gap: 32px;
         padding: 0;
         max-width: none
     }
@@ -336,8 +434,6 @@ a.stealthy-link:visited {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  display: grid;
-  grid-column-gap: 32px;
   padding-left: 32px;
   padding-right: 32px;
   grid-template-columns: [complete-start] 0 [q1-start q2-start q3-start q4-start] 1fr [q1-end q2-end q3-end q4-end] 0 [complete-end]
@@ -346,6 +442,8 @@ a.stealthy-link:visited {
 @supports (display: grid) {
 
     .grid-4q {
+        display: grid;
+        grid-column-gap: 32px;
         padding: 0;
         max-width: none
     }
@@ -864,19 +962,14 @@ th > :last-child, td > :last-child {
 }
 
 .example-bar {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  display: grid;
-  grid-column-gap: 32px;
-  padding-left: 32px;
-  padding-right: 32px;
   grid-template-columns: repeat(6, minmax(0, 130px))
 }
 
 @supports (display: grid) {
 
     .example-bar {
+        display: grid;
+        grid-column-gap: 32px;
         padding: 0;
         max-width: none
     }
@@ -898,19 +991,14 @@ th > :last-child, td > :last-child {
 }
 
 .example-sheet {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  display: grid;
-  grid-column-gap: 32px;
-  padding-left: 32px;
-  padding-right: 32px;
   grid-template-columns: repeat(6, minmax(0, 130px))
 }
 
 @supports (display: grid) {
 
     .example-sheet {
+        display: grid;
+        grid-column-gap: 32px;
         padding: 0;
         max-width: none
     }
