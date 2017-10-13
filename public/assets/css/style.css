@@ -632,6 +632,12 @@ a.stealthy-link:visited {
     margin-left: 0
 }
 
+img.symbol {
+  float: right;
+  margin-left: 1em;
+  margin-bottom: 1em;
+}
+
 button, .button {
   border-radius: 5px;
   display: inline-block;
