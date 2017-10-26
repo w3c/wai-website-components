@@ -1582,43 +1582,6 @@ p+ul, p+ol {
     margin-top: -.14em
 }
 
-.navigations {
-  position: relative;
-  grid-column: content;
-  display: grid;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  grid-template-rows: min-content minmax(10px, 1fr) min-content
-}
-
-@media (min-width: 35em) {
-
-    .navigations {
-        border: 1px solid rgba(255, 255, 255, .11);
-        border-style: none solid;
-        padding: 16px 0 0
-    }
-  }
-
-.navigations .nava11y {
-    display: block
-}
-
-.mainnav, .metanav, #controls {
-}
-
-.mainnav ul, .metanav ul, #controls ul {
-    margin: 0;
-    padding: 0
-}
-
-.mainnav ul > li, .metanav ul > li, #controls ul > li {
-    display: inline-block;
-    list-style: none;
-    margin: 0
-}
-
 #controls {
   background-color: #f2f2f2;
   text-align: right;
@@ -1670,7 +1633,193 @@ p+ul, p+ol {
     height: .8em
 }
 
-.metanav, .mainnav {
+.mainnav {
+  position: relative;
+  font-size: 14px;
+  font-size: .875rem;
+  background-color: #003366
+}
+
+@media (min-width: 35em) {
+
+    .mainnav {
+        font-size: 16px;
+        font-size: 1rem
+    }
+  }
+
+.mainnav > ul {
+    width: 100%;
+    margin: 0;
+    padding: 0
+}
+
+@media (min-width: 35em) {
+
+    .mainnav > ul {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: end;
+            -ms-flex-align: end;
+                align-items: flex-end
+    }
+
+    @supports (display: grid) {
+
+        .mainnav > ul {
+            display: grid;
+            grid-template-rows: min-content min-content;
+            grid-template-columns: minmax(16px, 1fr) repeat(6, minmax(206px, max-content)) minmax(16px, 1fr);
+            -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                    justify-content: space-between
+        }
+    }
+}
+
+.mainnav > ul > li {
+    display: block
+}
+
+.mainnav > ul > li.active {
+    background: #091832;
+    border-radius: 3px 3px 0 0
+}
+
+.mainnav > ul > li.active > a > span {
+    border-bottom: 2px solid #eed009 !important
+}
+
+@media (min-width: 35em) {
+
+    .mainnav > ul > li {
+        position: relative;
+        -webkit-box-flex: 1;
+            -ms-flex-positive: 1;
+                flex-grow: 1;
+        -ms-flex-negative: 1;
+            flex-shrink: 1
+    }
+}
+
+.mainnav > ul > li > a {
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    color: #ffffff;
+    text-align: center;
+    padding: 15px;
+    box-sizing: border-box
+}
+
+@supports (display: grid) {
+
+    .mainnav > ul > li > a {
+        padding-top: 8px;
+        padding-bottom: 8px
+    }
+}
+
+.mainnav > ul > li > a > span {
+    display: block;
+    border-bottom: 2px solid transparent
+    /* var(--trans-line-grey);*/
+}
+
+.mainnav > ul > li > a:hover,
+.mainnav > ul > li > a:focus,
+.mainnav > ul > li > a[aria-current="page"] {
+}
+
+.mainnav > ul > li > a:hover > span,
+.mainnav > ul > li > a:focus > span,
+.mainnav > ul > li > a[aria-current="page"] > span {
+    border-bottom: 2px solid #eed009
+}
+
+.mainnav li.active + .subnav {
+    display: grid
+}
+
+.mainnav .subnav {
+    font-size: 14px;
+    font-size: .875rem;
+    display: none;
+    background-color: #091832
+}
+
+@media (min-width: 35em) {
+
+    .mainnav .subnav {
+}
+
+    @supports (display: grid) {
+
+        .mainnav .subnav {
+            grid-row-start: 2;
+            grid-column-start: 1;
+            grid-column-end: 9;
+            grid-template-rows: min-content min-content;
+            grid-template-columns: minmax(16px, 1fr) minmax(1232px, max-content) minmax(16px, 1fr);
+            -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                    justify-content: space-between
+        }
+
+        .mainnav .subnav ul {
+            grid-column-start: 2;
+            grid-column-end: 3
+        }
+
+        .mainnav .subnav ul a:link {
+            color: #fff !important
+        }
+    }
+}
+
+.subnavcontent {
+  -webkit-columns: 3;
+          columns: 3; /* Does not really work :-/ */
+  margin: 0;
+  padding: 16px 0
+}
+
+.subnavcontent, .subnavcontent li {
+    list-style: none
+}
+
+.subnavcontent a {
+    text-decoration: none;
+    color: #ffffff
+}
+
+.subnavcontent a:hover,
+.subnavcontent a:focus {
+    text-decoration: underline
+}
+
+.subnavcontent > li {
+    margin-bottom: 16px
+}
+
+.subnavcontent > li:last-child {
+    margin-bottom: 0
+}
+
+.subnavcontent > li > a {
+    font-weight: bold
+}
+
+.subnavcontent > li > ul {
+    border-left: 1px solid #315079;
+    margin: 0;
+    padding: 0 0 0 16px;
+    line-height: 1.8
+}
+
+.subnavcontent > li > ul > li {
+    margin-bottom: 0
 }
 
 .metanav {
@@ -1845,351 +1994,41 @@ p+ul, p+ol {
     opacity: 1
 }
 
-.mainnav {
+.navigations {
   position: relative;
-  font-size: 14px;
-  font-size: .875rem
+  grid-column: content;
+  display: grid;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  grid-template-rows: min-content minmax(10px, 1fr) min-content
 }
 
 @media (min-width: 35em) {
 
-    .mainnav {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-align: end;
-            -ms-flex-align: end;
-                align-items: flex-end;
-        padding: 0 1px;
-        grid-row-start: 2;
-        font-size: 16px;
-        font-size: 1rem
+    .navigations {
+        border: 1px solid rgba(255, 255, 255, .11);
+        border-style: none solid;
+        padding: 16px 0 0
     }
   }
 
-.mainnav > ul {
-    width: 100%
-}
-
-@media (min-width: 35em) {
-
-    .mainnav > ul {
-        margin: 0 -8px;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-align: end;
-            -ms-flex-align: end;
-                align-items: flex-end
-    }
-
-    @supports (display: grid) {
-
-        .mainnav > ul {
-            display: grid;
-            grid-template-columns: repeat(6, minmax(0, 130px));
-            grid-column-gap: 32px;
-            margin: 0
-        }
-    }
-}
-
-.mainnav > ul > li {
+.navigations .nava11y {
     display: block
 }
 
-@media (min-width: 35em) {
-
-    .mainnav > ul > li {
-        -webkit-box-flex: 1;
-            -ms-flex: 1;
-                flex: 1;
-        position: relative
-    }
+.mainnav, .metanav, #controls {
 }
 
-.mainnav > ul > li > a {
-    text-decoration: none;
-    display: block;
-    width: 100%;
-    padding: 16px
-}
-
-@supports (display: grid) {
-
-    .mainnav > ul > li > a {
-        padding-top: 8px;
-        padding-bottom: 8px
-    }
-}
-
-.mainnav > ul > li > a br {
-    display: none
-}
-
-@media (min-width: 35em) {
-
-    .mainnav > ul > li > a br {
-        display: block
-    }
-}
-
-.mainnav > ul > li > a > span {
-    display: block;
-    border-bottom: 2px solid transparent
-    /* var(--trans-line-grey);*/
-}
-
-.mainnav > ul > li > a:hover,
-.mainnav > ul > li > a:focus,
-.mainnav > ul > li > a[aria-current="page"] {
-}
-
-.mainnav > ul > li > a:hover > span,
-.mainnav > ul > li > a:focus > span,
-.mainnav > ul > li > a[aria-current="page"] > span {
-    border-bottom: 2px solid #eed009
-}
-
-.mainnav .subnav {
-    font-size: 14px;
-    font-size: .875rem;
-    display: none;
-    background-color: #003366;
-    padding: 0 0 16px;
-    z-index: 9999
-}
-
-@media (min-width: 35em) {
-
-    .mainnav .subnav {
-        padding-top: 16px;
-        position: absolute;
-        left: -16px;
-        width: 20em
-    }
-}
-
-.mainnav .subnav > li, .mainnav .subnav > li li {
-    position: relative;
-    display: block !important;
-    margin-bottom: 0
-}
-
-.mainnav .subnav > li:hover, .mainnav .subnav > li li:hover {
-    background-color: #091832
-}
-
-.mainnav .subnav > li:last-child, .mainnav .subnav > li li:last-child {
-    border-bottom: none
-}
-
-.mainnav .subnav > li > a, .mainnav .subnav > li li > a {
-    /*grid-column: 1/2;*/
-}
-
-.mainnav .subnav > li:last-child a::after, .mainnav .subnav > li:last-child span::after, .mainnav .subnav > li li:last-child a::after, .mainnav .subnav > li li:last-child span::after {
-    display: none
-}
-
-.mainnav .subnav > li a, .mainnav .subnav > li li a {
-    display: block;
-    text-decoration: none;
-    position: relative
-}
-
-.mainnav .subnav > li a:hover,
-.mainnav .subnav > li a:focus,
-.mainnav .subnav > li li a:hover,
-.mainnav .subnav > li li a:focus {
-    color: #eed009 !important;
-    background-color: #091832;
-    z-index: 5
-}
-
-.mainnav .subnav > li a:hover::before,
-.mainnav .subnav > li a:focus::before,
-.mainnav .subnav > li li a:hover::before,
-.mainnav .subnav > li li a:focus::before {
-    content: "•";
-    color: #ffffff;
-    left: 16px;
-    height: 1em;
-    line-height: 1;
-    top: 50%;
-    margin-top: -.5em;
-    position: absolute
-}
-
-.mainnav .subnav > li span, .mainnav .subnav > li li span {
-    display: block;
-    border: 1px solid rgba(221, 221, 221, .32);
-    border-width: 1px 0 0;
-    margin: 0 16px 0;
-    padding: 8px 16px
-}
-
-.mainnav .subnav > li.new-section>a>span, .mainnav .subnav > li li.new-section>a>span {
-    border-top-width: 3px
-}
-
-.mainnav .subnav > li:last-child>a>span, .mainnav .subnav > li li:last-child>a>span {
-    border-bottom-width: 1px
-}
-
-.mainnav .subnav > li svg, .mainnav .subnav > li li svg {
-    float: right;
-    width: .7em;
-    height: .7em;
-    right: 16px;
-    top: 50%;
-    margin-top: -.35em;
-    position: absolute
-}
-
-.mainnav .subnav .subsubnav {
-    display: none;
-    background-color: #091832;
-    padding: 0 0 16px
-}
-
-@media (min-width: 35em) {
-
-    .mainnav .subnav .subsubnav {
-        padding-top: 16px;
-        position: absolute;
-        width: 20em;
-        left: 100%;
-        top: 0
-    }
-}
-
-.mainnav .subnav .subsubnav a:hover > span,
-.mainnav .subnav .subsubnav a:focus > span {
-    border-color: rgba(221, 221, 221, .32)
-}
-
-.mainnav .subnav li:hover .subsubnav,
-.mainnav .subnav li:focus .subsubnav,
-.mainnav .subnav li.open .subsubnav {
-    display: block
-}
-
-.mainnav li:hover .subnav,
-.mainnav li:focus .subnav,
-.mainnav li.open .subnav {
-    display: block
-}
-
-.mainnav.alternative {
-}
-
-.mainnav.alternative .subnav {
-    padding: 16px;
-    -webkit-columns: 2;
-            columns: 2;
-    width: 30em
-}
-
-.mainnav.alternative .subnav a, .mainnav.alternative .subnav strong {
-    display: block;
-    font-weight: bold;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale
-}
-
-.mainnav.alternative .subnav .has-sub {
-    page-break-inside: avoid
-}
-
-.mainnav.alternative .subnav .subsubnav {
-    margin-left: 1em;
-    width: auto;
-    /*grid-column: 2/3;*/
-    display: block;
-    position: static;
-    left: auto;
-    left: initial;
-    top: auto;
-    top: initial;
-    background-color: #003366;
-    border: 2px solid #003366;
-    page-break-inside: avoid;
-    padding: 0 !important
-}
-
-.mainnav.alternative .subnav .subsubnav a {
-    font-weight: normal
-}
-
-.mainsub {
-  display:grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  position: absolute;
-  top: 100%;
-  left:16px;
-  right: 16px
-}
-
-.mainsub b {
-    display: block
-}
-
-.mainsub>ul {
-    background-color: #003366;
-    padding: 4px 8px;
-    list-style: none;
+.mainnav > ul, .metanav > ul, #controls > ul {
     margin: 0;
-    display: none;
-    -webkit-columns: 2;
-            columns: 2;
-    font-size: 14px;
-    font-size: .875rem
+    padding: 0
 }
 
-.mainsub>ul ul {
-    padding: 0 0 0 16px;
-    margin-bottom: 16px;
+.mainnav > ul > li, .metanav > ul > li, #controls > ul > li {
+    display: inline-block;
     list-style: none;
-    border-left: 2px solid #344D72
-    /* TODO: DEFINE COLOR*/
-}
-
-.mainsub>ul ul a {
-    color: #f2f2f2 !important;
-    text-decoration: none
-}
-
-.mainsub>ul ul a:hover, .mainsub>ul ul a:focus {
-    text-decoration: underline
-}
-
-.mainsub>ul ul > li {
-    padding-bottom: 8px
-}
-
-.mainsub>ul > li {
-    page-break-inside: avoid
-}
-
-.mainsub>ul.active {
-    display: block
-}
-
-.mainsub>ul:nth-child(1) {
-    grid-column: 1/4
-}
-
-.mainsub>ul:nth-child(2) {
-    grid-column: 2/5
-}
-
-.mainsub>ul:nth-child(3) {
-    grid-column: 1/4
-}
-
-.mainsub>ul:nth-child(4) {
-    grid-column: 2/5
+    margin: 0
 }
 
 .teaser.news {

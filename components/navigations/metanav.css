@@ -1,0 +1,112 @@
+.metanav {
+  text-transform: uppercase;
+  font-size: .75rem;
+  font-weight: bold;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.11);
+  text-align: right;
+  width: 100%;
+  @media (--medium) {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  & a {
+    text-decoration: none;
+    &:--hovcus, &[aria-current="page"] {
+      border-bottom: 2px solid var(--gold);
+    }
+  }
+  & > ul {
+    width: 100%;
+    @media (--medium) {
+      display: flex;
+      justify-content: flex-end;
+    }
+    & li {
+      display: inline;
+      margin-bottom: 8px;
+      @media (--medium) {
+        display: flex;
+        align-items: center;
+        margin: 0 8px;
+      }
+      &:first-child {
+        margin-right: 16px;
+        grid-column-start: 1;
+        grid-column-end: 3;
+      }
+      &:last-child {
+        min-width: 300px;
+      }
+      & a {
+        @media (--medium) {
+          display: block;
+          width: 100%;
+          text-align: right;
+        }
+      }
+    }
+  }
+  & form[role=search] {
+    background-color: rgba(6, 30, 54, 0.44);
+    & > div {
+      width: 300px;
+      display:flex;
+    }
+    & label {
+      text-transform: none;
+      font-weight: normal;
+      display: flex;
+      align-content: center;
+      width: 70%;
+      flex: 1 1 70%;
+      & .l {
+        display: block;
+        padding: 8px 4px 8px 12px;
+      }
+    }
+    & input {
+      box-sizing: border-box;
+      -webkit-appearance: none;
+      background-color: transparent;
+      border: 0;
+      border-radius: 0;
+      color: var(--pure-white);
+      height: 100%;
+      padding: 8px 0;
+      margin: 0;
+      min-width: 100px;
+      &::-webkit-search-cancel-button,
+      &::-webkit-search-results-button {
+        filter: invert(100%);
+      }
+    }
+    & button {
+      display: block;
+      margin: 0;
+    }
+    & ::-webkit-input-placeholder {
+       color: var(--pure-white);
+       font-style: italic;
+       opacity: 1;
+    }
+
+    & :-moz-placeholder { /* Firefox 18- */
+       color: var(--pure-white);
+       font-style: italic;
+       opacity: 1;
+    }
+
+    & ::-moz-placeholder {  /* Firefox 19+ */
+       color: var(--pure-white);
+       font-style: italic;
+       opacity: 1;
+    }
+
+    & :-ms-input-placeholder {
+       color: var(--pure-white);
+       font-style: italic;
+       opacity: 1;
+    }
+  }
+}

@@ -1,0 +1,119 @@
+.mainnav {
+  position: relative;
+  font-size: .875rem;
+  background-color: var(--w3c-blue);
+  @media (--medium) {
+    font-size: 16px;
+    font-size: 1rem;
+  }
+  & > ul {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    @media (--medium) {
+      display: flex;
+      align-items: flex-end;
+      @supports (display: grid) {
+        display:grid;
+        grid-template-rows: min-content min-content;
+        grid-template-columns: minmax(16px, 1fr) repeat(6, minmax(206px, max-content)) minmax(16px, 1fr);
+        justify-content: space-between;
+      }
+    }
+    & > li {
+      &.active {
+        background: var(--dk-blue);
+        border-radius: 3px 3px 0 0;
+        & > a > span {
+          border-bottom: 2px solid var(--gold) !important;
+        }
+      }
+      display:block;
+      @media (--medium) {
+        position: relative;
+        flex-grow: 1;
+        flex-shrink: 1;
+      }
+      & > a {
+        text-decoration: none;
+        display:block;
+        width: 100%;
+        color: var(--pure-white);
+        text-align: center;
+        padding: 15px;
+        box-sizing: border-box;
+        @supports (display: grid) {
+          padding-top:8px;
+          padding-bottom:8px;
+        }
+        & > span {
+          display: block;
+          border-bottom: 2px solid transparent;/* var(--trans-line-grey);*/
+        }
+        &:--hovcus, &[aria-current="page"] {
+          & > span {
+            border-bottom: 2px solid var(--gold);
+          }
+        }
+      }
+    }
+  }
+  & li.active + .subnav {
+    display:grid;
+  }
+  & .subnav {
+    font-size: .875rem;
+    display: none;
+    background-color: var(--dk-blue);
+    @media (--medium) {
+      @supports (display: grid) {
+        grid-row-start: 2;
+        grid-column-start: 1;
+        grid-column-end: 9;
+        grid-template-rows: min-content min-content;
+        grid-template-columns: minmax(16px, 1fr) minmax(1232px, max-content) minmax(16px, 1fr);
+        justify-content: space-between;
+        & ul {
+          grid-column-start: 2;
+          grid-column-end: 3;
+          & a:link {
+            color: #fff !important;
+          }
+        }
+      }
+    }
+  }
+}
+.subnavcontent {
+  columns: 3; /* Does not really work :-/ */
+  margin: 0;
+  padding: 16px 0;
+  &, & li {
+    list-style: none;
+  }
+  & a {
+    text-decoration: none;
+    color: var(--pure-white);
+    &:--hovcus {
+      text-decoration: underline;
+    }
+  }
+  & > li {
+    margin-bottom: 16px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  & > li > a {
+    font-weight: bold;
+  }
+  & > li > ul {
+    border-left: 1px solid #315079;
+    margin: 0;
+    padding: 0 0 0 16px;
+    line-height: 1.8;
+  }
+  & > li > ul > li {
+    margin-bottom: 0;
+  }
+}

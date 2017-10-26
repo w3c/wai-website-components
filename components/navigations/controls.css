@@ -1,0 +1,31 @@
+#controls {
+  background-color: var(--off-white);
+  text-align: right;
+  font-size: .8125em;
+  padding-left: 8px;
+  padding-right: 8px;
+  & ul {
+    padding: 8px;
+    grid-area: content;
+    display: flex;
+    justify-content: space-between;
+    @media (--small) {
+      justify-content: flex-end;
+    }
+  }
+  & a {
+    color: var(--w3c-blue);
+    @media (--small) {
+      margin-left: 16px;
+    }
+    text-decoration: none;
+    &:--hovcus {
+      border-bottom: none;
+      text-decoration: underline;
+    }
+    & svg {
+      width: .8em;
+      height: .8em;
+    }
+  }
+}
