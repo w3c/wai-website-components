@@ -121,9 +121,9 @@
         isopen = false;
     while (cureel.nodeName.toLowerCase() != 'LI'.toLowerCase()) {
       cureel = cureel.parentNode;
-      if (hasclass(cureel, 'active')) { isopen = true; }
     }
     if (hasclass(cureel, 'has-submenu')) {
+      if (hasclass(cureel, 'active')) { isopen = true; }
       event.preventDefault();
       Array.prototype.forEach.call(document.querySelectorAll('li.active'), function(el, i){
         remclass(el, 'active');
