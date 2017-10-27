@@ -117,18 +117,20 @@
   }
 
   document.querySelector('.mainnav').addEventListener("click", function(event){
-    event.preventDefault();
     var cureel = event.target,
         isopen = false;
     while (cureel.nodeName.toLowerCase() != 'LI'.toLowerCase()) {
       cureel = cureel.parentNode;
       if (hasclass(cureel, 'active')) { isopen = true; }
     }
-    Array.prototype.forEach.call(document.querySelectorAll('li.active'), function(el, i){
-      remclass(el, 'active');
-    });
-    if (!isopen) {
-      addclass(cureel, 'active');
+    if (hasclass(cureel, 'has-submenu')) {
+      event.preventDefault();
+      Array.prototype.forEach.call(document.querySelectorAll('li.active'), function(el, i){
+        remclass(el, 'active');
+      });
+      if (!isopen) {
+        addclass(cureel, 'active');
+      }
     }
   });
 
