@@ -1,13 +1,12 @@
 .navigations {
   position: relative;
-  grid-column: content;
-  display: grid;
+  grid-column-start: 5;
+  grid-column-end: -2;
   flex-grow: 1;
-  grid-template-rows: min-content minmax(10px, 1fr) min-content;
   @media (--medium) {
-    border: 1px solid rgba(255, 255, 255, 0.11);
-    border-style: none solid;
-    padding: 16px 0 0;
+    /*border: 1px solid rgba(255, 255, 255, 0.11);
+    border-style: none solid;*/
+    /*padding: 16px 0 0;*/
   }
   & .nava11y {
     display: block;

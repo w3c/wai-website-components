@@ -14,14 +14,15 @@
   line-height: 1.2;
   @media (--medium) {
     vertical-align: middle;
-    display: block;
+    /*display: block;*/
     font-size: 1.5625rem;
   }
 }
 
 .logos {
   padding: 16px 0;
-  grid-area: navigation;
+  grid-column-start: 2;
+  grid-column-end: 5;
   grid-row-start: 1;
   margin-right: 32px;
   text-decoration: none;

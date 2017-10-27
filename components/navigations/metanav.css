@@ -2,7 +2,7 @@
   text-transform: uppercase;
   font-size: .75rem;
   font-weight: bold;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.11);
+  /*border-bottom: 1px solid rgba(255, 255, 255, 0.11);*/
   text-align: right;
   width: 100%;
   @media (--medium) {
@@ -12,6 +12,7 @@
   }
   & a {
     text-decoration: none;
+    padding: 8px 0;
     &:--hovcus, &[aria-current="page"] {
       border-bottom: 2px solid var(--gold);
     }
@@ -28,15 +29,11 @@
       @media (--medium) {
         display: flex;
         align-items: center;
-        margin: 0 8px;
-      }
-      &:first-child {
-        margin-right: 16px;
-        grid-column-start: 1;
-        grid-column-end: 3;
+        margin: 0 16px 0 0 !important;
       }
       &:last-child {
         min-width: 300px;
+        margin-right: 0;
       }
       & a {
         @media (--medium) {
