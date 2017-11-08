@@ -63,3 +63,6 @@ variants:
 - name: audio-description
   context:
     name: audio-description
+- name: external-link
+  context:
+    name: external-link
