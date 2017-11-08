@@ -116,7 +116,7 @@
 
   }
 
-  document.querySelector('.mainnav').addEventListener("click", function(event){
+  document.querySelector('.mainnav > li').addEventListener("click", function(event){
     var cureel = event.target,
         isopen = false;
     while (cureel.nodeName.toLowerCase() != 'LI'.toLowerCase()) {
