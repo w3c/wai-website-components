@@ -226,6 +226,7 @@ a {
 .grid-4 {
   @media (--large) {
     @apply --grid-four;
+    &.nogap { grid-column-gap: none; }
   }
   & .col1, & .from-col1 { grid-column-start: 1; }
   & .col1, & .to-col1   { grid-column-end:   2; }

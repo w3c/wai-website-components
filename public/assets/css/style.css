@@ -206,6 +206,10 @@ a.stealthy-link:visited {
             max-width: none
         }
     }
+
+    .grid-4.nogap {
+        grid-column-gap: none
+    }
   }
 
 .grid-4 .col1, .grid-4 .from-col1 {
