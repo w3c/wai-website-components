@@ -208,7 +208,7 @@ a.stealthy-link:visited {
     }
 
     .grid-4.nogap {
-        grid-column-gap: none
+        grid-column-gap: 0
     }
   }
 
