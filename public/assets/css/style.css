@@ -194,7 +194,7 @@ a.stealthy-link:visited {
 @media  (min-width: 60em) {
 
     .grid-4 {
-        grid-template-columns: repeat(4, minmax(0, 130px))
+        grid-template-columns: repeat(4, minmax(0, 1fr))
     }
 
     @supports (display: grid) {
@@ -246,7 +246,7 @@ a.stealthy-link:visited {
 @media  (min-width: 60em) {
 
     .grid-6 {
-        grid-template-columns: repeat(6, minmax(0, 130px))
+        grid-template-columns: repeat(6, minmax(0, 1fr))
     }
 
     @supports (display: grid) {
@@ -968,7 +968,7 @@ th > :last-child, td > :last-child {
 }
 
 .example-bar {
-  grid-template-columns: repeat(6, minmax(0, 130px))
+  grid-template-columns: repeat(6, minmax(0, 1fr))
 }
 
 @supports (display: grid) {
@@ -997,7 +997,7 @@ th > :last-child, td > :last-child {
 }
 
 .example-sheet {
-  grid-template-columns: repeat(6, minmax(0, 130px))
+  grid-template-columns: repeat(6, minmax(0, 1fr))
 }
 
 @supports (display: grid) {
