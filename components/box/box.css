@@ -8,8 +8,6 @@
   padding: 8px 16px;
   color: var(--wai-green);
   font-weight: bold;
-  font-size: .875rem;
-  line-height: 1.57;
   background-color: var(--off-white);
   & h1, & h2, & h3, & h4, & h5, & h6 {
     all: unset;
@@ -65,5 +63,7 @@
   & .box-h-simple {
     padding: 8px 8px 2px;
     background-color: transparent;
+    font-size: .875rem;
+    line-height: 1.57;
   }
 }

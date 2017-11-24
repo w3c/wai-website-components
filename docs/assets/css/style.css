@@ -194,7 +194,7 @@ a.stealthy-link:visited {
 @media  (min-width: 60em) {
 
     .grid-4 {
-        grid-template-columns: repeat(4, minmax(0, 130px))
+        grid-template-columns: repeat(4, minmax(0, 1fr))
     }
 
     @supports (display: grid) {
@@ -246,7 +246,7 @@ a.stealthy-link:visited {
 @media  (min-width: 60em) {
 
     .grid-6 {
-        grid-template-columns: repeat(6, minmax(0, 130px))
+        grid-template-columns: repeat(6, minmax(0, 1fr))
     }
 
     @supports (display: grid) {
@@ -638,6 +638,10 @@ img.symbol {
   margin-bottom: 1em;
 }
 
+figure { margin: 0; }
+
+figcaption { font-weight: bold; border-bottom: 1px solid #ddd;}
+
 button, .button {
   border-radius: 5px;
   display: inline-block;
@@ -811,9 +815,6 @@ th > :last-child, td > :last-child {
   padding: 8px 16px;
   color: #005A6A;
   font-weight: bold;
-  font-size: 14px;
-  font-size: .875rem;
-  line-height: 1.57;
   background-color: #f2f2f2
 }
 
@@ -888,7 +889,10 @@ th > :last-child, td > :last-child {
 
 .box.box-simple .box-h-simple {
     padding: 8px 8px 2px;
-    background-color: transparent
+    background-color: transparent;
+    font-size: 14px;
+    font-size: .875rem;
+    line-height: 1.57
 }
 
 .breadcrumb {
@@ -968,7 +972,7 @@ th > :last-child, td > :last-child {
 }
 
 .example-bar {
-  grid-template-columns: repeat(6, minmax(0, 130px))
+  grid-template-columns: repeat(6, minmax(0, 1fr))
 }
 
 @supports (display: grid) {
@@ -997,7 +1001,7 @@ th > :last-child, td > :last-child {
 }
 
 .example-sheet {
-  grid-template-columns: repeat(6, minmax(0, 130px))
+  grid-template-columns: repeat(6, minmax(0, 1fr))
 }
 
 @supports (display: grid) {
