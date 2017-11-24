@@ -445,3 +445,6 @@ img.symbol {
   margin-left: 1em;
   margin-bottom: 1em;
 }
+
+figure { margin: 0; }
+figcaption { font-weight: bold; border-bottom: 1px solid var(--line-grey);}

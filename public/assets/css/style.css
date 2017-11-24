@@ -638,6 +638,10 @@ img.symbol {
   margin-bottom: 1em;
 }
 
+figure { margin: 0; }
+
+figcaption { font-weight: bold; border-bottom: 1px solid #ddd;}
+
 button, .button {
   border-radius: 5px;
   display: inline-block;
