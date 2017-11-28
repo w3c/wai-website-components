@@ -644,9 +644,9 @@ img.symbol {
 
 #main img { max-width: 100%; }
 
-figure { margin: 0; }
+figure { margin: 0 0 1em; }
 
-figcaption { font-weight: bold; border-bottom: 1px solid #ddd; margin-bottom: 1em;}
+figcaption { font-weight: bold; border-bottom: 1px solid #ddd; margin-bottom: .5em;}
 
 button, .button {
   border-radius: 5px;

@@ -449,5 +449,5 @@ img.symbol {
 
 #main img { max-width: 100%; }
 
-figure { margin: 0; }
-figcaption { font-weight: bold; border-bottom: 1px solid var(--line-grey); margin-bottom: 1em;}
+figure { margin: 0 0 1em; }
+figcaption { font-weight: bold; border-bottom: 1px solid var(--line-grey); margin-bottom: .5em;}
