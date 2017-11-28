@@ -64,3 +64,31 @@ Single-colored icons can be modified like so:
 .icon-readmore {
   width: 0.7142857142857142em;
 }
+
+.icon-desktop {
+  width: 1.0714285714285714em;
+}
+
+.icon-laptop {
+  width: 1.0714285714285714em;
+}
+
+.icon-tablet {
+  width: 0.6428571428571428em;
+}
+
+.icon-mobile {
+  width: 0.42857142857142855em;
+}
+
+.icon-code {
+  width: 1.0714285714285714em;
+}
+
+.icon-fork {
+  width: 0.5714285714285714em;
+}
+
+.icon-code-file {
+  width: 0.8571428571428571em;
+}

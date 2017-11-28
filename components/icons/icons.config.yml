@@ -72,3 +72,24 @@ variants:
 - name: readmore
   context:
     name: readmore
+- name: desktop
+  context:
+    name: desktop
+- name: laptop
+  context:
+    name: laptop
+- name: tablet
+  context:
+    name: tablet
+- name: mobile
+  context:
+    name: mobile
+- name: code
+  context:
+    name: code
+- name: code-file
+  context:
+    name: code-file
+- name: fork
+  context:
+    name: fork
