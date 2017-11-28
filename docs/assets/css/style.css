@@ -642,9 +642,11 @@ img.symbol {
   margin-bottom: 1em;
 }
 
+#main img { max-width: 100%; }
+
 figure { margin: 0; }
 
-figcaption { font-weight: bold; border-bottom: 1px solid #ddd;}
+figcaption { font-weight: bold; border-bottom: 1px solid #ddd; margin-bottom: 1em;}
 
 button, .button {
   border-radius: 5px;
