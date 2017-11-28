@@ -1489,6 +1489,10 @@ Single-colored icons can be modified like so:
   width: 0.8571428571428571em;
 }
 
+.icon-readmore {
+  width: 0.7142857142857142em;
+}
+
 ul ::marker {
   color: #c0272d;
 }

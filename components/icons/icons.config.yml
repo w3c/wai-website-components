@@ -69,3 +69,6 @@ variants:
 - name: warning
   context:
     name: warning
+- name: readmore
+  context:
+    name: readmore
