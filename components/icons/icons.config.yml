@@ -96,3 +96,6 @@ variants:
 - name: cart-plus
   context:
     name: cart-plus
+- name: menu
+  context:
+    name: menu
