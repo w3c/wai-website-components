@@ -1521,6 +1521,10 @@ Single-colored icons can be modified like so:
   width: 0.8571428571428571em;
 }
 
+.icon-cart-plus {
+  width: 0.9285714285714285em;
+}
+
 ul ::marker {
   color: #c0272d;
 }
