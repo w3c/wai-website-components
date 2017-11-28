@@ -66,3 +66,6 @@ variants:
 - name: external-link
   context:
     name: external-link
+- name: warning
+  context:
+    name: warning
