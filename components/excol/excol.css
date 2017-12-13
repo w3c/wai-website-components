@@ -7,7 +7,7 @@ summary {
 }
 
 summary > * {
-  display: inline;
+  /*display: inline;*/
 }
 
 summary::-webkit-details-marker {
