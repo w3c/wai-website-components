@@ -931,7 +931,7 @@ th > :last-child, td > :last-child {
     line-height: 1.57
 }
 
-@media  (min-width: 60em) {
+@media (min-width: 35em) {
   .box {
   }
   .box.box-left, .box.box-right {

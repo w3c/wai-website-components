@@ -68,7 +68,7 @@
   }
 }
 
-@media (--large) {
+@media (--medium) {
   .box {
     &.box-left, &.box-right { width: 25%; }
     &.box-left {
