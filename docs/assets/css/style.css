@@ -648,6 +648,36 @@ figure { margin: 0 0 1em; }
 
 figcaption { font-weight: bold; border-bottom: 1px solid #ddd; margin-bottom: .5em;}
 
+blockquote {
+  font-style: italic;
+  margin-bottom: 1em
+}
+
+blockquote cite {
+    display: block;
+    margin-top: .55em;
+    font-style: normal;
+    color: #003366
+}
+
+blockquote cite:before {
+    content: "— ";
+    font-weight: bold
+}
+
+blockquote p:first-of-type::before {
+    content: '“';
+    margin-left: -.75ch
+}
+
+blockquote p:last-of-type::after {
+    content: '”'
+}
+
+blockquote.special {
+    text-align: center
+}
+
 button, .button {
   border-radius: 5px;
   display: inline-block;
@@ -899,6 +929,22 @@ th > :last-child, td > :last-child {
     font-size: 14px;
     font-size: .875rem;
     line-height: 1.57
+}
+
+@media  (min-width: 60em) {
+  .box {
+  }
+  .box.box-left, .box.box-right {
+        width: 25%
+    }
+  .box.box-left {
+        float: left;
+        margin-right: 1em
+    }
+  .box.box-right {
+        float: right;
+        margin-left: 1em
+    }
 }
 
 .breadcrumb {
