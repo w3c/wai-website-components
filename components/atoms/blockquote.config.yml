@@ -1,0 +1,6 @@
+collated: true
+variants:
+- name: default
+- name: special
+  context:
+    class: special

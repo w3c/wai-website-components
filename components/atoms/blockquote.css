@@ -1,0 +1,28 @@
+blockquote {
+  font-style: italic;
+  margin-bottom: 1em;
+
+  & cite {
+    display: block;
+    margin-top: .55em;
+    font-style: normal;
+    color: var(--w3c-blue);
+    &:before {
+      content: "— ";
+      font-weight: bold;
+    }
+  }
+  & p:first-of-type::before {
+    content: '“';
+    margin-left: -.75ch;
+  }
+
+  & p:last-of-type::after {
+    content: '”';
+  }
+
+
+  &.special {
+    text-align: center;
+  }
+}

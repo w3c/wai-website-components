@@ -67,3 +67,17 @@
     line-height: 1.57;
   }
 }
+
+@media (--large) {
+  .box {
+    &.box-left, &.box-right { width: 25%; }
+    &.box-left {
+      float: left;
+      margin-right: 1em;
+    }
+    &.box-right {
+      float: right;
+      margin-left: 1em;
+    }
+  }
+}
