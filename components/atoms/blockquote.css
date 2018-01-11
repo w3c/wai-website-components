@@ -6,7 +6,7 @@ blockquote {
     display: block;
     margin-top: .55em;
     font-style: normal;
-    color: var(--w3c-blue);
+    /*color: var(--w3c-blue);*/
     &:before {
       content: "— ";
       font-weight: bold;

@@ -656,8 +656,8 @@ blockquote {
 blockquote cite {
     display: block;
     margin-top: .55em;
-    font-style: normal;
-    color: #003366
+    font-style: normal
+    /*color: var(--w3c-blue);*/
 }
 
 blockquote cite:before {
@@ -797,6 +797,19 @@ button:disabled, .button:disabled {
             flex: 1;
     text-align: center;
     margin: 8px
+}
+
+img {
+}
+
+img.left {
+    float: left;
+    margin-right: 1em
+}
+
+img.right {
+    float: right;
+    margin-left: 1em
 }
 
 table, caption {
