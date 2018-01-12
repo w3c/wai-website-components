@@ -611,31 +611,6 @@ a.stealthy-link:visited {
   position: relative;
 }
 
-#toc {
-}
-
-@media (min-width: 35em) {
-
-    #toc {
-        float: right;
-        margin-left: 32px;
-        width: 40%
-    }
-  }
-
-@media  (min-width: 60em) {
-
-    #toc {
-        width: 30%
-    }
-  }
-
-#toc.box-full {
-    width: auto;
-    float: none;
-    margin-left: 0
-}
-
 img.symbol {
   float: right;
   margin-left: 1em;

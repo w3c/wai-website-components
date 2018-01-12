@@ -425,22 +425,6 @@ a {
   position: relative;
 }
 
-#toc {
-  @media (--medium) {
-    float:right;
-    margin-left: 32px;
-    width: 40%;
-  }
-  @media (--large) {
-    width: 30%;
-  }
-  &.box-full {
-    width: auto;
-    float: none;
-    margin-left: 0;
-  }
-}
-
 img.symbol {
   float: right;
   margin-left: 1em;
