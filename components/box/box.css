@@ -68,14 +68,20 @@
   }
 }
 
+.box.box-simple.box-aside .box-i {
+  font-size: .875rem;
+}
+
 @media (--medium) {
   .box {
     &.box-left, &.box-right { width: 25%; }
     &.box-left {
+      clear: left;
       float: left;
       margin-right: 1em;
     }
     &.box-right {
+      clear: right;
       float: right;
       margin-left: 1em;
     }

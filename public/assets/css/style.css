@@ -808,6 +808,7 @@ img.left {
 }
 
 img.right {
+    clear: right;
     float: right;
     margin-left: 1em
 }
@@ -944,6 +945,11 @@ th > :last-child, td > :last-child {
     line-height: 1.57
 }
 
+.box.box-simple.box-aside .box-i {
+  font-size: 14px;
+  font-size: .875rem;
+}
+
 @media (min-width: 35em) {
   .box {
   }
@@ -951,10 +957,12 @@ th > :last-child, td > :last-child {
         width: 25%
     }
   .box.box-left {
+        clear: left;
         float: left;
         margin-right: 1em
     }
   .box.box-right {
+        clear: right;
         float: right;
         margin-left: 1em
     }

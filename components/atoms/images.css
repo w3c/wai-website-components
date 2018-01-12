@@ -4,6 +4,7 @@ img {
     margin-right: 1em;
   }
   &.right {
+    clear: right;
     float: right;
     margin-left: 1em;
   }

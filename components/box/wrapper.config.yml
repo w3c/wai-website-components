@@ -55,3 +55,10 @@ variants:
     headermods: ['simple']
     mods: ['simple', 'right']
     content: '<p>When you want to learn more about how different disabilities affect Web use, and read about scenarios of people with disabilities using the Web, see <a href="#">How People with Disabilities Use the Web</a>.</p>'
+- name: float-right-small
+  context:
+    headerlabel: "More info"
+    headertype: simple
+    headermods: ['simple']
+    mods: ['simple', 'right', 'aside']
+    content: '<p>When you want to learn more about how different disabilities affect Web use, and read about scenarios of people with disabilities using the Web, see <a href="#">How People with Disabilities Use the Web</a>.</p>'
