@@ -1285,6 +1285,12 @@ details[open] > summary > *:first-child::before {
   content: '–';
 }
 
+details > div::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
 .page-footer, .site-footer {
   font-size: 12px;
   font-size: .75rem;
