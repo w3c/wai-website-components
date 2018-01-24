@@ -1385,9 +1385,14 @@ details > div::after {
     color: #eed009 !important
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3 {
   padding: 0;
   margin: 60px 0 20px;
+}
+
+h4, h5, h6 {
+  padding: 0;
+  margin: 20px 0 10px;
 }
 
 h1 {
