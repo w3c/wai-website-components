@@ -2714,6 +2714,31 @@ p+ul, p+ol {
     text-decoration: underline
 }
 
+.video-link {
+  display: inline-block;
+  text-decoration: none;
+  margin: 20px 0
+}
+
+.video-link img {
+    -webkit-mask: url("../images/video-mask-16-9.svg");
+            mask: url("../images/video-mask-16-9.svg");
+    -webkit-mask-size: contain;
+            mask-size: contain;
+    width: 240px
+}
+
+.video-link.ratio-43 img {
+    -webkit-mask: url("../images/video-mask-4-3.svg");
+            mask: url("../images/video-mask-4-3.svg")
+}
+
+.video-link span {
+    display: block;
+    text-align: center;
+    text-decoration: underline
+}
+
 /*
   Able Player core styles
 
