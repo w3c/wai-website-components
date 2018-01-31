@@ -1,0 +1,18 @@
+.video-link {
+  display: inline-block;
+  text-decoration: none;
+  margin: 20px 0;
+  & img {
+    mask: url("../images/video-mask-16-9.svg");
+    mask-size: contain;
+    width: 240px;
+  }
+  &.ratio-43 img {
+    mask: url("../images/video-mask-4-3.svg");
+  }
+  & span {
+    display: block;
+    text-align: center;
+    text-decoration: underline;
+  }
+}
