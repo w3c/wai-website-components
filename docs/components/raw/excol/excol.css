@@ -22,7 +22,7 @@ summary {
     border-radius: 5px;
     width: 1.3rem;
     height: 1.3rem;
-    line-height: 1;
+    line-height: .9;
     background: var(--pure-white);
     color: var(--wai-green);
     border: 2px solid var(--wai-green);
@@ -31,6 +31,7 @@ summary {
   }
   &:--hovcus > *:first-child::before {
     background: var(--w3c-blue);
+    border-color: var(--w3c-blue);
     color: var(--pure-white);
   }
 }

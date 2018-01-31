@@ -1252,7 +1252,7 @@ summary > *:first-child::before {
     width: 1.3rem;
     height: 20.8px;
     height: 1.3rem;
-    line-height: 1;
+    line-height: .9;
     background: #ffffff;
     color: #005A6A;
     border: 2px solid #005A6A;
@@ -1263,6 +1263,7 @@ summary > *:first-child::before {
 summary:hover > *:first-child::before,
 summary:focus > *:first-child::before {
     background: #003366;
+    border-color: #003366;
     color: #ffffff
 }
 
