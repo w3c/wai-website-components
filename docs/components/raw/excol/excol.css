@@ -14,18 +14,25 @@ summary::-webkit-details-marker {
   display: none;
 }
 
-summary > *:first-child::before {
-  content: '+';
-  margin-right: 0.5rem;
-  margin-bottom: .25rem;
-  display: inline-block;
-  border-radius: 5px;
-  width: 1.5rem;
-  height: 1.5rem;
-  background: #036;
-  color: #fff;
-  text-align: center;
-  font-weight: bold;
+summary {
+  & > *:first-child::before {
+    content: '+';
+    margin-right: 0.5rem;
+    display: inline-block;
+    border-radius: 5px;
+    width: 1.3rem;
+    height: 1.3rem;
+    line-height: 1;
+    background: var(--pure-white);
+    color: var(--wai-green);
+    border: 2px solid var(--wai-green);
+    text-align: center;
+    font-weight: bold;
+  }
+  &:--hovcus > *:first-child::before {
+    background: var(--w3c-blue);
+    color: var(--pure-white);
+  }
 }
 
 details[open] > summary > *:first-child::before {

@@ -213,44 +213,51 @@
                         <div class="FileBrowser-itemPreview">
                             
                             <code class="Code Code--lang-CSS FileBrowser-code">
-                                <pre><span class="hljs-selector-tag">details</span> {
-  <span class="hljs-attribute">padding-left</span>: <span class="hljs-number">2rem</span>;
+                                <pre>details {
+  padding-left: 2rem;
 }
-<span class="hljs-selector-tag">summary</span> {
-  <span class="hljs-attribute">display</span>: block;
-  <span class="hljs-attribute">margin-left</span>: -<span class="hljs-number">2rem</span>;
-}
-
-<span class="hljs-selector-tag">summary</span> &gt; * {
-  <span class="hljs-comment">/*display: inline;*/</span>
+summary {
+  display: block;
+  margin-left: -2rem;
 }
 
-<span class="hljs-selector-tag">summary</span><span class="hljs-selector-pseudo">::-webkit-details-marker</span> {
-  <span class="hljs-attribute">display</span>: none;
+summary &gt; * {
+  /*display: inline;*/
 }
 
-<span class="hljs-selector-tag">summary</span> &gt; *<span class="hljs-selector-pseudo">:first-child</span><span class="hljs-selector-pseudo">::before</span> {
-  <span class="hljs-attribute">content</span>: <span class="hljs-string">'+'</span>;
-  <span class="hljs-attribute">margin-right</span>: <span class="hljs-number">0.5rem</span>;
-  <span class="hljs-attribute">margin-bottom</span>: .<span class="hljs-number">25rem</span>;
-  <span class="hljs-attribute">display</span>: inline-block;
-  <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">5px</span>;
-  <span class="hljs-attribute">width</span>: <span class="hljs-number">1.5rem</span>;
-  <span class="hljs-attribute">height</span>: <span class="hljs-number">1.5rem</span>;
-  <span class="hljs-attribute">background</span>: <span class="hljs-number">#036</span>;
-  <span class="hljs-attribute">color</span>: <span class="hljs-number">#fff</span>;
-  <span class="hljs-attribute">text-align</span>: center;
-  <span class="hljs-attribute">font-weight</span>: bold;
+summary::-webkit-details-marker {
+  display: none;
 }
 
-<span class="hljs-selector-tag">details</span><span class="hljs-selector-attr">[open]</span> &gt; <span class="hljs-selector-tag">summary</span> &gt; *<span class="hljs-selector-pseudo">:first-child</span><span class="hljs-selector-pseudo">::before</span> {
-  <span class="hljs-attribute">content</span>: <span class="hljs-string">'–'</span>;
+summary {
+  &amp; &gt; *:first-child::before {
+    content: '+';
+    margin-right: 0.5rem;
+    display: inline-block;
+    border-radius: 5px;
+    width: 1.3rem;
+    height: 1.3rem;
+    line-height: 1;
+    background: var(--pure-white);
+    color: var(--wai-green);
+    border: 2px solid var(--wai-green);
+    text-align: center;
+    font-weight: bold;
+  }
+  &amp;:--hovcus &gt; *:first-child::before {
+    background: var(--w3c-blue);
+    color: var(--pure-white);
+  }
 }
 
-<span class="hljs-selector-tag">details</span> &gt; <span class="hljs-selector-tag">div</span><span class="hljs-selector-pseudo">::after</span> {
-  <span class="hljs-attribute">content</span>: <span class="hljs-string">""</span>;
-  <span class="hljs-attribute">display</span>: block;
-  <span class="hljs-attribute">clear</span>: both;
+details[open] &gt; summary &gt; *:first-child::before {
+  content: '–';
+}
+
+details &gt; div::after {
+  content: "";
+  display: block;
+  clear: both;
 }</pre>
                             </code>
                             
@@ -267,7 +274,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">586 Bytes</span>
+                    <span class="Meta-value">782 Bytes</span>
                 </li>
             </ul>
         </div>

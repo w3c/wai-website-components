@@ -1238,22 +1238,31 @@ summary::-webkit-details-marker {
   display: none;
 }
 
+summary {
+}
+
 summary > *:first-child::before {
-  content: '+';
-  margin-right: 8px;
-  margin-right: 0.5rem;
-  margin-bottom: 4px;
-  margin-bottom: .25rem;
-  display: inline-block;
-  border-radius: 5px;
-  width: 24px;
-  width: 1.5rem;
-  height: 24px;
-  height: 1.5rem;
-  background: #036;
-  color: #fff;
-  text-align: center;
-  font-weight: bold;
+    content: '+';
+    margin-right: 8px;
+    margin-right: 0.5rem;
+    display: inline-block;
+    border-radius: 5px;
+    width: 20.8px;
+    width: 1.3rem;
+    height: 20.8px;
+    height: 1.3rem;
+    line-height: 1;
+    background: #ffffff;
+    color: #005A6A;
+    border: 2px solid #005A6A;
+    text-align: center;
+    font-weight: bold
+}
+
+summary:hover > *:first-child::before,
+summary:focus > *:first-child::before {
+    background: #003366;
+    color: #ffffff
 }
 
 details[open] > summary > *:first-child::before {
