@@ -1689,6 +1689,10 @@ p+ul, p+ol {
     }
   }
 
+dd+dt {
+  margin-top: 8px;
+}
+
 .info {
   background-color: #eed009;
   background-image: linear-gradient(to bottom, #eed009, rgb(217, 189, 10));

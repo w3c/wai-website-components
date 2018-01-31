@@ -68,3 +68,7 @@ p+ul, p+ol {
     columns: 4;
   }
 }
+
+dd+dt {
+  margin-top: 8px;
+}
