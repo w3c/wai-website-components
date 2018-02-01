@@ -4,13 +4,19 @@
   font-size: .8125em;
   padding-left: 8px;
   padding-right: 8px;
-  & ul {
+  & > ul {
+    margin: 0;
     padding: 8px;
     grid-area: content;
     display: flex;
     justify-content: space-between;
     @media (--small) {
       justify-content: flex-end;
+    }
+    & > li {
+      display: inline-block;
+      list-style: none;
+      margin: 0;
     }
   }
   & a {

@@ -12,7 +12,7 @@
     display: block;
   }
 }
-.mainnav, .metanav, #controls {
+.mainnav, .metanav {
   & > ul {
     margin: 0;
     padding: 0;

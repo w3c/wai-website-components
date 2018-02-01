@@ -1733,7 +1733,8 @@ dd+dt {
   padding-right: 8px
 }
 
-#controls ul {
+#controls > ul {
+    margin: 0;
     padding: 8px;
     grid-area: content;
     display: -webkit-box;
@@ -1746,11 +1747,17 @@ dd+dt {
 
 @media  (min-width: 23em) {
 
-    #controls ul {
+    #controls > ul {
         -webkit-box-pack: end;
             -ms-flex-pack: end;
                 justify-content: flex-end
     }
+}
+
+#controls > ul > li {
+    display: inline-block;
+    list-style: none;
+    margin: 0
 }
 
 #controls a {
@@ -2155,15 +2162,15 @@ dd+dt {
     display: block
 }
 
-.mainnav, .metanav, #controls {
+.mainnav, .metanav {
 }
 
-.mainnav > ul, .metanav > ul, #controls > ul {
+.mainnav > ul, .metanav > ul {
     margin: 0;
     padding: 0
 }
 
-.mainnav > ul > li, .metanav > ul > li, #controls > ul > li {
+.mainnav > ul > li, .metanav > ul > li {
     display: inline-block;
     list-style: none;
     margin: 0
