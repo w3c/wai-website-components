@@ -837,6 +837,10 @@ th > :last-child, td > :last-child {
   background-color: #ffffff;
 }
 
+.box.box-space-above {
+  margin-top: 90px;
+}
+
 .box-h {
   padding: 8px 16px;
   color: #005A6A;

@@ -4,6 +4,10 @@
   background-color: var(--pure-white);
 }
 
+.box.box-space-above {
+  margin-top: 90px;
+}
+
 .box-h {
   padding: 8px 16px;
   color: var(--wai-green);
