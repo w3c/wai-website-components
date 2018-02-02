@@ -35,11 +35,15 @@
   </ul>
 </nav>
 <header id="site-header" class="default-grid with-gap">
-  <a href="/" class="logos">
-  <img src="../../assets/images/w3c.svg" alt="W3C">
-  <span class="wai"><span class="wa">Web Accessibility</span> <span class="i">Initiative</span></span>
-</a>
-
+  <div class="logos">
+  <a href="/" class="home">
+    <img src="../../assets/images/w3c.svg" alt="W3C">
+    <span class="wai"><span class="wa">Web&nbsp;Accessibility</span> <span class="i">Initiative</span></span>
+  </a>
+  <div class="claim">
+    Strategies, standards, and resources to make the web accessible to people with disabilities.
+  </div>
+</div>
   <div class="navigations">
   <nav class="metanav" label="Meta &amp; Search">
   <ul>
@@ -49,8 +53,7 @@
       <form action="#" role="search">
         <div>
           <label for="header-search">
-            <span class="l">Search:</span>
-            <input id="header-search" type="search" results="10" autosave="waisearches" placeholder="e.g. Tutorials">
+            <input id="header-search" type="search" placeholder="Search" aria-label="Search">
           </label>
           <button class="button button-icon button-nobg button-noborder"><span><svg aria-hidden="true" class="icon-search "><use xlink:href="../../assets/images/icons.svg#icon-search"></use></svg></span></button>
         </div>

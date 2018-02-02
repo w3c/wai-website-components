@@ -1,8 +1,10 @@
 .navigations {
   position: relative;
-  grid-column-start: 5;
+  grid-column-start: 6;
   grid-column-end: -2;
   flex-grow: 1;
+  display: flex;
+  align-items: center ;
   @media (--medium) {
     /*border: 1px solid rgba(255, 255, 255, 0.11);
     border-style: none solid;*/

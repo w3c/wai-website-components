@@ -1372,30 +1372,74 @@ details > div::after {
 .logos {
   padding: 16px 0;
   grid-column-start: 2;
-  grid-column-end: 5;
+  grid-column-end: 6;
   grid-row-start: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex
+}
+
+.logos .claim {
+    font-size: 14px;
+    font-style: italic;
+    margin-left: 16px;
+    padding-left: 16px;
+    border-left: 1px solid rgba(221, 221, 221, .32);
+    color: #ddd;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1
+}
+
+.home {
   margin-right: 32px;
   text-decoration: none;
-  transition: color .5s ease-in .1s
+  transition: color .5s ease-in .1s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex:1;
+      -ms-flex:1;
+          flex:1
 }
 
 @supports (display: grid) {
 
-    .logos {
+    .home {
         margin-right: 0
     }
   }
 
-.logos img {
+.home img {
     vertical-align: middle;
     padding-right: 8px;
     margin-bottom: 8px;
     color: inherit;
-    fill: inherit
+    fill: inherit;
+    -webkit-box-flex: 0;
+        -ms-flex: 0;
+            flex: 0
 }
 
-.logos:hover,
-.logos:focus {
+.home .wai {
+    -webkit-box-flex: 2;
+        -ms-flex: 2;
+            flex: 2;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    font-size: 19px
+}
+
+.home:hover,
+.home:focus {
     text-decoration: underline;
     color: #eed009 !important
 }
@@ -1980,22 +2024,12 @@ dd+dt {
   /*border-bottom: 1px solid rgba(255, 255, 255, 0.11);*/
   text-align: right;
   width: 100%
+  /*@media (--medium) {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }*/
 }
-
-@media (min-width: 35em) {
-
-    .metanav {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-align: center;
-            -ms-flex-align: center;
-                align-items: center;
-        -webkit-box-pack: end;
-            -ms-flex-pack: end;
-                justify-content: flex-end
-    }
-  }
 
 .metanav a {
     text-decoration: none;
@@ -2043,7 +2077,6 @@ dd+dt {
 }
 
 .metanav > ul li:last-child {
-    min-width: 300px;
     margin-right: 0
 }
 
@@ -2064,7 +2097,6 @@ dd+dt {
 }
 
 .metanav form[role=search] > div {
-    width: 300px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex
@@ -2072,16 +2104,7 @@ dd+dt {
 
 .metanav form[role=search] label {
     text-transform: none;
-    font-weight: normal;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-line-pack: center;
-        align-content: center;
-    width: 70%;
-    -webkit-box-flex: 1;
-        -ms-flex: 1 1 70%;
-            flex: 1 1 70%
+    font-weight: normal
 }
 
 .metanav form[role=search] label .l {
@@ -2095,11 +2118,19 @@ dd+dt {
     background-color: transparent;
     border: 0;
     border-radius: 0;
-    color: #ffffff;
+    color: #f2f2f2;
     height: 100%;
-    padding: 8px 0;
+    padding: 8px;
     margin: 0;
-    min-width: 100px
+    width: 10em;
+    font-size: 12.8px;
+    font-size: 0.8rem;
+    transition: width .5s linear
+}
+
+.metanav form[role=search] input:focus {
+    width: 15em;
+    color: #ffffff
 }
 
 .metanav form[role=search] input::-webkit-search-cancel-button,
@@ -2142,11 +2173,17 @@ dd+dt {
 
 .navigations {
   position: relative;
-  grid-column-start: 5;
+  grid-column-start: 6;
   grid-column-end: -2;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
-          flex-grow: 1
+          flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center ;
+      -ms-flex-align: center ;
+          align-items: center 
 }
 
 @media (min-width: 35em) {

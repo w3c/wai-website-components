@@ -5,11 +5,11 @@
   /*border-bottom: 1px solid rgba(255, 255, 255, 0.11);*/
   text-align: right;
   width: 100%;
-  @media (--medium) {
+  /*@media (--medium) {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-  }
+  }*/
   & a {
     text-decoration: none;
     padding: 8px 0;
@@ -32,7 +32,6 @@
         margin: 0 16px 0 0 !important;
       }
       &:last-child {
-        min-width: 300px;
         margin-right: 0;
       }
       & a {
@@ -47,16 +46,11 @@
   & form[role=search] {
     background-color: rgba(6, 30, 54, 0.44);
     & > div {
-      width: 300px;
       display:flex;
     }
     & label {
       text-transform: none;
       font-weight: normal;
-      display: flex;
-      align-content: center;
-      width: 70%;
-      flex: 1 1 70%;
       & .l {
         display: block;
         padding: 8px 4px 8px 12px;
@@ -68,11 +62,17 @@
       background-color: transparent;
       border: 0;
       border-radius: 0;
-      color: var(--pure-white);
+      color: var(--off-white);
       height: 100%;
-      padding: 8px 0;
+      padding: 8px;
       margin: 0;
-      min-width: 100px;
+      width: 10em;
+      font-size: 0.8rem;
+      transition: width .5s linear;
+      &:focus {
+        width: 15em;
+        color: var(--pure-white);
+      }
       &::-webkit-search-cancel-button,
       &::-webkit-search-results-button {
         filter: invert(100%);

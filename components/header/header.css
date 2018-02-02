@@ -22,11 +22,26 @@
 .logos {
   padding: 16px 0;
   grid-column-start: 2;
-  grid-column-end: 5;
+  grid-column-end: 6;
   grid-row-start: 1;
+  display: flex;
+  & .claim {
+    font-size: 14px;
+    font-style: italic;
+    margin-left: 16px;
+    padding-left: 16px;
+    border-left: 1px solid var(--trans-line-grey);
+    color: var(--line-grey);
+    flex:1;
+  }
+}
+
+.home {
   margin-right: 32px;
   text-decoration: none;
   transition: color .5s ease-in .1s;
+  display: flex;
+  flex:1;
   @supports (display: grid) {
     margin-right: 0;
   }
@@ -36,6 +51,14 @@
     margin-bottom: 8px;
     color: inherit;
     fill: inherit;
+    flex: 0;
+  }
+  & .wai {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 19px;
   }
   &:--hovcus {
     text-decoration: underline;
