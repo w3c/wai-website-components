@@ -2,9 +2,12 @@
   position: relative;
   font-size: .875rem;
   background-color: var(--w3c-blue);
+  display: none;
+  &.open {display: block;}
   @media (--medium) {
     font-size: 16px;
     font-size: 1rem;
+    display: block;
   }
   & > ul {
     width: 100%;
@@ -16,11 +19,12 @@
       @supports (display: grid) {
         display:grid;
         grid-template-rows: min-content min-content;
-        grid-template-columns: minmax(16px, 1fr) repeat(6, minmax(206px, max-content)) minmax(16px, 1fr);
+        grid-template-columns: minmax(16px, 1fr) repeat(6, minmax(16%, max-content)) minmax(16px, 1fr);
         justify-content: space-between;
       }
     }
     & > li {
+      outline: 1px solid #bada55;
       &.active {
         background: var(--dk-blue);
         border-radius: 3px 3px 0 0;
@@ -115,5 +119,11 @@
   }
   & > li > ul > li {
     margin-bottom: 0;
+  }
+}
+
+#openmenu {
+  @media (--medium) {
+    display: none;
   }
 }

@@ -33,6 +33,10 @@
     border-left: 1px solid var(--trans-line-grey);
     color: var(--line-grey);
     flex:1;
+    display: none;
+    @media (--medium) {
+      display: block;
+    }
   }
 }
 
@@ -57,7 +61,7 @@
     flex: 2;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     font-size: 19px;
   }
   &:--hovcus {
