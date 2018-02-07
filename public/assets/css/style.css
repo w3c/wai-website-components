@@ -1388,7 +1388,15 @@ details > div::after {
     color: #ddd;
     -webkit-box-flex: 1;
         -ms-flex: 1;
-            flex: 1
+            flex: 1;
+    display: none
+}
+
+@media (min-width: 35em) {
+
+    .logos .claim {
+        display: block
+    }
 }
 
 .home {
@@ -1432,9 +1440,9 @@ details > div::after {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     font-size: 19px
 }
 
@@ -1831,14 +1839,20 @@ dd+dt {
   position: relative;
   font-size: 14px;
   font-size: .875rem;
-  background-color: #003366
+  background-color: #003366;
+  display: none
+}
+
+.mainnav.open {
+    display: block
 }
 
 @media (min-width: 35em) {
 
     .mainnav {
         font-size: 16px;
-        font-size: 1rem
+        font-size: 1rem;
+        display: block
     }
   }
 
@@ -1864,7 +1878,7 @@ dd+dt {
         .mainnav > ul {
             display: grid;
             grid-template-rows: min-content min-content;
-            grid-template-columns: minmax(16px, 1fr) repeat(6, minmax(206px, max-content)) minmax(16px, 1fr);
+            grid-template-columns: minmax(16px, 1fr) repeat(6, minmax(16%, max-content)) minmax(16px, 1fr);
             -webkit-box-pack: justify;
                 -ms-flex-pack: justify;
                     justify-content: space-between
@@ -1873,6 +1887,7 @@ dd+dt {
 }
 
 .mainnav > ul > li {
+    outline: 1px solid #bada55;
     display: block
 }
 
@@ -2016,30 +2031,49 @@ dd+dt {
     margin-bottom: 0
 }
 
+#openmenu {
+}
+
+@media (min-width: 35em) {
+
+    #openmenu {
+        display: none
+    }
+  }
+
 .metanav {
   text-transform: uppercase;
   font-size: 12px;
   font-size: .75rem;
-  font-weight: bold;
-  /*border-bottom: 1px solid rgba(255, 255, 255, 0.11);*/
   text-align: right;
-  width: 100%
-  /*@media (--medium) {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-  }*/
+  width: 100%;
+  display: none
 }
+
+.metanav.open {
+    display: block
+}
+
+@media (min-width: 35em) {
+
+    .metanav {
+        display: block
+    }
+  }
 
 .metanav a {
     text-decoration: none;
-    padding: 8px 0
+    font-weight: bold
 }
 
 .metanav a:hover,
 .metanav a:focus,
 .metanav a[aria-current="page"] {
-    border-bottom: 2px solid #eed009
+    border-bottom: 1px solid #ffffff
+}
+
+.metanav a[aria-current="page"] {
+    border-bottom-color: #eed009
 }
 
 .metanav > ul {
@@ -2052,6 +2086,9 @@ dd+dt {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
         -webkit-box-pack: end;
             -ms-flex-pack: end;
                 justify-content: flex-end
@@ -2060,7 +2097,8 @@ dd+dt {
 
 .metanav > ul li {
     display: inline;
-    margin-bottom: 8px
+    border-left: 1px solid rgba(221, 221, 221, .32);
+    padding: 8px 16px
 }
 
 @media (min-width: 35em) {
@@ -2071,13 +2109,18 @@ dd+dt {
         display: flex;
         -webkit-box-align: center;
             -ms-flex-align: center;
-                align-items: center;
-        margin: 0 16px 0 0 !important
+                align-items: center
     }
 }
 
+.metanav > ul li:first-child {
+    border: 0
+}
+
 .metanav > ul li:last-child {
-    margin-right: 0
+    margin-right: 0;
+    padding: 0;
+    border: 0
 }
 
 .metanav > ul li a {
@@ -2105,11 +2148,6 @@ dd+dt {
 .metanav form[role=search] label {
     text-transform: none;
     font-weight: normal
-}
-
-.metanav form[role=search] label .l {
-    display: block;
-    padding: 8px 4px 8px 12px
 }
 
 .metanav form[role=search] input {
