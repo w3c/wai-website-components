@@ -116,7 +116,7 @@
 
   }
 
-  document.querySelector('.mainnav > li').addEventListener("click", function(event){
+  document.querySelector('.mainnav > ul > li').addEventListener("click", function(event){
     var cureel = event.target,
         isopen = false;
     while (cureel.nodeName.toLowerCase() != 'LI'.toLowerCase()) {
@@ -203,6 +203,21 @@
 
     }
 
+  });
+
+  var metanav = document.querySelector('.navigations');
+  var mainnav = document.querySelector('.mainnav');
+
+  document.querySelector('#openmenu').addEventListener('click', function(e) {
+    if (hasclass(e.target, 'open')) {
+      remclass(e.target, 'open');
+      remclass(metanav, 'open');
+      remclass(mainnav, 'open');
+    } else {
+      addclass(e.target, 'open');
+      addclass(metanav, 'open');
+      addclass(mainnav, 'open');
+    }
   });
 
 }());
