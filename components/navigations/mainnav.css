@@ -24,7 +24,7 @@
       }
     }
     & > li {
-      outline: 1px solid #bada55;
+      display:block;
       &.active {
         background: var(--dk-blue);
         border-radius: 3px 3px 0 0;
@@ -32,7 +32,6 @@
           border-bottom: 2px solid var(--gold) !important;
         }
       }
-      display:block;
       @media (--medium) {
         position: relative;
         flex-grow: 1;
@@ -43,7 +42,10 @@
         display:block;
         width: 100%;
         color: var(--pure-white);
-        text-align: center;
+        text-align: left;
+        @media (--medium) {
+          text-align: center;
+        }
         padding: 15px;
         box-sizing: border-box;
         @supports (display: grid) {
@@ -89,9 +91,15 @@
   }
 }
 .subnavcontent {
-  columns: 3; /* Does not really work :-/ */
   margin: 0;
-  padding: 16px 0;
+  padding: 15px;
+  @media (--medium) {
+    columns: 2; /* Does not really work :-/ */
+    padding: 15px 0;
+  }
+  @media (--large) {
+    columns: 3; /* Does not really work :-/ */
+  }
   &, & li {
     list-style: none;
   }
