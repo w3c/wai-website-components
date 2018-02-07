@@ -1887,7 +1887,6 @@ dd+dt {
 }
 
 .mainnav > ul > li {
-    outline: 1px solid #bada55;
     display: block
 }
 
@@ -1917,9 +1916,16 @@ dd+dt {
     display: block;
     width: 100%;
     color: #ffffff;
-    text-align: center;
+    text-align: left;
     padding: 15px;
     box-sizing: border-box
+}
+
+@media (min-width: 35em) {
+
+    .mainnav > ul > li > a {
+        text-align: center
+    }
 }
 
 @supports (display: grid) {
@@ -1988,11 +1994,28 @@ dd+dt {
 }
 
 .subnavcontent {
-  -webkit-columns: 3;
-          columns: 3; /* Does not really work :-/ */
   margin: 0;
-  padding: 16px 0
+  padding: 15px
 }
+
+@media (min-width: 35em) {
+
+    .subnavcontent {
+        -webkit-columns: 2;
+                columns: 2;
+        /* Does not really work :-/ */
+        padding: 15px 0
+    }
+  }
+
+@media  (min-width: 60em) {
+
+    .subnavcontent {
+        -webkit-columns: 3;
+                columns: 3
+        /* Does not really work :-/ */
+    }
+  }
 
 .subnavcontent, .subnavcontent li {
     list-style: none
@@ -2096,7 +2119,7 @@ dd+dt {
 }
 
 .metanav > ul li {
-    display: inline;
+    display: inline-block;
     border-left: 1px solid rgba(221, 221, 221, .32);
     padding: 8px 16px
 }
@@ -2246,7 +2269,6 @@ dd+dt {
 }
 
 .mainnav > ul > li, .metanav > ul > li {
-    display: inline-block;
     list-style: none;
     margin: 0
 }
