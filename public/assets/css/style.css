@@ -1878,7 +1878,7 @@ dd+dt {
         .mainnav > ul {
             display: grid;
             grid-template-rows: min-content min-content;
-            grid-template-columns: minmax(16px, 1fr) repeat(6, minmax(16%, max-content)) minmax(16px, 1fr);
+            grid-template-columns: minmax(16px, 1fr) repeat(6, minmax(206px, max-content)) minmax(16px, 1fr);
             -webkit-box-pack: justify;
                 -ms-flex-pack: justify;
                     justify-content: space-between
