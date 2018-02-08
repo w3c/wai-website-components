@@ -1850,9 +1850,14 @@ dd+dt {
 @media (min-width: 35em) {
 
     .mainnav {
-        font-size: 16px;
-        font-size: 1rem;
         display: block
+    }
+  }
+
+@media  (min-width: 60em) {
+
+    .mainnav {
+        font-size: 1rem
     }
   }
 
@@ -1878,10 +1883,23 @@ dd+dt {
         .mainnav > ul {
             display: grid;
             grid-template-rows: min-content min-content;
-            grid-template-columns: minmax(16px, 1fr) repeat(6, minmax(206px, max-content)) minmax(16px, 1fr);
             -webkit-box-pack: justify;
                 -ms-flex-pack: justify;
                     justify-content: space-between
+        }
+
+        @media (min-width: 35em) {
+
+            .mainnav > ul {
+                grid-template-columns: minmax(16px, 1fr) repeat(6, minmax(16%, max-content)) minmax(16px, 1fr)
+            }
+        }
+
+        @media  (min-width: 60em) {
+
+            .mainnav > ul {
+                grid-template-columns: minmax(16px, 1fr) repeat(6, minmax(206px, max-content)) minmax(16px, 1fr)
+            }
         }
     }
 }
@@ -1976,7 +1994,7 @@ dd+dt {
             grid-column-start: 1;
             grid-column-end: 9;
             grid-template-rows: min-content min-content;
-            grid-template-columns: minmax(16px, 1fr) minmax(1232px, max-content) minmax(16px, 1fr);
+            grid-template-columns: minmax(16px, 1fr) max-content minmax(16px, 1fr);
             -webkit-box-pack: justify;
                 -ms-flex-pack: justify;
                     justify-content: space-between
@@ -1995,7 +2013,36 @@ dd+dt {
 
 .subnavcontent {
   margin: 0;
-  padding: 15px
+  padding: 15px;
+  .sub {
+  }
+  .sub-2 {
+        grid-row: span 2
+    }
+  .sub-3 {
+        grid-row: span 3
+    }
+  .sub-4 {
+        grid-row: span 4
+    }
+  .sub-5 {
+        grid-row: span 5
+    }
+  .sub-6 {
+        grid-row: span 6
+    }
+  .sub-7 {
+        grid-row: span 7
+    }
+  .sub-8 {
+        grid-row: span 8
+    }
+  .sub-9 {
+        grid-row: span 9
+    }
+  .sub-10 {
+        grid-row: span 10
+    }
 }
 
 @media (min-width: 35em) {
@@ -2006,6 +2053,14 @@ dd+dt {
         /* Does not really work :-/ */
         padding: 15px 0
     }
+
+    @supports (display: grid) {
+
+        .subnavcontent {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr)
+        }
+    }
   }
 
 @media  (min-width: 60em) {
@@ -2014,6 +2069,14 @@ dd+dt {
         -webkit-columns: 3;
                 columns: 3
         /* Does not really work :-/ */
+    }
+
+    @supports (display: grid) {
+
+        .subnavcontent {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr)
+        }
     }
   }
 
