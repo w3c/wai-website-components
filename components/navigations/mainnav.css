@@ -105,6 +105,7 @@
     @supports (display: grid) {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
+      grid-gap: 8px 32px;
     }
   }
   @media (--large) {
@@ -125,7 +126,7 @@
     }
   }
   & > li {
-    margin-bottom: 16px;
+    /*margin-bottom: 16px;*/
     &:last-child {
       margin-bottom: 0;
     }
@@ -142,7 +143,7 @@
   & > li > ul > li {
     margin-bottom: 0;
   }
-  .sub {
+  & .sub {
     &-2 {
       grid-row: span 2;
     }
