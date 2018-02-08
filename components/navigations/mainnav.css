@@ -104,15 +104,17 @@
     padding: 15px 0;
     @supports (display: grid) {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: 50%;
+      grid-auto-flow: dense column;
       grid-gap: 8px 32px;
+      grid-template-rows: repeat(4, min-content);
     }
   }
   @media (--large) {
     columns: 3; /* Does not really work :-/ */
     @supports (display: grid) {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: 33%;
     }
   }
   &, & li {

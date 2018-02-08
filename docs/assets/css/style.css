@@ -2029,8 +2029,10 @@ dd+dt {
 
         .subnavcontent {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            grid-gap: 8px 32px
+            grid-template-columns: 50%;
+            grid-auto-flow: dense column;
+            grid-gap: 8px 32px;
+            grid-template-rows: repeat(4, min-content)
         }
     }
   }
@@ -2047,7 +2049,7 @@ dd+dt {
 
         .subnavcontent {
             display: grid;
-            grid-template-columns: repeat(3, 1fr)
+            grid-template-columns: 33%
         }
     }
   }
