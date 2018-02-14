@@ -5,15 +5,17 @@
 .sidenav--head {
   /*background-color: var(--off-white);*/
   background-color: var(--w3c-blue);
-  padding: 8px;
+  padding: 16px 24px;
   display:flex;
   align-items: flex-end;
   border: 2px solid var(--w3c-blue);
   border-bottom: none;
+  font-weight: bold;
 }
 
 .sidenav--head-icon {
   padding-bottom: .3em;
+  margin-left: -16px;
 }
 
 .sidenav--head-icon--inner {

@@ -2614,7 +2614,7 @@ dd+dt {
 .sidenav--head {
   /*background-color: var(--off-white);*/
   background-color: #003366;
-  padding: 8px;
+  padding: 16px 24px;
   display:-webkit-box;
   display:-ms-flexbox;
   display:flex;
@@ -2623,10 +2623,12 @@ dd+dt {
           align-items: flex-end;
   border: 2px solid #003366;
   border-bottom: none;
+  font-weight: bold;
 }
 
 .sidenav--head-icon {
   padding-bottom: .3em;
+  margin-left: -16px;
 }
 
 .sidenav--head-icon--inner {
