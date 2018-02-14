@@ -2922,7 +2922,7 @@ dd+dt {
 .video-link {
   display: inline-block;
   text-decoration: none;
-  margin: 20px 0
+  margin: 10px 0
 }
 
 .video-link img {
@@ -2942,6 +2942,28 @@ dd+dt {
     display: block;
     text-align: center;
     text-decoration: underline
+}
+
+.video-link-small img {
+  width: 120px;
+}
+
+.video-link-inline {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  span {
+    text-align: left;
+  }
+}
+
+.video-link-inline img {
+    width: auto;
+    height: 2em;
+    margin-right: 1em
 }
 
 /*

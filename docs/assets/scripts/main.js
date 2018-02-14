@@ -233,12 +233,10 @@
       remclass(e.target, 'open');
       remclass(metanav, 'open');
       remclass(mainnav, 'open');
-      e.target.setAttribute('aria-expanded', 'false');
     } else {
       addclass(e.target, 'open');
       addclass(metanav, 'open');
       addclass(mainnav, 'open');
-      e.target.setAttribute('aria-expanded', 'true');
     }
   });
 

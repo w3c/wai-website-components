@@ -1,7 +1,7 @@
 .video-link {
   display: inline-block;
   text-decoration: none;
-  margin: 20px 0;
+  margin: 10px 0;
   & img {
     mask: url("../images/video-mask-16-9.svg");
     mask-size: contain;
@@ -14,5 +14,22 @@
     display: block;
     text-align: center;
     text-decoration: underline;
+  }
+}
+
+.video-link-small img {
+  width: 120px;
+}
+
+.video-link-inline {
+  display: inline-flex;
+  align-items: center;
+  & img {
+    width: auto;
+    height: 2em;
+    margin-right: 1em;
+  }
+  span {
+    text-align: left;
   }
 }
