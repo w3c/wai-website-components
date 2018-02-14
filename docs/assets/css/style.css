@@ -1894,13 +1894,6 @@ dd+dt {
                 grid-template-columns: minmax(16px, 1fr) repeat(6, minmax(16%, max-content)) minmax(16px, 1fr)
             }
         }
-
-        @media  (min-width: 60em) {
-
-            .mainnav > ul {
-                grid-template-columns: minmax(16px, 1fr) repeat(6, minmax(206px, max-content)) minmax(16px, 1fr)
-            }
-        }
     }
 }
 

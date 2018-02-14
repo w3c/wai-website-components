@@ -20,13 +20,10 @@
       @supports (display: grid) {
         display:grid;
         grid-template-rows: min-content min-content;
+        justify-content: space-between;
         @media (--medium) {
           grid-template-columns: minmax(16px, 1fr) repeat(6, minmax(16%, max-content)) minmax(16px, 1fr);
         }
-        @media (--large) {
-          grid-template-columns: minmax(16px, 1fr) repeat(6, minmax(206px, max-content)) minmax(16px, 1fr);
-        }
-        justify-content: space-between;
       }
     }
     & > li {
