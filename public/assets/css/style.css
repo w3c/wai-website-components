@@ -800,6 +800,10 @@ img.right {
     margin-left: 1em
 }
 
+mark {
+  background-color: rgba(238, 208, 9, 0.35);
+}
+
 table, caption {
   text-align: left;
 }
