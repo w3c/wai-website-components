@@ -1863,8 +1863,9 @@ dd+dt {
 
 .mainnav > ul {
     width: 100%;
-    margin: 0;
-    padding: 0
+    max-width: 1268px;
+    padding: 0;
+    margin: 0 auto !important
 }
 
 @media (min-width: 35em) {
@@ -2022,10 +2023,9 @@ dd+dt {
 
         .subnavcontent {
             display: grid;
-            grid-template-columns: 50%;
-            grid-auto-flow: dense column;
-            grid-gap: 8px 32px;
-            grid-template-rows: repeat(4, min-content)
+            grid-template-columns: repeat(2, 1fr);
+            grid-auto-flow: dense;
+            grid-gap: 8px 32px
         }
     }
   }
@@ -2042,7 +2042,7 @@ dd+dt {
 
         .subnavcontent {
             display: grid;
-            grid-template-columns: 33%
+            grid-template-columns: repeat(3, 1fr)
         }
     }
   }
