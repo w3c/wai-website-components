@@ -757,6 +757,17 @@ button:disabled, .button:disabled {
     vertical-align: -1px
 }
 
+.button-menu {
+  text-transform: uppercase
+}
+
+.button-menu:hover,
+.button-menu:focus {
+    border-color: var(--white);
+    background-color: #eed009;
+    color: #1d1d1d
+}
+
 .button-group {
   display: -webkit-box;
   display: -ms-flexbox;

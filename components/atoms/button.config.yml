@@ -42,3 +42,9 @@ variants:
     icon: arrow-up
     href: '#top'
     mods: ['backtotop']
+- name: menu
+  context:
+    type: icon
+    label: Menu
+    icon: menu
+    mods: ['menu']

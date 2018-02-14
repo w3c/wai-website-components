@@ -73,6 +73,15 @@ button, .button {
   }
 }
 
+.button-menu {
+  text-transform: uppercase;
+  &:--hovcus {
+    border-color: var(--white);
+    background-color: var(--gold);
+    color: var(--off-black);
+  }
+}
+
 .button-group {
   display: flex;
   flex-wrap: wrap;
