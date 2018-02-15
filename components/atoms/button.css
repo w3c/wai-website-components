@@ -76,7 +76,7 @@ button, .button {
 .button-menu {
   text-transform: uppercase;
   &:--hovcus {
-    border-color: var(--white);
+    border-color: var(--pure-white);
     background-color: var(--gold);
     color: var(--off-black);
   }

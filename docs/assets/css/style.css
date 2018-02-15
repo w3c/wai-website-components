@@ -763,7 +763,7 @@ button:disabled, .button:disabled {
 
 .button-menu:hover,
 .button-menu:focus {
-    border-color: var(--white);
+    border-color: #ffffff;
     background-color: #eed009;
     color: #1d1d1d
 }
