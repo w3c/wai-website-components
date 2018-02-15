@@ -1387,7 +1387,7 @@ details > div::after {
 .logos {
   padding: 16px 0;
   grid-column-start: 2;
-  grid-column-end: 6;
+  grid-column-end: 7;
   grid-row-start: 1;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1395,7 +1395,8 @@ details > div::after {
 }
 
 .logos .claim {
-    font-size: 14px;
+    font-size: 16px;
+    font-size: 1rem;
     font-style: italic;
     margin-left: 16px;
     padding-left: 16px;
@@ -1421,6 +1422,9 @@ details > div::after {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-flex:1;
       -ms-flex:1;
           flex:1
@@ -1436,18 +1440,12 @@ details > div::after {
 .home img {
     vertical-align: middle;
     padding-right: 8px;
-    margin-bottom: 8px;
     color: inherit;
     fill: inherit;
-    -webkit-box-flex: 0;
-        -ms-flex: 0;
-            flex: 0
+    height: 46px
 }
 
 .home .wai {
-    -webkit-box-flex: 2;
-        -ms-flex: 2;
-            flex: 2;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1458,7 +1456,16 @@ details > div::after {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    font-size: 19px
+    font-size: 20px
+}
+
+.home .wai .i {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between
 }
 
 .home:hover,
@@ -1802,7 +1809,7 @@ dd+dt {
 
 #controls > ul {
     margin: 0;
-    padding: 8px;
+    padding: 4px;
     grid-area: content;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1824,19 +1831,19 @@ dd+dt {
 #controls > ul > li {
     display: inline-block;
     list-style: none;
-    margin: 0
+    margin: 0 0 0 8px;
+    padding: 0;
+    border-left: 1px solid #003366
+}
+
+#controls > ul > li:first-child {
+    border-left: 0
 }
 
 #controls a {
     color: #003366;
-    text-decoration: none
-}
-
-@media  (min-width: 23em) {
-
-    #controls a {
-        margin-left: 16px
-    }
+    text-decoration: none;
+    padding: 2px 0 2px 8px
 }
 
 #controls a:hover,
@@ -2318,7 +2325,7 @@ dd+dt {
 
 .navigations {
   position: relative;
-  grid-column-start: 6;
+  grid-column-start: 7;
   grid-column-end: -2;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;

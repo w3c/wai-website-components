@@ -22,11 +22,11 @@
 .logos {
   padding: 16px 0;
   grid-column-start: 2;
-  grid-column-end: 6;
+  grid-column-end: 7;
   grid-row-start: 1;
   display: flex;
   & .claim {
-    font-size: 14px;
+    font-size: 1rem;
     font-style: italic;
     margin-left: 16px;
     padding-left: 16px;
@@ -45,6 +45,7 @@
   text-decoration: none;
   transition: color .5s ease-in .1s;
   display: flex;
+  align-items: center;
   flex:1;
   @supports (display: grid) {
     margin-right: 0;
@@ -52,17 +53,19 @@
   & img {
     vertical-align:middle;
     padding-right: 8px;
-    margin-bottom: 8px;
     color: inherit;
     fill: inherit;
-    flex: 0;
+    height: 46px
   }
   & .wai {
-    flex: 2;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    font-size: 19px;
+    font-size: 20px;
+    & .i {
+    display: flex;
+    justify-content: space-between;
+  }
   }
   &:--hovcus {
     text-decoration: underline;
