@@ -22,6 +22,12 @@ th {
   font-weight: bold;
   color: var(--pure-white);
   background-color: var(--wai-green);
+  & a {
+    color: inherit;
+    &:--hovcus {
+      color: var(--gold);
+    }
+  }
 }
 th, td {
   & > :first-child {

@@ -832,7 +832,16 @@ th, td {
 th {
   font-weight: bold;
   color: #ffffff;
-  background-color: #005A6A;
+  background-color: #005A6A
+}
+
+th a {
+    color: inherit
+}
+
+th a:hover,
+th a:focus {
+    color: #eed009
 }
 
 th, td {
