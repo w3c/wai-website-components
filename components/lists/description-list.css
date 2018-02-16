@@ -1,0 +1,15 @@
+dl {
+  margin: 16px 0;
+}
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin-left: 10%;
+}
+
+dd+dt {
+  margin-top: 8px;
+}

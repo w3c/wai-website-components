@@ -1696,6 +1696,22 @@ Single-colored icons can be modified like so:
   width: 0.9285714285714285em;
 }
 
+dl {
+  margin: 16px 0;
+}
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin-left: 10%;
+}
+
+dd+dt {
+  margin-top: 8px;
+}
+
 ul ::marker {
   color: #c0272d;
 }
@@ -1786,10 +1802,6 @@ p+ul, p+ol {
                 columns: 4
     }
   }
-
-dd+dt {
-  margin-top: 8px;
-}
 
 .info {
   background-color: #eed009;
