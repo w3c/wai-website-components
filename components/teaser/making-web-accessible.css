@@ -1,0 +1,29 @@
+.making-web-accessible {
+  text-align:center;
+  & .making-web-accessible-box {
+    border: 2px solid var(--line-grey);
+    background-color: var(--pure-white);
+    padding: 40px;
+    margin-bottom: 20px;
+  }
+  & .mwa-icon {
+    width:  85px;
+    height: 85px;
+  }
+  & h2 {
+    border:none;
+    font-size: 2.25rem;
+    font-weight: normal;
+    margin:0;
+  }
+  & h2 + p {
+    font-size: 1.25rem;
+    margin-bottom: 32px;
+  }
+  & h3 {
+    margin-top: 10px;
+  }
+  & h3 + p {
+    margin-bottom: 0;
+  }
+}

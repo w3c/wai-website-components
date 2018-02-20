@@ -1,0 +1,9 @@
+title: Inline-Resource
+context:
+  title: Easy Checks
+  subtitle: Featured Resource
+  description: "Is accessibility addressed in even the most basic way on your site?"
+  icon: checkmark
+  image: /assets/images/teaser-image@1x.jpg
+  image1x: /assets/images/teaser-image@1x.jpg
+  image2x: /assets/images/teaser-image@2x.jpg

@@ -203,6 +203,11 @@ a {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
+  --grid-three: {
+    @apply --def-grid-noflex;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
   --clear: {
     &:before, &:after {
       content: " ";
@@ -223,6 +228,21 @@ a {
       grid-column-end: content-end;
     }
   }
+}
+
+.grid-3 {
+  @media (--large) {
+    @apply --grid-three;
+    &.nogap { grid-column-gap: 0; }
+  }
+  & .col1, & .from-col1 { grid-column-start: 1; }
+  & .col1, & .to-col1   { grid-column-end:   2; }
+
+  & .col2, & .from-col2 { grid-column-start: 2; }
+  & .col2, & .to-col2   { grid-column-end:   3; }
+
+  & .col3, & .from-col3 { grid-column-start: 3; }
+  & .col3, & .to-col3   { grid-column-end:   4; }
 }
 
 .grid-4 {
