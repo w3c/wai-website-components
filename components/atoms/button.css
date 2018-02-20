@@ -51,6 +51,9 @@ button, .button {
 .button-secondary {
   background-color: var(--pure-white);
   color: var(--wai-green);
+  &:visited {
+    color: var(--w3c-blue);
+  }
 }
 
 .button-backtotop {

@@ -780,7 +780,11 @@ button:disabled, .button:disabled {
 
 .button-secondary {
   background-color: #ffffff;
-  color: #005A6A;
+  color: #005A6A
+}
+
+.button-secondary:visited {
+    color: #003366
 }
 
 .button-backtotop {
