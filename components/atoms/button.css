@@ -53,6 +53,9 @@ button, .button {
   color: var(--wai-green);
   &:visited {
     color: var(--w3c-blue);
+    &:--hovcus {
+      color: var(--pure-white);
+    }
   }
 }
 

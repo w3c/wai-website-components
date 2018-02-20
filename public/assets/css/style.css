@@ -787,6 +787,11 @@ button:disabled, .button:disabled {
     color: #003366
 }
 
+.button-secondary:visited:hover,
+.button-secondary:visited:focus {
+    color: #ffffff
+}
+
 .button-backtotop {
   position: fixed;
   /*position: sticky;*/
