@@ -2065,10 +2065,6 @@ p+ul, p+ol {
     border-bottom: 2px solid #eed009
 }
 
-.mainnav li.active + .subnav {
-    display: grid
-}
-
 .mainnav .subnav {
     font-size: 14px;
     font-size: .875rem;
@@ -2103,49 +2099,26 @@ p+ul, p+ol {
             color: #fff !important
         }
     }
+
+    .mainnav .subnav .col1, .mainnav .subnav .col2, .mainnav .subnav .col3 {
+        -webkit-box-flex: 1;
+            -ms-flex: 1;
+                flex: 1
+    }
+}
+
+.mainnav li.active + .subnav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-line-pack: stretch;
+        align-content: stretch
 }
 
 .subnavcontent {
   margin: 0;
   padding: 15px
 }
-
-@media (min-width: 35em) {
-
-    .subnavcontent {
-        -webkit-columns: 2;
-                columns: 2;
-        /* Does not really work :-/ */
-        padding: 15px 0
-    }
-
-    @supports (display: grid) {
-
-        .subnavcontent {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            grid-auto-flow: dense;
-            grid-gap: 8px 32px
-        }
-    }
-  }
-
-@media  (min-width: 60em) {
-
-    .subnavcontent {
-        -webkit-columns: 3;
-                columns: 3
-        /* Does not really work :-/ */
-    }
-
-    @supports (display: grid) {
-
-        .subnavcontent {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr)
-        }
-    }
-  }
 
 .subnavcontent, .subnavcontent li {
     list-style: none

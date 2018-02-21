@@ -68,9 +68,6 @@
       }
     }
   }
-  & li.active + .subnav {
-    display:grid;
-  }
   & .subnav {
     font-size: .875rem;
     display: none;
@@ -91,29 +88,19 @@
           }
         }
       }
+      & .col1, & .col2, & .col3 {
+        flex:1;
+      }
     }
+  }
+  & li.active + .subnav {
+    display:flex;
+    align-content: stretch;
   }
 }
 .subnavcontent {
   margin: 0;
   padding: 15px;
-  @media (--medium) {
-    columns: 2; /* Does not really work :-/ */
-    padding: 15px 0;
-    @supports (display: grid) {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      grid-auto-flow: dense;
-      grid-gap: 8px 32px;
-    }
-  }
-  @media (--large) {
-    columns: 3; /* Does not really work :-/ */
-    @supports (display: grid) {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-    }
-  }
   &, & li {
     list-style: none;
   }
