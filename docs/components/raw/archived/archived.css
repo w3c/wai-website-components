@@ -1,7 +1,7 @@
-.retired {
+.archived {
   & h1 {
     &::before{
-      content: "Retired";
+      content: "Archived";
       background-color: var(--gold);
       color: var(--dk-blue);
       display: inline-block;
@@ -18,7 +18,7 @@
   }
 }
 
-.retired-info-box {
+.archived-info-box {
   border: 2px solid var(--gold);
   padding: 8px;
   background-color: var(--pure-white);
