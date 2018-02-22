@@ -1,0 +1,5 @@
+variants:
+- name: default
+  context:
+    title: '<h3>Learn More About This</h3>'
+    content: 'This is a paragraph for illustration purposes. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa inventore at illum animi ipsam? Accusantium minima inventore sint, laborum sunt, ipsum corporis, quam laboriosam optio, mollitia magni nam obcaecati neque!'

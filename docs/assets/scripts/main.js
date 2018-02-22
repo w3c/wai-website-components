@@ -116,43 +116,48 @@
 
   }
 
-  document.querySelector('.mainnav').addEventListener("click", function(event){
-    var cureel = event.target,
-        isopen = false;
-    while (cureel.nodeName.toLowerCase() != 'LI'.toLowerCase()) {
-      cureel = cureel.parentNode;
-    }
-    if (hasclass(cureel, 'has-submenu')) {
-      if (hasclass(cureel, 'active')) { isopen = true; }
-      event.preventDefault();
-      Array.prototype.forEach.call(document.querySelectorAll('li.active'), function(el, i){
-        remclass(el, 'active');
-      });
-      if (!isopen) {
-        addclass(cureel, 'active');
+  var mainnav = document.querySelector('.mainnav');
+
+  if (mainnav !== null) {
+    document.querySelector('.mainnav').addEventListener("click", function(event){
+      var cureel = event.target,
+          isopen = false;
+      while (cureel.nodeName.toLowerCase() != 'LI'.toLowerCase()) {
+        cureel = cureel.parentNode;
       }
-    }
-  });
+      if (hasclass(cureel, 'has-submenu')) {
+        if (hasclass(cureel, 'active')) { isopen = true; }
+        event.preventDefault();
+        Array.prototype.forEach.call(document.querySelectorAll('li.active'), function(el, i){
+          remclass(el, 'active');
+        });
+        if (!isopen) {
+          addclass(cureel, 'active');
+        }
+      }
+    });
 
-  document.querySelector('.mainnav').addEventListener("mouseover", function(event){
-    var cureel = event.target,
-        isopen = false;
-    while (cureel.nodeName.toLowerCase() != 'LI'.toLowerCase()) {
-      cureel = cureel.parentNode;
-    }
-    if (hasclass(cureel, 'has-submenu')) {
-      Array.prototype.forEach.call(document.querySelectorAll('li.active'), function(el, i){
-        remclass(el, 'active');
-      });
-    }
-    addclass(cureel, 'active');
-  });
+    document.querySelector('.mainnav').addEventListener("mouseover", function(event){
+      var cureel = event.target,
+          isopen = false;
+      while (cureel.nodeName.toLowerCase() != 'LI'.toLowerCase()) {
+        cureel = cureel.parentNode;
+      }
+      if (hasclass(cureel, 'has-submenu')) {
+        Array.prototype.forEach.call(document.querySelectorAll('li.active'), function(el, i){
+          remclass(el, 'active');
+        });
+      }
+      addclass(cureel, 'active');
+    });
 
-  document.querySelector('.mainnav').addEventListener("mouseleave", function(event){
-      Array.prototype.forEach.call(document.querySelectorAll('li.active'), function(el, i){
-        remclass(el, 'active');
-      });
-  });
+    document.querySelector('.mainnav').addEventListener("mouseleave", function(event){
+        Array.prototype.forEach.call(document.querySelectorAll('li.active'), function(el, i){
+          remclass(el, 'active');
+        });
+    });
+
+  }
 
   // $('.mainnav li').click(function (e){
   //   if ($(e.target).parent().parent().hasClass('active')) {
@@ -227,19 +232,80 @@
 
   var metanav = document.querySelector('.metanav');
   var mainnav = document.querySelector('.mainnav');
+  var navbtn = document.querySelector('#openmenu');
 
-  document.querySelector('#openmenu').addEventListener('click', function(e) {
-    if (hasclass(e.target, 'open')) {
-      remclass(e.target, 'open');
-      remclass(metanav, 'open');
-      remclass(mainnav, 'open');
-      e.target.setAttribute('aria-expanded', 'false');
-    } else {
-      addclass(e.target, 'open');
-      addclass(metanav, 'open');
-      addclass(mainnav, 'open');
-      e.target.setAttribute('aria-expanded', 'true');
+  if (navbtn !== null) {
+    navbtn.addEventListener('click', function(e) {
+      if (hasclass(e.target, 'open')) {
+        remclass(e.target, 'open');
+        remclass(metanav, 'open');
+        remclass(mainnav, 'open');
+        e.target.setAttribute('aria-expanded', 'false');
+      } else {
+        addclass(e.target, 'open');
+        addclass(metanav, 'open');
+        addclass(mainnav, 'open');
+        e.target.setAttribute('aria-expanded', 'true');
+      }
+    });
+  }
+
+  var excolAll = document.querySelectorAll('.excol-all');
+  var excols =  document.querySelectorAll('details');
+
+  if ((excolAll !== null) && (excols !== null) && (excols.length > 1)) {
+    function enableButtons(els) {
+      Array.prototype.forEach.call(els, function(el, i){
+        el.disabled = false;
+      });
     }
-  });
+    function disableButtons(els) {
+      Array.prototype.forEach.call(els, function(el, i){
+        el.disabled = true;
+      });
+    }
+    function setExColAllButtons() {
+      setTimeout(function(){
+        var open  = document.querySelectorAll('details[open]').length;
+        var close = document.querySelectorAll('details:not([open])').length;
+        if((open > 0) && (close === 0)) {
+          enableButtons(document.querySelectorAll('.excol-all .collapse'));
+          disableButtons(document.querySelectorAll('.excol-all .expand'));
+        } else if ((open === 0) && (close > 0)) {
+          disableButtons(document.querySelectorAll('.excol-all .collapse'));
+          enableButtons(document.querySelectorAll('.excol-all .expand'));
+        } else {
+          enableButtons(document.querySelectorAll('.excol-all .collapse'));
+          enableButtons(document.querySelectorAll('.excol-all .expand'));
+        }
+      }, 100);
+    }
+
+    Array.prototype.forEach.call(document.querySelectorAll('details summary'), function(el, i){
+      el.addEventListener("click", function() {setExColAllButtons()});
+    });
+
+    Array.prototype.forEach.call(excolAll, function(el, i){
+      el.innerHTML = '<button class="expand button button-secondary">+ Expand All Sections</button> <button class="collapse button button-secondary">&minus; Collapse All Sections</button>';
+    });
+
+    Array.prototype.forEach.call(document.querySelectorAll('.excol-all'), function(el, i){
+      el.addEventListener("click", function(element) {
+        if (hasclass(element.target, 'expand')) {
+          Array.prototype.forEach.call(document.querySelectorAll('details'), function(el, i){
+            el.setAttribute('open', 'true');
+          });
+        }
+        if (hasclass(element.target, 'collapse')) {
+          Array.prototype.forEach.call(document.querySelectorAll('details'), function(el, i){
+            el.removeAttribute('open');
+          });
+        }
+        setExColAllButtons();
+      });
+    });
+
+    setExColAllButtons();
+  }
 
 }());
