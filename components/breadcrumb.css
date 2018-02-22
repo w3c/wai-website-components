@@ -2,7 +2,8 @@
   font-size: .8125rem;
   background-color: var(--pure-white);
   border-bottom: 1px solid var(--line-grey);
-  padding: 16px 0;
+  padding-top: 16px;
+  padding-bottom: 16px;
   margin-bottom: 32px;
   & ul {
     margin: 0;

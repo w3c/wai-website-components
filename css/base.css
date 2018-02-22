@@ -221,7 +221,9 @@ a {
 }
 
 .default-grid {
+  padding: 0 16px;
   @media (--large) {
+    padding:0;
     @apply --full-grid;
     & .inner {
       grid-column-start: navigation-start;

@@ -160,11 +160,13 @@ a.stealthy-link:visited {
   }
 
 .default-grid {
+  padding: 0 16px
 }
 
 @media  (min-width: 60em) {
 
     .default-grid {
+        padding: 0;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -1034,7 +1036,8 @@ th > :last-child, td > :last-child {
   font-size: .8125rem;
   background-color: #ffffff;
   border-bottom: 1px solid #ddd;
-  padding: 16px 0;
+  padding-top: 16px;
+  padding-bottom: 16px;
   margin-bottom: 32px
 }
 
