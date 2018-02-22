@@ -2683,6 +2683,43 @@ p+ul, p+ol {
   line-height: 2.2em;
 }
 
+.retired {
+}
+
+.retired h1 {
+}
+
+.retired h1::before {
+    content: "Retired";
+    background-color: #eed009;
+    color: #091832;
+    display: inline-block;
+    padding: 4px 8px;
+    margin-top: -8px;
+    margin-right: 8px;
+    font-size: 14px;
+    font-size: .875rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    vertical-align: middle;
+    border-radius: 3px
+}
+
+.retired-info-box {
+  border: 2px solid #eed009;
+  padding: 8px;
+  background-color: #ffffff
+}
+
+.retired-info-box p:first-child {
+    margin-top: 0
+}
+
+.retired-info-box p:last-child {
+    margin-bottom: 0
+}
+
 .sidenav {
   grid-area: navigation;
   margin-bottom: 24px;
