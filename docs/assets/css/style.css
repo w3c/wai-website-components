@@ -2682,6 +2682,7 @@ p+ul, p+ol {
 
 .sidenav {
   grid-area: navigation;
+  margin-bottom: 24px;
 }
 
 .sidenav--head {
