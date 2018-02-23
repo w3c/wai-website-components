@@ -1,0 +1,29 @@
+.pagination {
+  margin: 16px 0;
+  padding-top: 16px;
+  border-top: 2px solid var(--line-grey);
+  & ul {
+    width: 100%;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    justify-content: flex-end
+  }
+  & li {
+    margin-left: 8px;
+  }
+  & a, & .like-a {
+    padding: 8px 16px;
+    border-radius: 4px;
+    border: 2px solid var(--line-grey);
+  }
+  & .is-active .like-a {
+    background-color: var(--w3c-blue);
+    border-color: var(--w3c-blue);
+    color: var(--pure-white);
+  }
+  & a:--hovcus {
+    background-color: var(--line-grey);
+  }
+}

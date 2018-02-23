@@ -2619,6 +2619,46 @@ p+ul, p+ol {
   line-height: 1em;
 }
 
+.pagination {
+  margin: 16px 0;
+  padding-top: 16px;
+  border-top: 2px solid #ddd
+}
+
+.pagination ul {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end
+}
+
+.pagination li {
+    margin-left: 8px
+}
+
+.pagination a, .pagination .like-a {
+    padding: 8px 16px;
+    border-radius: 4px;
+    border: 2px solid #ddd
+}
+
+.pagination .is-active .like-a {
+    background-color: #003366;
+    border-color: #003366;
+    color: #ffffff
+}
+
+.pagination a:hover,
+.pagination a:focus {
+    background-color: #ddd
+}
+
 .quote {
   background-color: #005A6A;
   border-radius: 5px;
