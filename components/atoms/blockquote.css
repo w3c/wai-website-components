@@ -4,7 +4,6 @@ blockquote {
 
   & cite {
     display: block;
-    margin-top: .55em;
     font-style: normal;
     /*color: var(--w3c-blue);*/
     &:before {
@@ -15,6 +14,10 @@ blockquote {
   & p:first-of-type::before {
     content: '“';
     margin-left: -.75ch;
+  }
+
+  & p:last-of-type {
+    margin-bottom: 0;
   }
 
   & p:last-of-type::after {
