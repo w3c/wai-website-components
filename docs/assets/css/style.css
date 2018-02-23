@@ -700,7 +700,8 @@ figcaption { font-weight: bold; border-bottom: 1px solid #ddd; margin-bottom: .5
 .archived-info-box {
   border: 2px solid #eed009;
   padding: 8px;
-  background-color: #ffffff
+  background-color: #ffffff;
+  margin-bottom: 20px
 }
 
 .archived-info-box p:first-child {
