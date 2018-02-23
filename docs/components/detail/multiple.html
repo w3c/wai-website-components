@@ -149,7 +149,7 @@
         
         <pre><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"excol-all"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-<span class="hljs-tag">&lt;<span class="hljs-name">details</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">details</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"one"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">summary</span> <span class="hljs-attr">markdown</span>=<span class="hljs-string">"block"</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">h3</span>&gt;</span>Learn More About This<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">summary</span>&gt;</span>
@@ -158,16 +158,25 @@
         neque!
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">details</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">details</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">details</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"two"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">summary</span> <span class="hljs-attr">markdown</span>=<span class="hljs-string">"block"</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">h3</span>&gt;</span>Learn More About This<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">summary</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">markdown</span>=<span class="hljs-string">"block"</span>&gt;</span>
         This is a paragraph for illustration purposes. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa inventore at illum animi ipsam? Accusantium minima inventore sint, laborum sunt, ipsum corporis, quam laboriosam optio, mollitia magni nam obcaecati
         neque!
+        <span class="hljs-tag">&lt;<span class="hljs-name">details</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"four"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">summary</span> <span class="hljs-attr">markdown</span>=<span class="hljs-string">"block"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">h3</span>&gt;</span>Learn More About This<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">summary</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">markdown</span>=<span class="hljs-string">"block"</span>&gt;</span>
+                This is a paragraph for illustration purposes. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa inventore at illum animi ipsam? Accusantium minima inventore sint, laborum sunt, ipsum corporis, quam laboriosam optio, mollitia magni nam obcaecati
+                neque! <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"five"</span>&gt;</span>Test nested id!<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">details</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">details</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">details</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">details</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"three"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">summary</span> <span class="hljs-attr">markdown</span>=<span class="hljs-string">"block"</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">h3</span>&gt;</span>Learn More About This<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">summary</span>&gt;</span>
@@ -187,21 +196,28 @@
     <code class="Code Code--lang-html">
         <pre><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"excol-all"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-<span class="hljs-tag">&lt;<span class="hljs-name">details{%-</span> <span class="hljs-attr">if</span> <span class="hljs-attr">id</span> <span class="hljs-attr">-</span>%} <span class="hljs-attr">id</span>=<span class="hljs-string">"{{id}}"</span>{%<span class="hljs-attr">-</span> <span class="hljs-attr">endif</span> <span class="hljs-attr">-</span>%} {%<span class="hljs-attr">-</span> <span class="hljs-attr">if</span> <span class="hljs-attr">open</span> <span class="hljs-attr">-</span>%}<span class="hljs-attr">open</span>{%<span class="hljs-attr">-</span> <span class="hljs-attr">endif</span> <span class="hljs-attr">-</span>%}&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">summary</span> <span class="hljs-attr">markdown</span>=<span class="hljs-string">"block"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">details{%-</span> <span class="hljs-attr">if</span> <span class="hljs-attr">id</span> %} <span class="hljs-attr">id</span>=<span class="hljs-string">"one"</span>{%<span class="hljs-attr">-</span> <span class="hljs-attr">endif</span> <span class="hljs-attr">-</span>%} {%<span class="hljs-attr">-</span> <span class="hljs-attr">if</span> <span class="hljs-attr">open</span> <span class="hljs-attr">-</span>%}<span class="hljs-attr">open</span>{%<span class="hljs-attr">-</span> <span class="hljs-attr">endif</span> <span class="hljs-attr">-</span>%}&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">summary</span> <span class="hljs-attr">markdown</span>=<span class="hljs-string">"block"</span>&gt;</span>
   {{title}}
 <span class="hljs-tag">&lt;/<span class="hljs-name">summary</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">markdown</span>=<span class="hljs-string">"block"</span>&gt;</span>
   {{content}}
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">details</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">details{%-</span> <span class="hljs-attr">if</span> <span class="hljs-attr">id</span> <span class="hljs-attr">-</span>%} <span class="hljs-attr">id</span>=<span class="hljs-string">"{{id}}"</span>{%<span class="hljs-attr">-</span> <span class="hljs-attr">endif</span> <span class="hljs-attr">-</span>%} {%<span class="hljs-attr">-</span> <span class="hljs-attr">if</span> <span class="hljs-attr">open</span> <span class="hljs-attr">-</span>%}<span class="hljs-attr">open</span>{%<span class="hljs-attr">-</span> <span class="hljs-attr">endif</span> <span class="hljs-attr">-</span>%}&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">summary</span> <span class="hljs-attr">markdown</span>=<span class="hljs-string">"block"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">details{%-</span> <span class="hljs-attr">if</span> <span class="hljs-attr">id</span> %} <span class="hljs-attr">id</span>=<span class="hljs-string">"two"</span>{%<span class="hljs-attr">-</span> <span class="hljs-attr">endif</span> <span class="hljs-attr">-</span>%} {%<span class="hljs-attr">-</span> <span class="hljs-attr">if</span> <span class="hljs-attr">open</span> <span class="hljs-attr">-</span>%}<span class="hljs-attr">open</span>{%<span class="hljs-attr">-</span> <span class="hljs-attr">endif</span> <span class="hljs-attr">-</span>%}&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">summary</span> <span class="hljs-attr">markdown</span>=<span class="hljs-string">"block"</span>&gt;</span>
   {{title}}
 <span class="hljs-tag">&lt;/<span class="hljs-name">summary</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">markdown</span>=<span class="hljs-string">"block"</span>&gt;</span>
   {{content}}
+  <span class="hljs-tag">&lt;<span class="hljs-name">details{%-</span> <span class="hljs-attr">if</span> <span class="hljs-attr">id</span> %} <span class="hljs-attr">id</span>=<span class="hljs-string">"four"</span>{%<span class="hljs-attr">-</span> <span class="hljs-attr">endif</span> <span class="hljs-attr">-</span>%} {%<span class="hljs-attr">-</span> <span class="hljs-attr">if</span> <span class="hljs-attr">open</span> <span class="hljs-attr">-</span>%}<span class="hljs-attr">open</span>{%<span class="hljs-attr">-</span> <span class="hljs-attr">endif</span> <span class="hljs-attr">-</span>%}&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">summary</span> <span class="hljs-attr">markdown</span>=<span class="hljs-string">"block"</span>&gt;</span>
+    {{title}}
+  <span class="hljs-tag">&lt;/<span class="hljs-name">summary</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">markdown</span>=<span class="hljs-string">"block"</span>&gt;</span>
+    {{content}} <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"five"</span>&gt;</span>Test nested id!<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">details</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">details</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">details{%-</span> <span class="hljs-attr">if</span> <span class="hljs-attr">id</span> <span class="hljs-attr">-</span>%} <span class="hljs-attr">id</span>=<span class="hljs-string">"{{id}}"</span>{%<span class="hljs-attr">-</span> <span class="hljs-attr">endif</span> <span class="hljs-attr">-</span>%} {%<span class="hljs-attr">-</span> <span class="hljs-attr">if</span> <span class="hljs-attr">open</span> <span class="hljs-attr">-</span>%}<span class="hljs-attr">open</span>{%<span class="hljs-attr">-</span> <span class="hljs-attr">endif</span> <span class="hljs-attr">-</span>%}&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">summary</span> <span class="hljs-attr">markdown</span>=<span class="hljs-string">"block"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">details{%-</span> <span class="hljs-attr">if</span> <span class="hljs-attr">id</span> %} <span class="hljs-attr">id</span>=<span class="hljs-string">"three"</span>{%<span class="hljs-attr">-</span> <span class="hljs-attr">endif</span> <span class="hljs-attr">-</span>%} {%<span class="hljs-attr">-</span> <span class="hljs-attr">if</span> <span class="hljs-attr">open</span> <span class="hljs-attr">-</span>%}<span class="hljs-attr">open</span>{%<span class="hljs-attr">-</span> <span class="hljs-attr">endif</span> <span class="hljs-attr">-</span>%}&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">summary</span> <span class="hljs-attr">markdown</span>=<span class="hljs-string">"block"</span>&gt;</span>
   {{title}}
 <span class="hljs-tag">&lt;/<span class="hljs-name">summary</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">markdown</span>=<span class="hljs-string">"block"</span>&gt;</span>

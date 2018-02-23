@@ -22,6 +22,10 @@
       return new RegExp('(^| )' + className + '( |$)', 'gi').test(el.className);
   };
 
+  var isVisible = function(el) {
+    return (el.offsetWidth > 0 && el.offsetHeight > 0);
+  };
+
   var spc = document.createTextNode(' ');
 
   var headings = document.querySelectorAll('article h2[id], article h3[id], article h4[id]');
@@ -306,6 +310,26 @@
     });
 
     setExColAllButtons();
+  }
+
+  var fragment = window.location.hash;
+
+  if (fragment.length) {
+    var target = document.querySelector(fragment);
+    if (target.nodeName.toLowerCase() == 'details') {
+      target.setAttribute('open', 'true');
+      target = target.parentNode;
+    }
+    while (!isVisible(target)) {
+      if (target.nodeName.toLowerCase() == 'details') {
+        target.setAttribute('open', 'true');
+      }
+      target = target.parentNode;
+    }
+    if (target.nodeName.toLowerCase() == 'details') {
+      target.setAttribute('open', 'true');
+      target = target.parentNode;
+    }
   }
 
 }());

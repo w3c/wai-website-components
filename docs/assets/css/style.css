@@ -1365,10 +1365,6 @@ summary {
   margin-left: -2rem;
 }
 
-summary > * {
-  /*display: inline;*/
-}
-
 summary::-webkit-details-marker {
   display: none;
 }

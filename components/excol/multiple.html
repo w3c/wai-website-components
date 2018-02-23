@@ -1,20 +1,27 @@
 <div class="excol-all"></div>
 
-<details{%- if id -%} id="{{id}}"{%- endif -%} {%- if open -%}open{%- endif -%}><summary markdown="block">
+<details{%- if id %} id="one"{%- endif -%} {%- if open -%}open{%- endif -%}><summary markdown="block">
   {{title}}
 </summary>
 <div markdown="block">
   {{content}}
 </div>
 </details>
-<details{%- if id -%} id="{{id}}"{%- endif -%} {%- if open -%}open{%- endif -%}><summary markdown="block">
+<details{%- if id %} id="two"{%- endif -%} {%- if open -%}open{%- endif -%}><summary markdown="block">
   {{title}}
 </summary>
 <div markdown="block">
   {{content}}
+  <details{%- if id %} id="four"{%- endif -%} {%- if open -%}open{%- endif -%}><summary markdown="block">
+    {{title}}
+  </summary>
+  <div markdown="block">
+    {{content}} <span id="five">Test nested id!</span>
+  </div>
+  </details>
 </div>
 </details>
-<details{%- if id -%} id="{{id}}"{%- endif -%} {%- if open -%}open{%- endif -%}><summary markdown="block">
+<details{%- if id %} id="three"{%- endif -%} {%- if open -%}open{%- endif -%}><summary markdown="block">
   {{title}}
 </summary>
 <div markdown="block">
