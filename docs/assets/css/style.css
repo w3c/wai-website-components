@@ -792,6 +792,10 @@ button.button-noborder:focus,
     border-color: #fff
 }
 
+button.button-small, .button.button-small {
+    padding: 2px 4px
+}
+
 .stealthy-link:hover,
 .stealthy-link:focus {
 }
@@ -815,7 +819,8 @@ button:focus,
 }
 
 button:disabled, .button:disabled {
-    opacity: .75
+    opacity: .75;
+    text-decoration: line-through
 }
 
 .button-secondary {
@@ -1401,6 +1406,10 @@ details > div::after {
   content: "";
   display: block;
   clear: both;
+}
+
+.excol-all {
+  margin: 16px 0;
 }
 
 .page-footer, .site-footer {

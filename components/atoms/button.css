@@ -28,6 +28,9 @@ button, .button {
       border-color: #fff;
     }
   }
+  &.button-small {
+    padding: 2px 4px;
+  }
 }
 
 .stealthy-link:--hovcus {
@@ -45,6 +48,7 @@ button, .button {
   }
   &:disabled {
     opacity: .75;
+    text-decoration: line-through;
   }
 }
 

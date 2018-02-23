@@ -45,3 +45,7 @@ details > div::after {
   display: block;
   clear: both;
 }
+
+.excol-all {
+  margin: 16px 0;
+}

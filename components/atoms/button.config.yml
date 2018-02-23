@@ -11,6 +11,14 @@ variants:
   context:
     label: Secondary button
     mods: ['secondary']
+- name: small
+  context:
+    label: Small
+    mods: ['small']
+- name: small secondary
+  context:
+    label: Small Secondary
+    mods: ['small', 'secondary']
 - name: link
   context:
     label: Link Button
