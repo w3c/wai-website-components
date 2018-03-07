@@ -674,44 +674,6 @@ figure { margin: 0 0 1em; }
 
 figcaption { font-weight: bold; border-bottom: 1px solid #ddd; margin-bottom: .5em;}
 
-.archived {
-}
-
-.archived h1 {
-}
-
-.archived h1::before {
-    content: "Archived";
-    background-color: #eed009;
-    color: #091832;
-    display: inline-block;
-    padding: 4px 8px;
-    margin-top: -8px;
-    margin-right: 8px;
-    font-size: 14px;
-    font-size: .875rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-weight: bold;
-    vertical-align: middle;
-    border-radius: 3px
-}
-
-.archived-info-box {
-  border: 2px solid #eed009;
-  padding: 8px;
-  background-color: #ffffff;
-  margin-bottom: 20px
-}
-
-.archived-info-box p:first-child {
-    margin-top: 0
-}
-
-.archived-info-box p:last-child {
-    margin-bottom: 0
-}
-
 blockquote {
   font-style: italic;
   margin-bottom: 1em
@@ -1352,6 +1314,57 @@ th > :last-child, td > :last-child {
     margin-left: -8px;
     margin-left: -.5rem;
     z-index: 500
+}
+
+.doc-archived {
+}
+
+.doc-archived h1::before {
+    content: "Archived"
+}
+
+.doc-draft {
+}
+
+.doc-draft h1::before {
+    content: "Draft"
+}
+
+.doc-note {
+}
+
+.doc-note h1 {
+}
+
+.doc-note h1::before {
+    background-color: #eed009;
+    color: #091832;
+    display: inline-block;
+    padding: 4px 8px;
+    margin-top: -8px;
+    margin-right: 8px;
+    font-size: 14px;
+    font-size: .875rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    vertical-align: middle;
+    border-radius: 3px
+}
+
+.doc-note-box {
+  border: 2px solid #eed009;
+  padding: 8px;
+  background-color: #ffffff;
+  margin-bottom: 20px
+}
+
+.doc-note-box p:first-child {
+    margin-top: 0
+}
+
+.doc-note-box p:last-child {
+    margin-bottom: 0
 }
 
 details {

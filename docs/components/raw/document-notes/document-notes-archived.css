@@ -1,0 +1,5 @@
+.doc-archived {
+  & h1::before {
+    content: "Archived";
+  }
+}
