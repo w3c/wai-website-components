@@ -1,0 +1,11 @@
+status: wip
+default: archived
+variants:
+- name: archived
+  context:
+    type: archived
+    content: "<p>This is archived.</p><ul><li>Can</li><li>have</li><li>arbitrary HTML</li><li>still looks OK.</li></ul>"
+- name: draft
+  context:
+    type: draft
+    content: "<p>This is archived.</p><ul><li>Can</li><li>have</li><li>arbitrary HTML</li><li>still looks OK.</li></ul>"

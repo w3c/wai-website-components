@@ -1,7 +1,6 @@
-.archived {
+.doc-note {
   & h1 {
     &::before{
-      content: "Archived";
       background-color: var(--gold);
       color: var(--dk-blue);
       display: inline-block;
@@ -18,7 +17,7 @@
   }
 }
 
-.archived-info-box {
+.doc-note-box {
   border: 2px solid var(--gold);
   padding: 8px;
   background-color: var(--pure-white);
