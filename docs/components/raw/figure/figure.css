@@ -16,6 +16,8 @@ figure.shrink-wrap {
   }
   & img {
     border: 1px solid var(--line-grey);
+    width: auto;
+    height: auto;
   }
   & figcaption {
     font-weight: normal;
