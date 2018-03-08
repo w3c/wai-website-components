@@ -1,0 +1,25 @@
+figure.shrink-wrap {
+  box-sizing: border-box;
+  background-color: var(--pure-white);
+  width: min-content;
+  max-width: 100%;
+  border: 1px solid var(--line-grey);
+  border-radius: 3px;
+  padding: 10px;
+  & .figcontent {
+    @media (--medlarge) {
+      display: flex;
+      & > * {
+        flex: 1;
+      }
+    }
+  }
+  & img {
+    border: 1px solid var(--line-grey);
+  }
+  & figcaption {
+    font-weight: normal;
+    border: none;
+    margin: 0;
+  }
+}

@@ -1424,6 +1424,46 @@ details > div::after {
   margin: 16px 0;
 }
 
+figure.shrink-wrap {
+  box-sizing: border-box;
+  background-color: #ffffff;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  max-width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  padding: 10px
+}
+
+figure.shrink-wrap .figcontent {
+}
+
+@media (min-width: 47.5em) {
+
+    figure.shrink-wrap .figcontent {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex
+    }
+
+    figure.shrink-wrap .figcontent > * {
+        -webkit-box-flex: 1;
+            -ms-flex: 1;
+                flex: 1
+    }
+}
+
+figure.shrink-wrap img {
+    border: 1px solid #ddd
+}
+
+figure.shrink-wrap figcaption {
+    font-weight: normal;
+    border: none;
+    margin: 0
+}
+
 .page-footer, .site-footer {
   font-size: 12px;
   font-size: .75rem;

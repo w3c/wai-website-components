@@ -1,5 +1,10 @@
 @custom-selector :--hovcus :hover, :focus;
 
+@custom-media --small  (width >= 23em);
+@custom-media --medium (width >= 35em);
+@custom-media --medlarge (width >= 47.5em);
+@custom-media --large  (width >= 60em);
+
 .visuallyhidden, .no-display {
     border: 0;
     clip: rect(0 0 0 0);
@@ -134,11 +139,6 @@ a {
     padding:0;
   }
 }
-
-@custom-media --small  (width >= 23em);
-@custom-media --medium (width >= 35em);
-@custom-media --medlarge (width >= 47.5em);
-@custom-media --large  (width >= 60em);
 
 :root {
   --def-grid-noflex: {
