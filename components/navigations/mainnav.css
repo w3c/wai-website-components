@@ -7,9 +7,6 @@
   @media (--medium) {
     display: block;
   }
-  @media (--large) {
-    font-size: 1rem;
-  }
   & > ul {
     width: 100%;
     max-width: 1268px;
