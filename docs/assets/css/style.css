@@ -1564,8 +1564,8 @@ figure.shrink-wrap figcaption {
 }
 
 .logos .claim {
-    font-size: 16px;
-    font-size: 1rem;
+    font-size: 14px;
+    font-size: .875rem;
     font-style: italic;
     margin-left: 16px;
     padding-left: 16px;
@@ -1580,7 +1580,12 @@ figure.shrink-wrap figcaption {
 @media (min-width: 35em) {
 
     .logos .claim {
-        display: block
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center
     }
 }
 
@@ -1628,7 +1633,13 @@ figure.shrink-wrap figcaption {
     font-size: 20px
 }
 
+.home .wai .wa {
+    padding-bottom: 2px
+}
+
 .home .wai .i {
+    border-top: 1px solid #eed009;
+    padding-top: 2px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2057,13 +2068,6 @@ p+ul, p+ol {
     }
   }
 
-@media  (min-width: 60em) {
-
-    .mainnav {
-        font-size: 1rem
-    }
-  }
-
 .mainnav > ul {
     width: 100%;
     max-width: 1268px;
@@ -2404,7 +2408,8 @@ p+ul, p+ol {
 }
 
 .metanav form[role=search] {
-    background-color: rgba(6, 30, 54, .44)
+    background-color: rgba(6, 30, 54, .44);
+    border: 1px solid #ffffff
 }
 
 .metanav form[role=search] > div {
@@ -2435,7 +2440,6 @@ p+ul, p+ol {
 }
 
 .metanav form[role=search] input:focus {
-    width: 15em;
     color: #ffffff
 }
 
