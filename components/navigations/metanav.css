@@ -52,6 +52,7 @@
   }
   & form[role=search] {
     background-color: rgba(6, 30, 54, 0.44);
+    border: 1px solid var(--pure-white);
     & > div {
       display:flex;
     }
@@ -73,7 +74,6 @@
       font-size: 0.8rem;
       transition: width .5s linear;
       &:focus {
-        width: 15em;
         color: var(--pure-white);
       }
       &::-webkit-search-cancel-button,
