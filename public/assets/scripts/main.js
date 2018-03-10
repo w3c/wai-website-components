@@ -141,7 +141,10 @@
       }
     });
 
+    var timer;
+
     document.querySelector('.mainnav').addEventListener("mouseover", function(event){
+      clearTimeout(timer);
       var cureel = event.target,
           isopen = false;
       while (cureel.nodeName.toLowerCase() != 'LI'.toLowerCase()) {
@@ -156,9 +159,11 @@
     });
 
     document.querySelector('.mainnav').addEventListener("mouseleave", function(event){
+      timer = setTimeout(function(event){
         Array.prototype.forEach.call(document.querySelectorAll('li.active'), function(el, i){
           remclass(el, 'active');
         });
+      }, 350);
     });
 
   }

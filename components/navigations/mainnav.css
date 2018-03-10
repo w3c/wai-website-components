@@ -12,6 +12,7 @@
     max-width: 1268px;
     padding: 0;
     margin: 0 auto !important;
+    position: relative;
     @media (--medium) {
       display: flex;
       align-items: flex-end;
@@ -26,9 +27,9 @@
     }
     & > li {
       display:block;
+      border-radius: 0 0 3px 3px;
       &.active {
         background: var(--dk-blue);
-        border-radius: 3px 3px 0 0;
         & > a > span {
           border-bottom: 2px solid var(--gold) !important;
         }
@@ -71,6 +72,10 @@
     background-color: var(--dk-blue);
     @media (--medium) {
       @supports (display: grid) {
+        position: absolute;
+        left:0;
+        right:0;
+        top:100%;
         grid-row-start: 2;
         grid-column-start: 1;
         grid-column-end: 9;

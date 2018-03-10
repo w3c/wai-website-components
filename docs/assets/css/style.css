@@ -2072,7 +2072,8 @@ p+ul, p+ol {
     width: 100%;
     max-width: 1268px;
     padding: 0;
-    margin: 0 auto !important
+    margin: 0 auto !important;
+    position: relative
 }
 
 @media (min-width: 35em) {
@@ -2106,12 +2107,12 @@ p+ul, p+ol {
 }
 
 .mainnav > ul > li {
-    display: block
+    display: block;
+    border-radius: 0 0 3px 3px
 }
 
 .mainnav > ul > li.active {
-    background: #091832;
-    border-radius: 3px 3px 0 0
+    background: #091832
 }
 
 .mainnav > ul > li.active > a > span {
@@ -2187,6 +2188,10 @@ p+ul, p+ol {
     @supports (display: grid) {
 
         .mainnav .subnav {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 100%;
             grid-row-start: 2;
             grid-column-start: 1;
             grid-column-end: 9;
