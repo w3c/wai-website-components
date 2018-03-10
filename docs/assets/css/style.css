@@ -2192,6 +2192,7 @@ p+ul, p+ol {
             left: 0;
             right: 0;
             top: 100%;
+            z-index: 2000;
             grid-row-start: 2;
             grid-column-start: 1;
             grid-column-end: 9;
