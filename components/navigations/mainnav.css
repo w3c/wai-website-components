@@ -96,16 +96,20 @@
       }
     }
   }
-  @media (--medium) {
-    & li.active + .subnav {
-      display:flex;
+  & li.active + .subnav {
+    display:block;
+    @media (--medium) {
+      display: flex;
       align-content: stretch;
     }
   }
 }
 .subnavcontent {
   margin: 0;
-  padding: 15px;
+  padding: 0 15px;
+  @media (--medium) {
+    padding: 15px;
+  }
   &, & li {
     list-style: none;
   }
@@ -119,7 +123,9 @@
   & > li {
     /*margin-bottom: 16px;*/
     &:last-child {
-      margin-bottom: 0;
+      @media (--medium) {
+        margin-bottom: 0;
+      }
     }
   }
   & > li > a {

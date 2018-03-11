@@ -2279,10 +2279,11 @@ p+ul, p+ol {
     }
 }
 
-@media (min-width: 35em) {
-
-    .mainnav {
+.mainnav li.active + .subnav {
+    display: block
 }
+
+@media (min-width: 35em) {
 
     .mainnav li.active + .subnav {
         display: -webkit-box;
@@ -2291,12 +2292,19 @@ p+ul, p+ol {
         -ms-flex-line-pack: stretch;
             align-content: stretch
     }
-  }
+}
 
 .subnavcontent {
   margin: 0;
-  padding: 15px
+  padding: 0 15px
 }
+
+@media (min-width: 35em) {
+
+    .subnavcontent {
+        padding: 15px
+    }
+  }
 
 .subnavcontent, .subnavcontent li {
     list-style: none
@@ -2317,7 +2325,13 @@ p+ul, p+ol {
 }
 
 .subnavcontent > li:last-child {
-    margin-bottom: 0
+}
+
+@media (min-width: 35em) {
+
+    .subnavcontent > li:last-child {
+        margin-bottom: 0
+    }
 }
 
 .subnavcontent > li > a {
