@@ -1,0 +1,15 @@
+input, select, textarea {
+  font-size: 1em;
+  font-family: inherit;
+}
+
+input[type="search"] {
+  -webkit-appearance: none;
+}
+
+input[type="text"], input[type="search"] {
+  border: 1px solid var(--grey);
+  &:--hovcus {
+    border: 1px solid var(--w3c-blue);
+  }
+}
