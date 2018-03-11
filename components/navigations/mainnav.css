@@ -96,9 +96,11 @@
       }
     }
   }
-  & li.active + .subnav {
-    display:flex;
-    align-content: stretch;
+  @media (--medium) {
+    & li.active + .subnav {
+      display:flex;
+      align-content: stretch;
+    }
   }
 }
 .subnavcontent {
