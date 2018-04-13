@@ -96,7 +96,7 @@ body {
   font-family: "Noto Sans", "Trebuchet MS", "Helvetica Neue", Arial, sans-serif;
   line-height: 1.5;
   font-size: 1rem;
-  text-decoration-skip-ink: auto;
+  text-decoration-skip-ink: none;
   background-color: var(--body-bg);
   color:  var(--off-black);
   padding: 0;
