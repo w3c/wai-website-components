@@ -100,7 +100,7 @@ body {
   line-height: 1.5;
   font-size: 16px;
   font-size: 1rem;
-  text-decoration-skip-ink: auto;
+  text-decoration-skip-ink: none;
   background-color: #FAFAFC;
   color: #1d1d1d;
   padding: 0;
@@ -3047,40 +3047,36 @@ p+ul, p+ol {
 }
 
 .making-web-accessible {
-  text-align:center
+  text-align:center;
+  border-bottom: 1px solid #ddd
 }
 
 .making-web-accessible .making-web-accessible-box {
-    border: 2px solid #ddd;
-    background-color: #ffffff;
-    padding: 40px;
-    margin-bottom: 20px
+    text-align: left;
+    padding: 32px 20px 0 105px
 }
 
 .making-web-accessible .mwa-icon {
-    width: 85px;
-    height: 85px
+    width: 65px;
+    height: 65px;
+    float: left;
+    margin-left: -85px
 }
 
-.making-web-accessible h2 {
-    border: none;
+.making-web-accessible .title {
+    display: block;
     font-size: 36px;
-    font-size: 2.25rem;
-    font-weight: normal;
+    font-size: 2.25rem
+}
+
+.making-web-accessible .teaser-h h2 {
     margin: 0
 }
 
-.making-web-accessible h2 + p {
-    font-size: 20px;
-    font-size: 1.25rem;
-    margin-bottom: 32px
-}
-
 .making-web-accessible h3 {
-    margin-top: 10px
-}
-
-.making-web-accessible h3 + p {
+    margin-top: 10px;
+    font-size: 24px;
+    font-size: 1.5rem;
     margin-bottom: 0
 }
 
