@@ -1,16 +1,15 @@
 .metanav {
-  text-transform: uppercase;
-  font-size: .75rem;
   text-align: right;
   width: 100%;
   display: none;
+  font-size: .85em;
   &.open {display: block;}
   @media (--medium) {
     display: block;
   }
   & a {
     text-decoration: none;
-    font-weight: bold;
+    border-bottom: 1px solid transparent;
     &:--hovcus, &[aria-current="page"] {
       border-bottom: 1px solid var(--pure-white);
     }
@@ -27,8 +26,7 @@
     }
     & li {
       display: inline-block;
-      border-left: 1px solid var(--trans-line-grey);
-      padding: 8px 16px;
+      border-left: 1px solid #235A97;
       @media (--medium) {
         display: flex;
         align-items: center;
@@ -42,6 +40,7 @@
         border: 0;
       }
       & a {
+        padding: 8px 16px;
         @media (--medium) {
           display: block;
           width: 100%;
@@ -51,7 +50,7 @@
     }
   }
   & form[role=search] {
-    background-color: rgba(6, 30, 54, 0.44);
+    background-color: var(--dk-blue);
     border: 1px solid var(--pure-white);
     & > div {
       display:flex;
@@ -70,8 +69,7 @@
       height: 100%;
       padding: 8px;
       margin: 0;
-      width: 10em;
-      font-size: 0.8rem;
+      width: 12em;
       transition: width .5s linear;
       &:focus {
         color: var(--pure-white);
