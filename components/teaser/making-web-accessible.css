@@ -1,29 +1,26 @@
 .making-web-accessible {
   text-align:center;
+  border-bottom: 1px solid var(--line-grey);
   & .making-web-accessible-box {
-    border: 2px solid var(--line-grey);
-    background-color: var(--pure-white);
-    padding: 40px;
-    margin-bottom: 20px;
+    text-align: left;
+    padding: 32px 20px 0 105px;
   }
   & .mwa-icon {
-    width:  85px;
-    height: 85px;
+    width:  65px;
+    height: 65px;
+    float:left;
+    margin-left: -85px;
   }
-  & h2 {
-    border:none;
+  & .title {
+    display: block;
     font-size: 2.25rem;
-    font-weight: normal;
-    margin:0;
   }
-  & h2 + p {
-    font-size: 1.25rem;
-    margin-bottom: 32px;
+  & .teaser-h h2 {
+    margin:0;
   }
   & h3 {
     margin-top: 10px;
-  }
-  & h3 + p {
-    margin-bottom: 0;
+    font-size: 1.5rem;
+    margin-bottom:0;
   }
 }
