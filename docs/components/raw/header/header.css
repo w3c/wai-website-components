@@ -1,6 +1,7 @@
 #site-header {
   background-color: var(--w3c-blue);
   color: #fff;
+  padding-bottom: 10px;
   @supports (display: grid) {
     padding-left: 8px;
     padding-right: 8px;
@@ -22,7 +23,7 @@
 .logos {
   padding: 16px 0;
   grid-column-start: 2;
-  grid-column-end: 7;
+  grid-column-end: 6;
   grid-row-start: 1;
   display: flex;
   & .claim {
@@ -30,7 +31,7 @@
     font-style: italic;
     margin-left: 16px;
     padding-left: 16px;
-    border-left: 1px solid var(--trans-line-grey);
+    border-left: 1px solid #235A97;
     color: var(--line-grey);
     flex:1;
     display: none;
