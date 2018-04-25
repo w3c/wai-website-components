@@ -615,7 +615,7 @@ a.stealthy-link:visited {
 .leftcol {
 }
 
-.leftcol article {
+.leftcol main {
     grid-area: content
 }
 
@@ -658,7 +658,7 @@ a.stealthy-link:visited {
     height: 100%
 }
 
-#main {
+.contentarea {
   position: relative;
 }
 
@@ -668,7 +668,7 @@ img.symbol {
   margin-bottom: 1em;
 }
 
-#main img { max-width: 100%; }
+.contentarea img { max-width: 100%; }
 
 figure { margin: 0 0 1em; }
 
@@ -2191,8 +2191,7 @@ p+ul, p+ol {
             align-items: center;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
-            justify-content: center;
-    border-bottom: 1px solid #235A97
+            justify-content: center
 }
 
 .mainnav > ul > li > a > span {
