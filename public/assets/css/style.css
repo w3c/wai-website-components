@@ -2897,7 +2897,19 @@ p+ul, p+ol {
 .sidenav {
   grid-area: navigation;
   margin-bottom: 24px;
+  display: none
 }
+
+.sidenav.open {
+    display: block
+}
+
+@media  (min-width: 60em) {
+
+    .sidenav {
+        display: block
+    }
+  }
 
 .sidenav--head {
   /*background-color: var(--off-white);*/

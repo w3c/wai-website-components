@@ -1,6 +1,11 @@
 .sidenav {
   grid-area: navigation;
   margin-bottom: 24px;
+  display: none;
+  &.open { display: block; }
+  @media (--large) {
+    display: block;
+  }
 }
 
 .sidenav--head {
