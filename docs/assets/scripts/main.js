@@ -148,7 +148,7 @@
 
   var metanav  = document.querySelector('.metanav'   );
   var mainnav  = document.querySelector('.mainnav'   );
-  var mainnav  = document.querySelector('.sidenav'   );
+  var sidenav  = document.querySelector('.sidenav'   );
   var breadnav = document.querySelector('.breadcrumb');
   var navbtn   = document.querySelector('#openmenu'  );
 
@@ -159,14 +159,14 @@
         remclass(metanav, 'open');
         remclass(mainnav, 'open');
         remclass(sidenav, 'open');
-        breadnav.show();
+        breadnav.style.display='block';
         e.target.setAttribute('aria-expanded', 'false');
       } else {
         addclass(e.target, 'open');
         addclass(metanav, 'open');
         addclass(mainnav, 'open');
         addclass(sidenav, 'open');
-        breadnav.hide();
+        breadnav.style.display='none';
         e.target.setAttribute('aria-expanded', 'true');
       }
     });
