@@ -49,9 +49,14 @@
           display: block;
           border-bottom: 2px solid transparent;/* var(--trans-line-grey);*/
         }
-        &:--hovcus, &[aria-current="page"] {
+        &:--hovcus, &[aria-current="page"], &[aria-current="location"] {
           & > span {
             border-bottom: 2px solid var(--gold);
+          }
+        }
+        &[aria-current="page"], &[aria-current="location"] {
+          &:--hovcus > span {
+            border-bottom: 2px solid var(--pure-white);
           }
         }
       }
