@@ -2,7 +2,10 @@
   grid-area: navigation;
   margin-bottom: 24px;
   display: none;
-  &.open { display: block; }
+  &.open {
+    display: block;
+    margin-top: 16px;
+  }
   @media (--large) {
     display: block;
   }
