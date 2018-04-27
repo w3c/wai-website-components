@@ -23,4 +23,7 @@
     font-size: 1.5rem;
     margin-bottom:0;
   }
+  & p {
+    margin-bottom:0;
+  }
 }
