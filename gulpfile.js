@@ -14,14 +14,14 @@ const processors = [
     glob: true,
   }),
   cssnext({features: { autoprefixer: false }}),
-  autoprefixer({grid:false}),
-  cssnano
+  autoprefixer({grid:false})
 ];
 
 gulp.task('css', function () {
     return gulp.src(csssource)
         .pipe(sourcemaps.init())
         .pipe(postcss(processors))
+        .pipe(cssnano())
         .pipe(sourcemaps.write('./'))
         .pipe(gulp.dest('./public/assets/css/'));
 });
