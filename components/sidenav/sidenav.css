@@ -12,12 +12,12 @@
 }
 
 .sidenav--head {
-  /*background-color: var(--off-white);*/
   background-color: var(--w3c-blue);
+  border: 2px solid var(--w3c-blue);
+  border-width: 0 5px;
   padding: 16px 24px;
   display:flex;
   align-items: flex-end;
-  border: 2px solid var(--w3c-blue);
   border-bottom: none;
   font-weight: bold;
 }
@@ -48,25 +48,28 @@
 }
 
 .sidenav--list {
-  border: 2px solid var(--w3c-blue);
-  border-width: 0 1px 1px;
   background-color: var(--w3c-blue);
+  border: 2px solid var(--w3c-blue);
+  border-width: 0 0 0 5px;
   margin: 0;
   padding:0;
   font-size: .8125rem;
   & a {
-    display: block;
-    padding: 16px 24px;
+    display: flex;
+    box-sizing: border-box;
+    padding: 8px 24px;
+    min-height: 44px;
     color: var(--pure-white);
     text-decoration: none;
+    align-items: center;
     &:--hovcus {
       text-decoration: underline;
-      background-color: var(--pure-white);
+      background-color: var(--off-white);
       color: var(--wai-green);
     }
   }
-  &>li>a {
-    border-top: 1px solid var(--pure-white);
+  & li a {
+    border-top: 1px solid var(--w3c-classic);
   }
   .sidenav-head + & {
     border-top: none;
@@ -83,10 +86,8 @@
     padding: 0;
     list-style: none;
   }
-  & ul li a {
-    border-bottom: none;
-    padding: 4px 4px 4px 16px;
-    border-radius: 2px 0 0 2px;
+  & ul li:first-child a {
+    border-top-color:transparent;
   }
   & a[aria-current] {
     /*color: var(--w3c-blue);
@@ -98,8 +99,25 @@
   }
   & a[aria-current=page] {
     font-weight: bold;
-    margin-right: -1px;
-    color: var(--w3c-blue);
+    color: var(--wai-green);
     background-color: var(--body-bg);
+    position:relative;
+    &:before, &:after {
+      position: absolute;
+      content: "";
+      width: 0;
+      height: 0;
+      right: 0;
+      border: 1px solid #fff;
+      opacity: .9;
+    }
+    &:before {
+      top:-2px;
+      border-color: transparent #fff #fff transparent;
+    }
+    &:after {
+      bottom:-2px;
+      border-color: #fff #fff transparent transparent;
+    }
   }
 }
