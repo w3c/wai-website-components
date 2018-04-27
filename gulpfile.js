@@ -21,7 +21,7 @@ gulp.task('css', function () {
     return gulp.src(csssource)
         .pipe(sourcemaps.init())
         .pipe(postcss(processors))
-        .pipe(cssnano())
+        .pipe(cssnano({safe: true}))
         .pipe(sourcemaps.write('./'))
         .pipe(gulp.dest('./public/assets/css/'));
 });
