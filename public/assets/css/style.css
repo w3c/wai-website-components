@@ -1943,10 +1943,6 @@ dd+dt {
   margin-top: 8px;
 }
 
-ul ::marker {
-  color: #c0272d;
-}
-
 ul li, ol li {
   margin-bottom: 8px;
 }
