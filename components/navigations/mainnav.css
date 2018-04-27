@@ -46,7 +46,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        border-bottom: var(--w3c-classics);
+        border-bottom: var(--w3c-classic);
         & > span {
           display: block;
           border-bottom: 2px solid transparent;
