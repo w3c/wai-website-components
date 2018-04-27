@@ -17,7 +17,7 @@
       display: inline-block;
       list-style: none;
       margin: 0 0 0 8px;
-      padding: 0;
+      padding: 0 0 0 8px;
       border-left: 1px solid var(--w3c-blue);
       &:first-child {
         border-left: 0;
@@ -27,14 +27,10 @@
   & a {
     color: var(--w3c-blue);
     text-decoration: none;
-    padding: 2px 0 2px 8px;
+    padding: 2px 0;
     &:--hovcus {
       border-bottom: none;
       text-decoration: underline;
-    }
-    & svg {
-      width: .8em;
-      height: .8em;
     }
   }
 }
