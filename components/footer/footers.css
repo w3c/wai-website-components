@@ -1,5 +1,5 @@
 .page-footer, .site-footer {
-  font-size: .75rem;
+  font-size: .875rem;
   padding-top: 16px;
   padding-bottom: 16px;
   & p:first-of-type {
@@ -13,9 +13,13 @@
 .page-footer {
   margin-top: 32px;
   background-color: var(--footer-grey);
+  & .inner {
+    grid-area: content;
+  }
 }
 
 .site-footer {
+  margin-top: 32px;
   padding-top: 16px;
   padding-bottom: 16px;
   background-color: var(--dk-grey);
@@ -36,6 +40,14 @@
     border-bottom: 1px solid var(--trans-line-grey);
     padding: 4px 0;
   }
+  & .about {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+.page-footer + .site-footer {
+  margin-top: 0;
 }
 
 .site-footer ul {
@@ -45,5 +57,4 @@
 
 .site-footer ul li {
   list-style:none;
-  padding: 4px 0;
 }

@@ -1466,8 +1466,8 @@ figure.shrink-wrap figcaption {
 }
 
 .page-footer, .site-footer {
-  font-size: 12px;
-  font-size: .75rem;
+  font-size: 14px;
+  font-size: .875rem;
   padding-top: 16px;
   padding-bottom: 16px
 }
@@ -1482,10 +1482,15 @@ figure.shrink-wrap figcaption {
 
 .page-footer {
   margin-top: 32px;
-  background-color: #efefef;
+  background-color: #efefef
+}
+
+.page-footer .inner {
+    grid-area: content
 }
 
 .site-footer {
+  margin-top: 32px;
   padding-top: 16px;
   padding-bottom: 16px;
   background-color: #3b3b3b;
@@ -1513,6 +1518,23 @@ figure.shrink-wrap figcaption {
     padding: 4px 0
 }
 
+.site-footer .about {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between
+}
+
+.page-footer + .site-footer {
+  margin-top: 0;
+}
+
 .site-footer ul {
   margin: 0;
   padding: 0;
@@ -1520,7 +1542,6 @@ figure.shrink-wrap figcaption {
 
 .site-footer ul li {
   list-style:none;
-  padding: 4px 0;
 }
 
 input, select, textarea {
