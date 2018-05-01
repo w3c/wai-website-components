@@ -235,6 +235,7 @@
 
     if (fragment.length) {
       var target = document.querySelector(fragment);
+      var initialTarget = target;
 
       // if the first element is a details element, open it. Set target to its parent node so we…
       if (target.nodeName.toLowerCase() == 'details') {
@@ -256,8 +257,8 @@
         target.setAttribute('open', 'true');
       }
 
-      target.setAttribute('tabindex', '-1');
-      target.focus();
+      initialTarget.setAttribute('tabindex', '-1');
+      initialTarget.focus();
     }
   }
 
