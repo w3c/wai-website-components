@@ -255,6 +255,9 @@
       if (target.nodeName.toLowerCase() == 'details') {
         target.setAttribute('open', 'true');
       }
+
+      target.setAttribute('tabindex', '-1');
+      target.focus();
     }
   }
 
