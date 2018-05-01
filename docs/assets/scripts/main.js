@@ -230,30 +230,36 @@
     setExColAllButtons();
   }
 
-  var fragment = window.location.hash;
+  function openHiddenNodes() {
+    var fragment = window.location.hash;
 
-  if (fragment.length) {
-    var target = document.querySelector(fragment);
+    if (fragment.length) {
+      var target = document.querySelector(fragment);
 
-    // if the first element is a details element, open it. Set target to its parent node so we…
-    if (target.nodeName.toLowerCase() == 'details') {
-      target.setAttribute('open', 'true');
-      target = target.parentNode;
-    }
+      // if the first element is a details element, open it. Set target to its parent node so we…
+      if (target.nodeName.toLowerCase() == 'details') {
+        target.setAttribute('open', 'true');
+        target = target.parentNode;
+      }
 
-    // can see if that parent node is visible. If it is _not_, but is a details element, we open that details element.
-    // Then we move on to its parent until we arrive at a visible element
-    while (!isVisible(target)) {
+      // can see if that parent node is visible. If it is _not_, but is a details element, we open that details element.
+      // Then we move on to its parent until we arrive at a visible element
+      while (!isVisible(target)) {
+        if (target.nodeName.toLowerCase() == 'details') {
+          target.setAttribute('open', 'true');
+        }
+        target = target.parentNode;
+      }
+
+      // That last visible element might be a details element, so we need to make sure to open it as well.
       if (target.nodeName.toLowerCase() == 'details') {
         target.setAttribute('open', 'true');
       }
-      target = target.parentNode;
-    }
-
-    // That last visible element might be a details element, so we need to make sure to open it as well.
-    if (target.nodeName.toLowerCase() == 'details') {
-      target.setAttribute('open', 'true');
     }
   }
+
+  window.addEventListener("hashchange", openHiddenNodes);
+
+  openHiddenNodes();
 
 }());
