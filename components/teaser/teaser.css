@@ -96,7 +96,11 @@
 
 .teaser-media {
   align-items: center;
-  background-color: #fff;
+  background-color: var(--pure-white);
+}
+
+.teaser-sponsors {
+  border-top: 1px solid var(--line-grey);
 }
 
 .area-teaser {
