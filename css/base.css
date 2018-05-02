@@ -412,6 +412,11 @@ a {
 .leftcol {
   & main {
     grid-area: content;
+    flex: 1;
+    margin-left: 32px;
+    @supports (display: grid) {
+      margin-left: 0;
+    }
   }
 }
 
