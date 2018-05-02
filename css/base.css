@@ -151,7 +151,6 @@ a {
   }
   --def-grid: {
     display: flex;
-    flex-wrap: wrap;
     padding-left: 32px;
     padding-right: 32px;
     @apply --def-grid-noflex;
@@ -247,15 +246,6 @@ a {
   & .col3, & .from-col3 { grid-column-start: 3; }
   & .col3, & .to-col3   { grid-column-end:   4; }
 
-  /* IE fixes: */
-  & .col1, & .col2, & .col3, &.from-col1, & .from-col2, & .from-col3 {flex-basis: 25%; flex-grow: 1;}
-  & .col2, & .col3, & .from-col2, & .from-col3 {margin-left: 32px;}
-  @supports (display: grid) {
-    & .col2, & .col3, & .from-col2, & .from-col3{margin-left: 0;}
-  }
-  &.from-col1.to-col3 {
-    width: 100%;
-  }
 }
 
 .grid-4 {
@@ -275,15 +265,6 @@ a {
   & .col4, & .from-col4 { grid-column-start: 4; }
   & .col4, & .to-col4   { grid-column-end:   5; }
 
-  /* IE fixes: */
-  & .col1, & .col2, & .col3, & .col4, &.from-col1, & .from-col2, & .from-col3, & .from-col4 {flex-basis: 25%; flex-grow: 1;}
-  & .col2, & .col3, & .col4, & .from-col2, & .from-col3, & .from-col4 {margin-left: 32px;}
-  @supports (display: grid) {
-    & .col2, & .col3, & .col4, & .from-col2, & .from-col3, & .from-col4 {margin-left: 0;}
-  }
-  &.from-col1.to-col4 {
-    width: 100%;
-  }
 }
 
 .grid-6 {
