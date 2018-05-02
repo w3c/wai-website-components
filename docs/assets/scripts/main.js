@@ -258,6 +258,7 @@
       }
 
       initialTarget.setAttribute('tabindex', '-1');
+      initialTarget.scrollIntoView(true);
       initialTarget.focus();
     }
   }
