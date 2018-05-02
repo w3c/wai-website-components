@@ -5,6 +5,7 @@
   padding-left: 8px;
   padding-right: 8px;
   & > ul {
+    width: 100%;
     margin: 0;
     padding: 4px;
     grid-area: content;

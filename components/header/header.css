@@ -21,11 +21,15 @@
 }
 
 .logos {
-  padding: 16px 0;
   grid-column-start: 2;
   grid-column-end: 6;
   grid-row-start: 1;
+  padding: 16px 0;
   display: flex;
+  width: 60%;
+  @supports (display: grid) {
+    width: auto;
+  }
   & .claim {
     font-size: .875rem;
     font-style: italic;
@@ -33,7 +37,7 @@
     padding-left: 16px;
     border-left: 1px solid var(--pure-white);
     color: var(--pure-white);
-    flex:1;
+    flex:1 0 0;
     display: none;
     @media (--medium) {
       display: flex;
@@ -48,8 +52,10 @@
   transition: color .5s ease-in .1s;
   display: flex;
   align-items: center;
-  flex:0;
   @supports (display: grid) {
+    flex:0;
+  }
+  @media (--large) {
     margin-right: 0;
   }
   & img {
