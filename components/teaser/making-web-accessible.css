@@ -1,6 +1,7 @@
 .making-web-accessible {
   text-align:center;
   border-bottom: 1px solid var(--line-grey);
+  flex-direction: column;
   & .making-web-accessible-box {
     text-align: left;
     padding: 32px 20px 0 105px;
