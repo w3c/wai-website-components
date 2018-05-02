@@ -82,11 +82,14 @@
       border-radius: 0;
       color: var(--off-white);
       height: 100%;
-      padding: 0;
+      padding: 5px;
       margin: 0;
       width: 10em;
       &:focus {
         color: var(--pure-white);
+      }
+      &::-webkit-search-decoration {
+        display: none;
       }
       &::-webkit-search-cancel-button,
       &::-webkit-search-results-button {
