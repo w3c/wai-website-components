@@ -411,8 +411,8 @@ a {
 
 .leftcol {
   & nav {
-    flex-basis: 24.2537313%;
-    flex-grow: 0;
+    flex-basis: 24.25%;
+    flex-shrink: 0;
   }
   & main {
     grid-area: content;
