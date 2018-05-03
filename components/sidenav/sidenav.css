@@ -50,7 +50,7 @@
 .sidenav--list {
   background-color: var(--w3c-blue);
   border: 2px solid var(--w3c-blue);
-  border-width: 0 0 0 5px;
+  border-width: 0 0 5px 5px;
   margin: 0;
   padding:0;
   font-size: .8125rem;
