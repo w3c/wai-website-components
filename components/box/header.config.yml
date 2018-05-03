@@ -10,7 +10,9 @@ variants:
     mods: ['large']
 - name: large-icon
   context:
+    type: icon
     label: Large Header w/ Icon
+    icon: warning
     mods: ['large','icon']
 - name: simple
   context:

@@ -23,7 +23,8 @@ variants:
 - name: large-icon
   context:
     headerlabel: Large header w/ Icon
-    headertype: large-icon
+    headertype: icon
+    headericon: warning
     headermods: ['large', 'icon']
     content: "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem laudantium, molestias perspiciatis corporis aspernatur earum quibusdam, sequi, error pariatur delectus accusantium, cum! Maxime ad, eos ea. Ab labore aliquam quam!</p>"
 - name: large-icon-link-list
