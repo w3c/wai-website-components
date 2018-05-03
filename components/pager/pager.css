@@ -1,24 +1,23 @@
 .pager {
   background-color: var(--pure-white);
   border: 1px solid var(--line-grey);
-  display: flex;
-  flex: 1 100%;
 }
 
 .pager > ul {
+  box-sizing: border-box;
   align-content: center;
   display: flex;
-  flex: 1 100%;
   flex-direction: row;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   margin: 0;
-  padding: 18px;
+  padding: 8px;
 }
 
 .pager--item {
   display: flex;
-  flex: 1 auto;
+  flex: 0 1 50%;
   list-style: none;
+  margin:0;
 }
 
 .pager--item a:link {
@@ -27,6 +26,7 @@
   flex-direction: row;
   flex: 1 100%;
   text-decoration: none;
+  align-items: center;
 }
 
 .pager--item a:visited {
@@ -56,20 +56,18 @@
 .pager--item-text {
   display: flex;
   flex: 1 auto;
+  width: 100%;
   flex-direction: column;
-}
-
-.pager--item-text {
-  margin-right: 16px;
-  margin-left: 16px;
+  margin-right: 8px;
+  margin-left: 8px;
 }
 
 .pager--item-text-direction {
   color: var(--off-black);
-  font-size: 13px;
+  font-size: .75rem;
 }
 
 .pager--item-text-target {
-  font-size: 17px;
-  line-height: 1em;
+  font-size: 1rem;
+  line-height: 1;
 }

@@ -250,24 +250,23 @@
                                 <pre><span class="hljs-selector-class">.pager</span> {
   <span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">var</span>(--pure-white);
   <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-built_in">var</span>(--line-grey);
-  <span class="hljs-attribute">display</span>: flex;
-  <span class="hljs-attribute">flex</span>: <span class="hljs-number">1</span> <span class="hljs-number">100%</span>;
 }
 
 <span class="hljs-selector-class">.pager</span> &gt; <span class="hljs-selector-tag">ul</span> {
+  <span class="hljs-attribute">box-sizing</span>: border-box;
   <span class="hljs-attribute">align-content</span>: center;
   <span class="hljs-attribute">display</span>: flex;
-  <span class="hljs-attribute">flex</span>: <span class="hljs-number">1</span> <span class="hljs-number">100%</span>;
   <span class="hljs-attribute">flex-direction</span>: row;
-  <span class="hljs-attribute">flex-wrap</span>: nowrap;
+  <span class="hljs-attribute">flex-wrap</span>: wrap;
   <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span>;
-  <span class="hljs-attribute">padding</span>: <span class="hljs-number">18px</span>;
+  <span class="hljs-attribute">padding</span>: <span class="hljs-number">8px</span>;
 }
 
 <span class="hljs-selector-class">.pager--item</span> {
   <span class="hljs-attribute">display</span>: flex;
-  <span class="hljs-attribute">flex</span>: <span class="hljs-number">1</span> auto;
+  <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">1</span> <span class="hljs-number">50%</span>;
   <span class="hljs-attribute">list-style</span>: none;
+  <span class="hljs-attribute">margin</span>:<span class="hljs-number">0</span>;
 }
 
 <span class="hljs-selector-class">.pager--item</span> <span class="hljs-selector-tag">a</span><span class="hljs-selector-pseudo">:link</span> {
@@ -276,6 +275,7 @@
   <span class="hljs-attribute">flex-direction</span>: row;
   <span class="hljs-attribute">flex</span>: <span class="hljs-number">1</span> <span class="hljs-number">100%</span>;
   <span class="hljs-attribute">text-decoration</span>: none;
+  <span class="hljs-attribute">align-items</span>: center;
 }
 
 <span class="hljs-selector-class">.pager--item</span> <span class="hljs-selector-tag">a</span><span class="hljs-selector-pseudo">:visited</span> {
@@ -305,22 +305,20 @@
 <span class="hljs-selector-class">.pager--item-text</span> {
   <span class="hljs-attribute">display</span>: flex;
   <span class="hljs-attribute">flex</span>: <span class="hljs-number">1</span> auto;
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
   <span class="hljs-attribute">flex-direction</span>: column;
-}
-
-<span class="hljs-selector-class">.pager--item-text</span> {
-  <span class="hljs-attribute">margin-right</span>: <span class="hljs-number">16px</span>;
-  <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">16px</span>;
+  <span class="hljs-attribute">margin-right</span>: <span class="hljs-number">8px</span>;
+  <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">8px</span>;
 }
 
 <span class="hljs-selector-class">.pager--item-text-direction</span> {
   <span class="hljs-attribute">color</span>: <span class="hljs-built_in">var</span>(--off-black);
-  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">13px</span>;
+  <span class="hljs-attribute">font-size</span>: .<span class="hljs-number">75rem</span>;
 }
 
 <span class="hljs-selector-class">.pager--item-text-target</span> {
-  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">17px</span>;
-  <span class="hljs-attribute">line-height</span>: <span class="hljs-number">1em</span>;
+  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">1rem</span>;
+  <span class="hljs-attribute">line-height</span>: <span class="hljs-number">1</span>;
 }</pre>
                             </code>
                             
