@@ -6,7 +6,7 @@
   background-color: var(--w3c-blue);
   display: none;
   &.open { display: block; }
-  @media (--large) {
+  @media (--medium) {
     display: block;
   }
   & > ul {
@@ -73,7 +73,7 @@
 }
 
 #openmenu {
-  @media (--medium) {
+  @media (--large) {
     display: none;
   }
 }
