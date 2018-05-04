@@ -35,7 +35,7 @@
     font-style: italic;
     margin-left: 16px;
     padding-left: 16px;
-    border-left: 1px solid var(--pure-white);
+    border-left: 1px solid var(--gold);
     color: var(--pure-white);
     flex:1 0 0;
     display: none;
