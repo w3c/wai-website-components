@@ -8,7 +8,7 @@
   & ul {
     margin: 0;
     padding: 0;
-    grid-column: 2/7;
+    grid-column: 2/10;
     & li {
       display: inline-block;
       margin: 0;
