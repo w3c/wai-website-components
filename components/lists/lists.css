@@ -68,7 +68,7 @@ p+ul, p+ol {
 .two.small.columns {
   column-gap: 32px;
   @media (--medium) {
-    columns: 0;
+    columns: 1;
   }
   @media (--large) {
     columns: 2;
