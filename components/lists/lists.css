@@ -64,3 +64,13 @@ p+ul, p+ol {
     columns: 4;
   }
 }
+
+.two.small.columns {
+  column-gap: 32px;
+  @media (--medium) {
+    columns: 0;
+  }
+  @media (--large) {
+    columns: 2;
+  }
+}

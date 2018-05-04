@@ -16,6 +16,7 @@
       &:after {
         content: " / ";
         color: var(--wai-green);
+        white-space: pre-wrap;
       }
       &:last-child:after {
         content: "";
