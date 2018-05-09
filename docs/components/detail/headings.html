@@ -490,7 +490,13 @@ h3         { margin: 40px 0 20px; }
 h4, h5, h6 { margin: 20px 0 10px; }
 
 h1 {
-  font-size: 2.375rem;
+  font-size: 1.5rem;
+  @media (--medium) {
+    font-size: 2rem;
+  }
+  @media (--large) {
+    font-size: 2.375rem;
+  }
   color: var(--wai-green);
   line-height: 1.2;
   font-weight: normal;
@@ -596,7 +602,7 @@ h1, h2, h3, h4, h5, h6 {
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">1.4 KB</span>
+                    <span class="Meta-value">1.5 KB</span>
                 </li>
             </ul>
         </div>
