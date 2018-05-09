@@ -18,11 +18,9 @@
   }
   & > ul {
     width: 100%;
-    @media (--medium) {
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
-    }
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
     & li {
       display: inline-block;
       padding: 0 8px;
