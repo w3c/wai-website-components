@@ -90,6 +90,9 @@ button, .button {
 
 .button-menu {
   text-transform: uppercase;
+  background-color: var(--pure-white);
+  color: var(--w3c-blue);
+  border-color: var(--gold);
   &:--hovcus {
     border-color: var(--pure-white);
     background-color: var(--gold);
