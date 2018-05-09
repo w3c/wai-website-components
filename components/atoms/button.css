@@ -82,6 +82,10 @@ button, .button {
   & svg {
     vertical-align: -1px;
   }
+  &.inline {
+    position:static;
+    float: right;
+  }
 }
 
 .button-menu {
