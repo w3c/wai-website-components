@@ -17,3 +17,7 @@ dd {
 dd+dt {
   margin-top: 8px;
 }
+
+dl.paragraph-like dd+dt {
+  margin-top: 1em;
+}

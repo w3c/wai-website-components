@@ -1,7 +1,12 @@
 .box {
   border: solid 1px var(--line-grey);
-  margin-bottom: 16px;
+  margin-top: 16px;
   background-color: var(--pure-white);
+}
+
+.box + .box#toc {
+  margin-top: 0;
+  border-top: 0;
 }
 
 .box.box-space-above {
