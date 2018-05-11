@@ -1,6 +1,7 @@
 .pager {
   background-color: var(--pure-white);
   border: 1px solid var(--line-grey);
+  margin-top: 32px;
 }
 
 .pager > ul {
@@ -9,13 +10,16 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin: 0;
+  margin:0;
   padding: 8px;
 }
 
 .pager--item {
   display: flex;
   flex: 0 1 50%;
+  &:only-child {
+    flex-basis: 100%;
+  }
   list-style: none;
   margin:0;
 }

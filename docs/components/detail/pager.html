@@ -247,78 +247,82 @@
                         <div class="FileBrowser-itemPreview">
                             
                             <code class="Code Code--lang-CSS FileBrowser-code">
-                                <pre><span class="hljs-selector-class">.pager</span> {
-  <span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">var</span>(--pure-white);
-  <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-built_in">var</span>(--line-grey);
+                                <pre>.pager {
+  background-color: var(--pure-white);
+  border: 1px solid var(--line-grey);
+  margin-top: 32px;
 }
 
-<span class="hljs-selector-class">.pager</span> &gt; <span class="hljs-selector-tag">ul</span> {
-  <span class="hljs-attribute">box-sizing</span>: border-box;
-  <span class="hljs-attribute">align-content</span>: center;
-  <span class="hljs-attribute">display</span>: flex;
-  <span class="hljs-attribute">flex-direction</span>: row;
-  <span class="hljs-attribute">flex-wrap</span>: wrap;
-  <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span>;
-  <span class="hljs-attribute">padding</span>: <span class="hljs-number">8px</span>;
+.pager &gt; ul {
+  box-sizing: border-box;
+  align-content: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin:0;
+  padding: 8px;
 }
 
-<span class="hljs-selector-class">.pager--item</span> {
-  <span class="hljs-attribute">display</span>: flex;
-  <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">1</span> <span class="hljs-number">50%</span>;
-  <span class="hljs-attribute">list-style</span>: none;
-  <span class="hljs-attribute">margin</span>:<span class="hljs-number">0</span>;
+.pager--item {
+  display: flex;
+  flex: 0 1 50%;
+  &amp;:only-child {
+    flex-basis: 100%;
+  }
+  list-style: none;
+  margin:0;
 }
 
-<span class="hljs-selector-class">.pager--item</span> <span class="hljs-selector-tag">a</span><span class="hljs-selector-pseudo">:link</span> {
-  <span class="hljs-attribute">color</span>: <span class="hljs-built_in">var</span>(--wai-green);
-  <span class="hljs-attribute">display</span>: flex;
-  <span class="hljs-attribute">flex-direction</span>: row;
-  <span class="hljs-attribute">flex</span>: <span class="hljs-number">1</span> <span class="hljs-number">100%</span>;
-  <span class="hljs-attribute">text-decoration</span>: none;
-  <span class="hljs-attribute">align-items</span>: center;
+.pager--item a:link {
+  color: var(--wai-green);
+  display: flex;
+  flex-direction: row;
+  flex: 1 100%;
+  text-decoration: none;
+  align-items: center;
 }
 
-<span class="hljs-selector-class">.pager--item</span> <span class="hljs-selector-tag">a</span><span class="hljs-selector-pseudo">:visited</span> {
-  <span class="hljs-attribute">color</span>: <span class="hljs-built_in">var</span>(--visited-link);
+.pager--item a:visited {
+  color: var(--visited-link);
 }
 
-<span class="hljs-selector-class">.pager--item</span> <span class="hljs-selector-tag">a</span><span class="hljs-selector-pseudo">:hover</span>,
-<span class="hljs-selector-class">.pager--item</span> <span class="hljs-selector-tag">a</span><span class="hljs-selector-pseudo">:focus</span> {
-  <span class="hljs-attribute">color</span>: <span class="hljs-built_in">var</span>(--w3c-blue);
+.pager--item a:hover,
+.pager--item a:focus {
+  color: var(--w3c-blue);
 }
 
-<span class="hljs-selector-class">.pager--item</span> <span class="hljs-selector-tag">a</span><span class="hljs-selector-pseudo">:active</span> {
-  <span class="hljs-attribute">color</span>: <span class="hljs-built_in">var</span>(--wai-green);
+.pager--item a:active {
+  color: var(--wai-green);
 }
 
-<span class="hljs-selector-class">.pager--item</span><span class="hljs-selector-class">.next</span> <span class="hljs-selector-tag">a</span> {
-  <span class="hljs-attribute">flex-direction</span>: row-reverse;
-  <span class="hljs-attribute">justify-content</span>: flex-end;
-  <span class="hljs-attribute">text-align</span>: right;
+.pager--item.next a {
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  text-align: right;
 }
 
-<span class="hljs-selector-class">.pager--item-icon</span> {
-  <span class="hljs-attribute">display</span>: flex;
-  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">33px</span>;
+.pager--item-icon {
+  display: flex;
+  font-size: 33px;
 }
 
-<span class="hljs-selector-class">.pager--item-text</span> {
-  <span class="hljs-attribute">display</span>: flex;
-  <span class="hljs-attribute">flex</span>: <span class="hljs-number">1</span> auto;
-  <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
-  <span class="hljs-attribute">flex-direction</span>: column;
-  <span class="hljs-attribute">margin-right</span>: <span class="hljs-number">8px</span>;
-  <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">8px</span>;
+.pager--item-text {
+  display: flex;
+  flex: 1 auto;
+  width: 100%;
+  flex-direction: column;
+  margin-right: 8px;
+  margin-left: 8px;
 }
 
-<span class="hljs-selector-class">.pager--item-text-direction</span> {
-  <span class="hljs-attribute">color</span>: <span class="hljs-built_in">var</span>(--off-black);
-  <span class="hljs-attribute">font-size</span>: .<span class="hljs-number">75rem</span>;
+.pager--item-text-direction {
+  color: var(--off-black);
+  font-size: .75rem;
 }
 
-<span class="hljs-selector-class">.pager--item-text-target</span> {
-  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">1rem</span>;
-  <span class="hljs-attribute">line-height</span>: <span class="hljs-number">1</span>;
+.pager--item-text-target {
+  font-size: 1rem;
+  line-height: 1;
 }</pre>
                             </code>
                             
@@ -335,7 +339,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">1.1 KB</span>
+                    <span class="Meta-value">1.2 KB</span>
                 </li>
             </ul>
         </div>
