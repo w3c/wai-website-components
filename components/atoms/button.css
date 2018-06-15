@@ -20,13 +20,13 @@ button, .button {
     background: transparent;
     &:--hovcus {
       background-color: transparent;
-      border-color: #fff;
+      border-color: var(--pure-white)
     }
   }
   &.button-noborder {
     border-color: transparent;
     &:--hovcus {
-      border-color: #fff;
+      border-color: var(--pure-white)
     }
   }
   &.button-small {
@@ -46,6 +46,9 @@ button, .button {
     border-color: var(--w3c-blue);
     background-color: var(--w3c-blue);
     color: var(--pure-white);
+  }
+  &:focus {
+    outline-color: var(--w3c-blue);
   }
   &:disabled {
     opacity: .75;

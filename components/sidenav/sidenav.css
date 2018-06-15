@@ -66,6 +66,7 @@
       text-decoration: underline;
       background-color: var(--off-white);
       color: var(--wai-green);
+      outline-color: var(--gold);
     }
   }
   & li a {
