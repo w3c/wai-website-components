@@ -159,21 +159,29 @@
   var navbtn   = document.querySelector('#openmenu'  );
 
   if (navbtn !== null) {
-    navbtn.addEventListener('click', function(e) {
-      if (hasclass(e.target, 'open')) {
-        remclass(e.target, 'open');
+    navbtn.addEventListener('click', function(event) {
+      if (hasclass(event.target, 'open')) {
+        remclass(event.target, 'open');
         remclass(metanav, 'open');
         remclass(mainnav, 'open');
-        remclass(sidenav, 'open');
-        breadnav.style.display='block';
-        e.target.setAttribute('aria-expanded', 'false');
+        if (sidenav) {
+          remclass(sidenav, 'open');
+        }
+        if (breadnav) {
+          breadnav.style.display='block';
+        }
+        event.target.setAttribute('aria-expanded', 'false');
       } else {
-        addclass(e.target, 'open');
+        addclass(event.target, 'open');
         addclass(metanav, 'open');
         addclass(mainnav, 'open');
-        addclass(sidenav, 'open');
-        breadnav.style.display='none';
-        e.target.setAttribute('aria-expanded', 'true');
+        if (sidenav) {
+          addclass(sidenav, 'open');
+        }
+        if (breadnav) {
+          breadnav.style.display='none';
+        }
+        event.target.setAttribute('aria-expanded', 'true');
       }
     });
   }
