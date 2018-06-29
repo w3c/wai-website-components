@@ -47,7 +47,9 @@
 }
 
 .home {
-  margin-right: 32px;
+  @media (--small) {
+    margin-right: 32px;
+  }
   text-decoration: none;
   transition: color .5s ease-in .1s;
   display: flex;
