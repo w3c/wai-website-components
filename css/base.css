@@ -313,7 +313,11 @@ a:focus, button:focus, input:focus, select:focus, submit:focus, textarea:focus, 
 }
 
 .grid-three-five {
-  @apply --full-grid-three-five;
+  & .col1, & .col2 { padding-left: 16px; padding-right: 16px; }
+  @media (--medium) {
+    @apply --full-grid-three-five;
+    & .col1, & .col2 { padding: 0; }
+  }
   & .col1, & .col2 { flex-shrink: 1; }
   & .col1 {
     flex-basis: 35%;
@@ -337,7 +341,11 @@ a:focus, button:focus, input:focus, select:focus, submit:focus, textarea:focus, 
 }
 
 .grid-five-three {
-  @apply --full-grid-five-three;
+  & .col1, & .col2 { padding-left: 16px; padding-right: 16px; }
+  @media (--medium) {
+    @apply --full-grid-five-three;
+    & .col1, & .col2 { padding: 0; }
+  }
   & .col1, & .col2 { flex-shrink: 1; }
   & .col1 {
     flex: 1 1 62%;
