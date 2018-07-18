@@ -1,4 +1,4 @@
-collated: true
+collated: false
 variants:
 - name: default
   context:
