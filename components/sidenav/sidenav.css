@@ -66,6 +66,8 @@
       text-decoration: underline;
       background-color: var(--off-white);
       color: var(--wai-green);
+    }
+    &:focus {
       outline-color: var(--gold);
     }
   }
