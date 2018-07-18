@@ -458,16 +458,16 @@ a:focus, button:focus, input:focus, select:focus, submit:focus, textarea:focus, 
 .grid-line-right {
   @media (--medium) {
     border-right: 1px solid var(--line-grey);
-    margin-right: -17px;
-    padding-right: 17px;
+    margin-right: -17px !important;
+    padding-right: 17px !important;
   }
 }
 
 .grid-line-left {
   @media (--medium) {
     border-left: 1px solid var(--line-grey);
-    margin-left: -16px;
-    padding-left: 16px;
+    margin-left: -16px !important;
+    padding-left: 16px !important;
   }
 }
 
