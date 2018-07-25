@@ -29,16 +29,9 @@
     color: var(--w3c-blue);
     text-decoration: none;
     padding: 2px 0;
-    transition: transform .3s ease-out;
-    background-color: #eee;
-    transform-origin: 100% 0;
-    display: inline-block;
-    z-index: 200;
-    position: relative;
     &:--hovcus {
       border-bottom: none;
       text-decoration: underline;
-      transform: scale(3);
     }
   }
 }
