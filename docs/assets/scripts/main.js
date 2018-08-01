@@ -68,6 +68,10 @@
         } else {
           Array.prototype.forEach.call(document.querySelectorAll(buttontarget), function(el, i){
             el.removeAttribute('hidden');
+            if (i === 0) {
+              el.setAttribute('tabindex', '-1');
+              el.focus();
+            }
           });
           event.target.setAttribute('aria-expanded','true');
           event.target.textContent = event.target.textContent.replace('Show', 'Hide');
