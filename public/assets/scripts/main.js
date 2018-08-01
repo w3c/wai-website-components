@@ -26,6 +26,62 @@
     return (el.offsetWidth > 0 && el.offsetHeight > 0);
   };
 
+  /* Showhidebutton */
+
+  var showhidebuttons = document.querySelectorAll('.showhidebutton');
+
+  if (showhidebuttons !== null) {
+
+    Array.prototype.forEach.call(showhidebuttons, function(button, i){
+      var buttontarget = button.dataset.target;
+      var bid = button.dataset.showhidebuttonid;
+      if (sessionStorage.getItem(bid) == 'hidden') {
+        Array.prototype.forEach.call(document.querySelectorAll(buttontarget), function(el, i){
+          el.setAttribute('hidden', true);
+        });
+        button.setAttribute('aria-expanded','false');
+        button.textContent = button.textContent.replace('Hide', 'Show');
+        button.setAttribute('aria-label', button.getAttribute('aria-label').replace('Hide', 'Show'));
+      }
+      if (sessionStorage.getItem(bid) == 'visible') {
+        Array.prototype.forEach.call(document.querySelectorAll(buttontarget), function(el, i){
+            el.removeAttribute('hidden');
+          });
+          button.setAttribute('aria-expanded','true');
+          button.textContent = button.textContent.replace('Show', 'Hide');
+          button.setAttribute('aria-label', button.getAttribute('aria-label').replace('Show', 'Hide'));
+      }
+    });
+
+    Array.prototype.forEach.call(showhidebuttons, function(button, i){
+      button.addEventListener('click', function(event){
+        var buttontarget = event.target.dataset.target;
+        var buttonstatus = event.target.getAttribute('aria-expanded');
+        if (buttonstatus == "true") { // buttonstatus=true => Expanded, so hide target
+          Array.prototype.forEach.call(document.querySelectorAll(buttontarget), function(el, i){
+            el.setAttribute('hidden', true);
+          });
+          event.target.setAttribute('aria-expanded','false');
+          event.target.textContent = event.target.textContent.replace('Hide', 'Show');
+          event.target.setAttribute('aria-label', event.target.getAttribute('aria-label').replace('Hide', 'Show'));
+          sessionStorage.setItem(event.target.dataset.showhidebuttonid, 'hidden');
+        } else {
+          Array.prototype.forEach.call(document.querySelectorAll(buttontarget), function(el, i){
+            el.removeAttribute('hidden');
+          });
+          event.target.setAttribute('aria-expanded','true');
+          event.target.textContent = event.target.textContent.replace('Show', 'Hide');
+          event.target.setAttribute('aria-label', event.target.getAttribute('aria-label').replace('Show', 'Hide'));
+          sessionStorage.setItem(event.target.dataset.showhidebuttonid, 'visible');
+        }
+      })
+    });
+
+  }
+
+
+  /* Tutorial style headings */
+
   var spc = document.createTextNode(' ');
 
   var headings = document.querySelectorAll('article h2[id], article h3[id], article h4[id]');
@@ -151,6 +207,8 @@
     }
 
   });
+
+  /* Navigation button */
 
   var metanav  = document.querySelector('.metanav'   );
   var mainnav  = document.querySelector('.mainnav'   );

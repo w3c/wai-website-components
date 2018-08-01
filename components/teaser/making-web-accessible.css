@@ -2,6 +2,13 @@
   text-align:center;
   border-bottom: 1px solid var(--line-grey);
   flex-direction: column;
+  & [hidden] {
+    display: none !important;
+  }
+  & .inner.hidesection {
+    position: relative;
+    order: -1;
+  }
   & .making-web-accessible-box {
     text-align: left;
     padding: 32px 20px 0 105px;
@@ -26,5 +33,11 @@
   }
   & p {
     margin-bottom:0;
+  }
+  & .showhidebutton {
+    float: right;
+    position: absolute;
+    top: -1.35em;
+    right: 0;
   }
 }

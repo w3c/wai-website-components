@@ -500,3 +500,34 @@ main img { max-width: 100%; }
 
 figure { margin: 0 0 1em; }
 figcaption { font-weight: bold; border-bottom: 1px solid var(--line-grey); margin-bottom: .5em;}
+
+.showhidebutton {
+  background: transparent;
+  color: inherit;
+  border-color: transparent;
+  font-weight: normal;
+  &:after {
+    display: inline-block;
+    background-color: var(--w3c-blue);
+    color: var(--pure-white);
+    content: "–";
+    font-weight: bold;
+    margin-left: .5em;
+    padding: .3em;
+    border-radius: 3px;
+    width: 1em;
+    height: 1em;
+    line-height: 1em;
+  }
+  &:--hovcus {
+    &:after {
+      color: var(--w3c-blue);
+      background-color: var(--pure-white) !important;
+    }
+  }
+  &[aria-pressed=true] {
+    &:after {
+      content: "+";
+    }
+  }
+}
