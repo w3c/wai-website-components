@@ -40,16 +40,14 @@
           el.setAttribute('hidden', true);
         });
         button.setAttribute('aria-expanded','false');
-        button.textContent = button.textContent.replace('Hide', 'Show');
-        button.setAttribute('aria-label', button.getAttribute('aria-label').replace('Hide', 'Show'));
+        button.textContent = button.dataset.showtext;
       }
       if (sessionStorage.getItem(bid) == 'visible') {
         Array.prototype.forEach.call(document.querySelectorAll(buttontarget), function(el, i){
             el.removeAttribute('hidden');
           });
           button.setAttribute('aria-expanded','true');
-          button.textContent = button.textContent.replace('Show', 'Hide');
-          button.setAttribute('aria-label', button.getAttribute('aria-label').replace('Show', 'Hide'));
+          button.textContent = button.dataset.hidetext;
       }
     });
 
@@ -62,8 +60,7 @@
             el.setAttribute('hidden', true);
           });
           event.target.setAttribute('aria-expanded','false');
-          event.target.textContent = event.target.textContent.replace('Hide', 'Show');
-          event.target.setAttribute('aria-label', event.target.getAttribute('aria-label').replace('Hide', 'Show'));
+          button.textContent = button.dataset.showtext;
           sessionStorage.setItem(event.target.dataset.showhidebuttonid, 'hidden');
         } else {
           Array.prototype.forEach.call(document.querySelectorAll(buttontarget), function(el, i){
@@ -74,8 +71,7 @@
             }
           });
           event.target.setAttribute('aria-expanded','true');
-          event.target.textContent = event.target.textContent.replace('Show', 'Hide');
-          event.target.setAttribute('aria-label', event.target.getAttribute('aria-label').replace('Show', 'Hide'));
+          button.textContent = button.dataset.hidetext;
           sessionStorage.setItem(event.target.dataset.showhidebuttonid, 'visible');
         }
       })
