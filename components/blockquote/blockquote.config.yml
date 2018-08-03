@@ -1,0 +1,31 @@
+collated: false
+variants:
+- name: default
+  context:
+    content: "<p>The power of the Web is in its universality.<br>Access by everyone regardless of disability is an essential aspect.</p><p>Another paragraph. Just for illustration purposes.</p>"
+    source: "<strong>Tim Berners-Lee</strong>, W3C Director and inventor of the World Wide Web"
+- name: special
+  context:
+    class: special
+    content: "<p>The power of the Web is in its universality.<br>Access by everyone regardless of disability is an essential aspect.</p><p>Another paragraph. Just for illustration purposes.</p>"
+    source: "<strong>Tim Berners-Lee</strong>, W3C Director and inventor of the World Wide Web"
+- name: Pullquote Left
+  context:
+    class: pull left
+    content: "<p>Many organisations are waking up to the fact that embracing accessibility leads to multiple benefits – reducing legal risks, strengthening brand presence, improving customer experience and colleague productivity.</p>"
+    source: "<strong>Paul Smyth</strong>, Head of Digital Accessibility, Barclays"
+- name: Pullquote Right
+  context:
+    class: pull right
+    content: "<p>Many organisations are waking up to the fact that embracing accessibility leads to multiple benefits – reducing legal risks, strengthening brand presence, improving customer experience and colleague productivity.</p>"
+    source: "<strong>Paul Smyth</strong>, Head of Digital Accessibility, Barclays"
+- name: Pullquote Color Alt 1
+  context:
+    class: pull alt-1 right
+    content: "<p>Many organisations are waking up to the fact that embracing accessibility leads to multiple benefits – reducing legal risks, strengthening brand presence, improving customer experience and colleague productivity.</p>"
+    source: "<strong>Paul Smyth</strong>, Head of Digital Accessibility, Barclays"
+- name: Pullquote Color Alt 2
+  context:
+    class: pull alt-2 right
+    content: "<p>Many organisations are waking up to the fact that embracing accessibility leads to multiple benefits – reducing legal risks, strengthening brand presence, improving customer experience and colleague productivity.</p>"
+    source: "<strong>Paul Smyth</strong>, Head of Digital Accessibility, Barclays"
