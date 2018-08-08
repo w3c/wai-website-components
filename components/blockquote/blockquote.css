@@ -38,6 +38,10 @@ blockquote.pull {
   font-size: 1.25rem;
   padding-left: 1ch;
   margin-left: 4rem;
+  border: 1px solid transparent;
+  color: var(--w3c-blue);
+  font-weight: bold;
+  border-left: 2px solid var(--line-grey);
   &.right, &.left {
     max-width: 16rem;
   }
@@ -48,9 +52,6 @@ blockquote.pull {
     float: left;
     margin-right: 2rem;
   }
-  color: var(--w3c-blue);
-  font-weight: bold;
-  border-left: 2px solid var(--line-grey);
   & p:first-of-type::before {
     color: var(--w3c-classic);
     font-size: 5rem;
