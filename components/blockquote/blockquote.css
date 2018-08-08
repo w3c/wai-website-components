@@ -36,9 +36,11 @@ blockquote {
 blockquote.pull {
   position: relative;
   font-size: 1.25rem;
-  max-width: 16rem;
   padding-left: 1ch;
   margin-left: 4rem;
+  &.right, &.left {
+    max-width: 16rem;
+  }
   &.right {
     float: right;
   }
