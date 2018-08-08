@@ -92,7 +92,11 @@
 
 @media (--medium) {
   .box {
-    &.box-left, &.box-right { width: 25%; }
+    &.box-left, &.box-right {
+      width: 33%;
+      margin-top: -9px;
+      &.box-simple { margin-top:-3px; }
+    }
     &.box-left {
       clear: left;
       float: left;
