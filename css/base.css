@@ -144,6 +144,9 @@ a {
     }
   }
   @media print {
+    &[href^="#"]:after {
+      content: '(⇘ ' attr(href) ')';
+    }
     &[href^="http"]:after {
       content: ' (' attr(href) ')';
     }
