@@ -304,7 +304,7 @@
 
   function openHiddenNodes() {
     var fragment = window.location.hash;
-
+    fragment = fragment.replace(':', '\\:');
     if (fragment.length) {
       var target = document.querySelector(fragment);
       var initialTarget = target;
@@ -338,5 +338,37 @@
   window.addEventListener("hashchange", openHiddenNodes);
 
   openHiddenNodes();
+
+  // Enhance footnotes
+
+  var footnoteBox = document.querySelector('div.footnotes');
+
+  if (footnoteBox !== null) {
+    addclass(footnoteBox, 'box');
+    addclass(footnoteBox, 'box-simple');
+    footnoteBox.setAttribute('role', 'complementary');
+    footnoteBox.setAttribute('aria-label', 'References');
+
+    var header = document.createElement("header");
+    header.innerHTML = '<h2>References</h2>';
+    addclass(header, 'box-h');
+    footnoteBox.insertBefore(header, footnoteBox.querySelector('ol'));
+
+    var footnoteLinks = document.querySelectorAll('sup a.footnote');
+
+    Array.prototype.forEach.call(footnoteLinks, function(element, i){
+      element.setAttribute('aria-label', 'to footnote ' + element.textContent);
+      element.setAttribute('title', 'to footnote ' + element.textContent);
+    });
+
+    var footnoteBackLinks = footnoteBox.querySelectorAll('a.reversefootnote');
+
+    Array.prototype.forEach.call(footnoteBackLinks, function(element, i){
+      element.setAttribute('aria-label', 'back to footnote ' + element.getAttribute('href').replace('#fnref:','') + ' in text');
+      element.setAttribute('title', 'back to footnote ' + element.getAttribute('href').replace('#fnref:','') + ' in text');
+    });
+
+  }
+
 
 }());
