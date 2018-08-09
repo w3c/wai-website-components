@@ -34,4 +34,7 @@
       text-decoration: underline;
     }
   }
+  @media print {
+    display: none;
+  }
 }

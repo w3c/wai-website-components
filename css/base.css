@@ -90,6 +90,9 @@
 
 html {
   background-color: var(--off-white);
+  @media print {
+    background-color: #fff;
+  }
 }
 
 body {
@@ -99,6 +102,12 @@ body {
   text-decoration-skip-ink: none;
   background-color: var(--body-bg);
   color:  var(--off-black);
+  @media print {
+    color: #000;
+    background-color: #fff;
+    font-size: 10pt;
+    text-decoration-skip-ink: none;
+  }
   padding: 0;
   padding: constant(safe-area-inset-top) constant(safe-area-inset-right) constant(safe-area-inset-bottom) constant(safe-area-inset-left);
   margin: 0 auto;
@@ -116,6 +125,9 @@ code {
 
 a {
   color: var(--w3c-blue);
+  @media print {
+    color: #000;
+  }
   &:--hovcus {
     color: var(--wai-green);
   }
@@ -129,6 +141,14 @@ a {
     }
     &:visited {
       color: inherit;
+    }
+  }
+  @media print {
+    &[href^="http"]:after {
+      content: ' (' attr(href) ')';
+    }
+    &[href^="/WAI/"]:after {
+      content: ' (https://www.w3.org' attr(href) ')';
     }
   }
 }
@@ -240,6 +260,9 @@ a:focus, button:focus, input:focus, select:focus, submit:focus, textarea:focus, 
       grid-column-start: navigation-start;
       grid-column-end: content-end;
     }
+  }
+  @media print {
+    display: block;
   }
 }
 
@@ -531,3 +554,4 @@ figcaption { font-weight: bold; border-bottom: 1px solid var(--line-grey); margi
     }
   }
 }
+

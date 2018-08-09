@@ -1,13 +1,20 @@
 #site-header {
   background-color: var(--w3c-classic);
-  color: #fff;
+  color: var(--pure-white);
+  @media print {
+    background-color: var(--off-white);
+    color: #000;
+  }
   padding-top: 3px;
   @supports (display: grid) {
     padding-left: 8px;
     padding-right: 8px;
   }
   & a {
-    color: #fff;
+    color: var(--pure-white);
+    @media print {
+      color: var(--w3c-classic);
+    }
   }
 }
 
@@ -37,6 +44,9 @@
     padding-left: 16px;
     border-left: 1px solid var(--gold);
     color: var(--pure-white);
+    @media print {
+      color: var(--w3c-classic);
+    }
     flex:1 0 0;
     display: none;
     @media (--medium) {
@@ -60,11 +70,11 @@
   @media (--large) {
     margin-right: 0;
   }
-  & img {
+  & svg {
     vertical-align:middle;
     padding-right: 8px;
     color: inherit;
-    fill: inherit;
+    fill: currentColor;
     height: 30px;
     @media (--medium) {
       height: 46px;

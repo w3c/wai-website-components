@@ -7,6 +7,9 @@
   @media (--medium) {
     display: block;
   }
+  @media print {
+    display: none;
+  }
   & a {
     text-decoration: none;
     &:--hovcus, &[aria-current="page"] {

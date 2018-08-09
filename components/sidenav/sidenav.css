@@ -9,6 +9,9 @@
   @media (--large) {
     display: block;
   }
+  @media print {
+    display: none;
+  }
 }
 
 .sidenav--head {

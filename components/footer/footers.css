@@ -27,6 +27,9 @@
   & a {
     color: var(--pure-white);
   }
+  @media print {
+    display: none;
+  }s
   & a.largelink {
     color: var(--gold);
     font-size: 1.25rem;
