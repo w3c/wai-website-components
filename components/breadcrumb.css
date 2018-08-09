@@ -26,6 +26,7 @@
   }
   & a {
     color: var(--w3c-blue);
+    @media print { &:after { content: ''; } }
   }
   & [aria-current=page] {
     font-weight: bold;

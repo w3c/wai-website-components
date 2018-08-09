@@ -15,6 +15,11 @@
     @media print {
       color: var(--w3c-classic);
     }
+    @media print {
+      &:after {
+        content: '';
+      }
+    }
   }
 }
 
