@@ -38,6 +38,7 @@
   grid-row-start: 1;
   padding: 16px 0;
   display: flex;
+  align-items: center;
   width: 60%;
   @supports (display: grid) {
     width: auto;
@@ -66,23 +67,31 @@
     margin-right: 32px;
   }
   text-decoration: none;
-  transition: color .5s ease-in .1s;
+  transition: color .25s ease-in .1s;
   display: flex;
   align-items: center;
   @supports (display: grid) {
     flex:0;
   }
   @media (--large) {
-    margin-right: 0;
+    margin-right: 8px;
   }
-  & svg {
+  & svg, & img {
     vertical-align:middle;
-    padding-right: 8px;
     color: inherit;
     fill: currentColor;
     height: 30px;
     @media (--medium) {
       height: 46px;
+    }
+  }
+  img {
+    padding-right: 8px;
+  }
+  &.w3c {
+    border-bottom: 2px solid transparent;
+    &:hover {
+      border-bottom-color: currentColor;
     }
   }
   & .wai {

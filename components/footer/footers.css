@@ -1,5 +1,8 @@
 .page-footer, .site-footer {
   font-size: .875rem;
+  @media print {
+   font-size: 8pt;
+  }
   padding-top: 16px;
   padding-bottom: 16px;
   & p:first-of-type {
@@ -24,16 +27,22 @@
   padding-bottom: 16px;
   background-color: var(--dk-grey);
   color: var(--pure-white);
+  @media print {
+    background-color: var(--footer-grey);
+    color: var(--dk-grey);
+    border-top: 1px solid var(--dk-grey);
+  }
   & a {
     color: var(--pure-white);
   }
-  @media print {
-    display: none;
-  }s
   & a.largelink {
     color: var(--gold);
     font-size: 1.25rem;
     text-decoration: none;
+    @media print {
+      color: var(--dk-grey);
+      font-size: 12pt;
+    }
     &:hover, &:focus {
       text-decoration: underline;
     }
@@ -47,6 +56,19 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    @media print {
+      grid-column-end: q4-end;
+      flex-direction: row;
+      align-items: flex-end;
+      & p {
+        margin: 0;
+      }
+    }
+  }
+  &>:not(.about) {
+    @media print {
+      display: none;
+    }
   }
 }
 .page-footer + .site-footer {
