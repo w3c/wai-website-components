@@ -53,7 +53,6 @@ blockquote.pull {
     margin-right: 2rem;
   }
   & p:first-of-type::before {
-    color: var(--w3c-classic);
     font-size: 5rem;
     position: absolute;
     left: 0;
@@ -67,9 +66,12 @@ blockquote.pull {
     color: var(--off-black);
   }
   &.alt-1 {
-    color: var(--wai-green);
+    color: var(--w3c-classic);
   }
   &.alt-2 {
+    color: var(--wai-green);
+  }
+  &.alt-3 {
     color: var(--off-black);
   }
 }

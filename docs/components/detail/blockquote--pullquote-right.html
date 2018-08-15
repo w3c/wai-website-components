@@ -152,8 +152,8 @@
     <code class="Code Code--lang-html">
         
         <pre><span class="hljs-tag">&lt;<span class="hljs-name">blockquote</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"pull right"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Many organisations are waking up to the fact that embracing accessibility leads to multiple benefits – reducing legal risks, strengthening brand presence, improving customer experience and colleague productivity.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">cite</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>Paul Smyth<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span>, Head of Digital Accessibility, Barclays<span class="hljs-tag">&lt;/<span class="hljs-name">cite</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>I do what I do because it’s right! Because it’s decent! And above all, it’s kind! It’s just that…<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">cite</span>&gt;</span>John Smith, TARDIS Inc.<span class="hljs-tag">&lt;/<span class="hljs-name">cite</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">blockquote</span>&gt;</span></pre>
         
     </code>
@@ -176,8 +176,8 @@
             
             <pre>{
   <span class="hljs-attr">"class"</span>: <span class="hljs-string">"pull right"</span>,
-  <span class="hljs-attr">"content"</span>: <span class="hljs-string">"&lt;p&gt;Many organisations are waking up to the fact that embracing accessibility leads to multiple benefits – reducing legal risks, strengthening brand presence, improving customer experience and colleague productivity.&lt;/p&gt;"</span>,
-  <span class="hljs-attr">"source"</span>: <span class="hljs-string">"&lt;strong&gt;Paul Smyth&lt;/strong&gt;, Head of Digital Accessibility, Barclays"</span>
+  <span class="hljs-attr">"content"</span>: <span class="hljs-string">"&lt;p&gt;I do what I do because it’s right! Because it’s decent! And above all, it’s kind! It’s just that…&lt;/p&gt;"</span>,
+  <span class="hljs-attr">"source"</span>: <span class="hljs-string">"John Smith, TARDIS Inc."</span>
 }</pre>
             
         
@@ -264,7 +264,6 @@ blockquote.pull {
     margin-right: 2rem;
   }
   &amp; p:first-of-type::before {
-    color: var(--w3c-classic);
     font-size: 5rem;
     position: absolute;
     left: 0;
@@ -278,9 +277,12 @@ blockquote.pull {
     color: var(--off-black);
   }
   &amp;.alt-1 {
-    color: var(--wai-green);
+    color: var(--w3c-classic);
   }
   &amp;.alt-2 {
+    color: var(--wai-green);
+  }
+  &amp;.alt-3 {
     color: var(--off-black);
   }
 }</pre>
@@ -322,7 +324,7 @@ blockquote.pull {
         
         
         <li class="Meta-item">
-            <strong class="Meta-key">Variants <em class="Meta-count">(7)</em>:</strong>
+            <strong class="Meta-key">Variants <em class="Meta-count">(8)</em>:</strong>
             <span class="Meta-value Meta-value--linkList">
             
                 <a href="blockquote--default.html">
@@ -351,6 +353,10 @@ blockquote.pull {
             
                 <a href="blockquote--pullquote-color-alt-2.html">
                     <span>Pullquote Color Alt 2</span>
+                </a>, 
+            
+                <a href="blockquote--pullquote-color-alt-3.html">
+                    <span>Pullquote Color Alt 3</span>
                 </a>
             
             </span>
@@ -653,6 +659,16 @@ blockquote.pull {
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="blockquote--pullquote-color-alt-2.html" data-pjax>
                 <span>Pullquote Color Alt 2</span>
+                
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="blockquote--pullquote-color-alt-3.html" data-pjax>
+                <span>Pullquote Color Alt 3</span>
                 
             </a>
         </li>
