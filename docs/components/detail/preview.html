@@ -177,6 +177,355 @@
     <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"../../assets/css/style.css"</span>&gt;</span>
 
     <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span> &amp;#9670; Web Accessibility Initiative (WAI) &amp;#9670; W3C<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+        (<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+            <span class="hljs-comment">// Optimization for Repeat Views</span>
+            <span class="hljs-keyword">if</span> (sessionStorage.fontsLoadedCriticalFoftPolyfill) {
+                <span class="hljs-built_in">document</span>.documentElement.className += <span class="hljs-string">" fonts-loaded-1 fonts-loaded-2"</span>;
+                <span class="hljs-keyword">return</span>;
+            }
+            <span class="hljs-comment">/* Font Face Observer v2.0.13 - © Bram Stein. License: BSD-3-Clause */</span>
+            (<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+<span class="hljs-meta">                'use strict'</span>;
+                <span class="hljs-keyword">var</span> f, g = [];
+
+                <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">l</span>(<span class="hljs-params">a</span>) </span>{
+                    g.push(a);
+                    <span class="hljs-number">1</span> == g.length &amp;&amp; f()
+                }
+
+                <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">m</span>(<span class="hljs-params"></span>) </span>{
+                    <span class="hljs-keyword">for</span> (; g.length;) g[<span class="hljs-number">0</span>](), g.shift()
+                }
+                f = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+                    setTimeout(m)
+                };
+
+                <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">n</span>(<span class="hljs-params">a</span>) </span>{
+                    <span class="hljs-keyword">this</span>.a = p;
+                    <span class="hljs-keyword">this</span>.b = <span class="hljs-keyword">void</span> <span class="hljs-number">0</span>;
+                    <span class="hljs-keyword">this</span>.f = [];
+                    <span class="hljs-keyword">var</span> b = <span class="hljs-keyword">this</span>;
+                    <span class="hljs-keyword">try</span> {
+                        a(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">a</span>) </span>{
+                            q(b, a)
+                        }, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">a</span>) </span>{
+                            r(b, a)
+                        })
+                    } <span class="hljs-keyword">catch</span> (c) {
+                        r(b, c)
+                    }
+                }
+                <span class="hljs-keyword">var</span> p = <span class="hljs-number">2</span>;
+
+                <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">t</span>(<span class="hljs-params">a</span>) </span>{
+                    <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> n(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">b, c</span>) </span>{
+                        c(a)
+                    })
+                }
+
+                <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">u</span>(<span class="hljs-params">a</span>) </span>{
+                    <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> n(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">b</span>) </span>{
+                        b(a)
+                    })
+                }
+
+                <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">q</span>(<span class="hljs-params">a, b</span>) </span>{
+                    <span class="hljs-keyword">if</span> (a.a == p) {
+                        <span class="hljs-keyword">if</span> (b == a) <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">TypeError</span>;
+                        <span class="hljs-keyword">var</span> c = !<span class="hljs-number">1</span>;
+                        <span class="hljs-keyword">try</span> {
+                            <span class="hljs-keyword">var</span> d = b &amp;&amp; b.then;
+                            <span class="hljs-keyword">if</span> (<span class="hljs-literal">null</span> != b &amp;&amp; <span class="hljs-string">"object"</span> == <span class="hljs-keyword">typeof</span> b &amp;&amp; <span class="hljs-string">"function"</span> == <span class="hljs-keyword">typeof</span> d) {
+                                d.call(b, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">b</span>) </span>{
+                                    c || q(a, b);
+                                    c = !<span class="hljs-number">0</span>
+                                }, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">b</span>) </span>{
+                                    c || r(a, b);
+                                    c = !<span class="hljs-number">0</span>
+                                });
+                                <span class="hljs-keyword">return</span>
+                            }
+                        } <span class="hljs-keyword">catch</span> (e) {
+                            c || r(a, e);
+                            <span class="hljs-keyword">return</span>
+                        }
+                        a.a = <span class="hljs-number">0</span>;
+                        a.b = b;
+                        v(a)
+                    }
+                }
+
+                <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">r</span>(<span class="hljs-params">a, b</span>) </span>{
+                    <span class="hljs-keyword">if</span> (a.a == p) {
+                        <span class="hljs-keyword">if</span> (b == a) <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">TypeError</span>;
+                        a.a = <span class="hljs-number">1</span>;
+                        a.b = b;
+                        v(a)
+                    }
+                }
+
+                <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">v</span>(<span class="hljs-params">a</span>) </span>{
+                    l(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+                        <span class="hljs-keyword">if</span> (a.a != p)
+                            <span class="hljs-keyword">for</span> (; a.f.length;) {
+                                <span class="hljs-keyword">var</span> b = a.f.shift(),
+                                    c = b[<span class="hljs-number">0</span>],
+                                    d = b[<span class="hljs-number">1</span>],
+                                    e = b[<span class="hljs-number">2</span>],
+                                    b = b[<span class="hljs-number">3</span>];
+                                <span class="hljs-keyword">try</span> {
+                                    <span class="hljs-number">0</span> == a.a ? <span class="hljs-string">"function"</span> == <span class="hljs-keyword">typeof</span> c ? e(c.call(<span class="hljs-keyword">void</span> <span class="hljs-number">0</span>, a.b)) : e(a.b) : <span class="hljs-number">1</span> == a.a &amp;&amp; (<span class="hljs-string">"function"</span> == <span class="hljs-keyword">typeof</span> d ? e(d.call(<span class="hljs-keyword">void</span> <span class="hljs-number">0</span>, a.b)) : b(a.b))
+                                } <span class="hljs-keyword">catch</span> (h) {
+                                    b(h)
+                                }
+                            }
+                    })
+                }
+                n.prototype.g = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">a</span>) </span>{
+                    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.c(<span class="hljs-keyword">void</span> <span class="hljs-number">0</span>, a)
+                };
+                n.prototype.c = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">a, b</span>) </span>{
+                    <span class="hljs-keyword">var</span> c = <span class="hljs-keyword">this</span>;
+                    <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> n(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">d, e</span>) </span>{
+                        c.f.push([a, b, d, e]);
+                        v(c)
+                    })
+                };
+
+                <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">w</span>(<span class="hljs-params">a</span>) </span>{
+                    <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> n(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">b, c</span>) </span>{
+                        <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">d</span>(<span class="hljs-params">c</span>) </span>{
+                            <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">d</span>) </span>{
+                                h[c] = d;
+                                e += <span class="hljs-number">1</span>;
+                                e == a.length &amp;&amp; b(h)
+                            }
+                        }
+                        <span class="hljs-keyword">var</span> e = <span class="hljs-number">0</span>,
+                            h = [];
+                        <span class="hljs-number">0</span> == a.length &amp;&amp; b(h);
+                        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> k = <span class="hljs-number">0</span>; k &lt; a.length; k += <span class="hljs-number">1</span>) u(a[k]).c(d(k), c)
+                    })
+                }
+
+                <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">x</span>(<span class="hljs-params">a</span>) </span>{
+                    <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> n(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">b, c</span>) </span>{
+                        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> d = <span class="hljs-number">0</span>; d &lt; a.length; d += <span class="hljs-number">1</span>) u(a[d]).c(b, c)
+                    })
+                };
+                <span class="hljs-built_in">window</span>.Promise || (<span class="hljs-built_in">window</span>.Promise = n, <span class="hljs-built_in">window</span>.Promise.resolve = u, <span class="hljs-built_in">window</span>.Promise.reject = t, <span class="hljs-built_in">window</span>.Promise.race = x, <span class="hljs-built_in">window</span>.Promise.all = w, <span class="hljs-built_in">window</span>.Promise.prototype.then = n.prototype.c, <span class="hljs-built_in">window</span>.Promise.prototype[<span class="hljs-string">"catch"</span>] = n.prototype.g);
+            }());
+            (<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+                <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">l</span>(<span class="hljs-params">a, b</span>) </span>{
+                    <span class="hljs-built_in">document</span>.addEventListener ? a.addEventListener(<span class="hljs-string">"scroll"</span>, b, !<span class="hljs-number">1</span>) : a.attachEvent(<span class="hljs-string">"scroll"</span>, b)
+                }
+
+                <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">m</span>(<span class="hljs-params">a</span>) </span>{
+                    <span class="hljs-built_in">document</span>.body ? a() : <span class="hljs-built_in">document</span>.addEventListener ? <span class="hljs-built_in">document</span>.addEventListener(<span class="hljs-string">"DOMContentLoaded"</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">c</span>(<span class="hljs-params"></span>) </span>{
+                        <span class="hljs-built_in">document</span>.removeEventListener(<span class="hljs-string">"DOMContentLoaded"</span>, c);
+                        a()
+                    }) : <span class="hljs-built_in">document</span>.attachEvent(<span class="hljs-string">"onreadystatechange"</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">k</span>(<span class="hljs-params"></span>) </span>{
+                        <span class="hljs-keyword">if</span> (<span class="hljs-string">"interactive"</span> == <span class="hljs-built_in">document</span>.readyState || <span class="hljs-string">"complete"</span> == <span class="hljs-built_in">document</span>.readyState) <span class="hljs-built_in">document</span>.detachEvent(<span class="hljs-string">"onreadystatechange"</span>, k), a()
+                    })
+                };
+
+                <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">r</span>(<span class="hljs-params">a</span>) </span>{
+                    <span class="hljs-keyword">this</span>.a = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">"div"</span>);
+                    <span class="hljs-keyword">this</span>.a.setAttribute(<span class="hljs-string">"aria-hidden"</span>, <span class="hljs-string">"true"</span>);
+                    <span class="hljs-keyword">this</span>.a.appendChild(<span class="hljs-built_in">document</span>.createTextNode(a));
+                    <span class="hljs-keyword">this</span>.b = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">"span"</span>);
+                    <span class="hljs-keyword">this</span>.c = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">"span"</span>);
+                    <span class="hljs-keyword">this</span>.h = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">"span"</span>);
+                    <span class="hljs-keyword">this</span>.f = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">"span"</span>);
+                    <span class="hljs-keyword">this</span>.g = <span class="hljs-number">-1</span>;
+                    <span class="hljs-keyword">this</span>.b.style.cssText = <span class="hljs-string">"max-width:none;display:inline-block;position:absolute;height:100%;width:100%;overflow:scroll;font-size:16px;"</span>;
+                    <span class="hljs-keyword">this</span>.c.style.cssText = <span class="hljs-string">"max-width:none;display:inline-block;position:absolute;height:100%;width:100%;overflow:scroll;font-size:16px;"</span>;
+                    <span class="hljs-keyword">this</span>.f.style.cssText = <span class="hljs-string">"max-width:none;display:inline-block;position:absolute;height:100%;width:100%;overflow:scroll;font-size:16px;"</span>;
+                    <span class="hljs-keyword">this</span>.h.style.cssText = <span class="hljs-string">"display:inline-block;width:200%;height:200%;font-size:16px;max-width:none;"</span>;
+                    <span class="hljs-keyword">this</span>.b.appendChild(<span class="hljs-keyword">this</span>.h);
+                    <span class="hljs-keyword">this</span>.c.appendChild(<span class="hljs-keyword">this</span>.f);
+                    <span class="hljs-keyword">this</span>.a.appendChild(<span class="hljs-keyword">this</span>.b);
+                    <span class="hljs-keyword">this</span>.a.appendChild(<span class="hljs-keyword">this</span>.c)
+                }
+
+                <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">t</span>(<span class="hljs-params">a, b</span>) </span>{
+                    a.a.style.cssText = <span class="hljs-string">"max-width:none;min-width:20px;min-height:20px;display:inline-block;overflow:hidden;position:absolute;width:auto;margin:0;padding:0;top:-999px;white-space:nowrap;font-synthesis:none;font:"</span> + b + <span class="hljs-string">";"</span>
+                }
+
+                <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">y</span>(<span class="hljs-params">a</span>) </span>{
+                    <span class="hljs-keyword">var</span> b = a.a.offsetWidth,
+                        c = b + <span class="hljs-number">100</span>;
+                    a.f.style.width = c + <span class="hljs-string">"px"</span>;
+                    a.c.scrollLeft = c;
+                    a.b.scrollLeft = a.b.scrollWidth + <span class="hljs-number">100</span>;
+                    <span class="hljs-keyword">return</span> a.g !== b ? (a.g = b, !<span class="hljs-number">0</span>) : !<span class="hljs-number">1</span>
+                }
+
+                <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">z</span>(<span class="hljs-params">a, b</span>) </span>{
+                    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">c</span>(<span class="hljs-params"></span>) </span>{
+                        <span class="hljs-keyword">var</span> a = k;
+                        y(a) &amp;&amp; a.a.parentNode &amp;&amp; b(a.g)
+                    }
+                    <span class="hljs-keyword">var</span> k = a;
+                    l(a.b, c);
+                    l(a.c, c);
+                    y(a)
+                };
+
+                <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">A</span>(<span class="hljs-params">a, b</span>) </span>{
+                    <span class="hljs-keyword">var</span> c = b || {};
+                    <span class="hljs-keyword">this</span>.family = a;
+                    <span class="hljs-keyword">this</span>.style = c.style || <span class="hljs-string">"normal"</span>;
+                    <span class="hljs-keyword">this</span>.weight = c.weight || <span class="hljs-string">"normal"</span>;
+                    <span class="hljs-keyword">this</span>.stretch = c.stretch || <span class="hljs-string">"normal"</span>
+                }
+                <span class="hljs-keyword">var</span> B = <span class="hljs-literal">null</span>,
+                    C = <span class="hljs-literal">null</span>,
+                    E = <span class="hljs-literal">null</span>,
+                    F = <span class="hljs-literal">null</span>;
+
+                <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">G</span>(<span class="hljs-params"></span>) </span>{
+                    <span class="hljs-keyword">if</span> (<span class="hljs-literal">null</span> === C)
+                        <span class="hljs-keyword">if</span> (J() &amp;&amp; <span class="hljs-regexp">/Apple/</span>.test(<span class="hljs-built_in">window</span>.navigator.vendor)) {
+                            <span class="hljs-keyword">var</span> a = <span class="hljs-regexp">/AppleWebKit\/([0-9]+)(?:\.([0-9]+))(?:\.([0-9]+))/</span>.exec(<span class="hljs-built_in">window</span>.navigator.userAgent);
+                            C = !!a &amp;&amp; <span class="hljs-number">603</span> &gt; <span class="hljs-built_in">parseInt</span>(a[<span class="hljs-number">1</span>], <span class="hljs-number">10</span>)
+                        } <span class="hljs-keyword">else</span> C = !<span class="hljs-number">1</span>;
+                    <span class="hljs-keyword">return</span> C
+                }
+
+                <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">J</span>(<span class="hljs-params"></span>) </span>{
+                    <span class="hljs-literal">null</span> === F &amp;&amp; (F = !!<span class="hljs-built_in">document</span>.fonts);
+                    <span class="hljs-keyword">return</span> F
+                }
+
+                <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">K</span>(<span class="hljs-params"></span>) </span>{
+                    <span class="hljs-keyword">if</span> (<span class="hljs-literal">null</span> === E) {
+                        <span class="hljs-keyword">var</span> a = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">"div"</span>);
+                        <span class="hljs-keyword">try</span> {
+                            a.style.font = <span class="hljs-string">"condensed 100px sans-serif"</span>
+                        } <span class="hljs-keyword">catch</span> (b) {}
+                        E = <span class="hljs-string">""</span> !== a.style.font
+                    }
+                    <span class="hljs-keyword">return</span> E
+                }
+
+                <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">L</span>(<span class="hljs-params">a, b</span>) </span>{
+                    <span class="hljs-keyword">return</span> [a.style, a.weight, K() ? a.stretch : <span class="hljs-string">""</span>, <span class="hljs-string">"100px"</span>, b].join(<span class="hljs-string">" "</span>)
+                }
+                A.prototype.load = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">a, b</span>) </span>{
+                    <span class="hljs-keyword">var</span> c = <span class="hljs-keyword">this</span>,
+                        k = a || <span class="hljs-string">"BESbswy"</span>,
+                        q = <span class="hljs-number">0</span>,
+                        D = b || <span class="hljs-number">3E3</span>,
+                        H = (<span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>).getTime();
+                    <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">a, b</span>) </span>{
+                        <span class="hljs-keyword">if</span> (J() &amp;&amp; !G()) {
+                            <span class="hljs-keyword">var</span> M = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">a, b</span>) </span>{
+                                    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">e</span>(<span class="hljs-params"></span>) </span>{
+                                        (<span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>).getTime() - H &gt;= D ? b() : <span class="hljs-built_in">document</span>.fonts.load(L(c, <span class="hljs-string">'"'</span> + c.family + <span class="hljs-string">'"'</span>), k).then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">c</span>) </span>{
+                                            <span class="hljs-number">1</span> &lt;= c.length ? a() : setTimeout(e, <span class="hljs-number">25</span>)
+                                        }, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+                                            b()
+                                        })
+                                    }
+                                    e()
+                                }),
+                                N = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">a, c</span>) </span>{
+                                    q = setTimeout(c, D)
+                                });
+                            <span class="hljs-built_in">Promise</span>.race([N, M]).then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+                                clearTimeout(q);
+                                a(c)
+                            }, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+                                b(c)
+                            })
+                        } <span class="hljs-keyword">else</span> m(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+                            <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">u</span>(<span class="hljs-params"></span>) </span>{
+                                <span class="hljs-keyword">var</span> b;
+                                <span class="hljs-keyword">if</span> (b = <span class="hljs-number">-1</span> !=
+                                    f &amp;&amp; <span class="hljs-number">-1</span> != g || <span class="hljs-number">-1</span> != f &amp;&amp; <span class="hljs-number">-1</span> != h || <span class="hljs-number">-1</span> != g &amp;&amp; <span class="hljs-number">-1</span> != h)(b = f != g &amp;&amp; f != h &amp;&amp; g != h) || (<span class="hljs-literal">null</span> === B &amp;&amp; (b = <span class="hljs-regexp">/AppleWebKit\/([0-9]+)(?:\.([0-9]+))/</span>.exec(<span class="hljs-built_in">window</span>.navigator.userAgent), B = !!b &amp;&amp; (<span class="hljs-number">536</span> &gt; <span class="hljs-built_in">parseInt</span>(b[<span class="hljs-number">1</span>], <span class="hljs-number">10</span>) || <span class="hljs-number">536</span> === <span class="hljs-built_in">parseInt</span>(b[<span class="hljs-number">1</span>], <span class="hljs-number">10</span>) &amp;&amp; <span class="hljs-number">11</span> &gt;= <span class="hljs-built_in">parseInt</span>(b[<span class="hljs-number">2</span>], <span class="hljs-number">10</span>))), b = B &amp;&amp; (f == v &amp;&amp; g == v &amp;&amp; h == v || f == w &amp;&amp; g == w &amp;&amp; h == w || f == x &amp;&amp; g == x &amp;&amp; h == x)), b = !b;
+                                b &amp;&amp; (d.parentNode &amp;&amp; d.parentNode.removeChild(d), clearTimeout(q), a(c))
+                            }
+
+                            <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">I</span>(<span class="hljs-params"></span>) </span>{
+                                <span class="hljs-keyword">if</span> ((<span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>).getTime() - H &gt;= D) d.parentNode &amp;&amp; d.parentNode.removeChild(d), b(c);
+                                <span class="hljs-keyword">else</span> {
+                                    <span class="hljs-keyword">var</span> a = <span class="hljs-built_in">document</span>.hidden;
+                                    <span class="hljs-keyword">if</span> (!<span class="hljs-number">0</span> === a || <span class="hljs-keyword">void</span> <span class="hljs-number">0</span> === a) f = e.a.offsetWidth,
+                                        g = n.a.offsetWidth, h = p.a.offsetWidth, u();
+                                    q = setTimeout(I, <span class="hljs-number">50</span>)
+                                }
+                            }
+                            <span class="hljs-keyword">var</span> e = <span class="hljs-keyword">new</span> r(k),
+                                n = <span class="hljs-keyword">new</span> r(k),
+                                p = <span class="hljs-keyword">new</span> r(k),
+                                f = <span class="hljs-number">-1</span>,
+                                g = <span class="hljs-number">-1</span>,
+                                h = <span class="hljs-number">-1</span>,
+                                v = <span class="hljs-number">-1</span>,
+                                w = <span class="hljs-number">-1</span>,
+                                x = <span class="hljs-number">-1</span>,
+                                d = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">"div"</span>);
+                            d.dir = <span class="hljs-string">"ltr"</span>;
+                            t(e, L(c, <span class="hljs-string">"sans-serif"</span>));
+                            t(n, L(c, <span class="hljs-string">"serif"</span>));
+                            t(p, L(c, <span class="hljs-string">"monospace"</span>));
+                            d.appendChild(e.a);
+                            d.appendChild(n.a);
+                            d.appendChild(p.a);
+                            <span class="hljs-built_in">document</span>.body.appendChild(d);
+                            v = e.a.offsetWidth;
+                            w = n.a.offsetWidth;
+                            x = p.a.offsetWidth;
+                            I();
+                            z(e, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">a</span>) </span>{
+                                f = a;
+                                u()
+                            });
+                            t(e, L(c, <span class="hljs-string">'"'</span> + c.family + <span class="hljs-string">'",sans-serif'</span>));
+                            z(n, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">a</span>) </span>{
+                                g = a;
+                                u()
+                            });
+                            t(n, L(c, <span class="hljs-string">'"'</span> + c.family + <span class="hljs-string">'",serif'</span>));
+                            z(p, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">a</span>) </span>{
+                                h = a;
+                                u()
+                            });
+                            t(p, L(c, <span class="hljs-string">'"'</span> + c.family + <span class="hljs-string">'",monospace'</span>))
+                        })
+                    })
+                };
+                <span class="hljs-string">"object"</span> === <span class="hljs-keyword">typeof</span> <span class="hljs-built_in">module</span> ? <span class="hljs-built_in">module</span>.exports = A : (<span class="hljs-built_in">window</span>.FontFaceObserver = A, <span class="hljs-built_in">window</span>.FontFaceObserver.prototype.load = A.prototype.load);
+            }());
+            <span class="hljs-keyword">var</span> fontASubset = <span class="hljs-keyword">new</span> FontFaceObserver(<span class="hljs-string">'LatoSubset'</span>);
+            <span class="hljs-built_in">Promise</span>.all([fontASubset.load(<span class="hljs-literal">null</span>, <span class="hljs-number">10000</span>)]).then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+                <span class="hljs-built_in">document</span>.documentElement.className += <span class="hljs-string">" fonts-loaded-1"</span>;
+                <span class="hljs-keyword">var</span> fontA = <span class="hljs-keyword">new</span> FontFaceObserver(<span class="hljs-string">'Lato'</span>);
+                <span class="hljs-keyword">var</span> fontB = <span class="hljs-keyword">new</span> FontFaceObserver(<span class="hljs-string">'LatoBold'</span>, {
+                    <span class="hljs-attr">weight</span>: <span class="hljs-number">700</span>
+                });
+                <span class="hljs-keyword">var</span> fontC = <span class="hljs-keyword">new</span> FontFaceObserver(<span class="hljs-string">'LatoItalic'</span>, {
+                    <span class="hljs-attr">style</span>: <span class="hljs-string">'italic'</span>
+                });
+                <span class="hljs-keyword">var</span> fontD = <span class="hljs-keyword">new</span> FontFaceObserver(<span class="hljs-string">'LatoBoldItalic'</span>, {
+                    <span class="hljs-attr">weight</span>: <span class="hljs-number">700</span>,
+                    <span class="hljs-attr">style</span>: <span class="hljs-string">'italic'</span>
+                });
+                <span class="hljs-built_in">Promise</span>.all([
+                    fontA.load(<span class="hljs-literal">null</span>, <span class="hljs-number">10000</span>),
+                    fontB.load(<span class="hljs-literal">null</span>, <span class="hljs-number">10000</span>),
+                    fontC.load(<span class="hljs-literal">null</span>, <span class="hljs-number">10000</span>),
+                    fontD.load(<span class="hljs-literal">null</span>, <span class="hljs-number">10000</span>)
+                ]).then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+                    <span class="hljs-built_in">document</span>.documentElement.className += <span class="hljs-string">" fonts-loaded-2"</span>;
+                    <span class="hljs-comment">// Optimization for Repeat Views</span>
+                    sessionStorage.fontsLoadedCriticalFoftPolyfill = <span class="hljs-literal">true</span>;
+                });
+            });
+        })();
+    </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
@@ -246,6 +595,61 @@
     <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"{{ '/assets/css/style.css' | path }}"</span>&gt;</span>
 
     <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>{{ _target.context.title }} &amp;#9670; Web Accessibility Initiative (WAI) &amp;#9670; W3C<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  (<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+
+    <span class="hljs-comment">// Optimization for Repeat Views</span>
+    <span class="hljs-keyword">if</span>( sessionStorage.fontsLoadedCriticalFoftPolyfill ) {
+      <span class="hljs-built_in">document</span>.documentElement.className += <span class="hljs-string">" fonts-loaded-1 fonts-loaded-2"</span>;
+      <span class="hljs-keyword">return</span>;
+    }
+
+    <span class="hljs-comment">/* Font Face Observer v2.0.13 - © Bram Stein. License: BSD-3-Clause */</span>
+    (<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{<span class="hljs-string">'use strict'</span>;<span class="hljs-keyword">var</span> f,g=[];<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">l</span>(<span class="hljs-params">a</span>)</span>{g.push(a);<span class="hljs-number">1</span>==g.length&amp;&amp;f()}<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">m</span>(<span class="hljs-params"></span>)</span>{<span class="hljs-keyword">for</span>(;g.length;)g[<span class="hljs-number">0</span>](),g.shift()}f=<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{setTimeout(m)};<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">n</span>(<span class="hljs-params">a</span>)</span>{<span class="hljs-keyword">this</span>.a=p;<span class="hljs-keyword">this</span>.b=<span class="hljs-keyword">void</span> <span class="hljs-number">0</span>;<span class="hljs-keyword">this</span>.f=[];<span class="hljs-keyword">var</span> b=<span class="hljs-keyword">this</span>;<span class="hljs-keyword">try</span>{a(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">a</span>)</span>{q(b,a)},<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">a</span>)</span>{r(b,a)})}<span class="hljs-keyword">catch</span>(c){r(b,c)}}<span class="hljs-keyword">var</span> p=<span class="hljs-number">2</span>;<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">t</span>(<span class="hljs-params">a</span>)</span>{<span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> n(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">b,c</span>)</span>{c(a)})}<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">u</span>(<span class="hljs-params">a</span>)</span>{<span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> n(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">b</span>)</span>{b(a)})}<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">q</span>(<span class="hljs-params">a,b</span>)</span>{<span class="hljs-keyword">if</span>(a.a==p){<span class="hljs-keyword">if</span>(b==a)<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">TypeError</span>;<span class="hljs-keyword">var</span> c=!<span class="hljs-number">1</span>;<span class="hljs-keyword">try</span>{<span class="hljs-keyword">var</span> d=b&amp;&amp;b.then;<span class="hljs-keyword">if</span>(<span class="hljs-literal">null</span>!=b&amp;&amp;<span class="hljs-string">"object"</span>==<span class="hljs-keyword">typeof</span> b&amp;&amp;<span class="hljs-string">"function"</span>==<span class="hljs-keyword">typeof</span> d){d.call(b,<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">b</span>)</span>{c||q(a,b);c=!<span class="hljs-number">0</span>},<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">b</span>)</span>{c||r(a,b);c=!<span class="hljs-number">0</span>});<span class="hljs-keyword">return</span>}}<span class="hljs-keyword">catch</span>(e){c||r(a,e);<span class="hljs-keyword">return</span>}a.a=<span class="hljs-number">0</span>;a.b=b;v(a)}}
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">r</span>(<span class="hljs-params">a,b</span>)</span>{<span class="hljs-keyword">if</span>(a.a==p){<span class="hljs-keyword">if</span>(b==a)<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">TypeError</span>;a.a=<span class="hljs-number">1</span>;a.b=b;v(a)}}<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">v</span>(<span class="hljs-params">a</span>)</span>{l(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{<span class="hljs-keyword">if</span>(a.a!=p)<span class="hljs-keyword">for</span>(;a.f.length;){<span class="hljs-keyword">var</span> b=a.f.shift(),c=b[<span class="hljs-number">0</span>],d=b[<span class="hljs-number">1</span>],e=b[<span class="hljs-number">2</span>],b=b[<span class="hljs-number">3</span>];<span class="hljs-keyword">try</span>{<span class="hljs-number">0</span>==a.a?<span class="hljs-string">"function"</span>==<span class="hljs-keyword">typeof</span> c?e(c.call(<span class="hljs-keyword">void</span> <span class="hljs-number">0</span>,a.b)):e(a.b):<span class="hljs-number">1</span>==a.a&amp;&amp;(<span class="hljs-string">"function"</span>==<span class="hljs-keyword">typeof</span> d?e(d.call(<span class="hljs-keyword">void</span> <span class="hljs-number">0</span>,a.b)):b(a.b))}<span class="hljs-keyword">catch</span>(h){b(h)}}})}n.prototype.g=<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">a</span>)</span>{<span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.c(<span class="hljs-keyword">void</span> <span class="hljs-number">0</span>,a)};n.prototype.c=<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">a,b</span>)</span>{<span class="hljs-keyword">var</span> c=<span class="hljs-keyword">this</span>;<span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> n(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">d,e</span>)</span>{c.f.push([a,b,d,e]);v(c)})};
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">w</span>(<span class="hljs-params">a</span>)</span>{<span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> n(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">b,c</span>)</span>{<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">d</span>(<span class="hljs-params">c</span>)</span>{<span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">d</span>)</span>{h[c]=d;e+=<span class="hljs-number">1</span>;e==a.length&amp;&amp;b(h)}}<span class="hljs-keyword">var</span> e=<span class="hljs-number">0</span>,h=[];<span class="hljs-number">0</span>==a.length&amp;&amp;b(h);<span class="hljs-keyword">for</span>(<span class="hljs-keyword">var</span> k=<span class="hljs-number">0</span>;k&lt;a.length;k+=<span class="hljs-number">1</span>)u(a[k]).c(d(k),c)})}<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">x</span>(<span class="hljs-params">a</span>)</span>{<span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> n(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">b,c</span>)</span>{<span class="hljs-keyword">for</span>(<span class="hljs-keyword">var</span> d=<span class="hljs-number">0</span>;d&lt;a.length;d+=<span class="hljs-number">1</span>)u(a[d]).c(b,c)})};<span class="hljs-built_in">window</span>.Promise||(<span class="hljs-built_in">window</span>.Promise=n,<span class="hljs-built_in">window</span>.Promise.resolve=u,<span class="hljs-built_in">window</span>.Promise.reject=t,<span class="hljs-built_in">window</span>.Promise.race=x,<span class="hljs-built_in">window</span>.Promise.all=w,<span class="hljs-built_in">window</span>.Promise.prototype.then=n.prototype.c,<span class="hljs-built_in">window</span>.Promise.prototype[<span class="hljs-string">"catch"</span>]=n.prototype.g);}());
+
+    (<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">l</span>(<span class="hljs-params">a,b</span>)</span>{<span class="hljs-built_in">document</span>.addEventListener?a.addEventListener(<span class="hljs-string">"scroll"</span>,b,!<span class="hljs-number">1</span>):a.attachEvent(<span class="hljs-string">"scroll"</span>,b)}<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">m</span>(<span class="hljs-params">a</span>)</span>{<span class="hljs-built_in">document</span>.body?a():<span class="hljs-built_in">document</span>.addEventListener?<span class="hljs-built_in">document</span>.addEventListener(<span class="hljs-string">"DOMContentLoaded"</span>,<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">c</span>(<span class="hljs-params"></span>)</span>{<span class="hljs-built_in">document</span>.removeEventListener(<span class="hljs-string">"DOMContentLoaded"</span>,c);a()}):<span class="hljs-built_in">document</span>.attachEvent(<span class="hljs-string">"onreadystatechange"</span>,<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">k</span>(<span class="hljs-params"></span>)</span>{<span class="hljs-keyword">if</span>(<span class="hljs-string">"interactive"</span>==<span class="hljs-built_in">document</span>.readyState||<span class="hljs-string">"complete"</span>==<span class="hljs-built_in">document</span>.readyState)<span class="hljs-built_in">document</span>.detachEvent(<span class="hljs-string">"onreadystatechange"</span>,k),a()})};<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">r</span>(<span class="hljs-params">a</span>)</span>{<span class="hljs-keyword">this</span>.a=<span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">"div"</span>);<span class="hljs-keyword">this</span>.a.setAttribute(<span class="hljs-string">"aria-hidden"</span>,<span class="hljs-string">"true"</span>);<span class="hljs-keyword">this</span>.a.appendChild(<span class="hljs-built_in">document</span>.createTextNode(a));<span class="hljs-keyword">this</span>.b=<span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">"span"</span>);<span class="hljs-keyword">this</span>.c=<span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">"span"</span>);<span class="hljs-keyword">this</span>.h=<span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">"span"</span>);<span class="hljs-keyword">this</span>.f=<span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">"span"</span>);<span class="hljs-keyword">this</span>.g=<span class="hljs-number">-1</span>;<span class="hljs-keyword">this</span>.b.style.cssText=<span class="hljs-string">"max-width:none;display:inline-block;position:absolute;height:100%;width:100%;overflow:scroll;font-size:16px;"</span>;<span class="hljs-keyword">this</span>.c.style.cssText=<span class="hljs-string">"max-width:none;display:inline-block;position:absolute;height:100%;width:100%;overflow:scroll;font-size:16px;"</span>;
+    <span class="hljs-keyword">this</span>.f.style.cssText=<span class="hljs-string">"max-width:none;display:inline-block;position:absolute;height:100%;width:100%;overflow:scroll;font-size:16px;"</span>;<span class="hljs-keyword">this</span>.h.style.cssText=<span class="hljs-string">"display:inline-block;width:200%;height:200%;font-size:16px;max-width:none;"</span>;<span class="hljs-keyword">this</span>.b.appendChild(<span class="hljs-keyword">this</span>.h);<span class="hljs-keyword">this</span>.c.appendChild(<span class="hljs-keyword">this</span>.f);<span class="hljs-keyword">this</span>.a.appendChild(<span class="hljs-keyword">this</span>.b);<span class="hljs-keyword">this</span>.a.appendChild(<span class="hljs-keyword">this</span>.c)}
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">t</span>(<span class="hljs-params">a,b</span>)</span>{a.a.style.cssText=<span class="hljs-string">"max-width:none;min-width:20px;min-height:20px;display:inline-block;overflow:hidden;position:absolute;width:auto;margin:0;padding:0;top:-999px;white-space:nowrap;font-synthesis:none;font:"</span>+b+<span class="hljs-string">";"</span>}<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">y</span>(<span class="hljs-params">a</span>)</span>{<span class="hljs-keyword">var</span> b=a.a.offsetWidth,c=b+<span class="hljs-number">100</span>;a.f.style.width=c+<span class="hljs-string">"px"</span>;a.c.scrollLeft=c;a.b.scrollLeft=a.b.scrollWidth+<span class="hljs-number">100</span>;<span class="hljs-keyword">return</span> a.g!==b?(a.g=b,!<span class="hljs-number">0</span>):!<span class="hljs-number">1</span>}<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">z</span>(<span class="hljs-params">a,b</span>)</span>{<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">c</span>(<span class="hljs-params"></span>)</span>{<span class="hljs-keyword">var</span> a=k;y(a)&amp;&amp;a.a.parentNode&amp;&amp;b(a.g)}<span class="hljs-keyword">var</span> k=a;l(a.b,c);l(a.c,c);y(a)};<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">A</span>(<span class="hljs-params">a,b</span>)</span>{<span class="hljs-keyword">var</span> c=b||{};<span class="hljs-keyword">this</span>.family=a;<span class="hljs-keyword">this</span>.style=c.style||<span class="hljs-string">"normal"</span>;<span class="hljs-keyword">this</span>.weight=c.weight||<span class="hljs-string">"normal"</span>;<span class="hljs-keyword">this</span>.stretch=c.stretch||<span class="hljs-string">"normal"</span>}<span class="hljs-keyword">var</span> B=<span class="hljs-literal">null</span>,C=<span class="hljs-literal">null</span>,E=<span class="hljs-literal">null</span>,F=<span class="hljs-literal">null</span>;<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">G</span>(<span class="hljs-params"></span>)</span>{<span class="hljs-keyword">if</span>(<span class="hljs-literal">null</span>===C)<span class="hljs-keyword">if</span>(J()&amp;&amp;<span class="hljs-regexp">/Apple/</span>.test(<span class="hljs-built_in">window</span>.navigator.vendor)){<span class="hljs-keyword">var</span> a=<span class="hljs-regexp">/AppleWebKit\/([0-9]+)(?:\.([0-9]+))(?:\.([0-9]+))/</span>.exec(<span class="hljs-built_in">window</span>.navigator.userAgent);C=!!a&amp;&amp;<span class="hljs-number">603</span>&gt;<span class="hljs-built_in">parseInt</span>(a[<span class="hljs-number">1</span>],<span class="hljs-number">10</span>)}<span class="hljs-keyword">else</span> C=!<span class="hljs-number">1</span>;<span class="hljs-keyword">return</span> C}<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">J</span>(<span class="hljs-params"></span>)</span>{<span class="hljs-literal">null</span>===F&amp;&amp;(F=!!<span class="hljs-built_in">document</span>.fonts);<span class="hljs-keyword">return</span> F}
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">K</span>(<span class="hljs-params"></span>)</span>{<span class="hljs-keyword">if</span>(<span class="hljs-literal">null</span>===E){<span class="hljs-keyword">var</span> a=<span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">"div"</span>);<span class="hljs-keyword">try</span>{a.style.font=<span class="hljs-string">"condensed 100px sans-serif"</span>}<span class="hljs-keyword">catch</span>(b){}E=<span class="hljs-string">""</span>!==a.style.font}<span class="hljs-keyword">return</span> E}<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">L</span>(<span class="hljs-params">a,b</span>)</span>{<span class="hljs-keyword">return</span>[a.style,a.weight,K()?a.stretch:<span class="hljs-string">""</span>,<span class="hljs-string">"100px"</span>,b].join(<span class="hljs-string">" "</span>)}
+    A.prototype.load=<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">a,b</span>)</span>{<span class="hljs-keyword">var</span> c=<span class="hljs-keyword">this</span>,k=a||<span class="hljs-string">"BESbswy"</span>,q=<span class="hljs-number">0</span>,D=b||<span class="hljs-number">3E3</span>,H=(<span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>).getTime();<span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">a,b</span>)</span>{<span class="hljs-keyword">if</span>(J()&amp;&amp;!G()){<span class="hljs-keyword">var</span> M=<span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">a,b</span>)</span>{<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">e</span>(<span class="hljs-params"></span>)</span>{(<span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>).getTime()-H&gt;=D?b():<span class="hljs-built_in">document</span>.fonts.load(L(c,<span class="hljs-string">'"'</span>+c.family+<span class="hljs-string">'"'</span>),k).then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">c</span>)</span>{<span class="hljs-number">1</span>&lt;=c.length?a():setTimeout(e,<span class="hljs-number">25</span>)},<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{b()})}e()}),N=<span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">a,c</span>)</span>{q=setTimeout(c,D)});<span class="hljs-built_in">Promise</span>.race([N,M]).then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{clearTimeout(q);a(c)},<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{b(c)})}<span class="hljs-keyword">else</span> m(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">u</span>(<span class="hljs-params"></span>)</span>{<span class="hljs-keyword">var</span> b;<span class="hljs-keyword">if</span>(b=<span class="hljs-number">-1</span>!=
+    f&amp;&amp;<span class="hljs-number">-1</span>!=g||<span class="hljs-number">-1</span>!=f&amp;&amp;<span class="hljs-number">-1</span>!=h||<span class="hljs-number">-1</span>!=g&amp;&amp;<span class="hljs-number">-1</span>!=h)(b=f!=g&amp;&amp;f!=h&amp;&amp;g!=h)||(<span class="hljs-literal">null</span>===B&amp;&amp;(b=<span class="hljs-regexp">/AppleWebKit\/([0-9]+)(?:\.([0-9]+))/</span>.exec(<span class="hljs-built_in">window</span>.navigator.userAgent),B=!!b&amp;&amp;(<span class="hljs-number">536</span>&gt;<span class="hljs-built_in">parseInt</span>(b[<span class="hljs-number">1</span>],<span class="hljs-number">10</span>)||<span class="hljs-number">536</span>===<span class="hljs-built_in">parseInt</span>(b[<span class="hljs-number">1</span>],<span class="hljs-number">10</span>)&amp;&amp;<span class="hljs-number">11</span>&gt;=<span class="hljs-built_in">parseInt</span>(b[<span class="hljs-number">2</span>],<span class="hljs-number">10</span>))),b=B&amp;&amp;(f==v&amp;&amp;g==v&amp;&amp;h==v||f==w&amp;&amp;g==w&amp;&amp;h==w||f==x&amp;&amp;g==x&amp;&amp;h==x)),b=!b;b&amp;&amp;(d.parentNode&amp;&amp;d.parentNode.removeChild(d),clearTimeout(q),a(c))}<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">I</span>(<span class="hljs-params"></span>)</span>{<span class="hljs-keyword">if</span>((<span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>).getTime()-H&gt;=D)d.parentNode&amp;&amp;d.parentNode.removeChild(d),b(c);<span class="hljs-keyword">else</span>{<span class="hljs-keyword">var</span> a=<span class="hljs-built_in">document</span>.hidden;<span class="hljs-keyword">if</span>(!<span class="hljs-number">0</span>===a||<span class="hljs-keyword">void</span> <span class="hljs-number">0</span>===a)f=e.a.offsetWidth,
+    g=n.a.offsetWidth,h=p.a.offsetWidth,u();q=setTimeout(I,<span class="hljs-number">50</span>)}}<span class="hljs-keyword">var</span> e=<span class="hljs-keyword">new</span> r(k),n=<span class="hljs-keyword">new</span> r(k),p=<span class="hljs-keyword">new</span> r(k),f=<span class="hljs-number">-1</span>,g=<span class="hljs-number">-1</span>,h=<span class="hljs-number">-1</span>,v=<span class="hljs-number">-1</span>,w=<span class="hljs-number">-1</span>,x=<span class="hljs-number">-1</span>,d=<span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">"div"</span>);d.dir=<span class="hljs-string">"ltr"</span>;t(e,L(c,<span class="hljs-string">"sans-serif"</span>));t(n,L(c,<span class="hljs-string">"serif"</span>));t(p,L(c,<span class="hljs-string">"monospace"</span>));d.appendChild(e.a);d.appendChild(n.a);d.appendChild(p.a);<span class="hljs-built_in">document</span>.body.appendChild(d);v=e.a.offsetWidth;w=n.a.offsetWidth;x=p.a.offsetWidth;I();z(e,<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">a</span>)</span>{f=a;u()});t(e,L(c,<span class="hljs-string">'"'</span>+c.family+<span class="hljs-string">'",sans-serif'</span>));z(n,<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">a</span>)</span>{g=a;u()});t(n,L(c,<span class="hljs-string">'"'</span>+c.family+<span class="hljs-string">'",serif'</span>));
+    z(p,<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">a</span>)</span>{h=a;u()});t(p,L(c,<span class="hljs-string">'"'</span>+c.family+<span class="hljs-string">'",monospace'</span>))})})};<span class="hljs-string">"object"</span>===<span class="hljs-keyword">typeof</span> <span class="hljs-built_in">module</span>?<span class="hljs-built_in">module</span>.exports=A:(<span class="hljs-built_in">window</span>.FontFaceObserver=A,<span class="hljs-built_in">window</span>.FontFaceObserver.prototype.load=A.prototype.load);}());
+
+
+    <span class="hljs-keyword">var</span> fontASubset = <span class="hljs-keyword">new</span> FontFaceObserver(<span class="hljs-string">'LatoSubset'</span>);
+
+    <span class="hljs-built_in">Promise</span>.all([fontASubset.load(<span class="hljs-literal">null</span>, <span class="hljs-number">10000</span>)]).then(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+      <span class="hljs-built_in">document</span>.documentElement.className += <span class="hljs-string">" fonts-loaded-1"</span>;
+
+      <span class="hljs-keyword">var</span> fontA = <span class="hljs-keyword">new</span> FontFaceObserver(<span class="hljs-string">'Lato'</span>);
+      <span class="hljs-keyword">var</span> fontB = <span class="hljs-keyword">new</span> FontFaceObserver(<span class="hljs-string">'LatoBold'</span>, {
+          <span class="hljs-attr">weight</span>: <span class="hljs-number">700</span>
+        });
+      <span class="hljs-keyword">var</span> fontC = <span class="hljs-keyword">new</span> FontFaceObserver(<span class="hljs-string">'LatoItalic'</span>, {
+          <span class="hljs-attr">style</span>: <span class="hljs-string">'italic'</span>
+        });
+      <span class="hljs-keyword">var</span> fontD = <span class="hljs-keyword">new</span> FontFaceObserver(<span class="hljs-string">'LatoBoldItalic'</span>, {
+          <span class="hljs-attr">weight</span>: <span class="hljs-number">700</span>,
+          <span class="hljs-attr">style</span>: <span class="hljs-string">'italic'</span>
+        });
+
+      <span class="hljs-built_in">Promise</span>.all([
+        fontA.load(<span class="hljs-literal">null</span>, <span class="hljs-number">10000</span>),
+        fontB.load(<span class="hljs-literal">null</span>, <span class="hljs-number">10000</span>),
+        fontC.load(<span class="hljs-literal">null</span>, <span class="hljs-number">10000</span>),
+        fontD.load(<span class="hljs-literal">null</span>, <span class="hljs-number">10000</span>)
+      ]).then(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+        <span class="hljs-built_in">document</span>.documentElement.className += <span class="hljs-string">" fonts-loaded-2"</span>;
+
+        <span class="hljs-comment">// Optimization for Repeat Views</span>
+        sessionStorage.fontsLoadedCriticalFoftPolyfill = <span class="hljs-literal">true</span>;
+      });
+    });
+  })();
+  </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
 
   <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
@@ -596,6 +1000,122 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="blockquote--pullquote-color-alt-3.html" data-pjax>
                 <span>Pullquote Color Alt 3</span>
+                
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="blockquote--pullquote-in-box.html" data-pjax>
+                <span>Pullquote In Box</span>
+                
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-blockquote-in-box">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Blockquote In Box</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="blockquote-in-box--default.html" data-pjax>
+                <span>Default</span>
+                
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="blockquote-in-box--special.html" data-pjax>
+                <span>Special</span>
+                
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="blockquote-in-box--pullquote.html" data-pjax>
+                <span>Pullquote</span>
+                
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="blockquote-in-box--pullquote-left.html" data-pjax>
+                <span>Pullquote Left</span>
+                
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="blockquote-in-box--pullquote-right.html" data-pjax>
+                <span>Pullquote Right</span>
+                
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="blockquote-in-box--pullquote-color-alt-1.html" data-pjax>
+                <span>Pullquote Color Alt 1</span>
+                
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="blockquote-in-box--pullquote-color-alt-2.html" data-pjax>
+                <span>Pullquote Color Alt 2</span>
+                
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="blockquote-in-box--pullquote-color-alt-3.html" data-pjax>
+                <span>Pullquote Color Alt 3</span>
+                
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="blockquote-in-box--pullquote-in-box.html" data-pjax>
+                <span>Pullquote In Box</span>
                 
             </a>
         </li>
