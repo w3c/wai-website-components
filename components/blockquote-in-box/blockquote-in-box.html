@@ -1,0 +1,10 @@
+<aside class="box">
+  {%render '@box-header', type=default, label="Testing" %}
+  <div class="box-i">
+    <blockquote{% if class %} class="{{ class }}"{% endif %}>
+    {{ content }}
+    <cite>{{ source }}</cite>
+    </blockquote>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quis enim ab beatae consectetur consequatur reiciendis minima saepe voluptatibus optio incidunt nobis omnis autem, corporis amet! Eveniet cupiditate sapiente dolores.</p>
+  </div>
+</aside>
