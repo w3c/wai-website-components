@@ -1,4 +1,4 @@
-@custom-selector :--forminputs input:not([type="checkbox"]):not([type="radio"]);
+@custom-selector :--forminputs input:not([type="checkbox"]):not([type="radio"]), textarea;
 
 input, select, textarea {
   font-size: 1em;
@@ -9,7 +9,19 @@ input[type="search"] {
   -webkit-appearance: none;
 }
 
-:--forminputs, textarea {
+
+fieldset {
+  border: none;
+  margin: 0 0 2rem;
+  padding: 0;
+}
+
+legend {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+:--forminputs {
   border: 1px solid var(--grey);
   &:--hovcus {
     border: 1px solid var(--w3c-blue);
@@ -43,9 +55,6 @@ input[type="search"] {
 .field {
   padding: 4px;
   margin: 0 0 2rem;
-  .group & {
-    margin-bottom: .5rem;
-  }
   & label {
     display: block;
   }
@@ -80,8 +89,14 @@ input[type="search"] {
   }
 
   &:focus-within input:focus {
-    backgound-color: var(--pure-white);
+    background-color: var(--pure-white) !important;
   }
+}
+
+
+.group > .field {
+  margin-bottom: .5rem;
+  margin-left: 2rem;
 }
 
 .radio-field {
@@ -106,4 +121,13 @@ input[type="search"] {
       color: inherit;
     }
   }
+}
+
+fieldset {
+  border: none;
+}
+
+legend {
+  font-size: 1.25rem;
+  font-weight: bold;
 }
