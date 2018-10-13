@@ -551,10 +551,8 @@ figcaption { font-weight: bold; border-bottom: 1px solid var(--line-grey); margi
       background-color: var(--pure-white) !important;
     }
   }
-  &[aria-pressed=true] {
-    &:after {
-      content: "+";
-    }
+  &[aria-expanded=false]:after {
+    content: "+";
   }
 }
 

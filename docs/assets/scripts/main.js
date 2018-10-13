@@ -40,14 +40,14 @@
           el.setAttribute('hidden', true);
         });
         button.setAttribute('aria-expanded','false');
-        button.textContent = button.dataset.showtext;
+        button.innerHTML = button.dataset.showtext;
       }
       if (sessionStorage.getItem(bid) == 'visible') {
         Array.prototype.forEach.call(document.querySelectorAll(buttontarget), function(el, i){
             el.removeAttribute('hidden');
           });
           button.setAttribute('aria-expanded','true');
-          button.textContent = button.dataset.hidetext;
+          button.innerHTML = button.dataset.hidetext;
       }
     });
 
@@ -60,8 +60,10 @@
             el.setAttribute('hidden', true);
           });
           event.target.setAttribute('aria-expanded','false');
-          button.textContent = button.dataset.showtext;
-          sessionStorage.setItem(event.target.dataset.showhidebuttonid, 'hidden');
+          button.innerHTML = button.dataset.showtext;
+          if (event.target.dataset.showhidebuttonid) {
+            sessionStorage.setItem(event.target.dataset.showhidebuttonid, 'hidden');
+          }
         } else {
           Array.prototype.forEach.call(document.querySelectorAll(buttontarget), function(el, i){
             el.removeAttribute('hidden');
@@ -71,8 +73,10 @@
             }
           });
           event.target.setAttribute('aria-expanded','true');
-          button.textContent = button.dataset.hidetext;
-          sessionStorage.setItem(event.target.dataset.showhidebuttonid, 'visible');
+          button.innerHTML = button.dataset.hidetext;
+          if (event.target.dataset.showhidebuttonid) {
+            sessionStorage.setItem(event.target.dataset.showhidebuttonid, 'visible');
+          }
         }
       })
     });
