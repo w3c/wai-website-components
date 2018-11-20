@@ -121,6 +121,10 @@ legend {
       color: inherit;
     }
   }
+  & label {
+    flex: 1 1 100%;
+    cursor: pointer;
+  }
 }
 
 fieldset {
