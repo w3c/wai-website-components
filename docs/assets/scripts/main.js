@@ -23,7 +23,7 @@
   };
 
   var isVisible = function(el) {
-    return (el.offsetWidth > 0 && el.offsetHeight > 0);
+    return (el && el.offsetWidth > 0 && el.offsetHeight > 0);
   };
 
   /* Showhidebutton */
@@ -39,15 +39,11 @@
         Array.prototype.forEach.call(document.querySelectorAll(buttontarget), function(el, i){
           el.setAttribute('hidden', true);
         });
-        button.setAttribute('aria-expanded','false');
-        button.innerHTML = button.dataset.showtext;
       }
       if (sessionStorage.getItem(bid) == 'visible') {
         Array.prototype.forEach.call(document.querySelectorAll(buttontarget), function(el, i){
             el.removeAttribute('hidden');
           });
-          button.setAttribute('aria-expanded','true');
-          button.innerHTML = button.dataset.hidetext;
       }
     });
 
@@ -55,25 +51,30 @@
       button.addEventListener('click', function(event){
         var buttontarget = event.target.dataset.target;
         var buttonstatus = event.target.getAttribute('aria-expanded');
+        var targetelms   = document.querySelectorAll(buttontarget);
         if (buttonstatus == "true") { // buttonstatus=true => Expanded, so hide target
-          Array.prototype.forEach.call(document.querySelectorAll(buttontarget), function(el, i){
+          Array.prototype.forEach.call(targetelms, function(el, i){
             el.setAttribute('hidden', true);
           });
-          event.target.setAttribute('aria-expanded','false');
-          button.innerHTML = button.dataset.showtext;
+          if(targetelms.length > 1) {
+            button.setAttribute('aria-expanded','false');
+            button.innerHTML = button.dataset.showtext;
+          }
           if (event.target.dataset.showhidebuttonid) {
             sessionStorage.setItem(event.target.dataset.showhidebuttonid, 'hidden');
           }
         } else {
-          Array.prototype.forEach.call(document.querySelectorAll(buttontarget), function(el, i){
+          Array.prototype.forEach.call(targetelms, function(el, i){
             el.removeAttribute('hidden');
-            if (i === 0) {
+            if ((i === 0) && (targetelms.length === 1)) {
               el.setAttribute('tabindex', '-1');
               el.focus();
             }
           });
-          event.target.setAttribute('aria-expanded','true');
-          button.innerHTML = button.dataset.hidetext;
+          if(targetelms.length > 1) {
+            button.setAttribute('aria-expanded','true');
+            button.innerHTML = button.dataset.hidetext;
+          }
           if (event.target.dataset.showhidebuttonid) {
             sessionStorage.setItem(event.target.dataset.showhidebuttonid, 'visible');
           }
@@ -83,6 +84,29 @@
 
   }
 
+
+// Create an observer
+var observer = new MutationObserver(function (mutationsList, observer) {
+    var mutationsList = mutationsList.filter(function(mutation) {
+      return ((mutation.type === 'attributes') && (mutation.attributeName === 'hidden'));
+    });
+
+    for (var i = mutationsList.length - 1; i >= 0; i--) {
+      var mutation = mutationsList[i];
+      var button = document.querySelector('button[data-target="#' + mutation.target.id +'"]');
+
+      if (button && mutation.target.getAttribute('hidden')) {
+        button.setAttribute('aria-expanded','false');
+        button.innerHTML = button.dataset.showtext;
+      } else if (button) {
+        button.setAttribute('aria-expanded','true');
+        button.innerHTML = button.dataset.hidetext;
+      }
+    }
+});
+
+// Observe the target infobox
+observer.observe(document.querySelector('main'), { attributes: true, subtree: true });
 
   /* Tutorial style headings */
 
@@ -313,8 +337,15 @@
       var target = document.querySelector(fragment);
       var initialTarget = target;
 
+      // Exit target is undefined / null
+      if (!target) {
+        return;
+      } else {
+        console.log(target);
+      }
+
       // if the first element is a details element, open it. Set target to its parent node so we…
-      if (target.nodeName.toLowerCase() == 'details') {
+      if (target && target.nodeName.toLowerCase() == 'details') {
         target.setAttribute('open', 'true');
         target = target.parentNode;
       }
@@ -373,6 +404,5 @@
     });
 
   }
-
 
 }());
