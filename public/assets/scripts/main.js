@@ -56,7 +56,7 @@
           Array.prototype.forEach.call(targetelms, function(el, i){
             el.setAttribute('hidden', true);
           });
-          if(targetelms.length > 1) {
+          if(targetelms.length >= 1) {
             button.setAttribute('aria-expanded','false');
             button.innerHTML = button.dataset.showtext;
           }
