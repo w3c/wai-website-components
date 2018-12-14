@@ -71,7 +71,7 @@
               el.focus();
             }
           });
-          if(targetelms.length > 1) {
+          if(targetelms.length >= 1) {
             button.setAttribute('aria-expanded','true');
             button.innerHTML = button.dataset.hidetext;
           }
