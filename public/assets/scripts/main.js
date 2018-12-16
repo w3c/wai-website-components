@@ -106,7 +106,9 @@ var observer = new MutationObserver(function (mutationsList, observer) {
 });
 
 // Observe the target infobox
-observer.observe(document.querySelector('main'), { attributes: true, subtree: true });
+if (document.querySelector('main')) {
+  observer.observe(document.querySelector('main'), { attributes: true, subtree: true });
+}
 
   /* Tutorial style headings */
 
@@ -246,8 +248,8 @@ observer.observe(document.querySelector('main'), { attributes: true, subtree: tr
 
   if (navbtn !== null) {
     navbtn.addEventListener('click', function(event) {
-      if (hasclass(event.target, 'open')) {
-        remclass(event.target, 'open');
+      if (hasclass(navbtn, 'open')) {
+        remclass(navbtn, 'open');
         remclass(metanav, 'open');
         remclass(mainnav, 'open');
         if (sidenav) {
@@ -256,9 +258,9 @@ observer.observe(document.querySelector('main'), { attributes: true, subtree: tr
         if (breadnav) {
           breadnav.style.display='block';
         }
-        event.target.setAttribute('aria-expanded', 'false');
+        navbtn.setAttribute('aria-expanded', 'false');
       } else {
-        addclass(event.target, 'open');
+        addclass(navbtn, 'open');
         addclass(metanav, 'open');
         addclass(mainnav, 'open');
         if (sidenav) {
@@ -267,7 +269,7 @@ observer.observe(document.querySelector('main'), { attributes: true, subtree: tr
         if (breadnav) {
           breadnav.style.display='none';
         }
-        event.target.setAttribute('aria-expanded', 'true');
+        navbtn.setAttribute('aria-expanded', 'true');
       }
     });
   }
