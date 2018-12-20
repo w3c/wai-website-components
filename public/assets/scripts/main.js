@@ -35,15 +35,28 @@
     Array.prototype.forEach.call(showhidebuttons, function(button, i){
       var buttontarget = button.dataset.target;
       var bid = button.dataset.showhidebuttonid;
+      Array.prototype.forEach.call(document.querySelectorAll(buttontarget), function(el, i){
+        if(button.getAttribute('aria-expanded') == "true") {
+          el.removeAttribute('hidden');
+          button.innerHTML = button.dataset.hidetext;
+        } else {
+          el.setAttribute('hidden', "true");
+          button.innerHTML = button.dataset.showtext;
+        }
+      });
       if (sessionStorage.getItem(bid) == 'hidden') {
         Array.prototype.forEach.call(document.querySelectorAll(buttontarget), function(el, i){
-          el.setAttribute('hidden', true);
+          el.setAttribute('hidden', "true");
         });
+        button.setAttribute('aria-expanded','false');
+        button.innerHTML = button.dataset.showtext;
       }
       if (sessionStorage.getItem(bid) == 'visible') {
         Array.prototype.forEach.call(document.querySelectorAll(buttontarget), function(el, i){
             el.removeAttribute('hidden');
           });
+        button.setAttribute('aria-expanded','true');
+        button.innerHTML = button.dataset.hidetext;
       }
     });
 
