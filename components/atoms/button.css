@@ -32,6 +32,9 @@ button, .button {
   &.button-small {
     padding: 2px 4px;
   }
+  &.button-inline {
+    padding: 0;
+  }
 }
 
 .stealthy-link:--hovcus {
