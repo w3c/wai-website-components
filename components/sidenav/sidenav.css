@@ -27,14 +27,14 @@
 
 .sidenav--head-icon {
   padding-bottom: .3em;
-  margin-left: -16px;
+  margin-inline-start: -16px;
 }
 
 .sidenav--head-icon--inner {
   width: 47px;
   height: 48px;
   float: left;
-  margin-right: 8px;
+  margin-inline-end: 8px;
 }
 
 .sidenav--head-section {
@@ -83,7 +83,7 @@
   & ul {
     padding: 0;
     margin: 0;
-    padding-left: 24px;
+    padding-inline-start: 24px;
   }
   & a + ul { display:none; }
   & a[aria-current] + ul { display:block; }
@@ -114,16 +114,46 @@
       width: 0;
       height: 0;
       right: 0;
-      border: 1px solid #fff;
+      border: 1px solid var(--pure-white);
       opacity: .9;
     }
     &:before {
       top:-2px;
-      border-color: transparent #fff #fff transparent;
+      border-color: transparent var(--pure-white) var(--pure-white) transparent;
     }
     &:after {
       bottom:-2px;
-      border-color: #fff #fff transparent transparent;
+      border-color: var(--pure-white) var(--pure-white) transparent transparent;
     }
+  }
+}
+
+.sidenav-languages {
+  font-size: .8125rem;
+  margin-top: 2rem;
+  border-radius: 3px;
+  border: 2px solid var(--gold);
+  background-color: var(--pure-white);
+  & header {
+    border-bottom: 2px solid var(--gold);
+    padding: 8px 27px;
+    font-weight: bold;
+  }
+  & .langlist {
+    padding-inline-start: 27px;
+    list-style-position: inside;
+    list-style-type: square;
+    color: var(--w3c-classic);
+    & li {
+      margin-block-end: 2px;
+    }
+  }
+  & p {
+    padding-block-start: 4px;
+    padding-block-end: 4px;
+    padding-inline-start: 27px;
+    padding-inline-end: 0;
+    margin:0;
+    border-top: 1px solid #eed009;
   }
 }

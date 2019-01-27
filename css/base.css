@@ -102,12 +102,6 @@ body {
   text-decoration-skip-ink: none;
   background-color: var(--body-bg);
   color:  var(--off-black);
-  @media print {
-    color: #000;
-    background-color: #fff;
-    font-size: 10pt;
-    text-decoration-skip-ink: none;
-  }
   padding: 0;
   padding: constant(safe-area-inset-top) constant(safe-area-inset-right) constant(safe-area-inset-bottom) constant(safe-area-inset-left);
   margin: 0 auto;
@@ -115,6 +109,12 @@ body {
   @supports (display: grid) {
     max-width: none;
     margin: 0;
+  }
+  @media print {
+    color: #000;
+    background-color: #fff;
+    font-size: 10pt;
+    text-decoration-skip-ink: none;
   }
 }
 
@@ -125,9 +125,6 @@ code {
 
 a {
   color: var(--w3c-blue);
-  @media print {
-    color: #000;
-  }
   &:--hovcus {
     color: var(--wai-green);
   }
@@ -144,6 +141,9 @@ a {
     }
   }
   @media print {
+    & {
+      color: #000;
+    }
     &[href^="#"]:after {
       content: '(⇘ ' attr(href) ')';
     }
@@ -174,91 +174,20 @@ a:focus, button:focus, input:focus, select:focus, submit:focus, textarea:focus, 
   }
 }
 
-:root {
-  --def-grid-noflex: {
+.default-grid {
+  padding: 0 16px;
+  @media (--large) {
+    padding:0;
+    display: flex;
+    padding-inline-start: 32px;
+    padding-inline-end: 32px;
     @supports (display: grid) {
       display: grid;
       grid-column-gap: 32px;
       padding: 0;
       max-width: none;
+      grid-template-columns: [complete-start] minmax(16px, 1fr) [navigation-start] repeat(2, minmax(0, 130px)) [navigation-end content-start] repeat(6, minmax(0, 130px)) [content-end] minmax(16px, 1fr) [complete-end];
     }
-  }
-  --def-grid: {
-    display: flex;
-    padding-left: 32px;
-    padding-right: 32px;
-    @apply --def-grid-noflex;
-  }
-
-  --full-grid: {
-    @apply --def-grid;
-    grid-template-columns: [complete-start] minmax(16px, 1fr) [navigation-start] repeat(2, minmax(0, 130px)) [navigation-end content-start] repeat(6, minmax(0, 130px)) [content-end] minmax(16px, 1fr) [complete-end];
-  }
-
-  --full-grid-three-five: {
-    @apply --def-grid;
-    grid-template-columns: [complete-start] 0 [three-start five-start] 1fr [three-end five-end] 0 [complete-end];
-    @media (--medium) {
-      grid-template-columns: [complete-start] minmax(16px, 1fr) [three-start] repeat(3, minmax(0, 130px)) [three-end five-start] repeat(5, minmax(0, 130px)) [five-end] minmax(16px, 1fr) [complete-end];
-    }
-  }
-
-  --full-grid-five-three: {
-    @apply --def-grid;
-    grid-template-columns: [complete-start] 0 [three-start five-start] 1fr [three-end five-end] 0 [complete-end];
-    @media (--medium) {
-      grid-template-columns: [complete-start] minmax(16px, 1fr) [five-start] repeat(5, minmax(0, 130px)) [five-end three-start] repeat(3, minmax(0, 130px)) [three-end] minmax(16px, 1fr) [complete-end];
-    }
-  }
-
-  --full-grid-4q: {
-    @apply --def-grid;
-    grid-template-columns: [complete-start] 0 [q1-start q2-start q3-start q4-start] 1fr [q1-end q2-end q3-end q4-end] 0 [complete-end];
-    @media (--large) {
-      grid-template-columns: [complete-start] minmax(16px, 1fr) [content-start q1-start] repeat(2, minmax(0, 130px)) [q1-end q2-start] repeat(2, minmax(0, 130px)) [q2-end q3-start] repeat(2, minmax(0, 130px)) [q3-end q4-start] repeat(2, minmax(0, 130px)) [q4-end content-end] minmax(16px, 1fr) [complete-end];
-    }
-  }
-
-  --full-grid-4q-nogap: {
-    grid-template-columns: [complete-start] 0 [q1-start q2-start q3-start q4-start] 1fr [q1-end q2-end q3-end q4-end] 0 [complete-end];
-    @media (--large) {
-      grid-template-columns: [complete-start] minmax(16px, 1fr) [content-start q1-start] repeat(2, minmax(0, 158px)) [q1-end q2-start] repeat(2, minmax(0, 158px)) [q2-end q3-start] repeat(2, minmax(0, 158px)) [q3-end q4-start] repeat(2, minmax(0, 158px)) [q4-end content-end] minmax(16px, 1fr) [complete-end];
-    }
-    grid-column-gap: 0;
-  }
-
-  --grid-six: {
-    @apply --def-grid;
-    grid-template-columns: repeat(6, minmax(0, 1fr));
-  }
-
-  --grid-four: {
-    @apply --def-grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
-
-  --grid-three: {
-    @apply --def-grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
-  --clear: {
-    &:before, &:after {
-      content: " ";
-      display: table;
-    }
-
-    &:after {
-        clear: both;
-    }
-  }
-}
-
-.default-grid {
-  padding: 0 16px;
-  @media (--large) {
-    padding:0;
-    @apply --full-grid;
     & .inner {
       grid-column-start: navigation-start;
       grid-column-end: content-end;
@@ -271,7 +200,16 @@ a:focus, button:focus, input:focus, select:focus, submit:focus, textarea:focus, 
 
 .grid-3 {
   @media (--large) {
-    @apply --grid-three;
+    display: flex;
+    padding-inline-start: 32px;
+    padding-inline-end: 32px;
+    @supports (display: grid) {
+      display: grid;
+      grid-column-gap: 32px;
+      padding: 0;
+      max-width: none;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
     &.nogap { grid-column-gap: 0; }
   }
   & .col1, & .from-col1 { grid-column-start: 1; }
@@ -287,7 +225,16 @@ a:focus, button:focus, input:focus, select:focus, submit:focus, textarea:focus, 
 
 .grid-4 {
   @media (--large) {
-    @apply --grid-four;
+    display: flex;
+    padding-inline-start: 32px;
+    padding-inline-end: 32px;
+    @supports (display: grid) {
+      display: grid;
+      grid-column-gap: 32px;
+      padding: 0;
+      max-width: none;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
     &.nogap { grid-column-gap: 0; }
   }
   & .col1, & .from-col1 { grid-column-start: 1; }
@@ -306,7 +253,16 @@ a:focus, button:focus, input:focus, select:focus, submit:focus, textarea:focus, 
 
 .grid-6 {
   @media (--large) {
-    @apply --grid-six;
+    display: flex;
+    padding-inline-start: 32px;
+    padding-inline-end: 32px;
+    @supports (display: grid) {
+      display: grid;
+      grid-column-gap: 32px;
+      padding: 0;
+      max-width: none;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+    }
   }
 
   & .col1, & .from-col1 { grid-column-start: 1; }
@@ -329,9 +285,9 @@ a:focus, button:focus, input:focus, select:focus, submit:focus, textarea:focus, 
 
   /* IE fixes: */
   & .col1, & .col2, & .col3, & .col4, & .col5, & .col6, &.from-col1, & .from-col2, & .from-col3, & .from-col4, & .from-col5, & .from-col6 {flex-basis: 25%; flex-grow: 1;}
-  & .col2, & .col3, & .col4, & .col5, & .col6, & .from-col2, & .from-col3, & .from-col4, & .from-col5, & .from-col6 {margin-left: 32px;}
+  & .col2, & .col3, & .col4, & .col5, & .col6, & .from-col2, & .from-col3, & .from-col4, & .from-col5, & .from-col6 {margin-inline-start: 32px;}
   @supports (display: grid) {
-    & .col2, & .col3, & .col4, & .col5, & .col6, & .from-col2, & .from-col3, & .from-col4, & .from-col5, & .from-col6 {margin-left: 0;}
+    & .col2, & .col3, & .col4, & .col5, & .col6, & .from-col2, & .from-col3, & .from-col4, & .from-col5, & .from-col6 {margin-inline-start: 0;}
   }
   &.from-col1.to-col6 {
     width: 100%;
@@ -341,7 +297,19 @@ a:focus, button:focus, input:focus, select:focus, submit:focus, textarea:focus, 
 .grid-three-five {
   & .col1, & .col2 { padding-left: 16px; padding-right: 16px; }
   @media (--medium) {
-    @apply --full-grid-three-five;
+    display: flex;
+    padding-inline-start: 32px;
+    padding-inline-end: 32px;
+    @supports (display: grid) {
+      display: grid;
+      grid-column-gap: 32px;
+      padding: 0;
+      max-width: none;
+      grid-template-columns: [complete-start] 0 [three-start five-start] 1fr [three-end five-end] 0 [complete-end];
+      @media (--medium) {
+        grid-template-columns: [complete-start] minmax(16px, 1fr) [three-start] repeat(3, minmax(0, 130px)) [three-end five-start] repeat(5, minmax(0, 130px)) [five-end] minmax(16px, 1fr) [complete-end];
+      }
+    }
     & .col1, & .col2 { padding: 0; }
   }
   & .col1, & .col2 { flex-shrink: 1; }
@@ -349,9 +317,9 @@ a:focus, button:focus, input:focus, select:focus, submit:focus, textarea:focus, 
     flex-basis: 35%;
     grid-column-start: three-start;
     grid-column-end: three-end;
-    margin-right: 32px;
+    margin-inline-end: 32px;
     @supports (display: grid) {
-      margin-right: 0;
+      margin-inline-end: 0;
     }
   }
   & .col2 {
@@ -369,7 +337,19 @@ a:focus, button:focus, input:focus, select:focus, submit:focus, textarea:focus, 
 .grid-five-three {
   & .col1, & .col2 { padding-left: 16px; padding-right: 16px; }
   @media (--medium) {
-    @apply --full-grid-five-three;
+    display: flex;
+    padding-inline-start: 32px;
+    padding-inline-end: 32px;
+    @supports (display: grid) {
+      display: grid;
+      grid-column-gap: 32px;
+      padding: 0;
+      max-width: none;
+      grid-template-columns: [complete-start] 0 [three-start five-start] 1fr [three-end five-end] 0 [complete-end];
+      @media (--medium) {
+        grid-template-columns: [complete-start] minmax(16px, 1fr) [five-start] repeat(5, minmax(0, 130px)) [five-end three-start] repeat(3, minmax(0, 130px)) [three-end] minmax(16px, 1fr) [complete-end];
+      }
+    }
     & .col1, & .col2 { padding: 0; }
   }
   & .col1, & .col2 { flex-shrink: 1; }
@@ -377,9 +357,9 @@ a:focus, button:focus, input:focus, select:focus, submit:focus, textarea:focus, 
     flex: 1 1 62%;
     grid-column-start: five-start;
     grid-column-end: five-end;
-    margin-right: 32px;
+    margin-inline-end: 32px;
     @supports (display: grid) {
-      margin-right: 0;
+      margin-inline-end: 0;
     }
   }
   & .col2 {
@@ -395,33 +375,49 @@ a:focus, button:focus, input:focus, select:focus, submit:focus, textarea:focus, 
 }
 
 .grid-4q {
-  @apply --full-grid-4q;
+  display: flex;
+  padding-inline-start: 32px;
+  padding-inline-end: 32px;
+  @supports (display: grid) {
+    display: grid;
+    grid-column-gap: 32px;
+    padding: 0;
+    max-width: none;
+    grid-template-columns: [complete-start] 0 [q1-start q2-start q3-start q4-start] 1fr [q1-end q2-end q3-end q4-end] 0 [complete-end];
+    @media (--large) {
+      grid-template-columns: [complete-start] minmax(16px, 1fr) [content-start q1-start] repeat(2, minmax(0, 130px)) [q1-end q2-start] repeat(2, minmax(0, 130px)) [q2-end q3-start] repeat(2, minmax(0, 130px)) [q3-end q4-start] repeat(2, minmax(0, 130px)) [q4-end content-end] minmax(16px, 1fr) [complete-end];
+    }
+  }
   &.nogap {
-    @apply --full-grid-4q-nogap;
+    grid-template-columns: [complete-start] 0 [q1-start q2-start q3-start q4-start] 1fr [q1-end q2-end q3-end q4-end] 0 [complete-end];
+    @media (--large) {
+      grid-template-columns: [complete-start] minmax(16px, 1fr) [content-start q1-start] repeat(2, minmax(0, 158px)) [q1-end q2-start] repeat(2, minmax(0, 158px)) [q2-end q3-start] repeat(2, minmax(0, 158px)) [q3-end q4-start] repeat(2, minmax(0, 158px)) [q4-end content-end] minmax(16px, 1fr) [complete-end];
+    }
+    grid-column-gap: 0;
   }
 
   & .q1-start {
     flex-basis:25%;
     flex-shrink: 1;
-    margin-right: 32px;
+    margin-inline-end: 32px;
     grid-column-start: q1-start;
   }
   & .q2-start {
     flex-basis:25%;
     flex-shrink: 1;
-    margin-right: 32px;
+    margin-inline-end: 32px;
     grid-column-start: q2-start;
   }
   & .q3-start {
     flex-basis:25%;
     flex-shrink: 1;
-    margin-right: 32px;
+    margin-inline-end: 32px;
     grid-column-start: q3-start;
   }
   & .q4-start {
     flex-basis:25%;
     flex-shrink: 1;
-    margin-right: 32px;
+    margin-inline-end: 32px;
     grid-column-start: q4-start;
   }
   & .q1-end {
@@ -435,7 +431,7 @@ a:focus, button:focus, input:focus, select:focus, submit:focus, textarea:focus, 
   }
   & .q4-end {
     grid-column-end: q4-end;
-    margin-right: 0;
+    margin-inline-end: 0;
   }
   & .q1-start.q2-end,
   & .q2-start.q3-end,
@@ -452,7 +448,7 @@ a:focus, button:focus, input:focus, select:focus, submit:focus, textarea:focus, 
     & .q2-start,
     & .q3-start,
     & .q4-start {
-      margin-right: 0;
+      margin-inline-end: 0;
     }
   }
 
@@ -461,7 +457,7 @@ a:focus, button:focus, input:focus, select:focus, submit:focus, textarea:focus, 
     & .q2-start,
     & .q3-start,
     & .q4-start {
-      margin-right: 0;
+      margin-inline-end: 0;
     }
   }
 }
@@ -474,9 +470,9 @@ a:focus, button:focus, input:focus, select:focus, submit:focus, textarea:focus, 
   & main {
     grid-area: content;
     flex: 1;
-    margin-left: 32px;
+    margin-inline-start: 32px;
     @supports (display: grid) {
-      margin-left: 0;
+      margin-inline-start: 0;
     }
   }
 }
@@ -492,7 +488,7 @@ a:focus, button:focus, input:focus, select:focus, submit:focus, textarea:focus, 
 .grid-line-left {
   @media (--medium) {
     border-left: 1px solid var(--line-grey);
-    margin-left: -16px !important;
+    margin-inline-start: -16px !important;
     padding-left: 16px !important;
   }
 }
@@ -518,7 +514,7 @@ a:focus, button:focus, input:focus, select:focus, submit:focus, textarea:focus, 
 
 img.symbol {
   float: right;
-  margin-left: 1em;
+  margin-inline-start: 1em;
   margin-bottom: 1em;
 }
 
