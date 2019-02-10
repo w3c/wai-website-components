@@ -1,6 +1,11 @@
 (function ($) {
   AblePlayer.prototype.seekTo = function (newTime) {
 
+    // define variables to be used for analytics
+    // e.g., to measure the extent to which users seek back and forward
+    this.seekFromTime = this.media.currentTime;
+    this.seekToTime = newTime;
+
     this.seeking = true;
     this.liveUpdatePending = true;
 
@@ -214,6 +219,9 @@
   };
 
   AblePlayer.prototype.playMedia = function () {
+
+    var thisObj = this;
+
     if (this.player === 'html5') {
       this.media.play(true);
       if (this.hasSignLanguage && this.signVideo) {
@@ -231,6 +239,52 @@
       this.stoppingYouTube = false;
     }
     this.startedPlaying = true;
+    if (this.hideControls) {
+      // wait briefly after playback begins, then hide controls
+      this.hidingControls = true;
+      this.hideControlsTimeout = window.setTimeout(function() {
+        thisObj.fadeControls('out');
+        thisObj.controlsHidden = true;
+        thisObj.hidingControls = false;
+      },2000);
+    }
+  };
+
+  AblePlayer.prototype.fadeControls = function(direction) {
+
+    // NOTE: This is a work in progress, and is not yet fully functional
+    // TODO: Use jQuery fadeIn() and fadeOut() to attain some sort of transition
+    // Currently just adds or removes able-offscreen class to visibly hide content
+    // without hiding it from screen reader users
+
+    // direction is either 'out' or 'in'
+
+    // One challenge:
+    // When controls fade out in other players (e.g., YouTube, Vimeo), the transition works well because
+    // their controls are an overlay on top of the video.
+    // Therefore, disappearing controls don't affect the size of the video container.
+    // Able Player's controls appear below the video, so if this.$playerDiv disappears,
+    // that results in a reduction in the height of the video container, which is a bit jarring
+    // Solution #1: Don't hide this.$playerDiv; instead hide the two containers nested inside it
+    if (direction == 'out') {
+      this.$controllerDiv.addClass('able-offscreen');
+      this.$statusBarDiv.addClass('able-offscreen');
+      // Removing content from $playerDiv leaves an empty controller bar in its place
+      // What to do with the empty space?
+      // For now, changing to a black background; will restore to original background on fade-in
+      this.playerBackground = this.$playerDiv.css('background-color');
+      this.$playerDiv.css('background-color','black');
+    }
+    else if (direction == 'in') {
+      this.$controllerDiv.removeClass('able-offscreen');
+      this.$statusBarDiv.removeClass('able-offscreen');
+      if (typeof this.playerBackground !== 'undefined') {
+        this.$playerDiv.css('background-color',this.playerBackground);
+      }
+      else {
+        this.$playerDiv.css('background-color','');
+      }
+    }
   };
 
   AblePlayer.prototype.refreshControls = function() {
@@ -238,8 +292,8 @@
     var thisObj, duration, elapsed, lastChapterIndex, displayElapsed,
       updateLive, textByState, timestamp, widthUsed,
       leftControls, rightControls, seekbarWidth, seekbarSpacer, captionsCount,
-      buffered, newTop, svgLink, newSvgLink,
-      statusBarHeight, speedHeight, statusBarWidthBreakpoint;
+      buffered, newTop, statusBarHeight, speedHeight, statusBarWidthBreakpoint,
+      newSvgData;
 
     thisObj = this;
     if (this.swappingSrc) {
@@ -340,7 +394,9 @@
           this.$playpauseButton.find('span.able-clipped').text(this.tt.play);
         }
         else if (this.iconType === 'svg') {
-          // TODO: Add play/pause toggle for SVG
+          newSvgData = this.getSvgData('play');
+          this.$playpauseButton.find('svg').attr('viewBox',newSvgData[0]);
+          this.$playpauseButton.find('path').attr('d',newSvgData[1]);
         }
         else {
           this.$playpauseButton.find('img').attr('src',this.playButtonImg);
@@ -384,12 +440,9 @@
               this.$playpauseButton.find('span.able-clipped').text(this.tt.play);
             }
             else if (this.iconType === 'svg') {
-              // Not currently working. SVG is a work in progress
-              this.$playpauseButton.find('svg').removeClass('svg-pause').addClass('svg-play');
-              svgLink = this.$playpauseButton.find('use').attr('xlink:href');
-              newSvgLink = svgLink.replace('svg-pause','svg-play');
-              this.$playpauseButton.find('use').attr(newSvgLink);
-              this.$playpauseButton.find('span.able-clipped').text(this.tt.play);
+              newSvgData = this.getSvgData('play');
+              this.$playpauseButton.find('svg').attr('viewBox',newSvgData[0]);
+              this.$playpauseButton.find('path').attr('d',newSvgData[1]);
             }
             else {
               this.$playpauseButton.find('img').attr('src',this.playButtonImg);
@@ -403,12 +456,9 @@
               this.$playpauseButton.find('span.able-clipped').text(this.tt.pause);
             }
             else if (this.iconType === 'svg') {
-              // Not currently working. SVG is a work in progress
-              this.$playpauseButton.find('svg').removeClass('svg-play').addClass('svg-pause');
-              svgLink = this.$playpauseButton.find('use').attr('xlink:href');
-              newSvgLink = svgLink.replace('svg-play','svg-pause');
-              this.$playpauseButton.find('use').attr(newSvgLink);
-              this.$playpauseButton.find('span.able-clipped').text(this.tt.pause);
+              newSvgData = this.getSvgData('pause');
+              this.$playpauseButton.find('svg').attr('viewBox',newSvgData[0]);
+              this.$playpauseButton.find('path').attr('d',newSvgData[1]);
             }
             else {
               this.$playpauseButton.find('img').attr('src',this.pauseButtonImg);
@@ -517,7 +567,8 @@
         this.$ccButton.attr({
           'aria-label': this.tt.captions,
           'aria-haspopup': 'true',
-          'aria-controls': this.mediaId + '-captions-menu'
+          'aria-controls': this.mediaId + '-captions-menu',
+          'aria-expanded': 'false'
         });
         this.$ccButton.find('span.able-clipped').text(this.tt.captions);
       }
@@ -527,7 +578,8 @@
       this.$chaptersButton.attr({
         'aria-label': this.tt.chapters,
         'aria-haspopup': 'true',
-        'aria-controls': this.mediaId + '-chapters-menu'
+        'aria-controls': this.mediaId + '-chapters-menu',
+        'aria-expanded': 'false'
       });
     }
     if (this.$fullscreenButton) {
@@ -538,9 +590,9 @@
           this.$fullscreenButton.find('span.able-clipped').text(this.tt.enterFullScreen);
         }
         else if (this.iconType === 'svg') {
-          // Not currently working. SVG is a work in progress.
-          this.$fullscreenButton.find('svg').removeClass('icon-fullscreen-collapse').addClass('icon-fullscreen-expand');
-          this.$fullscreenButton.find('span.able-clipped').text(this.tt.enterFullScreen);
+          newSvgData = this.getSvgData('fullscreen-expand');
+          this.$fullscreenButton.find('svg').attr('viewBox',newSvgData[0]);
+          this.$fullscreenButton.find('path').attr('d',newSvgData[1]);
         }
         else {
           this.$fullscreenButton.find('img').attr('src',this.fullscreenExpandButtonImg);
@@ -553,9 +605,9 @@
           this.$fullscreenButton.find('span.able-clipped').text(this.tt.exitFullScreen);
         }
         else if (this.iconType === 'svg') {
-          // Not currently working. SVG is a work in progress.
-          this.$fullscreenButton.find('svg').removeClass('icon-fullscreen-expand').addClass('icon-fullscreen-collapse');
-          this.$fullscreenButton.find('span.able-clipped').text(this.tt.exitFullScreen);
+          newSvgData = this.getSvgData('fullscreen-collapse');
+          this.$fullscreenButton.find('svg').attr('viewBox',newSvgData[0]);
+          this.$fullscreenButton.find('path').attr('d',newSvgData[1]);
         }
         else {
           this.$fullscreenButton.find('img').attr('src',this.fullscreenCollapseButtonImg);
@@ -850,27 +902,23 @@
       this.refreshControls();
     }
     else {
-
       // there is more than one caption track.
       // clicking on a track is handled via caption.js > getCaptionClickFunction()
-      if (this.captionsPopup.is(':visible')) {
+      if (this.captionsPopup && this.captionsPopup.is(':visible')) {
         this.captionsPopup.hide();
         this.hidingPopup = false;
-        this.$ccButton.focus();
+        this.$ccButton.attr('aria-expanded','false').focus();
       }
       else {
         this.closePopups();
-        this.captionsPopup.show();
-        this.captionsPopup.css('top', this.$ccButton.position().top - this.captionsPopup.outerHeight());
-        this.captionsPopup.css('left', this.$ccButton.position().left)
-        // Focus on the checked button, if any buttons are checked
-        // Otherwise, focus on the first button
-        this.captionsPopup.find('li').removeClass('able-focus');
-        if (this.captionsPopup.find('input:checked')) {
-          this.captionsPopup.find('input:checked').focus().parent().addClass('able-focus');
-        }
-        else {
-          this.captionsPopup.find('input').first().focus().parent().addClass('able-focus');
+        if (this.captionsPopup) {
+          this.captionsPopup.show();
+          this.$ccButton.attr('aria-expanded','true');
+          this.captionsPopup.css('top', this.$ccButton.position().top - this.captionsPopup.outerHeight());
+          this.captionsPopup.css('left', this.$ccButton.position().left)
+          // Place focus on the first button (even if another button is checked)
+          this.captionsPopup.find('li').removeClass('able-focus');
+          this.captionsPopup.find('li').first().focus().addClass('able-focus');
         }
       }
     }
@@ -886,21 +934,23 @@
     if (this.chaptersPopup.is(':visible')) {
       this.chaptersPopup.hide();
       this.hidingPopup = false;
-      this.$chaptersButton.focus();
+      this.$chaptersButton.attr('aria-expanded','false').focus();
     }
     else {
       this.closePopups();
       this.chaptersPopup.show();
+      this.$chaptersButton.attr('aria-expanded','true');
       this.chaptersPopup.css('top', this.$chaptersButton.position().top - this.chaptersPopup.outerHeight());
       this.chaptersPopup.css('left', this.$chaptersButton.position().left)
-      // Focus on the checked button, if any buttons are checked
-      // Otherwise, focus on the first button
+
+      // Highlight the current chapter, if any chapters are checked
+      // Otherwise, place focus on the first chapter
       this.chaptersPopup.find('li').removeClass('able-focus');
-      if (this.chaptersPopup.find('input:checked')) {
-        this.chaptersPopup.find('input:checked').focus().parent().addClass('able-focus');
+      if (this.chaptersPopup.find('li[aria-checked="true"]').length) {
+        this.chaptersPopup.find('li[aria-checked="true"]').focus().addClass('able-focus');
       }
       else {
-        this.chaptersPopup.find('input').first().focus().parent().addClass('able-focus');
+        this.chaptersPopup.find('li').first().addClass('able-focus').attr('aria-checked','true').focus();
       }
     }
   };
@@ -915,7 +965,6 @@
   };
 
   AblePlayer.prototype.handlePrefsClick = function(pref) {
-
     // NOTE: the prefs menu is positioned near the right edge of the player
     // This assumes the Prefs button is also positioned in that vicinity
     // (last or second-last button the right)
@@ -931,19 +980,22 @@
     if (this.prefsPopup.is(':visible')) {
       this.prefsPopup.hide();
       this.hidingPopup = false;
-      this.$prefsButton.focus();
+      this.$prefsButton.attr('aria-expanded','false').focus();
+      // restore each menu item to original hidden state
+      this.prefsPopup.find('li').removeClass('able-focus').attr('tabindex','-1');
     }
     else {
       this.closePopups();
       this.prefsPopup.show();
+      this.$prefsButton.attr('aria-expanded','true');
       prefsButtonPosition = this.$prefsButton.position();
       prefsMenuRight = this.$ableDiv.width() - 5;
       prefsMenuLeft = prefsMenuRight - this.prefsPopup.width();
       this.prefsPopup.css('top', prefsButtonPosition.top - this.prefsPopup.outerHeight());
       this.prefsPopup.css('left', prefsMenuLeft);
-      // remove prior focus and set focus on first item
-      this.prefsPopup.find('li').removeClass('able-focus');
-      this.prefsPopup.find('input').first().focus().parent().addClass('able-focus');
+      // remove prior focus and set focus on first item; also change tabindex from -1 to 0
+      this.prefsPopup.find('li').removeClass('able-focus').attr('tabindex','0');
+      this.prefsPopup.find('li').first().focus().addClass('able-focus');
     }
   };
 
@@ -958,6 +1010,7 @@
       this.$transcriptButton.addClass('buttonOff').attr('aria-label',this.tt.showTranscript);
       this.$transcriptButton.find('span.able-clipped').text(this.tt.showTranscript);
       this.prefTranscript = 0;
+      this.$transcriptButton.focus().addClass('able-focus');
     }
     else {
       this.positionDraggableWindow('transcript');
@@ -975,6 +1028,7 @@
       this.$signButton.addClass('buttonOff').attr('aria-label',this.tt.showSign);
       this.$signButton.find('span.able-clipped').text(this.tt.showSign);
       this.prefSign = 0;
+      this.$signButton.focus().addClass('able-focus');
     }
     else {
       this.positionDraggableWindow('sign');
@@ -1382,8 +1436,8 @@
     var max, $elements, z;
     max = 0;
 
-    // exclude the Able Player dialogs
-    $elements = $('body *').not('.able-modal-dialog,.able-modal-dialog *,.able-modal-overlay,.able-modal-overlay *');
+    // exclude the Able Player dialogs and windows
+    $elements = $('body *').not('.able-modal-dialog,.able-modal-dialog *,.able-modal-overlay,.able-modal-overlay *,.able-sign-window,.able-transcript-area');
 
     $elements.each(function(){
       z = $(this).css('z-index');
@@ -1401,22 +1455,48 @@
     // update z-index of 'transcript' or 'sign', relative to each other
     // direction is always 'up' (i.e., move window to top)
     // windows come to the top when the user clicks on them
+    var defHighZ, defLowZ, highestZ, transcriptZ, signZ, newHighZ, newLowZ;
 
-    var transcriptZ, signZ, newHighZ, newLowZ;
+    // set the default z-indexes, as defined in ableplayer.css
+    defHighZ = 8000; // by default, assigned to the sign window
+    defLowZ = 7000; // by default, assigned to the transcript area
+    highestZ = this.getHighestZIndex(); // highest z-index on the page, excluding Able Player windows & modals
+
+    // NOTE: Although highestZ is collected here, it currently isn't used.
+    // If something on the page has a higher z-index than the transcript or sign window, do we care?
+    // Excluding it here assumes "No". Our immediate concern is with the relationship between our own components.
+    // If we elevate our z-indexes so our content is on top, we run the risk of starting a z-index war.
 
     if (typeof this.$transcriptArea === 'undefined' || typeof this.$signWindow === 'undefined' ) {
       // at least one of the windows doesn't exist, so there's no conflict
+      // since z-index may have been stored to a cookie on another page, need to restore default
+      if (typeof this.$transcriptArea !== 'undefined') {
+        transcriptZ = parseInt(this.$transcriptArea.css('z-index'));
+        if (transcriptZ > defLowZ) {
+          // restore to the default
+          this.$transcriptArea.css('z-index',defLowZ);
+        }
+      }
+      else if (typeof this.$signWindow !== 'undefined') {
+        signZ = parseInt(this.$signWindow.css('z-index'));
+        if (signZ > defHighZ) {
+          // restore to the default
+          this.$signWindow.css('z-index',defHighZ);
+        }
+      }
       return false;
     }
+
+    // both windows exist
 
     // get current values
     transcriptZ = parseInt(this.$transcriptArea.css('z-index'));
     signZ = parseInt(this.$signWindow.css('z-index'));
 
     if (transcriptZ === signZ) {
-      // the two windows are equal; move the target window the top
-      newHighZ = transcriptZ + 1000;
-      newLowZ = transcriptZ;
+      // the two windows are equal; restore defaults (the target window will be on top)
+      newHighZ = defHighZ;
+      newLowZ = defLowZ;
     }
     else if (transcriptZ > signZ) {
       if (which === 'transcript') {
@@ -1431,6 +1511,7 @@
     }
     else { // signZ is greater
       if (which === 'sign') {
+        // sign is already on top; nothing to do
         return false;
       }
       else {
@@ -1438,7 +1519,6 @@
         newLowZ = transcriptZ;
       }
     }
-
     // now assign the new values
     if (which === 'transcript') {
       this.$transcriptArea.css('z-index',newHighZ);
@@ -1501,7 +1581,10 @@
       this.transcriptChapters = chapters;
       this.transcriptDescriptions = descriptions;
       this.updateChaptersList();
-      this.setupPopups('chapters');
+      // the following was commented out in Oct/Nov 2018.
+      // chapters popup is setup automatically when setupPopups() is called later with no param
+      // not sure why it was included here.
+      // this.setupPopups('chapters');
     }
     else if (source === 'transcript') {
       this.transcriptCaptions = captions;

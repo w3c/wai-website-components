@@ -399,6 +399,7 @@
   div.able-modal-overlay = 9500
 
   * Items that should always be on top (9000):
+	#able-vts-alert = 9400
   .able-alert = 9400
   .able-window-toolbar .able-button-handler-preferences = 9300
   .able-popup = 9200
@@ -430,6 +431,7 @@
   <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
   <span class="hljs-attribute">height</span>: auto;
   <span class="hljs-attribute">box-sizing</span>: content-box <span class="hljs-meta">!important</span>;
+  <span class="hljs-attribute">max-width</span>: none <span class="hljs-meta">!important</span>;
 }
 <span class="hljs-selector-class">.able</span> {
   <span class="hljs-attribute">position</span>: relative;
@@ -635,7 +637,7 @@
   <span class="hljs-attribute">position</span>: absolute;
   <span class="hljs-attribute">right</span>: <span class="hljs-number">0px</span>;
   <span class="hljs-attribute">top</span>: -<span class="hljs-number">74px</span>;
-  <span class="hljs-attribute">display</span>: none;
+  <span class="hljs-attribute">display</span>: block;
   <span class="hljs-attribute">z-index</span>: <span class="hljs-number">9100</span>;
 }
 <span class="hljs-selector-class">.able-volume-track</span> {
@@ -797,7 +799,7 @@ input[type=range]:focus::-ms-fill-upper {
   <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span>;
   <span class="hljs-attribute">text-align</span>: center;
   <span class="hljs-attribute">line-height</span>: <span class="hljs-number">1.35em</span>;
-  <span class="hljs-attribute">display</span>: none;
+  <span class="hljs-attribute">display</span>: block;
   <span class="hljs-attribute">z-index</span>: <span class="hljs-number">6000</span>;
 }
 <span class="hljs-selector-tag">div</span><span class="hljs-selector-class">.able-captions</span> {
@@ -1068,9 +1070,10 @@ input[type=range]:focus::-ms-fill-upper {
 }
 <span class="hljs-selector-class">.able-window-toolbar</span> <span class="hljs-selector-class">.able-popup</span> {
   <span class="hljs-attribute">position</span>: absolute;
+  <span class="hljs-attribute">cursor</span>: default;
   <span class="hljs-attribute">right</span>: <span class="hljs-number">0</span>;
   <span class="hljs-attribute">top</span>: <span class="hljs-number">0</span>;
-  <span class="hljs-attribute">display</span>: none;
+  <span class="hljs-attribute">display</span>: block;
 }
 <span class="hljs-selector-class">.able-drag</span> {
   <span class="hljs-attribute">border</span>: <span class="hljs-number">2px</span> dashed <span class="hljs-number">#F90</span>;
@@ -1208,7 +1211,7 @@ input[type=range]:focus::-ms-fill-upper {
   <span class="hljs-attribute">-webkit-border-radius</span>: <span class="hljs-number">5px</span>;
   <span class="hljs-attribute">-moz-border-radius</span>: <span class="hljs-number">5px</span>;
   <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">5px</span>;
-  <span class="hljs-attribute">display</span>: none;
+  <span class="hljs-attribute">display</span>: block;
 }
 <span class="hljs-selector-class">.able-alert</span> {
   <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#FFFFCC</span>;
@@ -1236,36 +1239,30 @@ input[type=range]:focus::-ms-fill-upper {
   <span class="hljs-attribute">-webkit-border-radius</span>: <span class="hljs-number">5px</span>;
   <span class="hljs-attribute">-moz-border-radius</span>: <span class="hljs-number">5px</span>;
   <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">5px</span>;
-  <span class="hljs-attribute">display</span>: none;
+  <span class="hljs-attribute">display</span>: block;
+  <span class="hljs-attribute">cursor</span>: default;
+  <span class="hljs-attribute">list-style</span>: none;
 }
-<span class="hljs-selector-class">.able-popup</span> <span class="hljs-selector-tag">ul</span> {
+<span class="hljs-selector-tag">ul</span><span class="hljs-selector-class">.able-popup</span> {
   <span class="hljs-attribute">list-style-type</span>: none;
-  <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span>;
-  <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span>;
 }
 <span class="hljs-selector-class">.able-popup</span> <span class="hljs-selector-tag">li</span> {
   <span class="hljs-attribute">padding</span>: <span class="hljs-number">0.25em</span> <span class="hljs-number">1em</span> <span class="hljs-number">0.25em</span> <span class="hljs-number">0.25em</span>;
   <span class="hljs-attribute">margin</span>: <span class="hljs-number">1px</span>;
-}
-<span class="hljs-selector-class">.able-popup</span> <span class="hljs-selector-tag">label</span> {
-  <span class="hljs-attribute">padding-left</span>: <span class="hljs-number">0.25em</span>;
   <span class="hljs-attribute">color</span>: <span class="hljs-number">#FFF</span>;
 }
 <span class="hljs-selector-class">.able-popup</span> <span class="hljs-selector-tag">li</span><span class="hljs-selector-class">.able-focus</span> {
   <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#CCC</span>;
-}
-<span class="hljs-selector-class">.able-popup</span> <span class="hljs-selector-tag">li</span><span class="hljs-selector-class">.able-focus</span> <span class="hljs-selector-tag">label</span> {
   <span class="hljs-attribute">color</span>: <span class="hljs-number">#000</span>;
 }
-
-<span class="hljs-comment">/*
-  Popup Menus with hidden radio buttons
-  e.g., chapters and preferences
-*/</span>
-<span class="hljs-selector-class">.able-popup-no-radio</span> &gt; <span class="hljs-selector-tag">ul</span> &gt; <span class="hljs-selector-tag">li</span> &gt; <span class="hljs-selector-tag">input</span> {
-  <span class="hljs-attribute">position</span>: absolute <span class="hljs-meta">!important</span>;
-  <span class="hljs-attribute">clip</span>: <span class="hljs-built_in">rect</span>(1px 1px 1px 1px); <span class="hljs-comment">/* IE6, IE7 */</span>
-  <span class="hljs-attribute">clip</span>: <span class="hljs-built_in">rect</span>(1px, 1px, 1px, 1px);
+<span class="hljs-selector-class">.able-popup-captions</span> <span class="hljs-selector-tag">li</span> {
+  <span class="hljs-attribute">padding-left</span>: <span class="hljs-number">1em</span>;
+}
+<span class="hljs-selector-class">.able-popup-captions</span> <span class="hljs-selector-tag">li</span><span class="hljs-selector-attr">[aria-checked="true"]</span> {
+  <span class="hljs-attribute">padding-left</span>: <span class="hljs-number">0</span>;
+}
+<span class="hljs-selector-class">.able-popup-captions</span> <span class="hljs-selector-tag">li</span><span class="hljs-selector-attr">[aria-checked="true"]</span><span class="hljs-selector-pseudo">::before</span> {
+  <span class="hljs-attribute">content</span>: <span class="hljs-string">"\2713  "</span>; <span class="hljs-comment">/* check mark; for heavier mark us 2714 */</span>
 }
 
 <span class="hljs-comment">/*
@@ -1278,6 +1275,7 @@ input[type=range]:focus::-ms-fill-upper {
   <span class="hljs-attribute">height</span>: <span class="hljs-number">400px</span>;
   <span class="hljs-attribute">z-index</span>: <span class="hljs-number">7000</span>;
   <span class="hljs-attribute">outline</span>: none;
+  <span class="hljs-attribute">padding-bottom</span>: <span class="hljs-number">25px</span>; <span class="hljs-comment">/* keep content above 16x16px drag icon */</span>
 }
 <span class="hljs-selector-class">.able-transcript</span> {
   <span class="hljs-attribute">position</span>: relative; <span class="hljs-comment">/* must be positioned for scrolling */</span>
@@ -1332,6 +1330,8 @@ input[type=range]:focus::-ms-fill-upper {
 }
 <span class="hljs-selector-class">.able-window-toolbar</span> <span class="hljs-selector-tag">input</span><span class="hljs-selector-pseudo">:focus</span>,
 <span class="hljs-selector-class">.able-window-toolbar</span> <span class="hljs-selector-tag">input</span><span class="hljs-selector-pseudo">:hover</span>,
+<span class="hljs-selector-class">.able-window-toolbar</span> <span class="hljs-selector-tag">select</span><span class="hljs-selector-pseudo">:focus</span>,
+<span class="hljs-selector-class">.able-window-toolbar</span> <span class="hljs-selector-tag">select</span><span class="hljs-selector-pseudo">:hover</span>,
 <span class="hljs-selector-class">.able-controller</span> <span class="hljs-selector-tag">input</span><span class="hljs-selector-pseudo">:focus</span>,
 <span class="hljs-selector-class">.able-controller</span> <span class="hljs-selector-tag">input</span><span class="hljs-selector-pseudo">:hover</span>,
 <span class="hljs-selector-class">.able-controller</span> <span class="hljs-selector-tag">button</span><span class="hljs-selector-pseudo">:focus</span>,
@@ -1342,12 +1342,14 @@ input[type=range]:focus::-ms-fill-upper {
   <span class="hljs-attribute">outline-width</span>: <span class="hljs-number">2px</span>;
 }
 <span class="hljs-selector-class">.able-window-toolbar</span> <span class="hljs-selector-tag">input</span><span class="hljs-selector-pseudo">:focus</span>,
+<span class="hljs-selector-class">.able-window-toolbar</span> <span class="hljs-selector-tag">select</span><span class="hljs-selector-pseudo">:focus</span>,
 <span class="hljs-selector-class">.able-controller</span> <span class="hljs-selector-tag">input</span><span class="hljs-selector-pseudo">:focus</span>,
 <span class="hljs-selector-class">.able-controller</span> <span class="hljs-selector-tag">button</span><span class="hljs-selector-pseudo">:focus</span>,
 <span class="hljs-selector-class">.able-seekbar-head</span><span class="hljs-selector-pseudo">:focus</span> {
   <span class="hljs-attribute">outline-color</span>: <span class="hljs-number">#ffbb37</span>; <span class="hljs-comment">/* yellow */</span>
 }
 <span class="hljs-selector-class">.able-window-toolbar</span> <span class="hljs-selector-tag">input</span><span class="hljs-selector-pseudo">:hover</span>,
+<span class="hljs-selector-class">.able-window-toolbar</span> <span class="hljs-selector-tag">select</span><span class="hljs-selector-pseudo">:hover</span>,
 <span class="hljs-selector-class">.able-controller</span> <span class="hljs-selector-tag">input</span><span class="hljs-selector-pseudo">:hover</span>,
 <span class="hljs-selector-class">.able-controller</span> <span class="hljs-selector-tag">button</span><span class="hljs-selector-pseudo">:hover</span>,
 <span class="hljs-selector-class">.able-seekbar-head</span><span class="hljs-selector-pseudo">:hover</span> {
@@ -1443,6 +1445,107 @@ input[type=range]:focus::-ms-fill-upper {
 <span class="hljs-selector-class">.able-search-term</span> {
   <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#FFC</span>;
   <span class="hljs-attribute">font-weight</span>: bold;
+}
+
+<span class="hljs-comment">/*
+  Video Transcript Sorter (VTS)
+*/</span>
+<span class="hljs-selector-id">#able-vts-instructions</span> {
+	<span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">1.5em</span>;
+	<span class="hljs-attribute">padding</span>: <span class="hljs-number">1em</span>;
+	<span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-number">#999</span>;
+	<span class="hljs-attribute">width</span>: <span class="hljs-number">720px</span>;
+	<span class="hljs-attribute">max-width</span>: <span class="hljs-number">90%</span>;
+}
+<span class="hljs-selector-id">#able-vts</span> <span class="hljs-selector-tag">fieldset</span> {
+  <span class="hljs-attribute">margin</span>: <span class="hljs-number">1em</span>;
+  <span class="hljs-attribute">border</span>: none;
+}
+<span class="hljs-selector-id">#able-vts</span> <span class="hljs-selector-tag">fieldset</span> <span class="hljs-selector-tag">legend</span> {
+  <span class="hljs-attribute">color</span>: <span class="hljs-number">#000</span>;
+  <span class="hljs-attribute">font-weight</span>: bold;
+}
+<span class="hljs-selector-id">#able-vts</span> <span class="hljs-selector-tag">fieldset</span> <span class="hljs-selector-tag">div</span> {
+  <span class="hljs-attribute">float</span>: left;
+  <span class="hljs-attribute">padding-right</span>: <span class="hljs-number">1em</span>;
+}
+<span class="hljs-selector-id">#able-vts</span> <span class="hljs-selector-tag">table</span> {
+  <span class="hljs-attribute">clear</span>: left;
+}
+
+<span class="hljs-selector-id">#able-vts</span> <span class="hljs-selector-tag">table</span>,
+<span class="hljs-selector-id">#able-vts</span> <span class="hljs-selector-tag">table</span> <span class="hljs-selector-tag">th</span>,
+<span class="hljs-selector-id">#able-vts</span> <span class="hljs-selector-tag">table</span> <span class="hljs-selector-tag">td</span> {
+  <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid black;
+  <span class="hljs-attribute">border-collapse</span>: collapse;
+  <span class="hljs-attribute">padding</span>: <span class="hljs-number">0.5em</span> <span class="hljs-number">0.75em</span>;
+}
+<span class="hljs-selector-id">#able-vts</span> <span class="hljs-selector-tag">table</span> <span class="hljs-selector-tag">th</span><span class="hljs-selector-class">.actions</span> {
+  <span class="hljs-attribute">min-width</span>: <span class="hljs-number">140px</span>;
+}
+<span class="hljs-selector-id">#able-vts</span> <span class="hljs-selector-tag">table</span> <span class="hljs-selector-tag">td</span> <span class="hljs-selector-tag">button</span> {
+  <span class="hljs-attribute">width</span>: auto;
+  <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">margin</span>: <span class="hljs-number">2px</span>;
+}
+<span class="hljs-selector-id">#able-vts</span> <span class="hljs-selector-tag">table</span> <span class="hljs-selector-tag">td</span> <span class="hljs-selector-tag">button</span> <span class="hljs-selector-tag">svg</span> {
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">16px</span>;
+  <span class="hljs-attribute">height</span>: <span class="hljs-number">16px</span>;
+}
+<span class="hljs-selector-id">#able-vts</span> <span class="hljs-selector-tag">table</span> <span class="hljs-selector-tag">button</span><span class="hljs-selector-pseudo">:hover</span>,
+<span class="hljs-selector-id">#able-vts</span> <span class="hljs-selector-tag">table</span> <span class="hljs-selector-tag">button</span><span class="hljs-selector-pseudo">:focus</span>  {
+  <span class="hljs-comment">/*    border: 3px solid #66c2ff; */</span>
+}
+<span class="hljs-selector-id">#able-vts</span> <span class="hljs-selector-tag">table</span> <span class="hljs-selector-tag">button</span><span class="hljs-selector-pseudo">:hover</span> <span class="hljs-selector-tag">svg</span> {
+  <span class="hljs-attribute">fill</span>: <span class="hljs-number">#C00</span>;
+}
+<span class="hljs-selector-tag">tr</span><span class="hljs-selector-class">.kind-chapters</span>,
+<span class="hljs-selector-tag">tr</span><span class="hljs-selector-class">.kind-subtitles</span> {
+  <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#FFF</span>;
+}
+<span class="hljs-selector-tag">tr</span><span class="hljs-selector-class">.kind-descriptions</span> {
+  <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#FEE</span>;
+}
+<span class="hljs-selector-tag">tr</span><span class="hljs-selector-class">.kind-chapters</span> {
+  <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#e6ffe6</span>;
+}
+<span class="hljs-selector-class">.able-vts-dragging</span> {
+  <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#FFC</span>;
+}
+<span class="hljs-selector-tag">div</span><span class="hljs-selector-id">#able-vts-icon-credit</span> {
+  <span class="hljs-attribute">margin</span>: <span class="hljs-number">1em</span>;
+}
+<span class="hljs-selector-tag">div</span><span class="hljs-selector-id">#able-vts-alert</span> {
+  <span class="hljs-attribute">display</span>: none;
+  <span class="hljs-attribute">position</span>: fixed;
+  <span class="hljs-attribute">top</span>: <span class="hljs-number">5px</span>;
+  <span class="hljs-attribute">left</span>: <span class="hljs-number">5px</span>;
+  <span class="hljs-attribute">border</span>: <span class="hljs-number">2px</span> solid <span class="hljs-number">#666</span>;
+  <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#FFC</span>;
+  <span class="hljs-attribute">padding</span>: <span class="hljs-number">1em</span>;
+  <span class="hljs-attribute">font-weight</span>: bold;
+  <span class="hljs-attribute">z-index</span>: <span class="hljs-number">9400</span>;
+}
+<span class="hljs-selector-tag">button</span><span class="hljs-selector-id">#able-vts-save</span> {
+	<span class="hljs-attribute">font-size</span>: <span class="hljs-number">1em</span>;
+	<span class="hljs-attribute">padding</span>: <span class="hljs-number">0.25em</span>;
+	<span class="hljs-attribute">border-radius</span>: <span class="hljs-number">5px</span>;
+	<span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">1em</span>;
+	<span class="hljs-attribute">font-weight</span>: bold;
+}
+<span class="hljs-selector-tag">button</span><span class="hljs-selector-id">#able-vts-save</span><span class="hljs-selector-pseudo">:hover</span>,
+<span class="hljs-selector-tag">button</span><span class="hljs-selector-id">#able-vts-save</span><span class="hljs-selector-pseudo">:focus</span> {
+  <span class="hljs-attribute">color</span>: white;
+  <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#060</span>;
+}
+<span class="hljs-selector-class">.able-vts-output-instructions</span> {
+	<span class="hljs-attribute">width</span>: <span class="hljs-number">720px</span>;
+	<span class="hljs-attribute">max-width</span>: <span class="hljs-number">90%</span>;
+}
+<span class="hljs-selector-id">#able-vts</span> <span class="hljs-selector-tag">textarea</span> {
+	<span class="hljs-attribute">height</span>: <span class="hljs-number">200px</span>;
+	<span class="hljs-attribute">width</span>: <span class="hljs-number">720px</span>;
+	<span class="hljs-attribute">max-width</span>: <span class="hljs-number">90%</span>;
 }
 
 <span class="hljs-comment">/*
@@ -1628,6 +1731,7 @@ input[type=range]:focus::-ms-fill-upper {
     <span class="hljs-attribute">content</span>: <span class="hljs-string">"\f128"</span>;
 }
 
+
 </pre>
                             </code>
                             
@@ -1644,7 +1748,7 @@ input[type=range]:focus::-ms-fill-upper {
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">24.6 KB</span>
+                    <span class="Meta-value">26.4 KB</span>
                 </li>
             </ul>
         </div>

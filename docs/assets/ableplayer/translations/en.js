@@ -1,5 +1,9 @@
 var en = {
 
+"audio": "audio",
+
+"video": "video",
+
 "playerHeading": "Media player",
 
 "faster": "Faster",
@@ -289,6 +293,8 @@ var en = {
 "windowResizeHeading": "Resize Window",
 
 "windowResizeAlert": "The window has been resized.",
+
+"windowClose": "Close",
 
 "width": "Width",
 

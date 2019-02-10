@@ -1,5 +1,9 @@
 var ja = {
 
+"audio": "オーディオ",
+
+"video": "ビデオ",
+
 "playerHeading": "メディアプレイヤー",
 
 "faster": "はやく",
@@ -289,6 +293,8 @@ var ja = {
 "windowResizeHeading": "ウィンドウのサイズ変更",
 
 "windowResizeAlert": "ウィンドウのサイズが変更されました。",
+
+"windowClose": "閉じる",
 
 "width": "幅",
 
