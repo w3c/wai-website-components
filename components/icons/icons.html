@@ -1,6 +1,6 @@
 {%- if name -%}{%- else -%}{%- set name="default" -%}{%- endif -%}
 {%- if label -%}
-<svg aria-label="{{ label }}" class="icon-{{ name }} {{class}}"><use xlink:href="{{ "/assets/images/icons.svg" | path }}#icon-{{ name }}"></use></svg>
+<svg aria-label="{{ label }}" class="icon-{{ name }} {{class}}"><use xlink:href="{{ "/assets/images/icons.svg" | path }}#icon-{{ name }}"></use></svg> {{ name }}
 {%- else -%}
-<svg aria-hidden="true" class="icon-{{ name }} {{class}}"><use xlink:href="{{ "/assets/images/icons.svg" | path }}#icon-{{ name }}"></use></svg>
+<svg aria-hidden="true" class="icon-{{ name }} {{class}}"><use xlink:href="{{ "/assets/images/icons.svg" | path }}#icon-{{ name }}"></use></svg> {{ name }}
 {%- endif -%}

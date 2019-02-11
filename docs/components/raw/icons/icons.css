@@ -102,3 +102,8 @@ Single-colored icons can be modified like so:
   width: 2.75em;
   vertical-align: -8%;
 }
+
+.icon-translations {
+  height: 1.6em;
+  vertical-align: middle
+}
