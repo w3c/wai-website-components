@@ -73,6 +73,9 @@
     &:focus {
       outline-color: var(--gold);
     }
+    & span.lang {
+      font-weight: normal;
+    }
   }
   & li a {
     border-top: 1px solid var(--w3c-classic);
