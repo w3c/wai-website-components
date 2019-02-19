@@ -692,11 +692,11 @@ span.able-modkey {
   position: absolute;
   width: 16px;
   height: 16px;
-  padding: 5px 2px;
+  padding: 5px 0 0 5px;
   bottom: 0;
   right: 0;
   cursor: nwse-resize;
-  background: transparent url('../ableplayer/images/wingrip.png') no-repeat;
+  background: transparent bottom right url('../ableplayer/images/wingrip.png') no-repeat;
 }
 
 /*
@@ -885,6 +885,7 @@ ul.able-popup {
   z-index: 7000;
   outline: none;
   padding-bottom: 25px; /* keep content above 16x16px drag icon */
+  background-color: #fff;
 }
 .able-transcript {
   position: relative; /* must be positioned for scrolling */
