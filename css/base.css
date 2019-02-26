@@ -32,60 +32,46 @@
 
 @font-face {
   font-family: 'Noto Sans';
-  src: url('../fonts/notosans-regular.woff2') format('woff2'),
-       url('../fonts/notosans-regular.woff') format('woff');
+  src: url('../fonts/notosans/notosans-regular.woff2') format('woff2'),
+       url('../fonts/notosans/notosans-regular.woff') format('woff');
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: 'Noto Sans';
-  src: url('../fonts/notosans-italic.woff2') format('woff2'),
-       url('../fonts/notosans-italic.woff') format('woff');
+  src: url('../fonts/notosans/notosans-italic.woff2') format('woff2'),
+       url('../fonts/notosans/notosans-italic.woff') format('woff');
   font-weight: 400;
   font-style: italic;
 }
 @font-face {
   font-family: 'Noto Sans';
-  src: url('../fonts/notosans-bold.woff2') format('woff2'),
-       url('../fonts/notosans-bold.woff') format('woff');
+  src: url('../fonts/notosans/notosans-bold.woff2') format('woff2'),
+       url('../fonts/notosans/notosans-bold.woff') format('woff');
   font-weight: 600;
   font-style: normal;
 }
 @font-face {
   font-family: 'Noto Sans';
-  src: url('../fonts/notosans-bolditalic.woff2') format('woff2'),
-       url('../fonts/notosans-bolditalic.woff') format('woff');
+  src: url('../fonts/notosans/notosans-bolditalic.woff2') format('woff2'),
+       url('../fonts/notosans/notosans-bolditalic.woff') format('woff');
   font-weight: 600;
   font-style: italic;
 }
 
 @font-face {
-  font-family: 'Anonymous Pro';
-  src: url('../fonts/anonymouspro-regular.woff2') format('woff2'),
-       url('../fonts/anonymouspro-regular.woff') format('woff');
+  font-family: 'Noto Sans Mono';
+  src: url('../fonts/notosansmono/notosansmono-semicondensed.woff2') format('woff2'),
+       url('../fonts/notosansmono/notosansmono-semicondensed.woff') format('woff');
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
-  font-family: 'Anonymous Pro';
-  src: url('../fonts/anonymouspro-italic.woff2') format('woff2'),
-       url('../fonts/anonymouspro-italic.woff') format('woff');
-  font-weight: 400;
-  font-style: italic;
-}
-@font-face {
-  font-family: 'Anonymous Pro';
-  src: url('../fonts/anonymouspro-bold.woff2') format('woff2'),
-       url('../fonts/anonymouspro-bold.woff') format('woff');
+  font-family: 'Noto Sans Mono';
+  src: url('../fonts/notosansmono/notosansmono-semicondensedbold.woff2') format('woff2'),
+       url('../fonts/notosansmono/notosansmono-semicondensedbold.woff') format('woff');
   font-weight: 600;
   font-style: normal;
-}
-@font-face {
-  font-family: 'Anonymous Pro';
-  src: url('../fonts/anonymouspro-bolditalic.woff2') format('woff2'),
-       url('../fonts/anonymouspro-bolditalic.woff') format('woff');
-  font-weight: 600;
-  font-style: italic;
 }
 
 html {
@@ -120,7 +106,7 @@ body {
 
 code {
   font-size: 1em;
-  font-family: 'Anonymous Pro', monospace;
+  font-family: 'Noto Sans Mono', monospace;
 }
 
 a {
