@@ -22,9 +22,10 @@ pre {
 }
 
 .highlight {
-  font-size: .875rem;
+  font-size: 14px;
   color: var(--w3c-blue);
   tab-size: 2;
+  font-variant-ligatures: no-common-ligatures;
 }
 .highlight .c   { color: var(--dk-grey) } /* Comment */
 .highlight .err { color: var(--w3c-blue) } /* Error */
@@ -96,6 +97,6 @@ pre {
 .highlight .il  { color: var(--wai-green) } /* Literal.Number.Integer.Long */
 
 :not(.highlight) code {
+  font-variant-ligatures: no-common-ligatures;
   color: var(--w3c-blue);
-  font-size: .875rem;
 }
