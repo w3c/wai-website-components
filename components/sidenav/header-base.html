@@ -1,4 +1,5 @@
 <nav class="sidenav{% for mod in mods %} sn-{{ mod }}{% endfor %}" label="{{label}}"{% if id %} id="{{ id }}"{% endif %}>
 {%render '@sn-header', icon=icon, section=section, header=label %}
 {%render '@sn-base', content=content %}
+{%render '@sn-languages' %}
 </nav>

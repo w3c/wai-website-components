@@ -1,7 +1,8 @@
 .pagination {
-  margin: 16px 0;
-  padding-top: 16px;
-  border-top: 2px solid var(--line-grey);
+  margin: 0;
+  margin-block: 16px;
+  padding-block-start: 16px;
+  border-block-start: 2px solid var(--line-grey);
   & ul {
     width: 100%;
     display: flex;
@@ -11,10 +12,11 @@
     justify-content: flex-end
   }
   & li {
-    margin-left: 8px;
+    margin-inline-start: 8px;
   }
   & a, & .like-a {
-    padding: 8px 16px;
+    padding-block: 8px;
+    padding-inline: 16px;
     border-radius: 4px;
     border: 2px solid var(--line-grey);
   }

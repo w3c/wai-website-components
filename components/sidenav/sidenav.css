@@ -1,10 +1,10 @@
 .sidenav {
   grid-area: navigation;
-  margin-bottom: 24px;
+  margin-block-end: 24px;
   display: none;
   &.open {
     display: block;
-    margin-top: 16px;
+    margin-block-start: 16px;
   }
   @media (--large) {
     display: block;
@@ -21,20 +21,20 @@
   padding: 16px 24px;
   display:flex;
   align-items: flex-end;
-  border-bottom: none;
+  border-block-end: none;
   font-weight: bold;
 }
 
 .sidenav--head-icon {
-  padding-bottom: .3em;
-  margin-left: -16px;
+  padding-block-end: .3em;
+  margin-inline-start: -16px;
 }
 
 .sidenav--head-icon--inner {
   width: 47px;
   height: 48px;
-  float: left;
-  margin-right: 8px;
+  float: inline-start;
+  margin-inline-end: 8px;
 }
 
 .sidenav--head-section {
@@ -73,17 +73,20 @@
     &:focus {
       outline-color: var(--gold);
     }
+    & span.lang {
+      font-weight: normal;
+    }
   }
   & li a {
-    border-top: 1px solid var(--w3c-classic);
+    border-block-start: 1px solid var(--w3c-classic);
   }
   .sidenav-head + & {
-    border-top: none;
+    border-block-start: none;
   }
   & ul {
     padding: 0;
     margin: 0;
-    padding-left: 24px;
+    padding-inline-start: 24px;
   }
   & a + ul { display:none; }
   & a[aria-current] + ul { display:block; }
@@ -100,7 +103,7 @@
     background-color: var(--body-bg);*/
   }
   & a[aria-current=location] {
-     padding-bottom: 4px;
+     padding-block-end: 4px;
      font-weight: bold;
   }
   & a[aria-current=page] {
@@ -114,16 +117,47 @@
       width: 0;
       height: 0;
       right: 0;
-      border: 1px solid #fff;
+      border: 1px solid var(--pure-white);
       opacity: .9;
     }
     &:before {
       top:-2px;
-      border-color: transparent #fff #fff transparent;
+      border-color: transparent var(--pure-white) var(--pure-white) transparent;
     }
     &:after {
       bottom:-2px;
-      border-color: #fff #fff transparent transparent;
+      border-color: var(--pure-white) var(--pure-white) transparent transparent;
     }
+  }
+}
+
+.sidenav-languages {
+  font-size: .8125rem;
+  margin-block-start: 2rem;
+  border-radius: 3px;
+  border: 2px solid var(--gold);
+  background-color: var(--pure-white);
+  & header {
+    border-block-end: 2px solid var(--gold);
+    padding-block: 8px;
+    padding-inline: 27px;
+    font-weight: bold;
+  }
+  & .langlist {
+    padding-inline-start: 27px;
+    list-style-position: inside;
+    list-style-type: square;
+    color: var(--w3c-classic);
+    & li {
+      margin-block-end: 2px;
+    }
+  }
+  & p {
+    padding-block-start: 4px;
+    padding-block-end: 4px;
+    padding-inline-start: 27px;
+    padding-inline-end: 0;
+    margin:0;
+    border-block-start: 1px solid #eed009;
   }
 }

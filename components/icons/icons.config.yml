@@ -102,3 +102,9 @@ variants:
 - name: menu
   context:
     name: menu
+- name: languages
+  context:
+    name: languages
+- name: translations
+  context:
+    name: translations

@@ -10,17 +10,17 @@
 .related-content--head {
   align-items: center;
   background-color: var(--off-white);
-  border-bottom: 1px solid var(--line-grey);
+  border-box-end: 1px solid var(--line-grey);
   display: flex;
   flex-direction: row;
-  height: 48px;
+  block-size: 48px;
 }
 
 .related-content--head-icon {
-  height: 22px;
-  margin-right: 10px;
-  margin-left: 19px;
-  width: 22px;
+  block-size: 22px;
+  margin-inline-end: 10px;
+  margin-inline-start: 19px;
+  inline-size: 22px;
 }
 
 .related-content--head-heading {

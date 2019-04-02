@@ -28,13 +28,20 @@
 
   /* Showhidebutton */
 
-  var showhidebuttons = document.querySelectorAll('.showhidebutton');
-
+  const showhidebuttons = document.querySelectorAll('.showhidebutton');
+  const mq = window.matchMedia( "(min-width: 47.5em)" );
   if (showhidebuttons !== null) {
-
     Array.prototype.forEach.call(showhidebuttons, function(button, i){
       var buttontarget = button.dataset.target;
       var bid = button.dataset.showhidebuttonid;
+      if (button.getAttribute('data-large-aria-expanded') && mq.matches) {
+        if (button.getAttribute('data-large-aria-expanded') == "true") {
+          button.setAttribute('aria-expanded', 'true');
+        }
+        if (button.getAttribute('data-large-aria-expanded') == "false") {
+          button.setAttribute('aria-expanded', 'false');
+        }
+      }
       Array.prototype.forEach.call(document.querySelectorAll(buttontarget), function(el, i){
         if(button.getAttribute('aria-expanded') == "true") {
           el.removeAttribute('hidden');

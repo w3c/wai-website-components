@@ -7,9 +7,9 @@
   font-weight: bold;
   text-align: center;
   & svg {
-    margin-right: 8px;
+    margin-inline-end: 8px;
     font-size: 2em;
     vertical-align: middle;
-    margin-top: -.14em;
+    margin-block-start: -.14em;
   }
 }

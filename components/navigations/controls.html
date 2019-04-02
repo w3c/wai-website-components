@@ -1,6 +1,20 @@
-<nav aria-label="Skip Link and Accessibility Options" id="controls" class="default-grid">
+<nav aria-label="Skip Link, Customization, and Language Selector" id="controls" class="default-grid">
   <ul>
-    <li><a href="#main">Skip to Content</a></li>
-    <li><a href="#">Change Text Size or Colors</a></li>
-  </ul>
+      <li><a href="#main">Skip to Content</a></li>
+      <li class="opt"><a href="/wai-video-standards-and-benefits/meta/customize/">Change Text Size or Colors</a></li>
+      <li class="opt languagelist">
+          <strong>This page in:</strong>
+          <ul class="languagelistul"><li><strong style="text-transform: capitalize;">English</strong></li><li><a style="text-transform: capitalize;" href="/wai-video-standards-and-benefits/videos/standards-and-benefits/el" lang="el">Ελληνικά</a></li>
+          <li><a style="text-transform: capitalize;" href="/wai-video-standards-and-benefits/videos/standards-and-benefits/es" lang="es">español</a></li>
+          <li><a style="text-transform: capitalize;" href="/wai-video-standards-and-benefits/videos/standards-and-benefits/fr" lang="fr">français</a></li>
+          <li><a style="text-transform: capitalize;" href="/wai-video-standards-and-benefits/videos/standards-and-benefits/nl" lang="nl">Nederlands</a></li>
+          <li><a style="text-transform: capitalize;" href="/wai-video-standards-and-benefits/videos/standards-and-benefits/zh-hans" lang="zh-hans">简体汉语</a></li>
+          </ul>
+        </li>
+        <li class="opt">
+          <a href="/wai-video-standards-and-benefits/translations/">All Translations {%render '@icons', name="languages" %}</a>
+      </li>
+      <li><button id="showoptions" class="showhidebutton button-inline" data-target="#controls .opt" aria-expanded="true" data-showtext='{%render '@icons', name="languages" %} Show Customization, Languages, Translations' data-hidetext='Hide Options'>{%render '@icons', name="languages" %} Show Customization, Languages, Translations</button></li>
+    </ul>
+
 </nav>

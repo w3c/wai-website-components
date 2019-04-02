@@ -1,0 +1,13 @@
+.doc-note-translation {
+  font-size: .8125rem;
+  & p {
+    margin-block-start: 5px;
+    margin-block-end: 5px;
+    &:first-of-type {
+      margin-block-start: 0;
+    }
+    &:last-child {
+      margin-block-end: 0;
+    }
+  }
+}

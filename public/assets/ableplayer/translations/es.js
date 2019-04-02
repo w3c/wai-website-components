@@ -1,5 +1,9 @@
 var es = {
 
+"audio": "audio",
+
+"video": "video",
+
 "playerHeading": "Media player",
 
 "faster": "Rápido",
@@ -289,6 +293,8 @@ var es = {
 "windowResizeHeading": "Redimensionar la ventana con el intérprete",
 
 "windowResizeAlert": "La ventana ha sido redimensionada.",
+
+"windowClose": "Cerrar",
 
 "width": "Ancho",
 

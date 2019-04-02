@@ -1,5 +1,9 @@
 var nl = {
 
+"audio": "audio",
+
+"video": "video",
+
 "playerHeading": "Mediaspeler",
 
 "faster": "Sneller",
@@ -289,6 +293,8 @@ var nl = {
 "windowResizeHeading": "Verander grootte van scherm met gebarentolk",
 
 "windowResizeAlert": "Het venster is van grootte veranderd.",
+
+"windowClose": "Sluit",
 
 "width": "Breedte",
 

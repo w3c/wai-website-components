@@ -4,7 +4,7 @@ details {
 summary {
   cursor: pointer;
   display: block;
-  margin-left: -2rem;
+  margin-inline-start: -2rem;
 }
 
 summary::-webkit-details-marker {
@@ -14,7 +14,7 @@ summary::-webkit-details-marker {
 summary {
   & > *:first-child::before {
     content: '+';
-    margin-right: 0.5rem;
+    margin-inline-end: 0.5rem;
     display: inline-block;
     border-radius: 5px;
     width: 1.3rem;

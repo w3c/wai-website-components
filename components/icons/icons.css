@@ -96,3 +96,14 @@ Single-colored icons can be modified like so:
 .icon-cart-plus {
   width: 0.9285714285714285em;
 }
+
+.icon-languages {
+  height: 1em;
+  width: 2.75em;
+  vertical-align: -8%;
+}
+
+.icon-translations {
+  height: 1.6em;
+  vertical-align: middle
+}

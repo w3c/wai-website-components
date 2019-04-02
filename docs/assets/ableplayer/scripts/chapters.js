@@ -78,6 +78,7 @@
         // add event listeners
         getClickFunction = function (time) {
           return function () {
+            thisObj.seekTrigger = 'chapter';
             $clickedItem = $(this).closest('li');
             $chaptersList = $(this).closest('ul').find('li');
             thisChapterIndex = $chaptersList.index($clickedItem);
@@ -236,6 +237,26 @@
     }
     else {
       return chapterTime;
+    }
+  };
+
+  AblePlayer.prototype.getChapterClickFunction = function (time) {
+
+    // Returns the function used when a chapter is clicked in the chapters menu.
+    var thisObj = this;
+    return function () {
+      thisObj.seekTrigger = 'chapter';
+      thisObj.seekTo(time);
+      // stopgap to prevent spacebar in Firefox from reopening popup
+      // immediately after closing it (used in handleChapters())
+      thisObj.hidingPopup = true;
+      thisObj.chaptersPopup.hide();
+      // Ensure stopgap gets cancelled if handleChapters() isn't called
+      // e.g., if user triggered button with Enter or mouse click, not spacebar
+      setTimeout(function() {
+        thisObj.hidingPopup = false;
+      }, 100);
+      thisObj.$chaptersButton.focus();
     }
   };
 

@@ -1,5 +1,5 @@
 .metanav {
-  text-align: right;
+  text-align: end;
   width: 100%;
   display: none;
   font-size: .85em;
@@ -26,7 +26,7 @@
     justify-content: flex-end;
     & li {
       display: inline-block;
-      padding: 0 8px;
+      padding-inline: 8px;
       @media (--medium) {
         display: flex;
         align-items: center;
@@ -35,14 +35,14 @@
         border: 0;
       }
       &:last-child {
-        margin-right: 0;
+        margin-block-end: 0;
         padding:0;
         border: 0;
       }
       & a {
         position: relative;
         min-height: 24px;
-        padding: 10px 0;
+        padding-block: 10px;
         display: inline-flex;
         align-items: center;
         justify-content: center;
@@ -51,13 +51,13 @@
           content: '';
           top: 12px;
           left: -8px;
-          bottom:12px;
+          bottom: 12px;
           width: 1px;
           background-color: var(--gold);
         }
         @media (--medium) {
           width: 100%;
-          text-align: right;
+          text-align: end;
         }
       }
     }

@@ -1,0 +1,37 @@
+.showhidebutton {
+  display: inline;
+  background: transparent;
+  color: inherit;
+  border-color: transparent;
+  font-weight: normal;
+  &:after {
+    display: inline-block;
+    background-color: var(--w3c-blue);
+    color: var(--pure-white);
+    content: "–";
+    font-weight: bold;
+    margin-inline-start: .5em;
+    padding: .3em;
+    border-radius: 3px;
+    width: 1em;
+    height: 1em;
+    line-height: 1em;
+  }
+  &:--hovcus {
+    &:after {
+      color: var(--w3c-blue);
+      background-color: var(--pure-white) !important;
+    }
+  }
+  &[aria-expanded=false]:after {
+    content: "+";
+  }
+ /* &.button-inline:after {
+    margin-inline-start: .2em;
+    padding: .15em;
+    border-radius: 3px;
+    width: .85em;
+    height: .85em;
+    line-height: .85em;
+  }*/
+}

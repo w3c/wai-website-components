@@ -8,6 +8,7 @@
   div.able-modal-overlay = 9500
 
   * Items that should always be on top (9000):
+	#able-vts-alert = 9400
   .able-alert = 9400
   .able-window-toolbar .able-button-handler-preferences = 9300
   .able-popup = 9200
@@ -39,6 +40,7 @@
   width: 100%;
   height: auto;
   box-sizing: content-box !important;
+  max-width: none !important;
 }
 .able {
   position: relative;
@@ -47,10 +49,10 @@
   z-index: 5000;
 }
 .able-column-left {
-    float: left;
+    float: inline-start;
 }
 .able-column-right {
-    float: left;
+    float: inline-start;
 }
 .able .able-vidcap-container {
   background-color: black;
@@ -82,8 +84,8 @@
 }
 .able-controller {
   position: relative;
-  border-top: 2px solid #4c4c4c;
-  border-bottom: 2px solid #4c4c4c;
+  border-block-start: 2px solid #4c4c4c;
+  border-block-end: 2px solid #4c4c4c;
   background-color: #464646; /* background color of controller bar */
   min-height: 38px; /* height of button (20px) + 4px border + 4px padding */
   padding: 0;
@@ -122,10 +124,10 @@
     vertical-align: middle;
 }
 .able-left-controls {
-  float: left;
+  float: inline-start;
 }
 .able-right-controls {
-  float: right;
+  float: inline-end;
 }
 .able-black-controls,
 .able-black-controls button,
@@ -244,7 +246,7 @@
   position: absolute;
   right: 0px;
   top: -74px;
-  display: none;
+  display: block;
   z-index: 9100;
 }
 .able-volume-track {
@@ -303,7 +305,7 @@ input[type=range]::-webkit-slider-thumb {
   background: #ffffff;
   cursor: pointer;
   -webkit-appearance: none;
-  margin-top: -14px;
+  margin-block-start: -14px;
 }
 input[type=range]:focus::-webkit-slider-runnable-track {
   background: #367ebd;
@@ -380,18 +382,18 @@ input[type=range]:focus::-ms-fill-upper {
 }
 .able-status-bar span.able-timer {
   /* contains both span.elapsedTime and span.duration */
-  text-align: left;
-  float: left;
+  text-align: start;
+  float: inline-start;
   width: 32%;
 }
 .able-status-bar span.able-speed {
-  float: left;
+  float: inline-start;
   width: 33%;
   text-align: center;
 }
 .able-status {
   font-style: italic;
-  float: right;
+  float: inline-end;
   width: 32%;
   text-align :right;
 }
@@ -406,7 +408,7 @@ div.able-captions-wrapper {
   padding: 0;
   text-align: center;
   line-height: 1.35em;
-  display: none;
+  display: block;
   z-index: 6000;
 }
 div.able-captions {
@@ -432,7 +434,7 @@ div.able-descriptions {
   color: #FF6; /* yellow, to differentiate it from captions */
   background-color: #262626;
   min-height: 2.8em;
-  border-top: 1px solid #666;
+  border-block-start: 1px solid #666;
   margin: 0;
   padding: 3%;
   width: 94%;
@@ -466,8 +468,8 @@ div.able-modal-dialog {
   position: absolute;
   height: auto;
   max-width: 90%;
-  margin-left: auto;
-  margin-right: auto;
+  margin-inline-start: auto;
+  margin-inline-end: auto;
   left: 0px;
   right: 0px;
   outline: 0px none;
@@ -496,7 +498,7 @@ button.modalCloseButton {
   right: 5px;
 }
 button.modal-button {
-  margin-right: 5px;
+  margin-inline-end: 5px;
 }
 div.able-modal-dialog input:hover,
 div.able-modal-dialog input:focus,
@@ -537,7 +539,7 @@ div.able-modal-dialog h1 {
 */
 
 .able-prefs-form fieldset {
-  margin-left: 0;
+  margin-inline-start: 0;
   padding-left: 0;
   border: none;
 }
@@ -548,7 +550,7 @@ div.able-modal-dialog h1 {
 }
 .able-prefs-form fieldset div {
   display: table;
-  margin-left: 1em;
+  margin-inline-start: 1em;
 }
 .able-prefs-form fieldset div input {
   display: table-cell;
@@ -560,26 +562,26 @@ div.able-modal-dialog h1 {
   padding-left: 0.5em;
 }
 fieldset.able-prefs-keys div {
-  float: left;
-  margin-right: 1em;
+  float: inline-start;
+  margin-inline-end: 1em;
 }
 div.able-desc-pref-prompt {
   font-weight: bold;
   font-style: italic;
-  margin-left: 1em !important;
+  margin-inline-start: 1em !important;
 }
 div.able-prefDescFormat > div {
-  margin-left: 1.5em;
+  margin-inline-start: 1.5em;
 }
 .able-prefs-captions label,
 .able-prefs-captions select {
   display: block;
-  float: left;
-  margin-bottom: 0.25em;
+  float: inline-start;
+  margin-block-end: 0.25em;
 }
 fieldset.able-prefs-captions label {
   width: 6em;
-  text-align: right;
+  text-align: end;
   padding-right: 1em;
 }
 fieldset.able-prefs-captions select {
@@ -592,12 +594,12 @@ fieldset.able-prefs-captions select {
   text-align: center;
 }
 .able-prefs-form h2 {
-  margin-top: 0;
-  margin-bottom: 0.5em;
+  margin-block-start: 0;
+  margin-block-end: 0.5em;
   font-size: 1.1em;
 }
 .able-prefs-form ul {
-  margin-top: 0;
+  margin-block-start: 0;
 }
 
 /*
@@ -677,9 +679,10 @@ span.able-modkey {
 }
 .able-window-toolbar .able-popup {
   position: absolute;
+  cursor: default;
   right: 0;
   top: 0;
-  display: none;
+  display: block;
 }
 .able-drag {
   border: 2px dashed #F90;
@@ -689,11 +692,11 @@ span.able-modkey {
   position: absolute;
   width: 16px;
   height: 16px;
-  padding: 5px 2px;
+  padding: 5px 0 0 5px;
   bottom: 0;
   right: 0;
   cursor: nwse-resize;
-  background: transparent url('../ableplayer/images/wingrip.png') no-repeat;
+  background: transparent bottom right url('../ableplayer/images/wingrip.png') no-repeat;
 }
 
 /*
@@ -741,7 +744,7 @@ div.able-chapters-div button {
   background-color: transparent;
   color: #000;
   font-size: 1em;
-  text-align: left;
+  text-align: start;
   padding: 0.15em 1em;
 }
 div.able-chapters-div li.able-current-chapter {
@@ -817,7 +820,7 @@ div.able-chapters-div button::-moz-focus-inner {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
-  display: none;
+  display: block;
 }
 .able-alert {
   background-color: #FFFFCC;
@@ -845,36 +848,30 @@ div.able-chapters-div button::-moz-focus-inner {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
-  display: none;
+  display: block;
+  cursor: default;
+  list-style: none;
 }
-.able-popup ul {
+ul.able-popup {
   list-style-type: none;
-  margin: 0;
-  padding: 0;
 }
 .able-popup li {
   padding: 0.25em 1em 0.25em 0.25em;
   margin: 1px;
-}
-.able-popup label {
-  padding-left: 0.25em;
   color: #FFF;
 }
 .able-popup li.able-focus {
   background-color: #CCC;
-}
-.able-popup li.able-focus label {
   color: #000;
 }
-
-/*
-  Popup Menus with hidden radio buttons
-  e.g., chapters and preferences
-*/
-.able-popup-no-radio > ul > li > input {
-  position: absolute !important;
-  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
-  clip: rect(1px, 1px, 1px, 1px);
+.able-popup-captions li {
+  padding-left: 1em;
+}
+.able-popup-captions li[aria-checked="true"] {
+  padding-left: 0;
+}
+.able-popup-captions li[aria-checked="true"]::before {
+  content: "\2713  "; /* check mark; for heavier mark us 2714 */
 }
 
 /*
@@ -887,6 +884,8 @@ div.able-chapters-div button::-moz-focus-inner {
   height: 400px;
   z-index: 7000;
   outline: none;
+  padding-bottom: 25px; /* keep content above 16x16px drag icon */
+  background-color: #fff;
 }
 .able-transcript {
   position: relative; /* must be positioned for scrolling */
@@ -936,11 +935,13 @@ div.able-chapters-div button::-moz-focus-inner {
   cursor: pointer;
 }
 .able-window-toolbar label {
-  margin-right: 10px;
+  margin-inline-end: 10px;
   color: #FFF;
 }
 .able-window-toolbar input:focus,
 .able-window-toolbar input:hover,
+.able-window-toolbar select:focus,
+.able-window-toolbar select:hover,
 .able-controller input:focus,
 .able-controller input:hover,
 .able-controller button:focus,
@@ -951,19 +952,21 @@ div.able-chapters-div button::-moz-focus-inner {
   outline-width: 2px;
 }
 .able-window-toolbar input:focus,
+.able-window-toolbar select:focus,
 .able-controller input:focus,
 .able-controller button:focus,
 .able-seekbar-head:focus {
   outline-color: #ffbb37; /* yellow */
 }
 .able-window-toolbar input:hover,
+.able-window-toolbar select:hover,
 .able-controller input:hover,
 .able-controller button:hover,
 .able-seekbar-head:hover {
   outline-color: #8AB839; /* green */
 }
 .able-window-toolbar .transcript-language-select-wrapper {
-  float: right;
+  float: inline-end;
   padding-right: 30px;
 }
 
@@ -1032,7 +1035,7 @@ div.able-chapters-div button::-moz-focus-inner {
 
 .able-search-results ul li {
   font-size: 1.1em;
-  margin-bottom: 1em;
+  margin-block-end: 1em;
 }
 .able-search-results-time {
   font-weight: bold;
@@ -1052,6 +1055,107 @@ div.able-chapters-div button::-moz-focus-inner {
 .able-search-term {
   background-color: #FFC;
   font-weight: bold;
+}
+
+/*
+  Video Transcript Sorter (VTS)
+*/
+#able-vts-instructions {
+	margin-block-end: 1.5em;
+	padding: 1em;
+	border: 1px solid #999;
+	width: 720px;
+	max-width: 90%;
+}
+#able-vts fieldset {
+  margin: 1em;
+  border: none;
+}
+#able-vts fieldset legend {
+  color: #000;
+  font-weight: bold;
+}
+#able-vts fieldset div {
+  float: inline-start;
+  padding-right: 1em;
+}
+#able-vts table {
+  clear: inline-start;
+}
+
+#able-vts table,
+#able-vts table th,
+#able-vts table td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 0.5em 0.75em;
+}
+#able-vts table th.actions {
+  min-width: 140px;
+}
+#able-vts table td button {
+  width: auto;
+  padding: 0;
+  margin: 2px;
+}
+#able-vts table td button svg {
+  width: 16px;
+  height: 16px;
+}
+#able-vts table button:hover,
+#able-vts table button:focus  {
+  /*    border: 3px solid #66c2ff; */
+}
+#able-vts table button:hover svg {
+  fill: #C00;
+}
+tr.kind-chapters,
+tr.kind-subtitles {
+  background-color: #FFF;
+}
+tr.kind-descriptions {
+  background-color: #FEE;
+}
+tr.kind-chapters {
+  background-color: #e6ffe6;
+}
+.able-vts-dragging {
+  background-color: #FFC;
+}
+div#able-vts-icon-credit {
+  margin: 1em;
+}
+div#able-vts-alert {
+  display: none;
+  position: fixed;
+  top: 5px;
+  left: 5px;
+  border: 2px solid #666;
+  background-color: #FFC;
+  padding: 1em;
+  font-weight: bold;
+  z-index: 9400;
+}
+button#able-vts-save {
+	font-size: 1em;
+	padding: 0.25em;
+	border-radius: 5px;
+	margin-block-end: 1em;
+	font-weight: bold;
+}
+button#able-vts-save:hover,
+button#able-vts-save:focus {
+  color: white;
+  background-color: #060;
+}
+.able-vts-output-instructions {
+	width: 720px;
+	max-width: 90%;
+}
+#able-vts textarea {
+	height: 200px;
+	width: 720px;
+	max-width: 90%;
 }
 
 /*
@@ -1085,14 +1189,14 @@ div.able-chapters-div button::-moz-focus-inner {
   font-weight: bold;
   font-size: 1.1em;
   padding: 1em;
-  margin-bottom: 1em;
+  margin-block-end: 1em;
   max-width: 500px;
   width: 95%;
 }
 .able-fallback div,
 .able-fallback ul,
 .able-fallback p {
-  text-align: left;
+  text-align: start;
 }
 .able-fallback li  {
   font-weight: normal;
@@ -1236,4 +1340,5 @@ button svg {
 .icon-help:before {
     content: "\f128";
 }
+
 

@@ -351,18 +351,18 @@
   padding:0;
   &amp; &gt; li {
     /*border: 2px solid #999;
-    border-top:none;*/
+    border-block-start:none;*/
     &amp; &gt; strong {
       display: block;
       padding: 1em .5em;
     }
     &amp;:first-child {
-      /*border-top:2px solid #999;*/
+      /*border-block-start:2px solid #999;*/
     }
     &amp; &gt; ul {
       padding:0;
       list-style: none;
-      /*border-top: 1px dotted #aaa;*/
+      /*border-block-start: 1px dotted #aaa;*/
       @supports (display: flex) {
         display:flex;
         flex-direction: row-reverse;
@@ -394,26 +394,26 @@
         &amp; li {
           padding: 0;
           padding-bottom: 0.5em;
-          margin-bottom: 0.5em;
-          border-bottom: 1px solid var(--dk-grey);
+          margin-block-end: 0.5em;
+          border-block-end: 1px solid var(--dk-grey);
           list-style: none;
           &amp; &gt; em {
             display: block;
             padding-left: 1.5em;
             position: relative;
-            margin-top: .25em;
+            margin-block-start: .25em;
             font-style: normal;
             &amp;:before {
               position:absolute;
               content: '';
               top:.2em;
-              margin-left: -1.5em;
+              margin-inline-start: -1.5em;
             }
           }
           &amp;:last-child {
             border-bottom-style: none;
             padding-bottom: 0;
-            margin-bottom: 0;
+            margin-block-end: 0;
           }
         }
       }
@@ -421,22 +421,22 @@
   }
   &amp; .yes {
     background-color: color(var(--w3c-blue) lightness(95%));
-    border-bottom: none;
+    border-block-end: none;
     &amp; li {
       list-style: disc;
-      margin-left: 1em;
+      margin-inline-start: 1em;
       &amp;:only-child {
         list-style: none;
       }
     }
   }
   &amp; .no {
-    /*border-right:1px dotted #aaa;*/
+    /*border-inline-end:1px dotted #aaa;*/
     background-color: color(var(--faded-red) lightness(85%));
-    border-bottom: none;
+    border-block-end: none;
     position: relative;
-    &amp;:after { top: 100%; left: 50%; border: solid transparent; content: " "; height: 0; width: 0; position: absolute; pointer-events: none; border-color: rgba(119, 119, 119, 0); border-top-color: color(var(--faded-red) lightness(85%)); border-width: 1rem; margin-left: -.5rem; z-index: 500; }
-    /*&amp;:before { top: 100%; left: 50%; border: solid transparent; content: " "; height: 0; width: 0; position: absolute; pointer-events: none; border-color: rgba(119, 119, 119, 0); border-top-color: #999; border-width: 1.1rem; margin-left: -.6rem; z-index: 400; }*/
+    &amp;:after { top: 100%; left: 50%; border: solid transparent; content: " "; height: 0; width: 0; position: absolute; pointer-events: none; border-color: rgba(119, 119, 119, 0); border-top-color: color(var(--faded-red) lightness(85%)); border-width: 1rem; margin-inline-start: -.5rem; z-index: 500; }
+    /*&amp;:before { top: 100%; left: 50%; border: solid transparent; content: " "; height: 0; width: 0; position: absolute; pointer-events: none; border-color: rgba(119, 119, 119, 0); border-top-color: #999; border-width: 1.1rem; margin-inline-start: -.6rem; z-index: 400; }*/
   }
 }</pre>
                             </code>
@@ -1438,6 +1438,30 @@
         </li>
         
     
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="document-notes--translation.html" data-pjax>
+                <span>Translation</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
 
             </ul>
         </li>
@@ -2002,6 +2026,26 @@
         </li>
         
     
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="icons--languages.html" data-pjax>
+                <span>Languages</span>
+                
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="icons--translations.html" data-pjax>
+                <span>Translations</span>
+                
+            </a>
+        </li>
+        
+    
 
             </ul>
         </li>
@@ -2327,30 +2371,6 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="navigations-mainnav-old.html" data-pjax>
-                <span>Mainnav Old</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="navigations-metanav.html" data-pjax>
                 <span>Metanav</span>
                 
@@ -2545,6 +2565,16 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="sn-header-base.html" data-pjax>
                 <span>Header Base</span>
+                
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="sn-languages.html" data-pjax>
+                <span>Languages</span>
                 
             </a>
         </li>

@@ -1,16 +1,16 @@
 .box {
   border: solid 1px var(--line-grey);
-  margin-top: 16px;
+  margin-block-start: 16px;
   background-color: var(--pure-white);
 }
 
 .box + .box#toc {
-  margin-top: 0;
-  border-top: 0;
+  margin-block-start: 0;
+  border-block-start: 0;
 }
 
 .box.box-space-above {
-  margin-top: 90px;
+  margin-block-start: 90px;
 }
 
 .box-h {
@@ -40,24 +40,31 @@
   color: var(--w3c-blue);
   padding-bottom: 7px;
   font-weight: normal;
-  border-bottom: solid 1px var(--line-grey);
+  border-block-end: solid 1px var(--line-grey);
 }
 
 .box-h-icon {
   & svg {
-    margin-right: 4px;
+    margin-inline-end: 4px;
   }
 }
 
 .box-i {
-  @apply --clear;
+  &:before, &:after {
+    content: " ";
+    display: table;
+  }
+
+  &:after {
+      clear: both;
+  }
   padding: 8px 16px;
   font-size: 14/16 * 1rem;
   & > :first-child {
-    margin-top: 0;
+    margin-block-start: 0;
   }
   & > :last-child {
-    margin-bottom: 0;
+    margin-block-end: 0;
   }
 }
 
@@ -97,18 +104,18 @@
   .box {
     &.box-left, &.box-right {
       width: 33%;
-      margin-top: -9px;
-      &.box-simple { margin-top:-3px; }
+      margin-block-start: -9px;
+      &.box-simple { margin-block-start:-3px; }
     }
     &.box-left {
-      clear: left;
-      float: left;
-      margin-right: 1em;
+      clear: inline-start;
+      float: inline-start;
+      margin-inline-end: 1em;
     }
     &.box-right {
-      clear: right;
-      float: right;
-      margin-left: 1em;
+      clear: inline-end;
+      float: inline-end;
+      margin-inline-start: 1em;
     }
   }
 }

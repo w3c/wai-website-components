@@ -1,8 +1,8 @@
 .mainnav {
   position: relative;
   font-size: .875rem;
-  border-top: 1px solid var(--w3c-classic);
-  border-bottom: 1px solid var(--w3c-classic);
+  border-block-start: 1px solid var(--w3c-classic);
+  border-block-end: 1px solid var(--w3c-classic);
   background-color: var(--w3c-blue);
   display: none;
   &.open { display: block; }
@@ -33,7 +33,7 @@
       &.active {
         background: var(--w3c-blue);
         & > a > span {
-          border-bottom: 2px solid var(--gold) !important;
+          border-block-end: 2px solid var(--gold) !important;
         }
       }
       & > a {
@@ -49,27 +49,27 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        border-bottom: var(--w3c-classic);
+        border-block-end: var(--w3c-classic);
         & > span {
           display: block;
-          border-bottom: 2px solid transparent;
+          border-block-end: 2px solid transparent;
         }
         &:--hovcus {
           background-color: var(--dk-blue);
         }
         &:--hovcus, &[aria-current="page"], &[aria-current="location"] {
           & > span {
-            border-bottom: 2px solid var(--gold);
+            border-block-end: 2px solid var(--gold);
           }
         }
         &[aria-current="page"], &[aria-current="location"] {
           &:--hovcus > span {
-            border-bottom: 2px solid var(--pure-white);
+            border-block-end: 2px solid var(--pure-white);
           }
         }
       }
       & + li > a {
-        border-left: 1px solid #235A97;
+        border-inline-start: 1px solid #235A97;
       }
     }
   }

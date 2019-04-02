@@ -11,13 +11,13 @@ dt {
 }
 
 dd {
-  margin-left: 32px;
+  margin-inline-start: 32px;
 }
 
 dd+dt {
-  margin-top: 8px;
+  margin-block-start: 8px;
 }
 
 dl.paragraph-like dd+dt {
-  margin-top: 1em;
+  margin-block-start: 1em;
 }
