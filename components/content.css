@@ -31,8 +31,8 @@
 
 .example-bar {
   display: flex;
-  padding-left: 32px;
-  padding-right: 32px;
+  padding-inline-start: 32px;
+  padding-inline-end: 32px;
   @supports (display: grid) {
     display: grid;
     grid-column-gap: 32px;
@@ -47,8 +47,9 @@
     grid-column: 1/2;
     grid-row: 1/99;
     text-align: right;
-    border-right: 2px solid var(--wai-green);
-    padding: 0 8px;
+    border-inline-end: 2px solid var(--wai-green);
+    padding-block: 0;
+    padding-inline: 8px;
     font-weight: bold;
     font-style: italic;
     color: var(--wai-green);
@@ -57,8 +58,8 @@
 
 .example-sheet {
   display: flex;
-  padding-left: 32px;
-  padding-right: 32px;
+  padding-inlne-start: 32px;
+  padding-inline-end: 32px;
   @supports (display: grid) {
     display: grid;
     grid-column-gap: 32px;
@@ -69,6 +70,7 @@
   & .example-sheet-inner {
     grid-column: 2/6;
     background-color: var(--pure-white);
-    padding: 16px 32px;
+    padding-block: 16px;
+    padding-inline: 32px;
   }
 }

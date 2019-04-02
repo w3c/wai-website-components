@@ -281,7 +281,7 @@ a:focus, button:focus, input:focus, select:focus, submit:focus, textarea:focus, 
 }
 
 .grid-three-five {
-  & .col1, & .col2 { padding-left: 16px; padding-right: 16px; }
+  & .col1, & .col2 { padding-inline-start: 16px; padding-inline-end: 16px; }
   @media (--medium) {
     display: flex;
     padding-inline-start: 32px;
@@ -321,7 +321,7 @@ a:focus, button:focus, input:focus, select:focus, submit:focus, textarea:focus, 
 }
 
 .grid-five-three {
-  & .col1, & .col2 { padding-left: 16px; padding-right: 16px; }
+  & .col1, & .col2 { padding-inline-start: 16px; padding-inline-end: 16px; }
   @media (--medium) {
     display: flex;
     padding-inline-start: 32px;
@@ -465,17 +465,17 @@ a:focus, button:focus, input:focus, select:focus, submit:focus, textarea:focus, 
 
 .grid-line-right {
   @media (--medium) {
-    border-right: 1px solid var(--line-grey);
-    margin-right: -17px !important;
-    padding-right: 17px !important;
+    border-inline-end: 1px solid var(--line-grey);
+    margin-inline-end: -17px !important;
+    padding-inline-end: 17px !important;
   }
 }
 
 .grid-line-left {
   @media (--medium) {
-    border-left: 1px solid var(--line-grey);
+    border-inline-start: 1px solid var(--line-grey);
     margin-inline-start: -16px !important;
-    padding-left: 16px !important;
+    padding-inline-start: 16px !important;
   }
 }
 
@@ -499,12 +499,12 @@ a:focus, button:focus, input:focus, select:focus, submit:focus, textarea:focus, 
 }
 
 img.symbol {
-  float: right;
+  float: inline-end;
   margin-inline-start: 1em;
-  margin-bottom: 1em;
+  margin-block-end: 1em;
 }
 
 main img { max-width: 100%; }
 
 figure { margin: 0 0 1em; }
-figcaption { font-weight: bold; border-bottom: 1px solid var(--line-grey); margin-bottom: .5em;}
+figcaption { font-weight: bold; border-block-end: 1px solid var(--line-grey); margin-block-end: .5em;}

@@ -1,12 +1,13 @@
 #controls {
   background-color: var(--off-white);
-  padding: 0 8px;
+  padding-inline: 8px;
+  padding-block: 0;
   @media (--medium) {
-    text-align: right;
+    text-align: end;
   }
   font-size: .8125em;
   & > ul {
-    padding:0;
+    padding: 0;
     margin: 0;
     @media (--medium) {
      grid-column-start: navigation;
@@ -15,15 +16,19 @@
     & > li {
       display: inline;
       list-style: none;
-      margin: 0 0 0 4px;
-      padding: 0 0 0 4px;
+      margin: 0;
+      margin-inline-start: 4px;
+      padding: 0;
+      padding-inline-start: 4px;
       @media (--medium) {
-        margin: 0 0 0 8px;
-        padding: 0 0 0 8px;
+        margin: 0;
+        margin-inline-start: 8px;
+        padding: 0;
+        padding-inline-start: 8px;
       }
-      border-left: 1px solid var(--w3c-blue);
+      border-inline-start: 1px solid var(--w3c-blue);
       &:first-child {
-        border-left: 0;
+        border-inline: 0;
         margin: 0;
         padding: 0;
       }
@@ -32,9 +37,10 @@
   & a {
     color: var(--w3c-blue);
     text-decoration: none;
-    padding: 2px 0;
+    padding-block: 2px;
+    padding-inline: 0;
     &:--hovcus {
-      border-bottom: none;
+      border-block-end: none;
       text-decoration: underline;
     }
   }
@@ -57,7 +63,7 @@
   margin:0;
   display: inline-block;
   &:first-child {
-    margin-right: 4px;
+    margin-inline-end: 4px;
   }
 }
 .languagelist>ul>li:first-child:before {
@@ -70,7 +76,9 @@
   background-color: #005A9C;
   width: 4px;
   height: 4px;
-  margin: -4px 4px 0 0;
+  margin:0;
+  margin-block-start: -4px;
+  margin-inline-end: 4px;
   vertical-align: middle;
 }
 

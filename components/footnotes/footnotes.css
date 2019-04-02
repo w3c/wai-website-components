@@ -1,5 +1,5 @@
 .footnotes {
-  margin-top: 60px;
+  margin-block-start: 60px;
 }
 .footnotes ol {
   font-size: .85rem;

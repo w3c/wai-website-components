@@ -1,7 +1,7 @@
 .pager {
   background-color: var(--pure-white);
   border: 1px solid var(--line-grey);
-  margin-top: 32px;
+  margin-block-start: 32px;
 }
 
 .pager > ul {
@@ -10,7 +10,7 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin:0;
+  margin: 0;
   padding: 8px;
 }
 
@@ -49,7 +49,7 @@
 .pager--item.next a {
   flex-direction: row-reverse;
   justify-content: flex-end;
-  text-align: right;
+  text-align: end;
 }
 
 .pager--item-icon {
@@ -62,8 +62,8 @@
   flex: 1 auto;
   width: 100%;
   flex-direction: column;
-  margin-right: 8px;
-  margin-left: 8px;
+  margin-inline-end: 8px;
+  margin-inline-start: 8px;
 }
 
 .pager--item-text-direction {

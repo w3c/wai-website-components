@@ -1,25 +1,27 @@
 table, caption {
-  text-align: left;
+  text-align: start;
 }
 table {
   border: 1px solid var(--line-grey);
   border-collapse: collapse;
-  margin-bottom: 2em;
+  margin-block-end: 2em;
 }
 caption {
   font-weight: bold;
   font-size: 1.125rem;
   color: var(--wai-green);
   line-height: 1.4;
-  margin-bottom: 8px;
+  margin-block-end: 8px;
 }
 th, td {
-  padding: 12px 18px;
+  padding-block: 12px;
+  padding-inline: 18px;
   border: 1px solid var(--line-grey);
   vertical-align: top;
 }
 .dense td, .dense th {
-  padding: 2px 4px;
+  padding-block: 2px;
+  padding-inline: 4px;
 }
 th {
   font-weight: bold;
@@ -37,10 +39,10 @@ th {
 }
 th, td {
   & > :first-child {
-    margin-top: 0;
+    margin-block-start: 0;
   }
   & > :last-child {
-    margin-top: 0;
+    margin-block-start: 0;
   }
 }
 

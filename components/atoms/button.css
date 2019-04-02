@@ -90,7 +90,7 @@ button, .button {
   }
   &.inline {
     position:static;
-    float: right;
+    float: inline-end;
   }
 }
 

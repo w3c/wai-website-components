@@ -27,9 +27,9 @@
   & img {
     width: auto;
     height: 2em;
-    margin-right: 1em;
+    margin-inline-end: 1em;
   }
   span {
-    text-align: left;
+    text-align: start;
   }
 }

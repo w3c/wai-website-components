@@ -1,6 +1,6 @@
 .making-web-accessible {
   text-align:center;
-  border-bottom: 1px solid var(--line-grey);
+  border-block-end: 1px solid var(--line-grey);
   flex-direction: column;
   & [hidden] {
     display: none !important;
@@ -10,14 +10,17 @@
     order: -1;
   }
   & .making-web-accessible-box {
-    text-align: left;
-    padding: 32px 20px 0 105px;
+    text-align: start;
+    padding-block-start: 32px;
+    padding-inline-end: 20px;
+    padding-block-end: 0;
+    padding-inline-start: 105px;
   }
   & .mwa-icon {
     width:  65px;
     height: 65px;
     float:left;
-    margin-left: -85px;
+    margin-inline-start: -85px;
   }
   & .title {
     display: block;
@@ -27,15 +30,15 @@
     margin:0;
   }
   & h3 {
-    margin-top: 10px;
+    margin-block-start: 10px;
     font-size: 1.5rem;
-    margin-bottom:0;
+    margin-block-end:0;
   }
   & p {
-    margin-bottom:0;
+    margin-block-end:0;
   }
   & .showhidebutton {
-    float: right;
+    float: inline-end;
     position: absolute;
     top: -1.35em;
     right: 0;

@@ -1,5 +1,5 @@
 ul li, ol li {
-  margin-bottom: 8px;
+  margin-block-end: 8px;
 }
 
 .linklist {
@@ -11,7 +11,7 @@ ul li, ol li {
   & a {
     display: block;
     padding: 4px 16px;
-    border-bottom: 1px solid var(--line-grey);
+    border-block-end: 1px solid var(--line-grey);
     text-decoration: none;
     & svg {
       height: .65em;
@@ -26,7 +26,7 @@ ul li, ol li {
     }
   }
   & li:last-child a {
-    border-bottom: none;
+    border-block-end: none;
   }
 }
 
@@ -41,13 +41,13 @@ ul li, ol li {
 }
 
 p+ul, p+ol {
-  margin-top: -8px;
+  margin-block-start: -8px;
 }
 
 .columns {
   padding: 0;
   & > * {
-    margin-left: 32px;
+    margin-inline-start: 32px;
   }
 }
 

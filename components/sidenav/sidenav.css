@@ -1,10 +1,10 @@
 .sidenav {
   grid-area: navigation;
-  margin-bottom: 24px;
+  margin-block-end: 24px;
   display: none;
   &.open {
     display: block;
-    margin-top: 16px;
+    margin-block-start: 16px;
   }
   @media (--large) {
     display: block;
@@ -21,19 +21,19 @@
   padding: 16px 24px;
   display:flex;
   align-items: flex-end;
-  border-bottom: none;
+  border-block-end: none;
   font-weight: bold;
 }
 
 .sidenav--head-icon {
-  padding-bottom: .3em;
+  padding-block-end: .3em;
   margin-inline-start: -16px;
 }
 
 .sidenav--head-icon--inner {
   width: 47px;
   height: 48px;
-  float: left;
+  float: inline-start;
   margin-inline-end: 8px;
 }
 
@@ -78,10 +78,10 @@
     }
   }
   & li a {
-    border-top: 1px solid var(--w3c-classic);
+    border-block-start: 1px solid var(--w3c-classic);
   }
   .sidenav-head + & {
-    border-top: none;
+    border-block-start: none;
   }
   & ul {
     padding: 0;
@@ -103,7 +103,7 @@
     background-color: var(--body-bg);*/
   }
   & a[aria-current=location] {
-     padding-bottom: 4px;
+     padding-block-end: 4px;
      font-weight: bold;
   }
   & a[aria-current=page] {
@@ -133,13 +133,14 @@
 
 .sidenav-languages {
   font-size: .8125rem;
-  margin-top: 2rem;
+  margin-block-start: 2rem;
   border-radius: 3px;
   border: 2px solid var(--gold);
   background-color: var(--pure-white);
   & header {
-    border-bottom: 2px solid var(--gold);
-    padding: 8px 27px;
+    border-block-end: 2px solid var(--gold);
+    padding-block: 8px;
+    padding-inline: 27px;
     font-weight: bold;
   }
   & .langlist {
@@ -157,6 +158,6 @@
     padding-inline-start: 27px;
     padding-inline-end: 0;
     margin:0;
-    border-top: 1px solid #eed009;
+    border-block-start: 1px solid #eed009;
   }
 }

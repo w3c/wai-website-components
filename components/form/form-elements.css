@@ -95,8 +95,8 @@ legend {
 
 
 .group > .field {
-  margin-bottom: .5rem;
-  margin-left: 2rem;
+  margin-block-end: .5rem;
+  margin-inline-start: 2rem;
 }
 
 .radio-field {
@@ -108,7 +108,7 @@ legend {
     flex: 0 0 1em;
     width: 1em;
     height: 1em;
-    margin-right: .5em;
+    margin-inline-end: .5em;
     &:checked + label {
       font-weight: bold;
       color: var(--dk-blue);

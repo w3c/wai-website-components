@@ -6,15 +6,15 @@
   padding-top: 16px;
   padding-bottom: 16px;
   & p:first-of-type {
-    margin-top: 0;
+    margin-block-start: 0;
   }
   & p:last-of-type {
-    margin-bottom: 0;
+    margin-block-end: 0;
   }
 }
 
 .page-footer {
-  margin-top: 32px;
+  margin-block-start: 32px;
   background-color: var(--footer-grey);
   & .inner {
     grid-area: content;
@@ -22,7 +22,7 @@
 }
 
 .site-footer {
-  margin-top: 32px;
+  margin-block-start: 32px;
   padding-top: 16px;
   padding-bottom: 16px;
   background-color: var(--dk-grey);
@@ -30,7 +30,7 @@
   @media print {
     background-color: var(--footer-grey);
     color: var(--dk-grey);
-    border-top: 1px solid var(--dk-grey);
+    border-block-start: 1px solid var(--dk-grey);
   }
   & a {
     color: var(--pure-white);
@@ -49,7 +49,7 @@
   }
   & .footer-list-header {
     font-weight: bold;
-    border-bottom: 1px solid var(--trans-line-grey);
+    border-block-end: 1px solid var(--trans-line-grey);
     padding: 4px 0;
   }
   & .about {
@@ -72,7 +72,7 @@
   }
 }
 .page-footer + .site-footer {
-  margin-top: 0;
+  margin-block-start: 0;
 }
 
 .site-footer ul {

@@ -10,7 +10,7 @@
     color: var(--pure-white);
     content: "–";
     font-weight: bold;
-    margin-left: .5em;
+    margin-inline-start: .5em;
     padding: .3em;
     border-radius: 3px;
     width: 1em;
@@ -27,7 +27,7 @@
     content: "+";
   }
  /* &.button-inline:after {
-    margin-left: .2em;
+    margin-inline-start: .2em;
     padding: .15em;
     border-radius: 3px;
     width: .85em;
