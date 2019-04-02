@@ -299,13 +299,13 @@
                                 <pre>.doc-note-translation {
   font-size: .8125rem;
   &amp; p {
-    margin-top: 5px;
-    margin-bottom: 5px;
+    margin-block-start: 5px;
+    margin-block-end: 5px;
     &amp;:first-of-type {
-      margin-top: 0;
+      margin-block-start: 0;
     }
     &amp;:last-child {
-      margin-bottom: 0;
+      margin-block-end: 0;
     }
   }
 }</pre>
@@ -324,7 +324,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">203 Bytes</span>
+                    <span class="Meta-value">225 Bytes</span>
                 </li>
             </ul>
         </div>
@@ -344,8 +344,8 @@
       color: var(--dk-blue);
       display: inline-block;
       padding: 4px 8px;
-      margin-top: -8px;
-      margin-right: 8px;
+      margin-block-start: -8px;
+      margin-inline-end: 8px;
       font-size: .875rem;
       text-transform: uppercase;
       letter-spacing: 1px;
@@ -360,12 +360,12 @@
   border: 2px solid var(--gold);
   padding: 8px;
   background-color: var(--pure-white);
-  margin-bottom: 20px;
+  margin-block-end: 20px;
   &amp; p:first-child {
-    margin-top: 0;
+    margin-block-start: 0;
   }
   &amp; p:last-child {
-    margin-bottom: 0;
+    margin-block-end: 0;
   }
 }
 
@@ -387,7 +387,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">629 Bytes</span>
+                    <span class="Meta-value">656 Bytes</span>
                 </li>
             </ul>
         </div>

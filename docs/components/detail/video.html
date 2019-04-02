@@ -440,10 +440,10 @@
   <span class="hljs-attribute">z-index</span>: <span class="hljs-number">5000</span>;
 }
 <span class="hljs-selector-class">.able-column-left</span> {
-    <span class="hljs-attribute">float</span>: left;
+    <span class="hljs-attribute">float</span>: inline-start;
 }
 <span class="hljs-selector-class">.able-column-right</span> {
-    <span class="hljs-attribute">float</span>: left;
+    <span class="hljs-attribute">float</span>: inline-start;
 }
 <span class="hljs-selector-class">.able</span> <span class="hljs-selector-class">.able-vidcap-container</span> {
   <span class="hljs-attribute">background-color</span>: black;
@@ -475,8 +475,8 @@
 }
 <span class="hljs-selector-class">.able-controller</span> {
   <span class="hljs-attribute">position</span>: relative;
-  <span class="hljs-attribute">border-top</span>: <span class="hljs-number">2px</span> solid <span class="hljs-number">#4c4c4c</span>;
-  <span class="hljs-attribute">border-bottom</span>: <span class="hljs-number">2px</span> solid <span class="hljs-number">#4c4c4c</span>;
+  <span class="hljs-attribute">border-block-start</span>: <span class="hljs-number">2px</span> solid <span class="hljs-number">#4c4c4c</span>;
+  <span class="hljs-attribute">border-block-end</span>: <span class="hljs-number">2px</span> solid <span class="hljs-number">#4c4c4c</span>;
   <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#464646</span>; <span class="hljs-comment">/* background color of controller bar */</span>
   <span class="hljs-attribute">min-height</span>: <span class="hljs-number">38px</span>; <span class="hljs-comment">/* height of button (20px) + 4px border + 4px padding */</span>
   <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span>;
@@ -515,10 +515,10 @@
     <span class="hljs-attribute">vertical-align</span>: middle;
 }
 <span class="hljs-selector-class">.able-left-controls</span> {
-  <span class="hljs-attribute">float</span>: left;
+  <span class="hljs-attribute">float</span>: inline-start;
 }
 <span class="hljs-selector-class">.able-right-controls</span> {
-  <span class="hljs-attribute">float</span>: right;
+  <span class="hljs-attribute">float</span>: inline-end;
 }
 <span class="hljs-selector-class">.able-black-controls</span>,
 <span class="hljs-selector-class">.able-black-controls</span> <span class="hljs-selector-tag">button</span>,
@@ -696,7 +696,7 @@ input[type=range]::-webkit-slider-thumb {
   background: #ffffff;
   cursor: pointer;
   -webkit-appearance: none;
-  margin-top: -14px;
+  margin-block-start: -14px;
 }
 input[type=range]:focus::-webkit-slider-runnable-track {
   background: #367ebd;
@@ -773,18 +773,18 @@ input[type=range]:focus::-ms-fill-upper {
 }
 <span class="hljs-selector-class">.able-status-bar</span> <span class="hljs-selector-tag">span</span><span class="hljs-selector-class">.able-timer</span> {
   <span class="hljs-comment">/* contains both span.elapsedTime and span.duration */</span>
-  <span class="hljs-attribute">text-align</span>: left;
-  <span class="hljs-attribute">float</span>: left;
+  <span class="hljs-attribute">text-align</span>: start;
+  <span class="hljs-attribute">float</span>: inline-start;
   <span class="hljs-attribute">width</span>: <span class="hljs-number">32%</span>;
 }
 <span class="hljs-selector-class">.able-status-bar</span> <span class="hljs-selector-tag">span</span><span class="hljs-selector-class">.able-speed</span> {
-  <span class="hljs-attribute">float</span>: left;
+  <span class="hljs-attribute">float</span>: inline-start;
   <span class="hljs-attribute">width</span>: <span class="hljs-number">33%</span>;
   <span class="hljs-attribute">text-align</span>: center;
 }
 <span class="hljs-selector-class">.able-status</span> {
   <span class="hljs-attribute">font-style</span>: italic;
-  <span class="hljs-attribute">float</span>: right;
+  <span class="hljs-attribute">float</span>: inline-end;
   <span class="hljs-attribute">width</span>: <span class="hljs-number">32%</span>;
   <span class="hljs-attribute">text-align </span>:right;
 }
@@ -825,7 +825,7 @@ input[type=range]:focus::-ms-fill-upper {
   <span class="hljs-attribute">color</span>: <span class="hljs-number">#FF6</span>; <span class="hljs-comment">/* yellow, to differentiate it from captions */</span>
   <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#262626</span>;
   <span class="hljs-attribute">min-height</span>: <span class="hljs-number">2.8em</span>;
-  <span class="hljs-attribute">border-top</span>: <span class="hljs-number">1px</span> solid <span class="hljs-number">#666</span>;
+  <span class="hljs-attribute">border-block-start</span>: <span class="hljs-number">1px</span> solid <span class="hljs-number">#666</span>;
   <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span>;
   <span class="hljs-attribute">padding</span>: <span class="hljs-number">3%</span>;
   <span class="hljs-attribute">width</span>: <span class="hljs-number">94%</span>;
@@ -859,8 +859,8 @@ input[type=range]:focus::-ms-fill-upper {
   <span class="hljs-attribute">position</span>: absolute;
   <span class="hljs-attribute">height</span>: auto;
   <span class="hljs-attribute">max-width</span>: <span class="hljs-number">90%</span>;
-  <span class="hljs-attribute">margin-left</span>: auto;
-  <span class="hljs-attribute">margin-right</span>: auto;
+  <span class="hljs-attribute">margin-inline-start</span>: auto;
+  <span class="hljs-attribute">margin-inline-end</span>: auto;
   <span class="hljs-attribute">left</span>: <span class="hljs-number">0px</span>;
   <span class="hljs-attribute">right</span>: <span class="hljs-number">0px</span>;
   <span class="hljs-attribute">outline</span>: <span class="hljs-number">0px</span> none;
@@ -889,7 +889,7 @@ input[type=range]:focus::-ms-fill-upper {
   <span class="hljs-attribute">right</span>: <span class="hljs-number">5px</span>;
 }
 <span class="hljs-selector-tag">button</span><span class="hljs-selector-class">.modal-button</span> {
-  <span class="hljs-attribute">margin-right</span>: <span class="hljs-number">5px</span>;
+  <span class="hljs-attribute">margin-inline-end</span>: <span class="hljs-number">5px</span>;
 }
 <span class="hljs-selector-tag">div</span><span class="hljs-selector-class">.able-modal-dialog</span> <span class="hljs-selector-tag">input</span><span class="hljs-selector-pseudo">:hover</span>,
 <span class="hljs-selector-tag">div</span><span class="hljs-selector-class">.able-modal-dialog</span> <span class="hljs-selector-tag">input</span><span class="hljs-selector-pseudo">:focus</span>,
@@ -930,7 +930,7 @@ input[type=range]:focus::-ms-fill-upper {
 */</span>
 
 <span class="hljs-selector-class">.able-prefs-form</span> <span class="hljs-selector-tag">fieldset</span> {
-  <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">margin-inline-start</span>: <span class="hljs-number">0</span>;
   <span class="hljs-attribute">padding-left</span>: <span class="hljs-number">0</span>;
   <span class="hljs-attribute">border</span>: none;
 }
@@ -941,7 +941,7 @@ input[type=range]:focus::-ms-fill-upper {
 }
 <span class="hljs-selector-class">.able-prefs-form</span> <span class="hljs-selector-tag">fieldset</span> <span class="hljs-selector-tag">div</span> {
   <span class="hljs-attribute">display</span>: table;
-  <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">1em</span>;
+  <span class="hljs-attribute">margin-inline-start</span>: <span class="hljs-number">1em</span>;
 }
 <span class="hljs-selector-class">.able-prefs-form</span> <span class="hljs-selector-tag">fieldset</span> <span class="hljs-selector-tag">div</span> <span class="hljs-selector-tag">input</span> {
   <span class="hljs-attribute">display</span>: table-cell;
@@ -953,26 +953,26 @@ input[type=range]:focus::-ms-fill-upper {
   <span class="hljs-attribute">padding-left</span>: <span class="hljs-number">0.5em</span>;
 }
 <span class="hljs-selector-tag">fieldset</span><span class="hljs-selector-class">.able-prefs-keys</span> <span class="hljs-selector-tag">div</span> {
-  <span class="hljs-attribute">float</span>: left;
-  <span class="hljs-attribute">margin-right</span>: <span class="hljs-number">1em</span>;
+  <span class="hljs-attribute">float</span>: inline-start;
+  <span class="hljs-attribute">margin-inline-end</span>: <span class="hljs-number">1em</span>;
 }
 <span class="hljs-selector-tag">div</span><span class="hljs-selector-class">.able-desc-pref-prompt</span> {
   <span class="hljs-attribute">font-weight</span>: bold;
   <span class="hljs-attribute">font-style</span>: italic;
-  <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">1em</span> <span class="hljs-meta">!important</span>;
+  <span class="hljs-attribute">margin-inline-start</span>: <span class="hljs-number">1em</span> <span class="hljs-meta">!important</span>;
 }
 <span class="hljs-selector-tag">div</span><span class="hljs-selector-class">.able-prefDescFormat</span> &gt; <span class="hljs-selector-tag">div</span> {
-  <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">1.5em</span>;
+  <span class="hljs-attribute">margin-inline-start</span>: <span class="hljs-number">1.5em</span>;
 }
 <span class="hljs-selector-class">.able-prefs-captions</span> <span class="hljs-selector-tag">label</span>,
 <span class="hljs-selector-class">.able-prefs-captions</span> <span class="hljs-selector-tag">select</span> {
   <span class="hljs-attribute">display</span>: block;
-  <span class="hljs-attribute">float</span>: left;
-  <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">0.25em</span>;
+  <span class="hljs-attribute">float</span>: inline-start;
+  <span class="hljs-attribute">margin-block-end</span>: <span class="hljs-number">0.25em</span>;
 }
 <span class="hljs-selector-tag">fieldset</span><span class="hljs-selector-class">.able-prefs-captions</span> <span class="hljs-selector-tag">label</span> {
   <span class="hljs-attribute">width</span>: <span class="hljs-number">6em</span>;
-  <span class="hljs-attribute">text-align</span>: right;
+  <span class="hljs-attribute">text-align</span>: end;
   <span class="hljs-attribute">padding-right</span>: <span class="hljs-number">1em</span>;
 }
 <span class="hljs-selector-tag">fieldset</span><span class="hljs-selector-class">.able-prefs-captions</span> <span class="hljs-selector-tag">select</span> {
@@ -985,12 +985,12 @@ input[type=range]:focus::-ms-fill-upper {
   <span class="hljs-attribute">text-align</span>: center;
 }
 <span class="hljs-selector-class">.able-prefs-form</span> <span class="hljs-selector-tag">h2</span> {
-  <span class="hljs-attribute">margin-top</span>: <span class="hljs-number">0</span>;
-  <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">0.5em</span>;
+  <span class="hljs-attribute">margin-block-start</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">margin-block-end</span>: <span class="hljs-number">0.5em</span>;
   <span class="hljs-attribute">font-size</span>: <span class="hljs-number">1.1em</span>;
 }
 <span class="hljs-selector-class">.able-prefs-form</span> <span class="hljs-selector-tag">ul</span> {
-  <span class="hljs-attribute">margin-top</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">margin-block-start</span>: <span class="hljs-number">0</span>;
 }
 
 <span class="hljs-comment">/*
@@ -1135,7 +1135,7 @@ input[type=range]:focus::-ms-fill-upper {
   <span class="hljs-attribute">background-color</span>: transparent;
   <span class="hljs-attribute">color</span>: <span class="hljs-number">#000</span>;
   <span class="hljs-attribute">font-size</span>: <span class="hljs-number">1em</span>;
-  <span class="hljs-attribute">text-align</span>: left;
+  <span class="hljs-attribute">text-align</span>: start;
   <span class="hljs-attribute">padding</span>: <span class="hljs-number">0.15em</span> <span class="hljs-number">1em</span>;
 }
 <span class="hljs-selector-tag">div</span><span class="hljs-selector-class">.able-chapters-div</span> <span class="hljs-selector-tag">li</span><span class="hljs-selector-class">.able-current-chapter</span> {
@@ -1326,7 +1326,7 @@ input[type=range]:focus::-ms-fill-upper {
   <span class="hljs-attribute">cursor</span>: pointer;
 }
 <span class="hljs-selector-class">.able-window-toolbar</span> <span class="hljs-selector-tag">label</span> {
-  <span class="hljs-attribute">margin-right</span>: <span class="hljs-number">10px</span>;
+  <span class="hljs-attribute">margin-inline-end</span>: <span class="hljs-number">10px</span>;
   <span class="hljs-attribute">color</span>: <span class="hljs-number">#FFF</span>;
 }
 <span class="hljs-selector-class">.able-window-toolbar</span> <span class="hljs-selector-tag">input</span><span class="hljs-selector-pseudo">:focus</span>,
@@ -1357,7 +1357,7 @@ input[type=range]:focus::-ms-fill-upper {
   <span class="hljs-attribute">outline-color</span>: <span class="hljs-number">#8AB839</span>; <span class="hljs-comment">/* green */</span>
 }
 <span class="hljs-selector-class">.able-window-toolbar</span> <span class="hljs-selector-class">.transcript-language-select-wrapper</span> {
-  <span class="hljs-attribute">float</span>: right;
+  <span class="hljs-attribute">float</span>: inline-end;
   <span class="hljs-attribute">padding-right</span>: <span class="hljs-number">30px</span>;
 }
 
@@ -1426,7 +1426,7 @@ input[type=range]:focus::-ms-fill-upper {
 
 <span class="hljs-selector-class">.able-search-results</span> <span class="hljs-selector-tag">ul</span> <span class="hljs-selector-tag">li</span> {
   <span class="hljs-attribute">font-size</span>: <span class="hljs-number">1.1em</span>;
-  <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">1em</span>;
+  <span class="hljs-attribute">margin-block-end</span>: <span class="hljs-number">1em</span>;
 }
 <span class="hljs-selector-class">.able-search-results-time</span> {
   <span class="hljs-attribute">font-weight</span>: bold;
@@ -1452,7 +1452,7 @@ input[type=range]:focus::-ms-fill-upper {
   Video Transcript Sorter (VTS)
 */</span>
 <span class="hljs-selector-id">#able-vts-instructions</span> {
-	<span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">1.5em</span>;
+	<span class="hljs-attribute">margin-block-end</span>: <span class="hljs-number">1.5em</span>;
 	<span class="hljs-attribute">padding</span>: <span class="hljs-number">1em</span>;
 	<span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-number">#999</span>;
 	<span class="hljs-attribute">width</span>: <span class="hljs-number">720px</span>;
@@ -1467,11 +1467,11 @@ input[type=range]:focus::-ms-fill-upper {
   <span class="hljs-attribute">font-weight</span>: bold;
 }
 <span class="hljs-selector-id">#able-vts</span> <span class="hljs-selector-tag">fieldset</span> <span class="hljs-selector-tag">div</span> {
-  <span class="hljs-attribute">float</span>: left;
+  <span class="hljs-attribute">float</span>: inline-start;
   <span class="hljs-attribute">padding-right</span>: <span class="hljs-number">1em</span>;
 }
 <span class="hljs-selector-id">#able-vts</span> <span class="hljs-selector-tag">table</span> {
-  <span class="hljs-attribute">clear</span>: left;
+  <span class="hljs-attribute">clear</span>: inline-start;
 }
 
 <span class="hljs-selector-id">#able-vts</span> <span class="hljs-selector-tag">table</span>,
@@ -1531,7 +1531,7 @@ input[type=range]:focus::-ms-fill-upper {
 	<span class="hljs-attribute">font-size</span>: <span class="hljs-number">1em</span>;
 	<span class="hljs-attribute">padding</span>: <span class="hljs-number">0.25em</span>;
 	<span class="hljs-attribute">border-radius</span>: <span class="hljs-number">5px</span>;
-	<span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">1em</span>;
+	<span class="hljs-attribute">margin-block-end</span>: <span class="hljs-number">1em</span>;
 	<span class="hljs-attribute">font-weight</span>: bold;
 }
 <span class="hljs-selector-tag">button</span><span class="hljs-selector-id">#able-vts-save</span><span class="hljs-selector-pseudo">:hover</span>,
@@ -1580,14 +1580,14 @@ input[type=range]:focus::-ms-fill-upper {
   <span class="hljs-attribute">font-weight</span>: bold;
   <span class="hljs-attribute">font-size</span>: <span class="hljs-number">1.1em</span>;
   <span class="hljs-attribute">padding</span>: <span class="hljs-number">1em</span>;
-  <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">1em</span>;
+  <span class="hljs-attribute">margin-block-end</span>: <span class="hljs-number">1em</span>;
   <span class="hljs-attribute">max-width</span>: <span class="hljs-number">500px</span>;
   <span class="hljs-attribute">width</span>: <span class="hljs-number">95%</span>;
 }
 <span class="hljs-selector-class">.able-fallback</span> <span class="hljs-selector-tag">div</span>,
 <span class="hljs-selector-class">.able-fallback</span> <span class="hljs-selector-tag">ul</span>,
 <span class="hljs-selector-class">.able-fallback</span> <span class="hljs-selector-tag">p</span> {
-  <span class="hljs-attribute">text-align</span>: left;
+  <span class="hljs-attribute">text-align</span>: start;
 }
 <span class="hljs-selector-class">.able-fallback</span> <span class="hljs-selector-tag">li</span>  {
   <span class="hljs-attribute">font-weight</span>: normal;
@@ -1749,7 +1749,7 @@ input[type=range]:focus::-ms-fill-upper {
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">26.5 KB</span>
+                    <span class="Meta-value">26.7 KB</span>
                 </li>
             </ul>
         </div>

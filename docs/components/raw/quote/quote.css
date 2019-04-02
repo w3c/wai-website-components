@@ -31,7 +31,8 @@
 .quote--block-cite {
   font-size: 15px;
   font-weight: 500;
-  margin: 9px 0 0 0;
+  margin: 0;
+  margin-block-start: 9px;
 }
 
 .quote--block-cite a {

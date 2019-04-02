@@ -7,8 +7,8 @@
   }
   padding-top: 3px;
   @supports (display: grid) {
-    padding-left: 8px;
-    padding-right: 8px;
+    padding-inline-start: 8px;
+    padding-inline-end: 8px;
   }
   & a {
     color: var(--pure-white);
@@ -36,7 +36,8 @@
   grid-column-start: 2;
   grid-column-end: 6;
   grid-row-start: 1;
-  padding: 16px 0;
+  padding-block: 16px;
+  padding-inline: 0;
   display: flex;
   align-items: center;
   width: 60%;
@@ -46,9 +47,9 @@
   & .claim {
     font-size: .875rem;
     font-style: italic;
-    margin-left: 16px;
-    padding-left: 16px;
-    border-left: 1px solid var(--gold);
+    margin-inline-start: 16px;
+    padding-inline-start: 16px;
+    border-inline-start: 1px solid var(--gold);
     color: var(--pure-white);
     @media print {
       color: var(--w3c-classic);
@@ -64,7 +65,7 @@
 
 .home {
   @media (--small) {
-    margin-right: 32px;
+    margin-inline-end: 32px;
   }
   text-decoration: none;
   transition: color .25s ease-in .1s;
@@ -74,7 +75,7 @@
     flex:0;
   }
   @media (--large) {
-    margin-right: 8px;
+    margin-inline-end: 8px;
   }
   & svg, & img {
     vertical-align:middle;
@@ -86,10 +87,10 @@
     }
   }
   img {
-    padding-right: 8px;
+    padding-inline-end: 8px;
   }
   &.w3c {
-    border-bottom: 2px solid transparent;
+    border-block-end: 2px solid transparent;
     &:hover {
       border-bottom-color: currentColor;
     }
@@ -102,10 +103,10 @@
       font-size: 1.25rem;
     }
     & .wa {
-      padding-bottom: 2px;
+      padding-block-end: 2px;
     }
     & .i {
-    border-top: 1px solid var(--gold);
+    border-block-start: 1px solid var(--gold);
     padding-top: 2px;
     display: flex;
     justify-content: space-between;
