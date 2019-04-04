@@ -46,14 +46,19 @@
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        &:before {
+        &:before, &:after {
           position: absolute;
-          content: '';
           top: 12px;
           left: -8px;
           bottom: 12px;
           width: 1px;
           background-color: var(--gold);
+        }
+        &:dir(ltr):before {
+          content: '';
+        }
+        &:dir(rtl):after {
+          content: '';
         }
         @media (--medium) {
           width: 100%;
@@ -61,7 +66,10 @@
         }
       }
     }
-    & li:first-child a:before {
+    &:dir(ltr) li:first-child a:before {
+      display: none;
+    }
+    &:dir(rtl) li:nth-last-child(2) a:after {
       display: none;
     }
   }
