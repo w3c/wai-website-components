@@ -75,6 +75,11 @@ button, .button {
   cursor: pointer;
   bottom: 16px;
   right: 16px;
+  left: auto;
+  &:dir(rtl) {
+    right: auto;
+    left: 16px;
+  }
   opacity: 0.85;
   border-radius: 100px;
   background-color: var(--w3c-blue);
