@@ -53,14 +53,18 @@
 .sidenav--list {
   background-color: var(--w3c-blue);
   border: 2px solid var(--w3c-blue);
-  border-width: 0 0 5px 5px;
+  border-block-end-width: 5px;
+  border-block-start-width: 0;
+  border-inline-start-width: 5px;
+  border-inline-end-width: 0;
   margin: 0;
   padding:0;
   font-size: .8125rem;
   & a {
     display: flex;
     box-sizing: border-box;
-    padding: 8px 24px;
+    padding-block: 8px;
+    padding-inline: 24px;
     min-height: 44px;
     color: var(--pure-white);
     text-decoration: none;
@@ -116,7 +120,12 @@
       content: "";
       width: 0;
       height: 0;
+      left: auto;
       right: 0;
+      &:dir(rtl) {
+        left: 0;
+        right: auto;
+      }
       border: 1px solid var(--pure-white);
       opacity: .9;
     }
