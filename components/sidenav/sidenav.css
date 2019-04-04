@@ -131,17 +131,17 @@
     }
     &:before {
       top:-2px;
-      border-block-start-color: transparent;
-      border-inline-end-color: var(--pure-white);
-      border-block-end-color: var(--pure-white);
-      border-inline-start-color: transparent;
+      border-color: transparent var(--pure-white) var(--pure-white) transparent;
+    }
+    &:dir(rtl):before {
+      border-color: transparent transparent var(--pure-white) var(--pure-white);
     }
     &:after {
       bottom:-2px;
-      border-block-start-color: var(--pure-white);
-      border-inline-end-color: var(--pure-white);
-      border-block-end-color: transparent;
-      border-inline-start-color: transparent;
+      border-color: var(--pure-white) var(--pure-white) transparent transparent;
+    }
+    &:dir(rtl):after {
+      border-color: var(--pure-white) transparent transparent var(--pure-white);
     }
   }
 }
