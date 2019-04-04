@@ -76,17 +76,33 @@
 }
 
 @font-face {
-  font-family: 'Noto Sans Arabic';
-  src: url('../fonts/notoarabic/regular.woff2') format('woff2'),
-       url('../fonts/notoarabic/regular.woff') format('woff');
+  font-family: 'Noto Naskh Arabic Minimal';
+  src: url('../fonts/notonaskh/regular-minimal.woff2') format('woff2'),
+       url('../fonts/notonaskh/regular-minimal.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Noto Sans Arabic';
-  src: url('../fonts/notoarabic/bold.woff2') format('woff2'),
-       url('../fonts/notoarabic/bold.woff') format('woff');
+  font-family: 'Noto Naskh Arabic Minimal';
+  src: url('../fonts/notonaskh/bold-minimal.woff2') format('woff2'),
+       url('../fonts/notonaskh/bold-minimal.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Noto Naskh Arabic';
+  src: url('../fonts/notonaskh/regular.woff2') format('woff2'),
+       url('../fonts/notonaskh/regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Noto Naskh Arabic';
+  src: url('../fonts/notonaskh/bold.woff2') format('woff2'),
+       url('../fonts/notonaskh/bold.woff') format('woff');
   font-weight: bold;
   font-style: normal;
 }
@@ -122,7 +138,11 @@ body {
 }
 
 body:lang(ar) {
-  font-family: "Noto Sans Arabic", "Noto Sans", "Trebuchet MS", "Helvetica Neue", Arial, sans-serif;
+  font-family: "Noto Naskh Arabic", "Noto Sans", "Trebuchet MS", "Helvetica Neue", Arial, sans-serif;
+}
+
+body:not(:lang(ar)) *:lang(ar) {
+  font-family: "Noto Naskh Arabic Minimal", "Noto Sans", "Trebuchet MS", "Helvetica Neue", Arial, sans-serif;
 }
 
 code {
