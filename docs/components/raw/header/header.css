@@ -47,6 +47,9 @@
   & .claim {
     font-size: .875rem;
     font-style: italic;
+    &:lang(ar) {
+      font-style: normal;
+    }
     margin-inline-start: 16px;
     padding-inline-start: 16px;
     border-inline-start: 1px solid var(--gold);
