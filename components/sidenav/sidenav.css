@@ -131,11 +131,17 @@
     }
     &:before {
       top:-2px;
-      border-color: transparent var(--pure-white) var(--pure-white) transparent;
+      border-block-start-color: transparent;
+      border-inline-end-color: var(--pure-white);
+      border-block-end-color: var(--pure-white);
+      border-inline-start-color: transparent;
     }
     &:after {
       bottom:-2px;
-      border-color: var(--pure-white) var(--pure-white) transparent transparent;
+      border-block-start-color: var(--pure-white);
+      border-inline-end-color: var(--pure-white);
+      border-block-end-color: transparent;
+      border-inline-start-color: transparent;
     }
   }
 }
