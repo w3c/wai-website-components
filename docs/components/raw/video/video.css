@@ -69,6 +69,10 @@
 .able-offscreen {
   position:absolute;
   left:-10000px;
+  &:dir(rtl) {
+    right: -10000px;
+    left: auto;
+  }
   top:auto;
   width:1px;
   height:1px;
