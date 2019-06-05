@@ -7,7 +7,8 @@
   --faded-red: #c0272d;
   --light-blue: #196cac;
   --dk-blue: #091832;
-  --gold: #eed009;
+  --gold: rgb(238, 208, 9);
+  --gold-light: rgba(238, 208, 9, .35);
   --ocean: #00818d;
   --cloudy: #bccbd3;
   --grey: #686868;
