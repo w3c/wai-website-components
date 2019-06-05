@@ -372,6 +372,13 @@ if (document.querySelector('main')) {
         target = target.parentNode;
       }
 
+      // if the target is in a summary, it is a heading with an id. In that case we want to open the details that is the parent.
+
+      if (target && target.parentNode.nodeName.toLowerCase() == 'summary') {
+        target.parentNode.parentNode.setAttribute('open', 'true');
+        target = target.parentNode.parentNode;
+      }
+
       // can see if that parent node is visible. If it is _not_, but is a details element, we open that details element.
       // Then we move on to its parent until we arrive at a visible element
       while (!isVisible(target)) {
