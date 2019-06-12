@@ -46,6 +46,22 @@ th, td {
   }
 }
 
+.quiet {
+  & th {
+    background-color: var(--off-white);
+    color: var(--w3c-blue);
+    & a {
+      color: inherit;
+      &:--hovcus {
+        color: var(--wai-green);
+      }
+      &:visited {
+        color: inherit;
+      }
+    }
+  }
+}
+
 .hyphenated {
   hyphens: auto;
 }
