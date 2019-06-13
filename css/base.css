@@ -36,6 +36,7 @@
        url('../fonts/notosans/notosans-regular.woff') format('woff');
   font-weight: 400;
   font-style: normal;
+  font-display:fallback;
 }
 @font-face {
   font-family: 'Noto Sans';
@@ -43,6 +44,7 @@
        url('../fonts/notosans/notosans-italic.woff') format('woff');
   font-weight: 400;
   font-style: italic;
+  font-display:fallback;
 }
 @font-face {
   font-family: 'Noto Sans';
@@ -50,6 +52,7 @@
        url('../fonts/notosans/notosans-bold.woff') format('woff');
   font-weight: 600;
   font-style: normal;
+  font-display:fallback;
 }
 @font-face {
   font-family: 'Noto Sans';
@@ -57,6 +60,7 @@
        url('../fonts/notosans/notosans-bolditalic.woff') format('woff');
   font-weight: 600;
   font-style: italic;
+  font-display:fallback;
 }
 
 @font-face {
@@ -65,6 +69,7 @@
        url('../fonts/notosansmono/notosansmono-semicondensed.woff') format('woff');
   font-weight: 400;
   font-style: normal;
+  font-display:fallback;
 }
 
 @font-face {
@@ -73,6 +78,7 @@
        url('../fonts/notosansmono/notosansmono-semicondensedbold.woff') format('woff');
   font-weight: 600;
   font-style: normal;
+  font-display:fallback;
 }
 
 @font-face {
@@ -81,6 +87,7 @@
        url('../fonts/notonaskh/regular-minimal.woff') format('woff');
   font-weight: normal;
   font-style: normal;
+  font-display:fallback;
 }
 
 @font-face {
@@ -89,6 +96,7 @@
        url('../fonts/notonaskh/bold-minimal.woff') format('woff');
   font-weight: bold;
   font-style: normal;
+  font-display:fallback;
 }
 
 @font-face {
@@ -97,6 +105,7 @@
        url('../fonts/notonaskh/regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
+  font-display:fallback;
 }
 
 @font-face {
@@ -105,6 +114,7 @@
        url('../fonts/notonaskh/bold.woff') format('woff');
   font-weight: bold;
   font-style: normal;
+  font-display:fallback;
 }
 
 html {
