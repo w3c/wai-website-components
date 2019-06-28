@@ -19,7 +19,7 @@ const processors = [
       'custom-selectors': true
     },
     autoprefixer: {grid:false},
-    browsers: 'last 2 version, > 1%, IE 10'
+    overrideBrowserslist: 'last 2 version, > 1%, IE 10'
   })
 ];
 
