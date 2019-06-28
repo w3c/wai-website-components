@@ -100,6 +100,15 @@
   font-size: .875rem;
 }
 
+.box.box-highlighted {
+  background-color: var(--cloudy-subtle);
+  & .box-h-highlighted {
+    color: var(--dk-blue);
+    border-bottom: solid 1px var(--line-grey);
+    background-color: var(--pure-white);
+  }
+}
+
 @media (--medium) {
   .box {
     &.box-left, &.box-right {
