@@ -5,12 +5,14 @@
   --off-black: #1d1d1d;
   --dk-grey: #3b3b3b;
   --faded-red: #c0272d;
+  --red-subtle: #f1d0e1;
   --light-blue: #196cac;
   --dk-blue: #091832;
   --gold: rgb(238, 208, 9);
   --gold-light: rgba(238, 208, 9, .35);
   --ocean: #00818d;
   --cloudy: #bccbd3;
+  --cloudy-subtle: #d0e1f1;
   --grey: #686868;
   --line-grey: #ddd;
   --trans-line-grey: rgba(221, 221, 221, 0.32);
