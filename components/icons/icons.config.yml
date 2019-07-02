@@ -108,3 +108,12 @@ variants:
 - name: translations
   context:
     name: translations
+- name: rss
+  context:
+    name: rss
+- name: youtube
+  context:
+    name: youtube
+- name: twitter
+  context:
+    name: twitter
