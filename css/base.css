@@ -147,11 +147,11 @@ body {
   }
 }
 
-body:lang(ar) {
+:lang(ar) {
   font-family: "Noto Naskh Arabic", "Noto Sans", "Trebuchet MS", "Helvetica Neue", Arial, sans-serif;
 }
 
-body:not(:lang(ar)) *:lang(ar) {
+.languagelist :lang(ar) {
   font-family: "Noto Naskh Arabic Minimal", "Noto Sans", "Trebuchet MS", "Helvetica Neue", Arial, sans-serif;
 }
 
