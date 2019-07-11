@@ -83,3 +83,34 @@
 .site-footer ul li {
   list-style:none;
 }
+
+.site-footer .social {
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+}
+
+.site-footer .social svg {
+  vertical-align: middle;
+  font-size: 2em;
+}
+
+.site-footer .social a {
+  color: var(--pure-white);
+  text-decoration: none;
+  &:--hovcus svg {
+    color: var(--gold);
+  }
+}
+
+.site-footer .social .button {
+  border: 1px solid var(--pure-white);
+}
+
+.site-footer .social ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  & li {
+    margin-inline-end: 1em;
+  }
+}
